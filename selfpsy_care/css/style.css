@@ -273,6 +273,20 @@ h6 {
   text-transform: uppercase;
 }
 
+@-webkit-keyframes float {
+  100% {
+    -webkit-transform: translateY(0.25rem);
+            transform: translateY(0.25rem);
+  }
+}
+
+@keyframes float {
+  100% {
+    -webkit-transform: translateY(0.25rem);
+            transform: translateY(0.25rem);
+  }
+}
+
 .come-content-thank {
   max-width: 31.25rem;
   background-color: #fff;
@@ -288,6 +302,15 @@ h6 {
 
 .come-content-thank__image {
   margin-top: -0.75rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 9.5625rem;
+          flex: 0 0 9.5625rem;
+}
+
+.come-content-thank__image img {
+  max-width: 100%;
+  -webkit-animation: float 1.7s infinite ease-in-out alternate;
+          animation: float 1.7s infinite ease-in-out alternate;
 }
 
 .come-content-thank__text {
