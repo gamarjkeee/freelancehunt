@@ -936,7 +936,6 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 1.875rem;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
@@ -1424,6 +1423,10 @@ svg path {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 13.75rem;
             flex: 0 0 13.75rem;
+  }
+
+  .client-form__items {
+    padding-right: 1.875rem;
   }
 }
 
