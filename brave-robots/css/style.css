@@ -154,7 +154,7 @@ body::after {
   left: 0;
   bottom: 0;
   right: 0;
-  padding: 30px 10px;
+  padding: 1.875rem 0.625rem;
   -webkit-transition: visibility 0.8s ease 0s;
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
@@ -208,11 +208,11 @@ body::after {
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   background-color: #eee;
-  padding: 20px;
+  padding: 1.25rem;
   width: 100%;
-  max-width: 1224px;
+  max-width: 76.5rem;
   height: 80vh;
-  border-radius: 30px;
+  border-radius: 1.875rem;
 }
 
 .lock .popup__content {
