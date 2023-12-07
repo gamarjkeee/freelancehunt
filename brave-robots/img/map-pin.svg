@@ -1,0 +1,16 @@
+<svg width="43" height="55" viewBox="0 0 43 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Map pin">
+<g id="Shadow" filter="url(#filter0_f_114_89)">
+<ellipse cx="21.0042" cy="49.535" rx="7" ry="2.5" transform="rotate(0.0955656 21.0042 49.535)" fill="black" fill-opacity="0.2"/>
+</g>
+<path id="Pin" fill-rule="evenodd" clip-rule="evenodd" d="M21.0867 0.0350266C32.6847 0.0543713 42.071 9.47206 42.0516 21.07C42.0368 29.9626 36.4969 37.5549 28.6854 40.6044L22.2004 49.4376C22.0652 49.6225 21.8859 49.7733 21.6775 49.8773C21.4691 49.9813 21.2379 50.0354 21.0033 50.035C20.7687 50.0346 20.5376 49.9797 20.3296 49.8751C20.1216 49.7704 19.9428 49.619 19.8082 49.4336L13.3527 40.5789C5.55144 37.5033 0.0368721 29.8925 0.0517043 21C0.071049 9.40201 9.48874 0.015682 21.0867 0.0350266Z" fill="#F75751"/>
+<path id="Circle" d="M30.0517 21.05C30.06 16.0795 26.0373 12.0433 21.0667 12.035C16.0961 12.0267 12.06 16.0494 12.0517 21.02C12.0434 25.9905 16.0661 30.0267 21.0367 30.035C26.0072 30.0433 30.0434 26.0206 30.0517 21.05Z" fill="#BE2E28"/>
+</g>
+<defs>
+<filter id="filter0_f_114_89" x="12.0042" y="45.0349" width="18" height="9.00005" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="1" result="effect1_foregroundBlur_114_89"/>
+</filter>
+</defs>
+</svg>
