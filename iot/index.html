@@ -1,1 +1,492 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<style>
+		body {
+			opacity: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20231207152306" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<!-- Загальна обгортка сторінки -->
+
+	<div class="wrapper">
+		<!-- Головна сторінка PAGE -->
+
+		<main class="page">
+			<!-- Обмежеючий контейнер -->
+
+			<div class="page__container">
+				<!-- Загальний контейнер для контенту -->
+
+				<div class="page__content-wrapper">
+					<!-- Бокове меню (на мобайлі трансформується в мобільне меню) -->
+
+					<aside class="page__aside aside-page">
+						<div class="aside-page__header">
+							<!-- Меню КНОПКА-БУРГЕР -->
+							<button type="button" class="icon-menu">
+								<span></span><i></i>
+							</button>
+
+							<!-- Бокове меню ЛОГО -->
+
+							<a href="index.html" class="aside-page__logo">
+								<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Logo Image" /></picture>
+							</a>
+						</div>
+						<!-- Бокове меню МЕНЮ -->
+
+						<div class="aside-page__menu menu">
+							<!-- Меню ОБОЛОНКА МЕНЮ -->
+
+							<nav class="menu__body">
+								<!-- Меню СПИСОК ПУНКТІВ МЕНЮ -->
+
+								<ul class="menu__list">
+									<!-- Меню ПУНКТ МЕНЮ -->
+
+									<li class="menu__item">
+										<button id="dashboard-button" class="menu__link button button--link active">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+												<path d="M22 8.52V3.98C22 2.57 21.36 2 19.77 2H15.73C14.14 2 13.5 2.57 13.5 3.98V8.51C13.5 9.93 14.14 10.49 15.73 10.49H19.77C21.36 10.5 22 9.93 22 8.52Z" stroke="#3E5E6D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M22 19.77V15.73C22 14.14 21.36 13.5 19.77 13.5H15.73C14.14 13.5 13.5 14.14 13.5 15.73V19.77C13.5 21.36 14.14 22 15.73 22H19.77C21.36 22 22 21.36 22 19.77Z" stroke="#3E5E6D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M10.5 8.52V3.98C10.5 2.57 9.86 2 8.27 2H4.23C2.64 2 2 2.57 2 3.98V8.51C2 9.93 2.64 10.49 4.23 10.49H8.27C9.86 10.5 10.5 9.93 10.5 8.52Z" stroke="#3E5E6D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M10.5 19.77V15.73C10.5 14.14 9.86 13.5 8.27 13.5H4.23C2.64 13.5 2 14.14 2 15.73V19.77C2 21.36 2.64 22 4.23 22H8.27C9.86 22 10.5 21.36 10.5 19.77Z" stroke="#3E5E6D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+											<span>Dashboard</span>
+										</button>
+									</li>
+									<!-- Меню ПУНКТ МЕНЮ -->
+
+									<li class="menu__item active">
+										<button id="settings-toggle-button" type="button" class="menu__link button button--toggler active">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+												<path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#344449" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M2 12.8804V11.1204C2 10.0804 2.85 9.22043 3.9 9.22043C5.71 9.22043 6.45 7.94042 5.54 6.37042C5.02 5.47042 5.33 4.30042 6.24 3.78042L7.97 2.79042C8.76 2.32042 9.78 2.60042 10.25 3.39042L10.36 3.58042C11.26 5.15042 12.74 5.15042 13.65 3.58042L13.76 3.39042C14.23 2.60042 15.25 2.32042 16.04 2.79042L17.77 3.78042C18.68 4.30042 18.99 5.47042 18.47 6.37042C17.56 7.94042 18.3 9.22043 20.11 9.22043C21.15 9.22043 22.01 10.0704 22.01 11.1204V12.8804C22.01 13.9204 21.16 14.7804 20.11 14.7804C18.3 14.7804 17.56 16.0604 18.47 17.6304C18.99 18.5404 18.68 19.7004 17.77 20.2204L16.04 21.2104C15.25 21.6804 14.23 21.4004 13.76 20.6104L13.65 20.4204C12.75 18.8504 11.27 18.8504 10.36 20.4204L10.25 20.6104C9.78 21.4004 8.76 21.6804 7.97 21.2104L6.24 20.2204C5.33 19.7004 5.02 18.5304 5.54 17.6304C6.45 16.0604 5.71 14.7804 3.9 14.7804C2.85 14.7804 2 13.9204 2 12.8804Z" stroke="#344449" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+											<span>Setting</span>
+										</button>
+										<ul id="settings-sub-menu" class="menu__sub-list open">
+											<li class="menu__sub-item">
+												<button id="wi-fi-button" class="menu__sub-link button button--link">
+													<svg class="wi-fi" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22" fill="none">
+														<path d="M10.7247 0.907084L10.725 0.907055C11.616 0.817708 13.7607 0.881149 14.7179 1.02756L14.7181 1.02759C17.3894 1.44019 20.0476 2.55696 22.1742 4.15716C22.8638 4.67423 23.2122 5.011 23.4179 5.41842C23.4938 5.56417 23.5425 5.67431 23.569 5.82466C23.5944 5.96882 23.5987 6.14594 23.5987 6.42411C23.5987 6.71025 23.5961 6.88724 23.5696 7.03154C23.5418 7.18301 23.4887 7.29434 23.4044 7.45107L23.4039 7.45193C23.1627 7.89269 22.8033 8.23341 22.3296 8.4594L22.3296 8.4594L22.3286 8.45984C22.1826 8.52811 22.064 8.57396 21.926 8.60135C21.7898 8.62838 21.6408 8.63618 21.4357 8.63618C21.1252 8.63618 20.8941 8.60859 20.6415 8.4992C20.3952 8.39255 20.1357 8.21102 19.7613 7.92187C15.3094 4.48981 9.13083 4.49628 4.70371 7.9467L4.70369 7.94671C4.34395 8.22697 4.09001 8.40271 3.84094 8.5056C3.58685 8.61055 3.34682 8.63618 3.02274 8.6362L3.02086 8.63617C2.79645 8.63302 2.64162 8.62525 2.5021 8.59544C2.35969 8.56502 2.23979 8.51313 2.08241 8.43254C1.59845 8.18471 1.17538 7.71229 0.991137 7.20775C0.93363 7.05711 0.897832 6.93314 0.879966 6.79111C0.862339 6.65098 0.862844 6.49833 0.872136 6.29214L0.872127 6.29214L0.872214 6.2906C0.897728 5.83985 0.98534 5.49601 1.23471 5.15007C1.47831 4.81214 1.87094 4.48016 2.48281 4.03614L2.4829 4.03608C4.91838 2.27163 7.68898 1.21799 10.7247 0.907084ZM14.5418 2.30033L14.5416 2.30031C13.6234 2.15707 11.6556 2.09477 10.8448 2.18152L10.8448 2.18153C7.78923 2.50634 5.13234 3.57366 2.72992 5.43464L2.72969 5.43482C2.47168 5.63378 2.3203 5.7837 2.2313 5.92967C2.14548 6.07043 2.11183 6.21738 2.11183 6.42411C2.11183 6.58661 2.13581 6.71079 2.18755 6.82135C2.23964 6.93266 2.32438 7.03984 2.46049 7.16145L2.46065 7.16158C2.63562 7.31838 2.82197 7.38956 3.01508 7.38628C3.21063 7.38295 3.42836 7.3029 3.66178 7.12877L3.66232 7.12837C5.56595 5.7231 7.05701 4.96452 8.87923 4.49955L8.87947 4.49949C11.7166 3.78102 14.6414 3.9781 17.3424 5.07188L17.3426 5.07199C18.469 5.53088 19.4134 6.08534 20.8269 7.13475C21.0602 7.30568 21.2779 7.38439 21.4736 7.38706C21.6671 7.38969 21.8536 7.31836 22.0285 7.16158L22.0287 7.16145C22.1648 7.03984 22.2495 6.93266 22.3016 6.82135C22.3533 6.71079 22.3773 6.58661 22.3773 6.42411C22.3773 6.21738 22.3437 6.07043 22.2579 5.92967C22.1689 5.7837 22.0175 5.63378 21.7595 5.43482L21.7592 5.43464C19.5819 3.74813 17.1992 2.71233 14.5418 2.30033Z" fill="#344449" stroke="#344449" stroke-width="0.268462" />
+														<path d="M11.4961 7.30261L11.4973 7.30251C11.6599 7.28919 12.1463 7.28957 12.5832 7.30846C14.4379 7.37229 16.0708 7.85741 17.6579 8.81995C18.1793 9.13334 18.5526 9.44601 18.7947 9.80233C19.039 10.162 19.143 10.5561 19.143 11.019C19.143 12.7152 17.4024 13.7828 15.9372 12.9686C15.0025 12.4507 14.3177 12.136 13.6798 11.9648C13.0448 11.7944 12.4494 11.7644 11.6914 11.8265L11.6904 11.8266C10.7046 11.9 10.0791 12.1285 8.59786 12.9435C8.37188 13.07 8.23191 13.1473 8.0812 13.1879C7.9295 13.2288 7.7726 13.2311 7.51832 13.2311L7.51643 13.2311C7.29179 13.2279 7.13491 13.2201 6.99495 13.1923C6.8519 13.1639 6.73245 13.1158 6.58003 13.041L6.58003 13.041L6.57947 13.0408C5.28263 12.3968 4.9374 10.6245 5.89904 9.53247L5.89932 9.53216C6.06345 9.34691 6.39261 9.10075 6.77093 8.86085C7.15281 8.6187 7.59814 8.37459 8.00475 8.19517C9.01518 7.74169 10.3084 7.41089 11.4961 7.30261ZM8.7998 11.3863L8.79984 11.3863C9.84759 10.808 10.9767 10.5259 12.246 10.5259C13.5345 10.5259 14.6636 10.8146 15.7416 11.4116C16.2388 11.6868 16.5025 11.8317 16.6677 11.9087C16.7493 11.9467 16.801 11.9653 16.8409 11.975C16.8788 11.9843 16.9106 11.9867 16.9553 11.9867C17.4613 11.9867 17.8908 11.5534 17.8908 11.0127C17.8908 10.8077 17.8486 10.653 17.7477 10.5064C17.6434 10.3546 17.47 10.2024 17.1889 10.0166C16.0155 9.24856 14.6285 8.76407 13.0928 8.60242C12.1857 8.50955 11.3328 8.55881 10.3553 8.75775C9.62765 8.91242 8.78707 9.22444 8.08889 9.56991C7.73997 9.74255 7.42959 9.9221 7.18836 10.0925C6.94246 10.2661 6.7841 10.4196 6.7198 10.5361C6.65215 10.6586 6.61117 10.8247 6.60342 10.9929C6.59563 11.162 6.62212 11.3162 6.67287 11.418C6.84971 11.7628 7.20007 11.9867 7.53676 11.9867C7.60968 11.9867 7.66835 11.9797 7.83738 11.9008C8.01276 11.8191 8.29067 11.6676 8.7998 11.3863Z" fill="#344449" stroke="#344449" stroke-width="0.268462" />
+														<path d="M11.8253 13.8532L11.8262 13.853C12.1144 13.8089 12.4831 13.8334 12.8495 13.9043C13.2171 13.9754 13.5936 14.0953 13.8989 14.25C14.1311 14.3672 14.4449 14.6304 14.7244 14.912C15.0046 15.1941 15.2697 15.5141 15.396 15.7558L15.3962 15.7563C15.5104 15.9769 15.6165 16.2886 15.6939 16.5985C15.7712 16.9081 15.8231 17.2286 15.8231 17.4677L15.8231 17.4681C15.8168 19.4839 14.2173 21.1342 12.2461 21.1342C9.91713 21.1342 8.22259 18.8951 8.79594 16.5979C8.88088 16.2532 8.98147 15.975 9.12817 15.7144C9.27469 15.4541 9.46413 15.2167 9.72083 14.9506C10.295 14.3496 11.0104 13.9836 11.8253 13.8532ZM13.0658 15.2699L13.0658 15.27L13.0629 15.2688C12.9221 15.2123 12.6942 15.1636 12.4629 15.1359C12.2302 15.1079 12.0169 15.1038 11.9024 15.125C10.9932 15.3043 10.3068 15.9291 10.0321 16.8268C9.69529 17.9395 10.2355 19.1566 11.3081 19.67L11.3081 19.67L11.3094 19.6706C11.4583 19.7438 11.5509 19.7799 11.6714 19.8004C11.7976 19.8218 11.9586 19.8268 12.2461 19.8268C12.5336 19.8268 12.6946 19.8218 12.8207 19.8004C12.9413 19.7799 13.0339 19.7438 13.1828 19.6706L13.1828 19.6706L13.184 19.6701C13.3667 19.5823 13.6502 19.3831 13.8072 19.2344C14.6633 18.411 14.8048 17.1909 14.155 16.1537L14.1546 16.153C13.9371 15.8014 13.4754 15.4236 13.0658 15.2699ZM11.8772 14.9932C12.1477 14.9428 12.7994 15.0183 13.1129 15.1443L11.8772 14.9932Z" fill="#344449" stroke="#344449" stroke-width="0.268462" />
+													</svg>
+													<span>WiFi</span>
+												</button>
+											</li>
+										</ul>
+									</li>
+									<!-- Меню ПУНКТ МЕНЮ -->
+
+									<li class="menu__item active">
+										<button id="maintenance-toggle-button" type="button" class="menu__link button button--toggler active">
+											<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+												<path d="M16.0627 12.4261C19.1717 12.4261 21.6919 9.86827 21.6919 6.71305C21.6919 6.16776 21.6167 5.64031 21.4761 5.14083C21.3674 4.75459 20.8954 4.66493 20.6155 4.94896L19.1119 6.475C18.3346 7.26381 17.0745 7.26381 16.2973 6.475C15.52 5.6862 15.52 4.40728 16.2973 3.61848L17.8009 2.09244C18.0808 1.8084 17.9924 1.32938 17.6118 1.21906C17.1197 1.07639 16.6 1 16.0627 1C12.9538 1 10.4335 3.55782 10.4335 6.71305C10.4335 6.99526 10.4536 7.27269 10.4926 7.54394C10.6098 8.36038 10.5228 9.23285 10.069 9.89132C9.99663 9.99626 9.91499 10.0958 9.82338 10.1887L1.58293 18.5519C0.805691 19.3407 0.805691 20.6196 1.58293 21.4084C2.36016 22.1972 3.62031 22.1972 4.39755 21.4084L11.5 14.2002L12.638 13.0453C13.3045 12.3689 14.3113 12.2282 15.244 12.3661C15.2741 12.3706 15.3042 12.3748 15.3345 12.3787C15.5729 12.41 15.8159 12.4261 16.0627 12.4261Z" stroke="#344449" stroke-width="1.478" stroke-linecap="round" />
+											</svg>
+											<span>Maintenance</span>
+										</button>
+										<ul id="maintenance-sub-menu" class="menu__sub-list open">
+											<li class="menu__sub-item">
+												<button id="fw-button" class="menu__sub-link button button--link">
+													<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+														<g clip-path="url(#clip0_127_1595)">
+															<path d="M10.3502 6.19244V7.86997C10.3502 8.58906 11.2196 8.94918 11.7281 8.44071L15.0154 5.15342C15.3306 4.83821 15.3306 4.32716 15.0154 4.01194L11.7281 0.724656C11.2196 0.21618 10.3502 0.576309 10.3502 1.29539V3.04208C6.24367 3.37274 3.01687 6.80756 3.01687 10.9993C3.01687 12.4911 3.43303 13.8788 4.14232 15.0695C4.41707 15.5307 5.04012 15.587 5.40216 15.225L6.51918 14.1079C6.77236 13.8548 6.82266 13.4744 6.66813 13.1691C6.33787 12.5168 6.1502 11.7826 6.1502 10.9993C6.1502 8.53999 7.97827 6.50967 10.3502 6.19244ZM7.77075 16.8453L8.23037 17.3049L7.77075 16.8453C7.45554 17.1605 7.45554 17.6715 7.77075 17.9868L11.058 21.274L11.5028 20.8292L11.058 21.274C11.5665 21.7825 12.4359 21.4224 12.4359 20.7033V18.9566C16.5425 18.626 19.7692 15.1911 19.7692 10.9993C19.7692 9.50756 19.3531 8.11991 18.6438 6.92924C18.3691 6.46802 17.746 6.41169 17.384 6.77373L16.2669 7.89076C16.0138 8.14393 15.9635 8.52432 16.118 8.82955C16.4482 9.4819 16.6359 10.2161 16.6359 10.9993C16.6359 13.4587 14.8078 15.489 12.4359 15.8063V14.1287C12.4359 13.4096 11.5665 13.0495 11.058 13.558L7.77075 16.8453Z" stroke="#344449" stroke-width="1.3" />
+														</g>
+														<defs>
+															<clipPath id="clip0_127_1595">
+																<rect width="22" height="22" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+													<span style="text-wrap: nowrap">FW update</span>
+												</button>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<!-- Бокове меню КНОПКА ЗГОРТАННЯ-РОЗГОРТАННЯ -->
+
+						<button id="asideToggler" class="aside-page__toggler">
+							<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+								<path d="M14.3333 11H7.66667M7.66667 11L10.9074 7.66667M7.66667 11L10.9074 14.3333M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z" stroke="#344449" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+					</aside>
+					<!-- Головний блок -->
+
+					<div class="page__content content-page">
+						<!-- Головний блок / Project name -->
+
+						<div class="content-page__project-name">Project name</div>
+						<!-- Головний блок / Блок з контентом -->
+
+						<div class="content-page__main main-content-page">
+							<!-- Головний блок / Блок з контентом / Секція dashboard -->
+
+							<section class="main-content-page__dashboard dashboard-section section active">
+								<div class="dashboard-section__title title-section">
+									<img src="img/icons/grid.svg" alt="Dashboard Icon" />
+									<span>Dashboard</span>
+								</div>
+								<div class="dashboard-section__items">
+									<div class="dashboard-section__item dashboard-section__item--temperature item-dashboard-section">
+										<div class="item-dashboard-section__name">
+											<img src="img/icons/temp.svg" alt="Temperature Icon" />
+											<span>Temperature</span>
+										</div>
+										<div class="item-dashboard-section__value">+25.5</div>
+										<div class="item-dashboard-section__unit">°C</div>
+									</div>
+									<div class="dashboard-section__item dashboard-section__item--humidity item-dashboard-section">
+										<div class="item-dashboard-section__name">
+											<img src="img/icons/cloud.svg" alt="Humidity Icon" /><span>Humidity</span>
+										</div>
+										<div class="item-dashboard-section__value">64.34</div>
+										<div class="item-dashboard-section__unit">%</div>
+									</div>
+									<div class="dashboard-section__item dashboard-section__item--pressure item-dashboard-section">
+										<div class="item-dashboard-section__name">
+											<img src="img/icons/speed.svg" alt="Pressure Icon" />
+											<span>Pressure</span>
+										</div>
+										<div class="item-dashboard-section__value">101,32</div>
+										<div class="item-dashboard-section__unit">Pa</div>
+									</div>
+									<div class="dashboard-section__item dashboard-section__item--mqtt item-dashboard-section">
+										<div class="item-dashboard-section__name">
+											<img src="img/icons/done.svg" alt="MQTT Icon" /><span>MQTT</span>
+										</div>
+										<div class="item-dashboard-section__status">
+											Connected
+										</div>
+									</div>
+									<div class="dashboard-section__item dashboard-section__item--date item-dashboard-section">
+										<div class="item-dashboard-section__name">
+											<img src="img/icons/calendar.svg" alt="Data / Time Icon" />
+											<span>Data / Time</span>
+										</div>
+										<div class="item-dashboard-section__status">
+											<span>14:55</span><span>26.11.2023</span>
+										</div>
+									</div>
+								</div>
+							</section>
+							<!-- Головний блок / Блок з контентом / Секція wi-fi -->
+
+							<section class="main-content-page__wi-fi wi-fi-section section">
+								<div class="wi-fi-section__title title-section">
+									<img src="img/icons/wifi.svg" alt="Wi-Fi Icon" />
+									<span>WiFi (Page name)</span>
+								</div>
+								<div class="wi-fi-section__modes">
+									<button id="ap-mode" class="wi-fi-section__mode wi-fi-section__mode--ap active">
+										AP mode
+									</button>
+									<button id="sta-mode" class="wi-fi-section__mode wi-fi-section__mode--sta">
+										STA mode
+									</button>
+								</div>
+								<form id="ap-form" class="wi-fi-section__form form-wi-fi active" action="#">
+									<div class="form-wi-fi__state">
+										<div class="form-wi-fi__columm column-form">
+											<div class="form-wi-fi__item item-form select-item">
+												<label for="#">State</label>
+												<div class="select-item__select">
+													<button type="button" class="select-item__button button button--toggler button--visible">
+														<span>Select</span>
+													</button>
+													<div class="select-item__items">
+														<button id="disabled" type="button" class="select-item__item">
+															Disabled
+														</button>
+														<button id="enabled" type="button" class="select-item__item">
+															Enabled
+														</button>
+													</div>
+												</div>
+											</div>
+											<div class="form-wi-fi__item item-form">
+												<label for="ssid">SSID</label>
+												<input name="ssid" autocomplete="off" type="text" class="form-wi-fi__input input-wi-fi" />
+											</div>
+										</div>
+										<div class="form-wi-fi__columm column-form column-form--r">
+											<div class="form-wi-fi__item item-form">
+												<label for="password">Password</label>
+												<input name="password" autocomplete="off" type="password" class="form-wi-fi__input input-wi-fi" />
+											</div>
+											<div class="form-wi-fi__item item-form">
+												<label for="password-confirm">Password confirm</label>
+												<input name="password-confirm" autocomplete="off" type="password" class="item-form__input input-wi-fi" />
+											</div>
+										</div>
+									</div>
+									<div class="form-wi-fi__advanced advanced-form">
+										<button id="advanced" type="button" class="advanced-form__button button button--toggler button--visible advanced active">
+											<span>Advanced</span>
+										</button>
+										<div class="advanced-form__body open">
+											<div class="advanced-form__column column-form">
+												<div class="advanced-form__item item-form">
+													<label for="ip">IP address</label>
+													<input name="ip" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
+												</div>
+												<div class="advanced-form__item item-form">
+													<label for="subnet-mask">Subnet mask</label>
+													<input name="subnet-mask" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
+												</div>
+												<div class="form-wi-fi__item item-form select-item">
+													<label for="#">Channel</label>
+													<div class="select-item__select">
+														<button type="button" class="select-item__button button button--toggler button--visible active">
+															<span>Select</span>
+														</button>
+														<div class="select-item__items">
+															<button id="option-1" type="button" class="select-item__item">
+																Option-1
+															</button>
+															<button id="option-2" type="button" class="select-item__item">
+																Option-2
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="advanced-form__column column-form column-form--r">
+												<div class="advanced-form__item item-form">
+													<label for="max-clients">Max connected clients</label>
+													<input name="max-clients" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
+												</div>
+												<div class="advanced-form__item item-form">
+													<label for="mac-address">MAC address</label>
+													<input name="mac-address" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-wi-fi__client client-form">
+										<div class="client-form__lable">
+											<img src="img/icons/profile.svg" alt="Profile Icon" />
+											<span>Client list</span>
+										</div>
+										<div class="client-form__items">
+											<div class="client-form__item item-client-form">
+												<div class="item-client-form__name">Name</div>
+												<div class="item-client-form__value"></div>
+											</div>
+											<div class="client-form__item item-client-form">
+												<div class="item-client-form__name">MAC address</div>
+												<div class="item-client-form__value"></div>
+											</div>
+											<div class="client-form__item item-client-form">
+												<div class="item-client-form__name">IP address</div>
+												<div class="item-client-form__value"></div>
+											</div>
+										</div>
+									</div>
+									<div class="form-wi-fi__status status-form">
+										<div class="status-form__column column-form">
+											<div class="status-form__item item-form">
+												<label for="mac-address">Status</label>
+												<input name="status" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+											</div>
+										</div>
+										<div class="status-form__column column-form column-form--r">
+											<button type="submit" class="status-form__button button button--link button--section active">
+												<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
+													<path opacity="0.24" d="M10.3809 6.27439V2.29175H10.7924C11.0934 2.29175 11.3826 2.40914 11.5984 2.61897L15.3163 6.23363C15.5403 6.45133 15.6666 6.75035 15.6666 7.06266V7.43064H11.5371C10.8985 7.43064 10.3809 6.91297 10.3809 6.27439Z" fill="white" />
+													<path d="M17.2083 13.8542L14.1249 16.9376L12.5833 15.3959M10.3809 2.29175H5.64575C4.36859 2.29175 3.33325 3.32709 3.33325 4.60425V15.3959C3.33325 16.6731 4.36859 17.7084 5.64575 17.7084H9.49992M10.3809 2.29175V6.27439C10.3809 6.91297 10.8985 7.43064 11.5371 7.43064H15.6666M10.3809 2.29175H10.7924C11.0934 2.29175 11.3826 2.40914 11.5984 2.61897L15.3163 6.23363C15.5403 6.45133 15.6666 6.75035 15.6666 7.06266V7.43064M15.6666 7.43064V9.22925" stroke="white" stroke-width="1.54167" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+												<span>Save</span>
+											</button>
+										</div>
+									</div>
+								</form>
+								<form id="sta-form" class="wi-fi-section__form form-wi-fi" action="#">
+									<div class="form-wi-fi__state">
+										<div class="form-wi-fi__columm column-form">
+											<div class="form-wi-fi__item item-form select-item">
+												<label for="#">State</label>
+												<div class="select-item__select">
+													<button type="button" class="select-item__button button button--toggler button--visible">
+														<span>Select</span>
+													</button>
+													<div class="select-item__items">
+														<button id="disabled" type="button" class="select-item__item">
+															Disabled
+														</button>
+														<button id="enabled" type="button" class="select-item__item">
+															Enabled
+														</button>
+													</div>
+												</div>
+											</div>
+											<div class="form-wi-fi__item item-form">
+												<label for="ssid">Scan for AP</label>
+												<button class="status-form__button button button--link button--section scan active">
+													<span>Scan</span>
+												</button>
+											</div>
+										</div>
+										<div class="form-wi-fi__columm column-form column-form--r">
+											<div class="form-wi-fi__item item-form">
+												<label for="ssid">SSID</label>
+												<input id="ssid" name="ssid" autocomplete="off" type="text" class="form-wi-fi__input input-wi-fi" />
+											</div>
+											<div class="form-wi-fi__item item-form">
+												<label for="password">Password</label>
+												<input id="password" name="password" autocomplete="off" type="password" class="form-wi-fi__input input-wi-fi" />
+											</div>
+										</div>
+									</div>
+									<div class="form-wi-fi__advanced advanced-form">
+										<button id="advanced" type="button" class="advanced-form__button button button--toggler button--visible advanced active">
+											<span>Advanced</span>
+										</button>
+										<div class="advanced-form__body open">
+											<div class="advanced-form__column column-form">
+												<div class="form-wi-fi__item item-form select-item">
+													<label for="#">IP mode</label>
+													<div class="select-item__select">
+														<button type="button" class="select-item__button button button--toggler button--visible active">
+															<span>Select</span>
+														</button>
+														<div class="select-item__items">
+															<button id="option-1" type="button" class="select-item__item">
+																Option-1
+															</button>
+															<button id="option-2" type="button" class="select-item__item">
+																Option-2
+															</button>
+															<button id="option-3" type="button" class="select-item__item">
+																Option-3
+															</button>
+														</div>
+													</div>
+												</div>
+
+												<div class="advanced-form__item item-form">
+													<label for="subnet-mask">Subnet mask</label>
+													<input id="subnet-mask" name="subnet-mask" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+												</div>
+												<div class="advanced-form__item item-form">
+													<label for="dns">DNS</label>
+													<input id="dns" name="subnet-mask" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+												</div>
+												<div class="advanced-form__item item-form">
+													<label for="reconnect-timeout">Reconnect <br />
+														timeout (s).</label>
+													<input id="reconnect-timeout" name="subnet-mask" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+												</div>
+											</div>
+											<div class="advanced-form__column column-form column-form--r">
+												<div class="advanced-form__item item-form">
+													<label for="ip">IP address</label>
+													<input id="ip" name="ip" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
+												</div>
+												<div class="advanced-form__item item-form">
+													<label for="default-gateway">Default <br />
+														Gateway</label>
+													<input id="default-gateway" name="default-gateway" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+												</div>
+												<div class="advanced-form__item item-form">
+													<label for="host-name">Hostname</label>
+													<input id="host-name" name="host-name" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+												</div>
+												<div class="advanced-form__item item-form">
+													<label for="mac-address">MAC address</label>
+													<input id="mac-address" name="mac-address" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-wi-fi__status status-form">
+										<div class="status-form__column column-form">
+											<div class="status-form__item item-form">
+												<label for="mac-address">Status</label>
+												<input name="status" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+											</div>
+										</div>
+										<div class="status-form__column column-form column-form--r">
+											<button type="submit" class="status-form__button button button--link button--section active">
+												<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
+													<path opacity="0.24" d="M10.3809 6.27439V2.29175H10.7924C11.0934 2.29175 11.3826 2.40914 11.5984 2.61897L15.3163 6.23363C15.5403 6.45133 15.6666 6.75035 15.6666 7.06266V7.43064H11.5371C10.8985 7.43064 10.3809 6.91297 10.3809 6.27439Z" fill="white" />
+													<path d="M17.2083 13.8542L14.1249 16.9376L12.5833 15.3959M10.3809 2.29175H5.64575C4.36859 2.29175 3.33325 3.32709 3.33325 4.60425V15.3959C3.33325 16.6731 4.36859 17.7084 5.64575 17.7084H9.49992M10.3809 2.29175V6.27439C10.3809 6.91297 10.8985 7.43064 11.5371 7.43064H15.6666M10.3809 2.29175H10.7924C11.0934 2.29175 11.3826 2.40914 11.5984 2.61897L15.3163 6.23363C15.5403 6.45133 15.6666 6.75035 15.6666 7.06266V7.43064M15.6666 7.43064V9.22925" stroke="white" stroke-width="1.54167" stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+												<span>Save</span>
+											</button>
+										</div>
+									</div>
+								</form>
+							</section>
+							<!-- Головний блок / Блок з контентом / Секція fw-update -->
+
+							<section class="main-content-page__fw-update fw-section section">
+								<div class="fw-section__title title-section">
+									<img src="img/icons/refresh.svg" alt="Wi-Fi Icon" />
+									<span>FW Update</span>
+								</div>
+								<div class="fw-section__body">
+									<div class="fw-section__upload upload-fw-section">
+										<div class="upload-fw-section__body">
+											<h3 class="upload-fw-section__title">
+												Select or drop <br />
+												you FW file here
+											</h3>
+											<div class="upload-fw-section__type">(*.bin)</div>
+											<button type="button" class="upload-fw-section__button">
+												<label for="file-input">+</label>
+												<input id="file-input" type="file" />
+											</button>
+										</div>
+									</div>
+									<div class="fw-section__progress">
+										<span id="progress-value">60%</span>
+										<span><i id="progress-line"></i></span>
+									</div>
+									<button type="button" class="fw-section__button button button--link button--section active">
+										<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+											<g clip-path="url(#clip0_127_1619)">
+												<path d="M7.15065 12.9999C7.15065 9.98735 9.42478 7.50848 12.3507 7.18555V9.30156C12.3507 10.0461 13.2508 10.419 13.7773 9.8925L17.6623 6.00752C17.9887 5.68116 17.9887 5.15201 17.6623 4.82565L13.7773 0.940666L13.3177 1.40029L13.7773 0.940665C13.2508 0.414193 12.3507 0.787068 12.3507 1.53161V3.70556C7.5067 4.03914 3.68398 8.07113 3.68398 12.9999C3.68398 14.7406 4.1695 16.3598 4.99741 17.7496L5.55583 17.4169L4.99741 17.7496C5.28154 18.2265 5.92622 18.2852 6.30121 17.9103L5.8416 17.4506L6.30122 17.9103L7.62133 16.5901L7.16172 16.1305L7.62134 16.5901C7.8834 16.3281 7.93569 15.9341 7.77549 15.6176L7.19557 15.9112L7.77549 15.6176C7.3771 14.8307 7.15065 13.9448 7.15065 12.9999ZM9.26759 19.9923L9.72721 20.4519L9.26759 19.9923C8.94123 20.3187 8.94122 20.8478 9.26759 21.1742L13.1526 25.0592C13.679 25.5856 14.5792 25.2128 14.5792 24.4682V22.2943C19.4232 21.9607 23.2459 17.9287 23.2459 12.9999C23.2459 11.2593 22.7604 9.64008 21.9325 8.25028C21.6483 7.77331 21.0036 7.71459 20.6287 8.08957L19.3085 9.4097C19.0465 9.67176 18.9942 10.0658 19.1544 10.3822C19.5528 11.1691 19.7792 12.0551 19.7792 12.9999C19.7792 16.0125 17.5051 18.4913 14.5792 18.8143V16.6983C14.5792 15.9537 13.679 15.5809 13.1526 16.1073L13.6122 16.567L13.1526 16.1073L9.26759 19.9923Z" stroke="white" stroke-width="1.3" />
+											</g>
+											<defs>
+												<clipPath id="clip0_127_1619">
+													<rect width="26" height="26" fill="white" />
+												</clipPath>
+											</defs>
+										</svg>
+										<span>Update</span>
+									</button>
+								</div>
+							</section>
+						</div>
+						<!-- Головний блок / Нижній блок з інфо -->
+
+						<div class="content-page__bottom-info bottom-info">
+							<div class="bottom-info__item">FW: v1.3.2</div>
+							<div class="bottom-info__item">UI: v1.1.1</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="js/app.min.js?_v=20231207152306"></script>
+</body>
+
+</html>
