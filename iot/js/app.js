@@ -460,11 +460,13 @@
         wiFiSection.classList.add("active");
         dashboardSection.classList.remove("active");
         fwSection.classList.remove("active");
-        document.documentElement.classList.remove("menu-open");
-        document.documentElement.classList.toggle("lock");
-        titlesOfSections[2].classList.add("mobile");
-        titlesOfSections[0].classList.remove("mobile");
-        titlesOfSections[1].classList.remove("mobile");
+        if (window.innerWidth < 768) {
+            document.documentElement.classList.remove("menu-open");
+            document.documentElement.classList.toggle("lock");
+            titlesOfSections[2].classList.add("mobile");
+            titlesOfSections[0].classList.remove("mobile");
+            titlesOfSections[1].classList.remove("mobile");
+        }
     }));
     fwButton.addEventListener("click", (() => {
         fwButton.classList.add("active");
@@ -473,11 +475,13 @@
         fwSection.classList.add("active");
         wiFiSection.classList.remove("active");
         dashboardSection.classList.remove("active");
-        document.documentElement.classList.remove("menu-open");
-        document.documentElement.classList.toggle("lock");
-        titlesOfSections[1].classList.add("mobile");
-        titlesOfSections[0].classList.remove("mobile");
-        titlesOfSections[2].classList.remove("mobile");
+        if (window.innerWidth < 768) {
+            document.documentElement.classList.remove("menu-open");
+            document.documentElement.classList.toggle("lock");
+            titlesOfSections[1].classList.add("mobile");
+            titlesOfSections[0].classList.remove("mobile");
+            titlesOfSections[2].classList.remove("mobile");
+        }
     }));
     dashboardButton.addEventListener("click", (() => {
         dashboardButton.classList.add("active");
@@ -486,11 +490,13 @@
         dashboardSection.classList.add("active");
         fwSection.classList.remove("active");
         wiFiSection.classList.remove("active");
-        document.documentElement.classList.remove("menu-open");
-        document.documentElement.classList.toggle("lock");
-        titlesOfSections[0].classList.add("mobile");
-        titlesOfSections[1].classList.remove("mobile");
-        titlesOfSections[2].classList.remove("mobile");
+        if (window.innerWidth < 768) {
+            document.documentElement.classList.remove("menu-open");
+            document.documentElement.classList.toggle("lock");
+            titlesOfSections[0].classList.add("mobile");
+            titlesOfSections[1].classList.remove("mobile");
+            titlesOfSections[2].classList.remove("mobile");
+        }
     }));
     const apMode = document.getElementById("ap-mode");
     const staMode = document.getElementById("sta-mode");

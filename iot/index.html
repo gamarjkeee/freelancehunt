@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20231208160226" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20231208185929" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,14 +30,12 @@
 
 				<div class="page__content-wrapper">
 					<!-- Бокове меню (на мобайлі трансформується в мобільне меню) -->
-
 					<aside class="page__aside aside-page">
+						<!-- Меню КНОПКА-БУРГЕР -->
+						<button type="button" class="icon-menu">
+							<span></span><i></i>
+						</button>
 						<div class="aside-page__header">
-							<!-- Меню КНОПКА-БУРГЕР -->
-							<button type="button" class="icon-menu">
-								<span></span><i></i>
-							</button>
-
 							<!-- Бокове меню ЛОГО -->
 
 							<a href="index.html" class="aside-page__logo">
@@ -51,7 +49,9 @@
 
 							<nav class="menu__body">
 								<!-- Меню СПИСОК ПУНКТІВ МЕНЮ -->
-
+								<a href="index.html" class="menu__logo">
+									<picture><source srcset="img/logo-small.webp" type="image/webp"><img src="img/logo-small.png" alt="Logo Image" /></picture>
+								</a>
 								<ul class="menu__list">
 									<!-- Меню ПУНКТ МЕНЮ -->
 
@@ -186,6 +186,10 @@
 											<span>14:55</span><span>26.11.2023</span>
 										</div>
 									</div>
+								</div>
+								<div class="content-page__bottom-info bottom-info mobile">
+									<div class="bottom-info__item">FW: v1.3.2</div>
+									<div class="bottom-info__item">UI: v1.1.1</div>
 								</div>
 							</section>
 							<!-- Головний блок / Блок з контентом / Секція wi-fi -->
@@ -383,7 +387,6 @@
 														</div>
 													</div>
 												</div>
-
 												<div class="advanced-form__item item-form">
 													<label for="subnet-mask">Subnet mask</label>
 													<input id="subnet-mask" name="subnet-mask" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
@@ -437,6 +440,10 @@
 										</div>
 									</div>
 								</form>
+								<div class="content-page__bottom-info bottom-info mobile">
+									<div class="bottom-info__item">FW: v1.3.2</div>
+									<div class="bottom-info__item">UI: v1.1.1</div>
+								</div>
 							</section>
 							<!-- Головний блок / Блок з контентом / Секція fw-update -->
 
@@ -448,6 +455,12 @@
 								<div class="fw-section__body">
 									<div class="fw-section__upload upload-fw-section">
 										<div class="upload-fw-section__body">
+											<div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+												<p>
+													Drag one or more files to this <i>drop zone</i>.
+												</p>
+											</div>
+
 											<h3 class="upload-fw-section__title">
 												Select or drop <br />
 												you FW file here
@@ -477,6 +490,10 @@
 										<span>Update</span>
 									</button>
 								</div>
+								<div class="content-page__bottom-info bottom-info mobile">
+									<div class="bottom-info__item">FW: v1.3.2</div>
+									<div class="bottom-info__item">UI: v1.1.1</div>
+								</div>
 							</section>
 						</div>
 						<!-- Головний блок / Нижній блок з інфо -->
@@ -490,7 +507,7 @@
 			</div>
 		</main>
 	</div>
-	<script src="js/app.min.js?_v=20231208160226"></script>
+	<script src="js/app.min.js?_v=20231208185929"></script>
 </body>
 
 </html>
