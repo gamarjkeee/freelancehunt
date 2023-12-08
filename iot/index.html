@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20231208185929" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20231208195639" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -454,23 +454,19 @@
 								</div>
 								<div class="fw-section__body">
 									<div class="fw-section__upload upload-fw-section">
-										<div class="upload-fw-section__body">
-											<div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-												<p>
-													Drag one or more files to this <i>drop zone</i>.
-												</p>
+										<label for="file-input" id="drop-area">
+											<div class="upload-fw-section__body">
+												<input id="file-input" type="file" hidden />
+												<h3 class="upload-fw-section__title">
+													Select or drop <br />
+													you FW file here
+												</h3>
+												<div class="upload-fw-section__type">(*.bin)</div>
+												<div type="button" class="upload-fw-section__button">
+													+
+												</div>
 											</div>
-
-											<h3 class="upload-fw-section__title">
-												Select or drop <br />
-												you FW file here
-											</h3>
-											<div class="upload-fw-section__type">(*.bin)</div>
-											<button type="button" class="upload-fw-section__button">
-												<label for="file-input">+</label>
-												<input id="file-input" type="file" />
-											</button>
-										</div>
+										</label>
 									</div>
 									<div class="fw-section__progress">
 										<span id="progress-value">60%</span>
@@ -507,7 +503,7 @@
 			</div>
 		</main>
 	</div>
-	<script src="js/app.min.js?_v=20231208185929"></script>
+	<script src="js/app.min.js?_v=20231208195639"></script>
 </body>
 
 </html>

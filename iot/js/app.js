@@ -552,6 +552,21 @@
             }));
         }));
     }));
+    const dropArea = document.getElementById("drop-area");
+    const inputFile = document.getElementById("file-input");
+    inputFile.addEventListener("change", uploadFife);
+    function uploadFife() {
+        alert("файл завантажився");
+    }
+    dropArea.addEventListener("dragover", (function(e) {
+        e.preventDefault();
+        alert("файл завантажився");
+    }));
+    dropArea.addEventListener("drop", (function(e) {
+        e.preventDefault();
+        inputFile.files = e.dataTransfer.files;
+        alert("файл завантажився");
+    }));
     window["FLS"] = false;
     isWebp();
     addLoadedClass();
