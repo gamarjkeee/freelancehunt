@@ -303,6 +303,20 @@ body {
   display: block;
 }
 
+.button.button--toggler.button--visible.advanced {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 13.75rem;
+  height: 2.75rem;
+  border-radius: 0.625rem;
+  background: #eeeff2;
+}
+
+.button.button--toggler.button--visible.advanced.active {
+  border-radius: 0.625rem 0.625rem 0px 0px;
+}
+
 .button.button--toggler.active::after {
   rotate: -180deg;
 }
@@ -905,20 +919,6 @@ section.section.active {
           justify-content: space-between;
 }
 
-.advanced-form__button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 13.75rem;
-  height: 2.75rem;
-  border-radius: 0.625rem;
-  background: #eeeff2;
-}
-
-.advanced-form__button.active {
-  border-radius: 0.625rem 0.625rem 0px 0px;
-}
-
 .advanced-form__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -949,13 +949,13 @@ section.section.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-column-gap: 1.25rem;
      -moz-column-gap: 1.25rem;
           column-gap: 1.25rem;
-  display: none;
+  padding: 0 0.9375rem;
 }
 
 .client-form__lable {
@@ -968,6 +968,12 @@ section.section.active {
   -webkit-column-gap: 0.5625rem;
      -moz-column-gap: 0.5625rem;
           column-gap: 0.5625rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 6.875rem;
+          flex: 0 0 6.875rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .client-form__lable span {
@@ -978,22 +984,18 @@ section.section.active {
 }
 
 .client-form__items {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
 .client-form__item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 33.33%;
-          flex: 1 1 33.33%;
   color: #344449;
   font-size: 0.9375rem;
   font-weight: 400;
@@ -1007,7 +1009,7 @@ section.section.active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 3.625rem;
+  text-align: center;
   border: 0.0625rem solid #d2dfe4;
 }
 
@@ -1017,6 +1019,23 @@ section.section.active {
 
 .client-form__item:nth-child(3) {
   border-radius: 0 0.625rem 0.625rem 0;
+}
+
+.item-client-form {
+  padding: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.9375rem;
+}
+
+.item-client-form__name {
+  font-weight: 500;
+  line-height: normal;
 }
 
 .status-form {
@@ -1341,10 +1360,6 @@ section.section.active {
         -ms-flex: 0 0 13.75rem;
             flex: 0 0 13.75rem;
   }
-
-  .client-form__items {
-    padding-right: 1.875rem;
-  }
 }
 
 @media (min-width: 101.875em) {
@@ -1383,6 +1398,14 @@ section.section.active {
 
   .item-dashboard-section__status {
     font-size: 1.6875rem;
+  }
+
+  .item-client-form__name {
+    font-size: 1rem;
+  }
+
+  .item-client-form__value {
+    font-size: 1rem;
   }
 }
 
@@ -1518,6 +1541,16 @@ section.section.active {
   }
 }
 
+@media (max-width: 20em) {
+  .item-client-form__name {
+    font-size: 0.875rem;
+  }
+
+  .item-client-form__value {
+    font-size: 0.875rem;
+  }
+}
+
 @media (max-width: 76.375em) {
   .column-form {
     -webkit-box-flex: 0;
@@ -1558,6 +1591,23 @@ section.section.active {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+
+  .client-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 0.3125rem;
+  }
+
+  .client-form__lable {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 }
 
@@ -1868,6 +1918,39 @@ section.section.active {
   }
 }
 
+@media (max-width: 33.6875em) {
+  .client-form {
+    padding: 0;
+  }
+
+  .client-form__items {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .client-form__item:nth-child(1) {
+    border-radius: 0.625rem 0.625rem 0 0;
+  }
+
+  .client-form__item:nth-child(3) {
+    border-radius: 0 0 0.625rem 0.625rem;
+  }
+
+  .item-client-form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
+            column-gap: 1.25rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 1.25rem 0.9375rem 1.25rem 1.875rem;
+  }
+}
+
 @media (max-width: 23.75em) {
   .aside-page__header {
     padding: 1.0625rem 1.25rem 0.625rem 2.5rem;
@@ -2103,6 +2186,32 @@ section.section.active {
       -webkit-column-gap: calc(1.875rem + 3.125 * (100vw - 75rem) / 25);
          -moz-column-gap: calc(1.875rem + 3.125 * (100vw - 75rem) / 25);
               column-gap: calc(1.875rem + 3.125 * (100vw - 75rem) / 25);
+    }
+}
+}
+
+@media (min-width: 20em) and (max-width: 101.875em) {
+@supports (font-size: clamp( 0.875rem , 0.8444656489rem  +  0.1526717557vw , 1rem )) {
+    .item-client-form__name {
+      font-size: clamp( 0.875rem , 0.8444656489rem  +  0.1526717557vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8444656489rem  +  0.1526717557vw , 1rem )) {
+    .item-client-form__name {
+      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 81.875);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8444656489rem  +  0.1526717557vw , 1rem )) {
+    .item-client-form__value {
+      font-size: clamp( 0.875rem , 0.8444656489rem  +  0.1526717557vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8444656489rem  +  0.1526717557vw , 1rem )) {
+    .item-client-form__value {
+      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 81.875);
     }
 }
 }

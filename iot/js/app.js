@@ -423,7 +423,6 @@
     }));
     const aside = document.querySelector(".page__aside");
     const asideToggleButton = document.getElementById("asideToggler");
-    document.querySelectorAll(".column-form--r");
     asideToggleButton.addEventListener("click", (() => {
         aside.classList.toggle("close");
     }));
