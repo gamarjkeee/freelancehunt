@@ -596,22 +596,19 @@ svg path {
 
 .content-page__main {
   position: absolute;
-  top: 12.1875rem;
+  top: 5.9375rem;
   left: 0;
   width: 100%;
   height: calc(100% - 190px);
   z-index: 10;
 }
 
-.content-page__bottom-info {
+.bottom-info {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 4.6875rem;
-}
-
-.bottom-info {
   border-radius: 0.625rem;
   background-color: #fff;
   display: -webkit-box;
@@ -1535,6 +1532,10 @@ section.section.active {
     background-color: #fff;
   }
 
+  ::-webkit-scrollbar {
+    width: 0rem;
+  }
+
   .page__container {
     padding: 0;
   }
@@ -1545,7 +1546,7 @@ section.section.active {
     top: 0;
     left: 0;
     width: 100%;
-    height: 7.5rem;
+    height: 6.336875rem;
   }
 
   .aside-page__header {
@@ -1561,7 +1562,7 @@ section.section.active {
     -webkit-column-gap: 2.5rem;
        -moz-column-gap: 2.5rem;
             column-gap: 2.5rem;
-    padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    padding: 0.625rem 1.25rem 0.625rem 2.5rem;
   }
 
   .aside-page__logo {
@@ -1681,9 +1682,9 @@ section.section.active {
 
   .content-page__project-name {
     position: fixed;
-    top: 7.586875rem;
+    top: 6.336875rem;
     padding: 0 1.25rem;
-    height: 3.75rem;
+    height: 2.5rem;
     z-index: 10;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1697,7 +1698,7 @@ section.section.active {
   }
 
   .content-page__main {
-    top: 10.711875rem;
+    top: 7.586875rem;
   }
 
   .bottom-info {
@@ -1706,7 +1707,7 @@ section.section.active {
     left: 1.25rem;
     width: calc(100% - 2.5rem);
     z-index: 10;
-    height: 3.75rem;
+    height: 2.5rem;
     background-color: #f6f6f6;
   }
 
