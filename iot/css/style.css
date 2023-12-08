@@ -501,11 +501,6 @@ svg path {
   padding-bottom: 1.5rem;
 }
 
-.page__content {
-  position: relative;
-  display: block;
-}
-
 .aside-page {
   background-color: #fff;
   -webkit-transition: all 0.3s ease 0s;
@@ -592,16 +587,76 @@ svg path {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 2.8125rem;
 }
 
 .content-page__main {
-  position: relative;
-  overflow: hidden;
+  position: absolute;
+  top: 12.1875rem;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 190px);
+  z-index: 10;
+}
+
+.content-page__bottom-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4.6875rem;
+}
+
+.bottom-info {
+  border-radius: 0.625rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 4.375rem;
+     -moz-column-gap: 4.375rem;
+          column-gap: 4.375rem;
+  padding: 0 2.1875rem;
+}
+
+.bottom-info span {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .main-content-page {
   border-radius: 0.625rem;
   background-color: #fff;
+}
+
+section.section {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+  padding: 3.125rem 2.5rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+section.section.active {
+  z-index: 2;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease 0.3s;
+  transition: all 0.3s ease 0.3s;
 }
 
 .dashboard-section__title {
@@ -744,28 +799,6 @@ svg path {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.bottom-info {
-  border-radius: 0.625rem;
-  background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 4.375rem;
-     -moz-column-gap: 4.375rem;
-          column-gap: 4.375rem;
-  padding: 0 2.1875rem;
-}
-
-.bottom-info span {
-  font-size: 0.9375rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
 }
 
 .wi-fi-section__title {
@@ -1179,71 +1212,6 @@ svg path {
         -ms-transform: translateX(-0.625rem);
             transform: translateX(-0.625rem);
   }
-
-  .content-page__project-name {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0 2.8125rem;
-  }
-
-  .content-page__main {
-    position: absolute;
-    top: 5.9375rem;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 190px);
-  }
-
-  .content-page__bottom-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4.6875rem;
-  }
-
-  section.section {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-    transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-    padding: 3.125rem 2.5rem;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-  section.section.active {
-    z-index: 2;
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: all 0.3s ease 0.3s;
-    transition: all 0.3s ease 0.3s;
-  }
-
-  .dashboard-section__item--temperature {
-    grid-area: a;
-  }
-
-  .dashboard-section__item--humidity {
-    grid-area: b;
-  }
-
-  .dashboard-section__item--pressure {
-    grid-area: c;
-  }
-
-  .dashboard-section__item--mqtt {
-    grid-area: d;
-  }
-
-  .dashboard-section__item--date {
-    grid-area: e;
-  }
 }
 
 @media (min-width: 47.99875em) and (min-width: 61.99875em) {
@@ -1315,36 +1283,6 @@ svg path {
     -ms-grid-columns: (1fr)[6];
     grid-template-columns: repeat(6, 1fr);
         grid-template-areas: "a a b b c c" "d d d e e e";
-  }
-
-  .dashboard-section__item--temperature {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-  }
-
-  .dashboard-section__item--humidity {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 2;
-  }
-
-  .dashboard-section__item--pressure {
-    -ms-grid-row: 1;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 2;
-  }
-
-  .dashboard-section__item--mqtt {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-
-  .dashboard-section__item--date {
-    -ms-grid-row: 2;
-    -ms-grid-column: 4;
-    -ms-grid-column-span: 3;
   }
 }
 
@@ -1430,6 +1368,61 @@ svg path {
   }
 }
 
+@media (min-width: 35em) {
+  .dashboard-section__item--temperature {
+    grid-area: a;
+  }
+
+  .dashboard-section__item--humidity {
+    grid-area: b;
+  }
+
+  .dashboard-section__item--pressure {
+    grid-area: c;
+  }
+
+  .dashboard-section__item--mqtt {
+    grid-area: d;
+  }
+
+  .dashboard-section__item--date {
+    grid-area: e;
+  }
+}
+
+@media (min-width: 61.99875em){
+
+  .dashboard-section__item--temperature {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+
+  .dashboard-section__item--humidity {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+  }
+
+  .dashboard-section__item--pressure {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 2;
+  }
+
+  .dashboard-section__item--mqtt {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+
+  .dashboard-section__item--date {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 3;
+  }
+}
+
 @media (max-width: 64em) {
   .page__content-wrapper {
     padding-right: 0.0000000625rem;
@@ -1437,6 +1430,25 @@ svg path {
 
   .page__content-wrapper {
     padding-left: 0.0000000625rem;
+  }
+}
+
+@media (max-width: 35em) {
+  .dashboard-section__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .dashboard-section__item {
+    height: 15rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 15rem;
+            flex: 0 0 15rem;
   }
 }
 
@@ -1523,10 +1535,6 @@ svg path {
     background-color: #fff;
   }
 
-  .page {
-    display: none;
-  }
-
   .page__container {
     padding: 0;
   }
@@ -1578,7 +1586,7 @@ svg path {
     height: 100%;
     top: 0;
     left: -100%;
-    background-color: #fff;
+    background-color: lightcoral;
     padding: 8.125rem 1.25rem 1.25rem 1.25rem;
     -webkit-transition: left 0.45s ease 0s;
     transition: left 0.45s ease 0s;
@@ -1669,47 +1677,45 @@ svg path {
 
   .content-page {
     min-height: 100svh;
-    padding-top: 8.75rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
   }
 
   .content-page__project-name {
+    position: fixed;
+    top: 7.586875rem;
     padding: 0 1.25rem;
-  }
-
-  .content-page__main {
-    position: static;
-  }
-
-  .content-page__bottom-info {
-    position: static;
-  }
-
-  section.section {
-    position: static;
-    display: none;
-  }
-
-  section.section.active {
-    display: block;
-  }
-
-  .dashboard-section__items {
+    height: 3.75rem;
+    z-index: 10;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
-  .dashboard-section__item {
-    height: 15rem;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 15rem;
-            flex: 0 0 15rem;
+  .content-page__main {
+    top: 10.711875rem;
+  }
+
+  .bottom-info {
+    position: fixed;
+    bottom: 0.625rem;
+    left: 1.25rem;
+    width: calc(100% - 2.5rem);
+    z-index: 10;
+    height: 3.75rem;
+    background-color: #f6f6f6;
+  }
+
+  section.section {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .dashboard-section__title {
+    margin-bottom: 0rem;
   }
 
   .item-dashboard-section__value {
@@ -1755,6 +1761,16 @@ svg path {
   }
 }
 
+@media (max-width: 37.5em) {
+  .item-dashboard-section__unit {
+    font-size: 1.625rem;
+    -ms-flex-preferred-size: 3.75rem;
+        flex-basis: 3.75rem;
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+}
+
 @media (min-width: 47.99875em) and (max-width: 61.99875em) {
   .button {
     padding: 1.125rem 1.3125rem;
@@ -1770,44 +1786,6 @@ svg path {
 
   .button.button--toggler::after {
     display: none;
-  }
-
-  .dashboard-section__items {
-    -ms-grid-columns: (1fr)[4];
-    grid-template-columns: repeat(4, 1fr);
-    -ms-grid-rows: (1fr)[3];
-    grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: "a a b b" "c c d d" "e e e e";
-  }
-
-  .dashboard-section__item--temperature {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-  }
-
-  .dashboard-section__item--humidity {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 2;
-  }
-
-  .dashboard-section__item--pressure {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-  }
-
-  .dashboard-section__item--mqtt {
-    -ms-grid-row: 2;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 2;
-  }
-
-  .dashboard-section__item--date {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
   }
 }
 
@@ -1835,6 +1813,41 @@ svg path {
       padding-left: calc(0.0000000625rem + 3.1249999375 * (100vw - 64rem) / 19.75);
     }
 }
+}
+
+@media (min-width: 35em) and (max-width: 61.99875em) {
+  .dashboard-section__items {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (1fr)[3];
+    grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "a a b b" "c c d d" "e e e e";
+  }
+  .dashboard-section__item--temperature {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+  .dashboard-section__item--humidity {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+  }
+  .dashboard-section__item--pressure {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+  .dashboard-section__item--mqtt {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+  }
+  .dashboard-section__item--date {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+  }
 }
 
 @media (min-width: 47.99875em) and (max-width: 83.75em) {
