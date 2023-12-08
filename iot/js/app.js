@@ -423,28 +423,9 @@
     }));
     const aside = document.querySelector(".page__aside");
     const asideToggleButton = document.getElementById("asideToggler");
-    const columnsWiFi = document.querySelectorAll(".column-form--r");
+    document.querySelectorAll(".column-form--r");
     asideToggleButton.addEventListener("click", (() => {
         aside.classList.toggle("close");
-        if (aside.classList.contains("close") && window.innerWidth >= 1350) {
-            columnsWiFi.forEach((el => {
-                el.style.paddingRight = "140px";
-            }));
-            clientFormItems.forEach((clientFormItem => {
-                clientFormItem.style.paddingRight = "140px";
-                clientFormItem.style.width = `${defaultWidthForClient + 100}px`;
-                clientFormItem.style.flexBasis = `${defaultWidthForClient + 100}px`;
-            }));
-        } else if (window.innerWidth >= 1350) {
-            columnsWiFi.forEach((el => {
-                el.style.paddingRight = "30px";
-            }));
-            clientFormItems.forEach((clientFormItem => {
-                clientFormItem.style.paddingRight = "30px";
-                clientFormItem.style.width = `${defaultWidthForClient}px`;
-                clientFormItem.style.flexBasis = `${defaultWidthForClient}px`;
-            }));
-        }
     }));
     const settingsButton = document.getElementById("settings-toggle-button");
     const maintenanceButton = document.getElementById("maintenance-toggle-button");
@@ -471,6 +452,8 @@
     const dashboardSection = document.querySelector(".dashboard-section");
     const wiFiSection = document.querySelector(".wi-fi-section");
     const fwSection = document.querySelector(".fw-section");
+    const titlesOfSections = document.querySelectorAll(".title-section");
+    console.log(titlesOfSections);
     wiFiButton.addEventListener("click", (() => {
         wiFiButton.classList.add("active");
         dashboardButton.classList.remove("active");
@@ -479,6 +462,10 @@
         dashboardSection.classList.remove("active");
         fwSection.classList.remove("active");
         document.documentElement.classList.remove("menu-open");
+        document.documentElement.classList.toggle("lock");
+        titlesOfSections[2].classList.add("mobile");
+        titlesOfSections[0].classList.remove("mobile");
+        titlesOfSections[1].classList.remove("mobile");
     }));
     fwButton.addEventListener("click", (() => {
         fwButton.classList.add("active");
@@ -488,6 +475,10 @@
         wiFiSection.classList.remove("active");
         dashboardSection.classList.remove("active");
         document.documentElement.classList.remove("menu-open");
+        document.documentElement.classList.toggle("lock");
+        titlesOfSections[1].classList.add("mobile");
+        titlesOfSections[0].classList.remove("mobile");
+        titlesOfSections[2].classList.remove("mobile");
     }));
     dashboardButton.addEventListener("click", (() => {
         dashboardButton.classList.add("active");
@@ -497,6 +488,10 @@
         fwSection.classList.remove("active");
         wiFiSection.classList.remove("active");
         document.documentElement.classList.remove("menu-open");
+        document.documentElement.classList.toggle("lock");
+        titlesOfSections[0].classList.add("mobile");
+        titlesOfSections[1].classList.remove("mobile");
+        titlesOfSections[2].classList.remove("mobile");
     }));
     const apMode = document.getElementById("ap-mode");
     const staMode = document.getElementById("sta-mode");
@@ -519,13 +514,6 @@
         advancedButton.addEventListener("click", (() => {
             advancedButton.classList.toggle("active");
             advancedButton.nextElementSibling.classList.toggle("open");
-            if (!advancedButton.classList.contains("active")) clientFormItems.forEach((clientFormItem => {
-                clientFormItem.style.width = `${parseInt(clientFormItem.style.width) + 8}px`;
-                clientFormItem.style.flexBasis = `${parseInt(clientFormItem.style.flexBasis) + 8}px`;
-            })); else clientFormItems.forEach((clientFormItem => {
-                clientFormItem.style.width = `${parseInt(clientFormItem.style.width) - 8}px`;
-                clientFormItem.style.flexBasis = `${parseInt(clientFormItem.style.flexBasis) - 8}px`;
-            }));
         }));
     }));
     const progressLine = document.getElementById("progress-line");
