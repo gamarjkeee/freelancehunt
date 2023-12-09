@@ -415,12 +415,6 @@
     allButtonsSpan.forEach((span => {
         span.style.textWrap = "nowrap";
     }));
-    const clientFormItems = document.querySelectorAll(".client-form__items");
-    const defaultWidthForClient = document.querySelector(".column-form").clientWidth * 2 - (document.querySelector(".column-form").clientWidth - 250);
-    if (window.innerWidth >= 1350) clientFormItems.forEach((clientFormItem => {
-        clientFormItem.style.width = `${defaultWidthForClient}px`;
-        clientFormItem.style.flexBasis = `${defaultWidthForClient}px`;
-    }));
     const aside = document.querySelector(".page__aside");
     const asideToggleButton = document.getElementById("asideToggler");
     asideToggleButton.addEventListener("click", (() => {
@@ -574,21 +568,25 @@
     const updateButton = document.getElementById("update-button");
     const snackbars = document.querySelectorAll(".snackbar");
     const snackbarCloseButtons = document.querySelectorAll(".snackbar__close");
+    console.log(snackbars[0]);
     snackbarCloseButtons.forEach((snackbarCloseButton => {
         snackbarCloseButton.addEventListener("click", (() => {
             snackbarCloseButton.parentNode.classList.remove("show");
         }));
     }));
-    let zIndex = 50;
-    updateButton.addEventListener("click", (() => {
-        if (zIndex > 1e3) zIndex = 50;
-        ++zIndex;
-        let randNum = Math.floor(Math.random() * 4);
-        snackbars[randNum].classList.add("show");
-        snackbars[randNum].style.zIndex = zIndex;
-        setTimeout((function() {
-            snackbars[randNum].className = snackbars[randNum].className.replace("show", "");
+    const toastBox = document.querySelector(".snackbar-box");
+    let num = 0;
+    function showToast() {
+        let toast = snackbars[num];
+        if (num >= 3) num = 0; else num++;
+        toast.classList.add("show");
+        toastBox.appendChild(toast);
+        setTimeout((() => {
+            toast.classList.remove("show");
         }), 4e3);
+    }
+    updateButton.addEventListener("click", (() => {
+        showToast();
     }));
     window["FLS"] = false;
     isWebp();

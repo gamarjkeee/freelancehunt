@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20231209113604" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20231209213232" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -548,75 +548,78 @@
 			</div>
 		</div>
 	</div>
-	<div id="snackbar-info" class="snackbar snackbar--info">
-		<div class="snackbar__message">
-			<svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
-				<path d="M18.0003 32.0833C26.0212 32.0833 32.5837 25.5208 32.5837 17.5C32.5837 9.47913 26.0212 2.91663 18.0003 2.91663C9.97949 2.91663 3.41699 9.47913 3.41699 17.5C3.41699 25.5208 9.97949 32.0833 18.0003 32.0833Z" stroke="#498BDE" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M18 11.6666V18.9583" stroke="#498BDE" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M17.9912 23.3334H18.0043" stroke="#498BDE" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round" />
-			</svg>
-			<span>Info!</span>
+	<div class="snackbar-box"></div>
+	<div class="snackbar__collection">
+		<div id="snackbar-info" class="snackbar snackbar--info">
+			<div class="snackbar__message">
+				<svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
+					<path d="M18.0003 32.0833C26.0212 32.0833 32.5837 25.5208 32.5837 17.5C32.5837 9.47913 26.0212 2.91663 18.0003 2.91663C9.97949 2.91663 3.41699 9.47913 3.41699 17.5C3.41699 25.5208 9.97949 32.0833 18.0003 32.0833Z" stroke="#498BDE" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M18 11.6666V18.9583" stroke="#498BDE" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M17.9912 23.3334H18.0043" stroke="#498BDE" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+				<span>Info!</span>
+			</div>
+			<button class="snackbar__close">
+				<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+					<path d="M17.5003 32.083C25.5212 32.083 32.0837 25.5205 32.0837 17.4997C32.0837 9.47888 25.5212 2.91638 17.5003 2.91638C9.47949 2.91638 2.91699 9.47888 2.91699 17.4997C2.91699 25.5205 9.47949 32.083 17.5003 32.083Z" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M13.373 21.627L21.6272 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M21.6272 21.627L13.373 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
 		</div>
-		<button class="snackbar__close">
-			<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
-				<path d="M17.5003 32.083C25.5212 32.083 32.0837 25.5205 32.0837 17.4997C32.0837 9.47888 25.5212 2.91638 17.5003 2.91638C9.47949 2.91638 2.91699 9.47888 2.91699 17.4997C2.91699 25.5205 9.47949 32.083 17.5003 32.083Z" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M13.373 21.627L21.6272 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M21.6272 21.627L13.373 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-			</svg>
-		</button>
-	</div>
-	<div id="snackbar-error" class="snackbar snackbar--error">
-		<div class="snackbar__message">
-			<svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
-				<path d="M22.2295 2.91663H13.7712C12.7795 2.91663 11.3795 3.49997 10.6795 4.19997L4.70033 10.1791C4.00033 10.8791 3.41699 12.2791 3.41699 13.2708V21.7291C3.41699 22.7208 4.00033 24.1208 4.70033 24.8208L10.6795 30.8C11.3795 31.5 12.7795 32.0833 13.7712 32.0833H22.2295C23.2211 32.0833 24.6212 31.5 25.3212 30.8L31.3003 24.8208C32.0003 24.1208 32.5837 22.7208 32.5837 21.7291V13.2708C32.5837 12.2791 32.0003 10.8791 31.3003 10.1791L25.3212 4.19997C24.6212 3.49997 23.2211 2.91663 22.2295 2.91663Z" stroke="#C96565" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M12.8955 22.6042L23.1038 12.3959" stroke="#C96565" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M23.1038 22.6042L12.8955 12.3959" stroke="#C96565" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-			</svg>
-			<span>Error!</span>
+		<div id="snackbar-error" class="snackbar snackbar--error">
+			<div class="snackbar__message">
+				<svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
+					<path d="M22.2295 2.91663H13.7712C12.7795 2.91663 11.3795 3.49997 10.6795 4.19997L4.70033 10.1791C4.00033 10.8791 3.41699 12.2791 3.41699 13.2708V21.7291C3.41699 22.7208 4.00033 24.1208 4.70033 24.8208L10.6795 30.8C11.3795 31.5 12.7795 32.0833 13.7712 32.0833H22.2295C23.2211 32.0833 24.6212 31.5 25.3212 30.8L31.3003 24.8208C32.0003 24.1208 32.5837 22.7208 32.5837 21.7291V13.2708C32.5837 12.2791 32.0003 10.8791 31.3003 10.1791L25.3212 4.19997C24.6212 3.49997 23.2211 2.91663 22.2295 2.91663Z" stroke="#C96565" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M12.8955 22.6042L23.1038 12.3959" stroke="#C96565" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M23.1038 22.6042L12.8955 12.3959" stroke="#C96565" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+				<span>Error!</span>
+			</div>
+			<button class="snackbar__close">
+				<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+					<path d="M17.5003 32.083C25.5212 32.083 32.0837 25.5205 32.0837 17.4997C32.0837 9.47888 25.5212 2.91638 17.5003 2.91638C9.47949 2.91638 2.91699 9.47888 2.91699 17.4997C2.91699 25.5205 9.47949 32.083 17.5003 32.083Z" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M13.373 21.627L21.6272 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M21.6272 21.627L13.373 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
 		</div>
-		<button class="snackbar__close">
-			<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
-				<path d="M17.5003 32.083C25.5212 32.083 32.0837 25.5205 32.0837 17.4997C32.0837 9.47888 25.5212 2.91638 17.5003 2.91638C9.47949 2.91638 2.91699 9.47888 2.91699 17.4997C2.91699 25.5205 9.47949 32.083 17.5003 32.083Z" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M13.373 21.627L21.6272 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M21.6272 21.627L13.373 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-			</svg>
-		</button>
-	</div>
-	<div id="snackbar-warning" class="snackbar snackbar--warning">
-		<div class="snackbar__message">
-			<svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
-				<path d="M18 11.3019V18.9581" stroke="#F1A027" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M31.2421 12.5128V22.4877C31.2421 24.121 30.3671 25.6378 28.9525 26.469L20.29 31.4711C18.8754 32.2878 17.1254 32.2878 15.6962 31.4711L7.03373 26.469C5.61915 25.6523 4.74414 24.1356 4.74414 22.4877V12.5128C4.74414 10.8794 5.61915 9.36269 7.03373 8.53144L15.6962 3.52937C17.1108 2.7127 18.8609 2.7127 20.29 3.52937L28.9525 8.53144C30.3671 9.36269 31.2421 10.8648 31.2421 12.5128Z" stroke="#F1A027" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M18 23.6257V23.7716" stroke="#F1A027" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round" />
-			</svg>
-			<span>Warning!</span>
+		<div id="snackbar-warning" class="snackbar snackbar--warning">
+			<div class="snackbar__message">
+				<svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
+					<path d="M18 11.3019V18.9581" stroke="#F1A027" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M31.2421 12.5128V22.4877C31.2421 24.121 30.3671 25.6378 28.9525 26.469L20.29 31.4711C18.8754 32.2878 17.1254 32.2878 15.6962 31.4711L7.03373 26.469C5.61915 25.6523 4.74414 24.1356 4.74414 22.4877V12.5128C4.74414 10.8794 5.61915 9.36269 7.03373 8.53144L15.6962 3.52937C17.1108 2.7127 18.8609 2.7127 20.29 3.52937L28.9525 8.53144C30.3671 9.36269 31.2421 10.8648 31.2421 12.5128Z" stroke="#F1A027" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M18 23.6257V23.7716" stroke="#F1A027" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+				<span>Warning!</span>
+			</div>
+			<button class="snackbar__close">
+				<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+					<path d="M17.5003 32.083C25.5212 32.083 32.0837 25.5205 32.0837 17.4997C32.0837 9.47888 25.5212 2.91638 17.5003 2.91638C9.47949 2.91638 2.91699 9.47888 2.91699 17.4997C2.91699 25.5205 9.47949 32.083 17.5003 32.083Z" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M13.373 21.627L21.6272 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M21.6272 21.627L13.373 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
 		</div>
-		<button class="snackbar__close">
-			<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
-				<path d="M17.5003 32.083C25.5212 32.083 32.0837 25.5205 32.0837 17.4997C32.0837 9.47888 25.5212 2.91638 17.5003 2.91638C9.47949 2.91638 2.91699 9.47888 2.91699 17.4997C2.91699 25.5205 9.47949 32.083 17.5003 32.083Z" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M13.373 21.627L21.6272 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M21.6272 21.627L13.373 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-			</svg>
-		</button>
-	</div>
-	<div id="snackbar-success" class="snackbar snackbar--success">
-		<div class="snackbar__message">
-			<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
-				<path d="M17.5003 32.0834C25.5212 32.0834 32.0837 25.5209 32.0837 17.5C32.0837 9.47919 25.5212 2.91669 17.5003 2.91669C9.47949 2.91669 2.91699 9.47919 2.91699 17.5C2.91699 25.5209 9.47949 32.0834 17.5003 32.0834Z" stroke="#3E5E6D" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M11.3018 17.4999L15.4288 21.627L23.6976 13.3728" stroke="#3E5E6D" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-			</svg>
-			<span>Success!</span>
+		<div id="snackbar-success" class="snackbar snackbar--success">
+			<div class="snackbar__message">
+				<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+					<path d="M17.5003 32.0834C25.5212 32.0834 32.0837 25.5209 32.0837 17.5C32.0837 9.47919 25.5212 2.91669 17.5003 2.91669C9.47949 2.91669 2.91699 9.47919 2.91699 17.5C2.91699 25.5209 9.47949 32.0834 17.5003 32.0834Z" stroke="#3E5E6D" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M11.3018 17.4999L15.4288 21.627L23.6976 13.3728" stroke="#3E5E6D" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+				<span>Success!</span>
+			</div>
+			<button class="snackbar__close">
+				<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+					<path d="M17.5003 32.083C25.5212 32.083 32.0837 25.5205 32.0837 17.4997C32.0837 9.47888 25.5212 2.91638 17.5003 2.91638C9.47949 2.91638 2.91699 9.47888 2.91699 17.4997C2.91699 25.5205 9.47949 32.083 17.5003 32.083Z" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M13.373 21.627L21.6272 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M21.6272 21.627L13.373 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
 		</div>
-		<button class="snackbar__close">
-			<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
-				<path d="M17.5003 32.083C25.5212 32.083 32.0837 25.5205 32.0837 17.4997C32.0837 9.47888 25.5212 2.91638 17.5003 2.91638C9.47949 2.91638 2.91699 9.47888 2.91699 17.4997C2.91699 25.5205 9.47949 32.083 17.5003 32.083Z" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M13.373 21.627L21.6272 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M21.6272 21.627L13.373 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
-			</svg>
-		</button>
 	</div>
 
-	<script src="js/app.min.js?_v=20231209113604"></script>
+	<script src="js/app.min.js?_v=20231209213232"></script>
 </body>
 
 </html>
