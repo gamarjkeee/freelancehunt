@@ -579,11 +579,13 @@
             snackbarCloseButton.parentNode.classList.remove("show");
         }));
     }));
+    let zIndex = 50;
     updateButton.addEventListener("click", (() => {
-        let zIndex = 50;
+        if (zIndex > 1e3) zIndex = 50;
+        ++zIndex;
         let randNum = Math.floor(Math.random() * 4);
         snackbars[randNum].classList.add("show");
-        snackbars[randNum].style.zIndex = ++zIndex;
+        snackbars[randNum].style.zIndex = zIndex;
         setTimeout((function() {
             snackbars[randNum].className = snackbars[randNum].className.replace("show", "");
         }), 4e3);
