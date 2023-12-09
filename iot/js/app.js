@@ -567,6 +567,27 @@
         inputFile.files = e.dataTransfer.files;
         alert("файл завантажився");
     }));
+    const loader = document.getElementById("loader");
+    setTimeout((() => {
+        loader.classList.remove("active");
+    }), 4e3);
+    const updateButton = document.getElementById("update-button");
+    const snackbars = document.querySelectorAll(".snackbar");
+    const snackbarCloseButtons = document.querySelectorAll(".snackbar__close");
+    snackbarCloseButtons.forEach((snackbarCloseButton => {
+        snackbarCloseButton.addEventListener("click", (() => {
+            snackbarCloseButton.parentNode.classList.remove("show");
+        }));
+    }));
+    updateButton.addEventListener("click", (() => {
+        let zIndex = 50;
+        let randNum = Math.floor(Math.random() * 4);
+        snackbars[randNum].classList.add("show");
+        snackbars[randNum].style.zIndex = ++zIndex;
+        setTimeout((function() {
+            snackbars[randNum].className = snackbars[randNum].className.replace("show", "");
+        }), 4e3);
+    }));
     window["FLS"] = false;
     isWebp();
     addLoadedClass();

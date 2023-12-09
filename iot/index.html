@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20231208235443" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20231209113604" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,11 +30,14 @@
 
 				<div class="page__content-wrapper">
 					<!-- Бокове меню (на мобайлі трансформується в мобільне меню) -->
+
 					<aside class="page__aside aside-page">
 						<!-- Меню КНОПКА-БУРГЕР -->
+
 						<button type="button" class="icon-menu">
 							<span></span><i></i>
 						</button>
+
 						<div class="aside-page__header">
 							<!-- Бокове меню ЛОГО -->
 
@@ -48,10 +51,13 @@
 							<!-- Меню ОБОЛОНКА МЕНЮ -->
 
 							<nav class="menu__body">
-								<!-- Меню СПИСОК ПУНКТІВ МЕНЮ -->
+								<!-- Меню ЛОГО ДЛЯ МОБАЙЛ МЕНЮ -->
+
 								<a href="index.html" class="menu__logo">
 									<picture><source srcset="img/logo-small.webp" type="image/webp"><img src="img/logo-small.png" alt="Logo Image" /></picture>
 								</a>
+								<!-- Меню СПИСОК ПУНКТІВ МЕНЮ -->
+
 								<ul class="menu__list">
 									<!-- Меню ПУНКТ МЕНЮ -->
 
@@ -141,53 +147,57 @@
 							<!-- Головний блок / Блок з контентом / Секція dashboard -->
 
 							<section class="main-content-page__dashboard dashboard-section section active">
-								<div data-da=".content-page__project-name, 767.98, 2" class="dashboard-section__title title-section mobile">
-									<img src="img/icons/grid.svg" alt="Dashboard Icon" />
-									<span>Dashboard</span>
+								<!-- Секція dashboard / Оболонка з контентом -->
+								<div class="section__content">
+									<div data-da=".content-page__project-name, 767.98, 2" class="dashboard-section__title title-section mobile">
+										<img src="img/icons/grid.svg" alt="Dashboard Icon" />
+										<span>Dashboard</span>
+									</div>
+									<div class="dashboard-section__items">
+										<div class="dashboard-section__item dashboard-section__item--temperature item-dashboard-section">
+											<div class="item-dashboard-section__name">
+												<img src="img/icons/temp.svg" alt="Temperature Icon" />
+												<span>Temperature</span>
+											</div>
+											<div class="item-dashboard-section__value">+25.5</div>
+											<div class="item-dashboard-section__unit">°C</div>
+										</div>
+										<div class="dashboard-section__item dashboard-section__item--humidity item-dashboard-section">
+											<div class="item-dashboard-section__name">
+												<img src="img/icons/cloud.svg" alt="Humidity Icon" /><span>Humidity</span>
+											</div>
+											<div class="item-dashboard-section__value">64.34</div>
+											<div class="item-dashboard-section__unit">%</div>
+										</div>
+										<div class="dashboard-section__item dashboard-section__item--pressure item-dashboard-section">
+											<div class="item-dashboard-section__name">
+												<img src="img/icons/speed.svg" alt="Pressure Icon" />
+												<span>Pressure</span>
+											</div>
+											<div class="item-dashboard-section__value">101,32</div>
+											<div class="item-dashboard-section__unit">Pa</div>
+										</div>
+										<div class="dashboard-section__item dashboard-section__item--mqtt item-dashboard-section">
+											<div class="item-dashboard-section__name">
+												<img src="img/icons/done.svg" alt="MQTT Icon" /><span>MQTT</span>
+											</div>
+											<div class="item-dashboard-section__status">
+												Connected
+											</div>
+										</div>
+										<div class="dashboard-section__item dashboard-section__item--date item-dashboard-section">
+											<div class="item-dashboard-section__name">
+												<img src="img/icons/calendar.svg" alt="Data / Time Icon" />
+												<span>Data / Time</span>
+											</div>
+											<div class="item-dashboard-section__status">
+												<span>14:55</span><span>26.11.2023</span>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="dashboard-section__items">
-									<div class="dashboard-section__item dashboard-section__item--temperature item-dashboard-section">
-										<div class="item-dashboard-section__name">
-											<img src="img/icons/temp.svg" alt="Temperature Icon" />
-											<span>Temperature</span>
-										</div>
-										<div class="item-dashboard-section__value">+25.5</div>
-										<div class="item-dashboard-section__unit">°C</div>
-									</div>
-									<div class="dashboard-section__item dashboard-section__item--humidity item-dashboard-section">
-										<div class="item-dashboard-section__name">
-											<img src="img/icons/cloud.svg" alt="Humidity Icon" /><span>Humidity</span>
-										</div>
-										<div class="item-dashboard-section__value">64.34</div>
-										<div class="item-dashboard-section__unit">%</div>
-									</div>
-									<div class="dashboard-section__item dashboard-section__item--pressure item-dashboard-section">
-										<div class="item-dashboard-section__name">
-											<img src="img/icons/speed.svg" alt="Pressure Icon" />
-											<span>Pressure</span>
-										</div>
-										<div class="item-dashboard-section__value">101,32</div>
-										<div class="item-dashboard-section__unit">Pa</div>
-									</div>
-									<div class="dashboard-section__item dashboard-section__item--mqtt item-dashboard-section">
-										<div class="item-dashboard-section__name">
-											<img src="img/icons/done.svg" alt="MQTT Icon" /><span>MQTT</span>
-										</div>
-										<div class="item-dashboard-section__status">
-											Connected
-										</div>
-									</div>
-									<div class="dashboard-section__item dashboard-section__item--date item-dashboard-section">
-										<div class="item-dashboard-section__name">
-											<img src="img/icons/calendar.svg" alt="Data / Time Icon" />
-											<span>Data / Time</span>
-										</div>
-										<div class="item-dashboard-section__status">
-											<span>14:55</span><span>26.11.2023</span>
-										</div>
-									</div>
-								</div>
-								<div class="content-page__bottom-info bottom-info mobile">
+								<!-- Секція dashboard / Футер -->
+								<div class="section__bottom-info bottom-info">
 									<div class="bottom-info__item">FW: v1.3.2</div>
 									<div class="bottom-info__item">UI: v1.1.1</div>
 								</div>
@@ -195,252 +205,264 @@
 							<!-- Головний блок / Блок з контентом / Секція wi-fi -->
 
 							<section class="main-content-page__wi-fi wi-fi-section section">
-								<div data-da=".content-page__project-name, 767.98, 2" class="wi-fi-section__title title-section">
-									<img src="img/icons/wifi.svg" alt="Wi-Fi Icon" />
-									<span>WiFi (Page name)</span>
-								</div>
-								<div class="wi-fi-section__modes">
-									<button id="ap-mode" class="wi-fi-section__mode wi-fi-section__mode--ap active">
-										AP mode
-									</button>
-									<button id="sta-mode" class="wi-fi-section__mode wi-fi-section__mode--sta">
-										STA mode
-									</button>
-								</div>
-								<form id="ap-form" class="wi-fi-section__form form-wi-fi active" action="#">
-									<div class="form-wi-fi__state">
-										<div class="form-wi-fi__columm column-form">
-											<div class="form-wi-fi__item item-form select-item">
-												<label for="#">State</label>
-												<div class="select-item__select">
-													<button type="button" class="select-item__button button button--toggler button--visible">
-														<span>Select</span>
-													</button>
-													<div class="select-item__items">
-														<button id="disabled" type="button" class="select-item__item">
-															Disabled
-														</button>
-														<button id="enabled" type="button" class="select-item__item">
-															Enabled
-														</button>
-													</div>
-												</div>
-											</div>
-											<div class="form-wi-fi__item item-form">
-												<label for="ssid">SSID</label>
-												<input name="ssid" autocomplete="off" type="text" class="form-wi-fi__input input-wi-fi" />
-											</div>
-										</div>
-										<div class="form-wi-fi__columm column-form column-form--r">
-											<div class="form-wi-fi__item item-form">
-												<label for="password">Password</label>
-												<input name="password" autocomplete="off" type="password" class="form-wi-fi__input input-wi-fi" />
-											</div>
-											<div class="form-wi-fi__item item-form">
-												<label for="password-confirm">Password confirm</label>
-												<input name="password-confirm" autocomplete="off" type="password" class="item-form__input input-wi-fi" />
-											</div>
-										</div>
+								<!-- Секція wi-fi / Оболонка з контентом -->
+
+								<div class="section__content">
+									<div data-da=".content-page__project-name, 767.98, 2" class="wi-fi-section__title title-section">
+										<img src="img/icons/wifi.svg" alt="Wi-Fi Icon" />
+										<span>WiFi (Page name)</span>
 									</div>
-									<div class="form-wi-fi__advanced advanced-form">
-										<button id="advanced" type="button" class="advanced-form__button button button--toggler button--visible advanced active">
-											<span>Advanced</span>
+									<div class="wi-fi-section__modes">
+										<button id="ap-mode" class="wi-fi-section__mode wi-fi-section__mode--ap active">
+											AP mode
 										</button>
-										<div class="advanced-form__body open">
-											<div class="advanced-form__column column-form">
-												<div class="advanced-form__item item-form">
-													<label for="ip">IP address</label>
-													<input name="ip" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
-												</div>
-												<div class="advanced-form__item item-form">
-													<label for="subnet-mask">Subnet mask</label>
-													<input name="subnet-mask" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
-												</div>
+										<button id="sta-mode" class="wi-fi-section__mode wi-fi-section__mode--sta">
+											STA mode
+										</button>
+									</div>
+									<form id="ap-form" class="wi-fi-section__form form-wi-fi active" action="#">
+										<div class="form-wi-fi__state">
+											<div class="form-wi-fi__columm column-form">
 												<div class="form-wi-fi__item item-form select-item">
-													<label for="#">Channel</label>
+													<label for="#">State</label>
 													<div class="select-item__select">
-														<button type="button" class="select-item__button button button--toggler button--visible active">
+														<button type="button" class="select-item__button button button--toggler button--visible">
 															<span>Select</span>
 														</button>
 														<div class="select-item__items">
-															<button id="option-1" type="button" class="select-item__item">
-																Option-1
+															<button id="disabled" type="button" class="select-item__item">
+																Disabled
 															</button>
-															<button id="option-2" type="button" class="select-item__item">
-																Option-2
+															<button id="enabled" type="button" class="select-item__item">
+																Enabled
 															</button>
 														</div>
 													</div>
 												</div>
-											</div>
-											<div class="advanced-form__column column-form column-form--r">
-												<div class="advanced-form__item item-form">
-													<label for="max-clients">Max connected clients</label>
-													<input name="max-clients" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
-												</div>
-												<div class="advanced-form__item item-form">
-													<label for="mac-address">MAC address</label>
-													<input name="mac-address" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
+												<div class="form-wi-fi__item item-form">
+													<label for="ssid">SSID</label>
+													<input name="ssid" autocomplete="off" type="text" class="form-wi-fi__input input-wi-fi" />
 												</div>
 											</div>
-										</div>
-									</div>
-									<div class="form-wi-fi__client client-form">
-										<div class="client-form__lable">
-											<img src="img/icons/profile.svg" alt="Profile Icon" />
-											<span>Client list</span>
-										</div>
-										<div class="client-form__items">
-											<div class="client-form__item item-client-form">
-												<div class="item-client-form__name">Name</div>
-												<div class="item-client-form__value">Interfacer</div>
-											</div>
-											<div class="client-form__item item-client-form">
-												<div class="item-client-form__name">MAC address</div>
-												<div class="item-client-form__value">
-													00-08-74-4C-7F-1D
+											<div class="form-wi-fi__columm column-form column-form--r">
+												<div class="form-wi-fi__item item-form">
+													<label for="password">Password</label>
+													<input name="password" autocomplete="off" type="password" class="form-wi-fi__input input-wi-fi" />
+												</div>
+												<div class="form-wi-fi__item item-form">
+													<label for="password-confirm">Password confirm</label>
+													<input name="password-confirm" autocomplete="off" type="password" class="item-form__input input-wi-fi" />
 												</div>
 											</div>
-											<div class="client-form__item item-client-form">
-												<div class="item-client-form__name">IP address</div>
-												<div class="item-client-form__value">192.168.0.1</div>
-											</div>
 										</div>
-									</div>
-									<div class="form-wi-fi__status status-form">
-										<div class="status-form__column column-form">
-											<div class="status-form__item item-form">
-												<label for="mac-address">Status</label>
-												<input name="status" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
-											</div>
-										</div>
-										<div class="status-form__column column-form column-form--r">
-											<button type="submit" class="status-form__button button button--link button--section active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
-													<path opacity="0.24" d="M10.3809 6.27439V2.29175H10.7924C11.0934 2.29175 11.3826 2.40914 11.5984 2.61897L15.3163 6.23363C15.5403 6.45133 15.6666 6.75035 15.6666 7.06266V7.43064H11.5371C10.8985 7.43064 10.3809 6.91297 10.3809 6.27439Z" fill="white" />
-													<path d="M17.2083 13.8542L14.1249 16.9376L12.5833 15.3959M10.3809 2.29175H5.64575C4.36859 2.29175 3.33325 3.32709 3.33325 4.60425V15.3959C3.33325 16.6731 4.36859 17.7084 5.64575 17.7084H9.49992M10.3809 2.29175V6.27439C10.3809 6.91297 10.8985 7.43064 11.5371 7.43064H15.6666M10.3809 2.29175H10.7924C11.0934 2.29175 11.3826 2.40914 11.5984 2.61897L15.3163 6.23363C15.5403 6.45133 15.6666 6.75035 15.6666 7.06266V7.43064M15.6666 7.43064V9.22925" stroke="white" stroke-width="1.54167" stroke-linecap="round" stroke-linejoin="round" />
-												</svg>
-												<span>Save</span>
+										<div class="form-wi-fi__advanced advanced-form">
+											<button id="advanced" type="button" class="advanced-form__button button button--toggler button--visible advanced active">
+												<span>Advanced</span>
 											</button>
-										</div>
-									</div>
-								</form>
-								<form id="sta-form" class="wi-fi-section__form form-wi-fi" action="#">
-									<div class="form-wi-fi__state">
-										<div class="form-wi-fi__columm column-form">
-											<div class="form-wi-fi__item item-form select-item">
-												<label for="#">State</label>
-												<div class="select-item__select">
-													<button type="button" class="select-item__button button button--toggler button--visible">
-														<span>Select</span>
-													</button>
-													<div class="select-item__items">
-														<button id="disabled" type="button" class="select-item__item">
-															Disabled
-														</button>
-														<button id="enabled" type="button" class="select-item__item">
-															Enabled
-														</button>
+											<div class="advanced-form__body open">
+												<div class="advanced-form__column column-form">
+													<div class="advanced-form__item item-form">
+														<label for="ip">IP address</label>
+														<input name="ip" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
+													</div>
+													<div class="advanced-form__item item-form">
+														<label for="subnet-mask">Subnet mask</label>
+														<input name="subnet-mask" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
+													</div>
+													<div class="form-wi-fi__item item-form select-item">
+														<label for="#">Channel</label>
+														<div class="select-item__select">
+															<button type="button" class="select-item__button button button--toggler button--visible active">
+																<span>Select</span>
+															</button>
+															<div class="select-item__items">
+																<button id="option-1" type="button" class="select-item__item">
+																	Option-1
+																</button>
+																<button id="option-2" type="button" class="select-item__item">
+																	Option-2
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="advanced-form__column column-form column-form--r">
+													<div class="advanced-form__item item-form">
+														<label for="max-clients">Max connected clients</label>
+														<input name="max-clients" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
+													</div>
+													<div class="advanced-form__item item-form">
+														<label for="mac-address">MAC address</label>
+														<input name="mac-address" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
 													</div>
 												</div>
 											</div>
-											<div class="form-wi-fi__item item-form">
-												<label for="ssid">Scan for AP</label>
-												<button class="status-form__button button button--link button--section scan active">
-													<span>Scan</span>
+										</div>
+										<div class="form-wi-fi__client client-form">
+											<div class="client-form__lable">
+												<img src="img/icons/profile.svg" alt="Profile Icon" />
+												<span>Client list</span>
+											</div>
+											<div class="client-form__items">
+												<div class="client-form__item item-client-form">
+													<div class="item-client-form__name">Name</div>
+													<div class="item-client-form__value">
+														Interfacer
+													</div>
+												</div>
+												<div class="client-form__item item-client-form">
+													<div class="item-client-form__name">
+														MAC address
+													</div>
+													<div class="item-client-form__value">
+														00-08-74-4C-7F-1D
+													</div>
+												</div>
+												<div class="client-form__item item-client-form">
+													<div class="item-client-form__name">IP address</div>
+													<div class="item-client-form__value">
+														192.168.0.1
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-wi-fi__status status-form">
+											<div class="status-form__column column-form">
+												<div class="status-form__item item-form">
+													<label for="mac-address">Status</label>
+													<input name="status" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+												</div>
+											</div>
+											<div class="status-form__column column-form column-form--r">
+												<button data-popup="#popup" type="submit" id="save-button" class="status-form__button button button--link button--section active">
+													<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
+														<path opacity="0.24" d="M10.3809 6.27439V2.29175H10.7924C11.0934 2.29175 11.3826 2.40914 11.5984 2.61897L15.3163 6.23363C15.5403 6.45133 15.6666 6.75035 15.6666 7.06266V7.43064H11.5371C10.8985 7.43064 10.3809 6.91297 10.3809 6.27439Z" fill="white" />
+														<path d="M17.2083 13.8542L14.1249 16.9376L12.5833 15.3959M10.3809 2.29175H5.64575C4.36859 2.29175 3.33325 3.32709 3.33325 4.60425V15.3959C3.33325 16.6731 4.36859 17.7084 5.64575 17.7084H9.49992M10.3809 2.29175V6.27439C10.3809 6.91297 10.8985 7.43064 11.5371 7.43064H15.6666M10.3809 2.29175H10.7924C11.0934 2.29175 11.3826 2.40914 11.5984 2.61897L15.3163 6.23363C15.5403 6.45133 15.6666 6.75035 15.6666 7.06266V7.43064M15.6666 7.43064V9.22925" stroke="white" stroke-width="1.54167" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>Save</span>
 												</button>
 											</div>
 										</div>
-										<div class="form-wi-fi__columm column-form column-form--r">
-											<div class="form-wi-fi__item item-form">
-												<label for="ssid">SSID</label>
-												<input id="ssid" name="ssid" autocomplete="off" type="text" class="form-wi-fi__input input-wi-fi" />
-											</div>
-											<div class="form-wi-fi__item item-form">
-												<label for="password">Password</label>
-												<input id="password" name="password" autocomplete="off" type="password" class="form-wi-fi__input input-wi-fi" />
-											</div>
-										</div>
-									</div>
-									<div class="form-wi-fi__advanced advanced-form">
-										<button id="advanced" type="button" class="advanced-form__button button button--toggler button--visible advanced active">
-											<span>Advanced</span>
-										</button>
-										<div class="advanced-form__body open">
-											<div class="advanced-form__column column-form">
+									</form>
+									<form id="sta-form" class="wi-fi-section__form form-wi-fi" action="#">
+										<div class="form-wi-fi__state">
+											<div class="form-wi-fi__columm column-form">
 												<div class="form-wi-fi__item item-form select-item">
-													<label for="#">IP mode</label>
+													<label for="#">State</label>
 													<div class="select-item__select">
-														<button type="button" class="select-item__button button button--toggler button--visible active">
+														<button type="button" class="select-item__button button button--toggler button--visible">
 															<span>Select</span>
 														</button>
 														<div class="select-item__items">
-															<button id="option-1" type="button" class="select-item__item">
-																Option-1
+															<button id="disabled" type="button" class="select-item__item">
+																Disabled
 															</button>
-															<button id="option-2" type="button" class="select-item__item">
-																Option-2
-															</button>
-															<button id="option-3" type="button" class="select-item__item">
-																Option-3
+															<button id="enabled" type="button" class="select-item__item">
+																Enabled
 															</button>
 														</div>
 													</div>
 												</div>
-												<div class="advanced-form__item item-form">
-													<label for="subnet-mask">Subnet mask</label>
-													<input id="subnet-mask" name="subnet-mask" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
-												</div>
-												<div class="advanced-form__item item-form">
-													<label for="dns">DNS</label>
-													<input id="dns" name="subnet-mask" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
-												</div>
-												<div class="advanced-form__item item-form">
-													<label for="reconnect-timeout">Reconnect <br />
-														timeout (s).</label>
-													<input id="reconnect-timeout" name="subnet-mask" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+												<div class="form-wi-fi__item item-form">
+													<label for="ssid">Scan for AP</label>
+													<button class="status-form__button button button--link button--section scan active">
+														<span>Scan</span>
+													</button>
 												</div>
 											</div>
-											<div class="advanced-form__column column-form column-form--r">
-												<div class="advanced-form__item item-form">
-													<label for="ip">IP address</label>
-													<input id="ip" name="ip" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
+											<div class="form-wi-fi__columm column-form column-form--r">
+												<div class="form-wi-fi__item item-form">
+													<label for="ssid">SSID</label>
+													<input id="ssid" name="ssid" autocomplete="off" type="text" class="form-wi-fi__input input-wi-fi" />
 												</div>
-												<div class="advanced-form__item item-form">
-													<label for="default-gateway">Default <br />
-														Gateway</label>
-													<input id="default-gateway" name="default-gateway" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
-												</div>
-												<div class="advanced-form__item item-form">
-													<label for="host-name">Hostname</label>
-													<input id="host-name" name="host-name" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
-												</div>
-												<div class="advanced-form__item item-form">
-													<label for="mac-address">MAC address</label>
-													<input id="mac-address" name="mac-address" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+												<div class="form-wi-fi__item item-form">
+													<label for="password">Password</label>
+													<input id="password" name="password" autocomplete="off" type="password" class="form-wi-fi__input input-wi-fi" />
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="form-wi-fi__status status-form">
-										<div class="status-form__column column-form">
-											<div class="status-form__item item-form">
-												<label for="mac-address">Status</label>
-												<input name="status" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
-											</div>
-										</div>
-										<div class="status-form__column column-form column-form--r">
-											<button type="submit" class="status-form__button button button--link button--section active">
-												<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
-													<path opacity="0.24" d="M10.3809 6.27439V2.29175H10.7924C11.0934 2.29175 11.3826 2.40914 11.5984 2.61897L15.3163 6.23363C15.5403 6.45133 15.6666 6.75035 15.6666 7.06266V7.43064H11.5371C10.8985 7.43064 10.3809 6.91297 10.3809 6.27439Z" fill="white" />
-													<path d="M17.2083 13.8542L14.1249 16.9376L12.5833 15.3959M10.3809 2.29175H5.64575C4.36859 2.29175 3.33325 3.32709 3.33325 4.60425V15.3959C3.33325 16.6731 4.36859 17.7084 5.64575 17.7084H9.49992M10.3809 2.29175V6.27439C10.3809 6.91297 10.8985 7.43064 11.5371 7.43064H15.6666M10.3809 2.29175H10.7924C11.0934 2.29175 11.3826 2.40914 11.5984 2.61897L15.3163 6.23363C15.5403 6.45133 15.6666 6.75035 15.6666 7.06266V7.43064M15.6666 7.43064V9.22925" stroke="white" stroke-width="1.54167" stroke-linecap="round" stroke-linejoin="round" />
-												</svg>
-												<span>Save</span>
+										<div class="form-wi-fi__advanced advanced-form">
+											<button id="advanced" type="button" class="advanced-form__button button button--toggler button--visible advanced active">
+												<span>Advanced</span>
 											</button>
+											<div class="advanced-form__body open">
+												<div class="advanced-form__column column-form">
+													<div class="form-wi-fi__item item-form select-item">
+														<label for="#">IP mode</label>
+														<div class="select-item__select">
+															<button type="button" class="select-item__button button button--toggler button--visible active">
+																<span>Select</span>
+															</button>
+															<div class="select-item__items">
+																<button id="option-1" type="button" class="select-item__item">
+																	Option-1
+																</button>
+																<button id="option-2" type="button" class="select-item__item">
+																	Option-2
+																</button>
+																<button id="option-3" type="button" class="select-item__item">
+																	Option-3
+																</button>
+															</div>
+														</div>
+													</div>
+													<div class="advanced-form__item item-form">
+														<label for="subnet-mask">Subnet mask</label>
+														<input id="subnet-mask" name="subnet-mask" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+													</div>
+													<div class="advanced-form__item item-form">
+														<label for="dns">DNS</label>
+														<input id="dns" name="subnet-mask" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+													</div>
+													<div class="advanced-form__item item-form">
+														<label for="reconnect-timeout">Reconnect <br />
+															timeout (s).</label>
+														<input id="reconnect-timeout" name="subnet-mask" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+													</div>
+												</div>
+												<div class="advanced-form__column column-form column-form--r">
+													<div class="advanced-form__item item-form">
+														<label for="ip">IP address</label>
+														<input id="ip" name="ip" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
+													</div>
+													<div class="advanced-form__item item-form">
+														<label for="default-gateway">Default <br />
+															Gateway</label>
+														<input id="default-gateway" name="default-gateway" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+													</div>
+													<div class="advanced-form__item item-form">
+														<label for="host-name">Hostname</label>
+														<input id="host-name" name="host-name" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+													</div>
+													<div class="advanced-form__item item-form">
+														<label for="mac-address">MAC address</label>
+														<input id="mac-address" name="mac-address" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+													</div>
+												</div>
+											</div>
 										</div>
-									</div>
-								</form>
-								<div class="content-page__bottom-info bottom-info mobile">
+										<div class="form-wi-fi__status status-form">
+											<div class="status-form__column column-form">
+												<div class="status-form__item item-form">
+													<label for="mac-address">Status</label>
+													<input name="status" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+												</div>
+											</div>
+											<div class="status-form__column column-form column-form--r">
+												<button type="submit" class="status-form__button button button--link button--section active">
+													<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
+														<path opacity="0.24" d="M10.3809 6.27439V2.29175H10.7924C11.0934 2.29175 11.3826 2.40914 11.5984 2.61897L15.3163 6.23363C15.5403 6.45133 15.6666 6.75035 15.6666 7.06266V7.43064H11.5371C10.8985 7.43064 10.3809 6.91297 10.3809 6.27439Z" fill="white" />
+														<path d="M17.2083 13.8542L14.1249 16.9376L12.5833 15.3959M10.3809 2.29175H5.64575C4.36859 2.29175 3.33325 3.32709 3.33325 4.60425V15.3959C3.33325 16.6731 4.36859 17.7084 5.64575 17.7084H9.49992M10.3809 2.29175V6.27439C10.3809 6.91297 10.8985 7.43064 11.5371 7.43064H15.6666M10.3809 2.29175H10.7924C11.0934 2.29175 11.3826 2.40914 11.5984 2.61897L15.3163 6.23363C15.5403 6.45133 15.6666 6.75035 15.6666 7.06266V7.43064M15.6666 7.43064V9.22925" stroke="white" stroke-width="1.54167" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+													<span>Save</span>
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<!-- Секція wi-fi / Футер -->
+
+								<div class="section__bottom-info bottom-info">
 									<div class="bottom-info__item">FW: v1.3.2</div>
 									<div class="bottom-info__item">UI: v1.1.1</div>
 								</div>
@@ -448,62 +470,153 @@
 							<!-- Головний блок / Блок з контентом / Секція fw-update -->
 
 							<section class="main-content-page__fw-update fw-section section">
-								<div data-da=".content-page__project-name, 767.98, 2" class="fw-section__title title-section">
-									<img src="img/icons/refresh.svg" alt="Wi-Fi Icon" />
-									<span>FW Update</span>
-								</div>
-								<div class="fw-section__body">
-									<div class="fw-section__upload upload-fw-section">
-										<label for="file-input" id="drop-area">
-											<div class="upload-fw-section__body">
-												<input id="file-input" type="file" hidden />
-												<h3 class="upload-fw-section__title">
-													Select or drop <br />
-													you FW file here
-												</h3>
-												<div class="upload-fw-section__type">(*.bin)</div>
-												<div type="button" class="upload-fw-section__button">
-													+
+								<!-- Секція fw-update / Оболонка з контентом -->
+
+								<div class="section__content">
+									<div data-da=".content-page__project-name, 767.98, 2" class="fw-section__title title-section">
+										<img src="img/icons/refresh.svg" alt="Wi-Fi Icon" />
+										<span>FW Update</span>
+									</div>
+									<div class="fw-section__body">
+										<div class="fw-section__upload upload-fw-section">
+											<label for="file-input" id="drop-area">
+												<div class="upload-fw-section__body">
+													<input id="file-input" type="file" hidden />
+													<h3 class="upload-fw-section__title">
+														Select or drop <br />
+														you FW file here
+													</h3>
+													<div class="upload-fw-section__type">(*.bin)</div>
+													<div type="button" class="upload-fw-section__button">
+														+
+													</div>
 												</div>
-											</div>
-										</label>
+											</label>
+										</div>
+										<div class="fw-section__progress">
+											<span id="progress-value">60%</span>
+											<span><i id="progress-line"></i></span>
+										</div>
+										<button id="update-button" type="button" class="fw-section__button button button--link button--section active">
+											<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+												<g clip-path="url(#clip0_127_1619)">
+													<path d="M7.15065 12.9999C7.15065 9.98735 9.42478 7.50848 12.3507 7.18555V9.30156C12.3507 10.0461 13.2508 10.419 13.7773 9.8925L17.6623 6.00752C17.9887 5.68116 17.9887 5.15201 17.6623 4.82565L13.7773 0.940666L13.3177 1.40029L13.7773 0.940665C13.2508 0.414193 12.3507 0.787068 12.3507 1.53161V3.70556C7.5067 4.03914 3.68398 8.07113 3.68398 12.9999C3.68398 14.7406 4.1695 16.3598 4.99741 17.7496L5.55583 17.4169L4.99741 17.7496C5.28154 18.2265 5.92622 18.2852 6.30121 17.9103L5.8416 17.4506L6.30122 17.9103L7.62133 16.5901L7.16172 16.1305L7.62134 16.5901C7.8834 16.3281 7.93569 15.9341 7.77549 15.6176L7.19557 15.9112L7.77549 15.6176C7.3771 14.8307 7.15065 13.9448 7.15065 12.9999ZM9.26759 19.9923L9.72721 20.4519L9.26759 19.9923C8.94123 20.3187 8.94122 20.8478 9.26759 21.1742L13.1526 25.0592C13.679 25.5856 14.5792 25.2128 14.5792 24.4682V22.2943C19.4232 21.9607 23.2459 17.9287 23.2459 12.9999C23.2459 11.2593 22.7604 9.64008 21.9325 8.25028C21.6483 7.77331 21.0036 7.71459 20.6287 8.08957L19.3085 9.4097C19.0465 9.67176 18.9942 10.0658 19.1544 10.3822C19.5528 11.1691 19.7792 12.0551 19.7792 12.9999C19.7792 16.0125 17.5051 18.4913 14.5792 18.8143V16.6983C14.5792 15.9537 13.679 15.5809 13.1526 16.1073L13.6122 16.567L13.1526 16.1073L9.26759 19.9923Z" stroke="white" stroke-width="1.3" />
+												</g>
+												<defs>
+													<clipPath id="clip0_127_1619">
+														<rect width="26" height="26" fill="white" />
+													</clipPath>
+												</defs>
+											</svg>
+											<span>Update</span>
+										</button>
 									</div>
-									<div class="fw-section__progress">
-										<span id="progress-value">60%</span>
-										<span><i id="progress-line"></i></span>
-									</div>
-									<button type="button" class="fw-section__button button button--link button--section active">
-										<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-											<g clip-path="url(#clip0_127_1619)">
-												<path d="M7.15065 12.9999C7.15065 9.98735 9.42478 7.50848 12.3507 7.18555V9.30156C12.3507 10.0461 13.2508 10.419 13.7773 9.8925L17.6623 6.00752C17.9887 5.68116 17.9887 5.15201 17.6623 4.82565L13.7773 0.940666L13.3177 1.40029L13.7773 0.940665C13.2508 0.414193 12.3507 0.787068 12.3507 1.53161V3.70556C7.5067 4.03914 3.68398 8.07113 3.68398 12.9999C3.68398 14.7406 4.1695 16.3598 4.99741 17.7496L5.55583 17.4169L4.99741 17.7496C5.28154 18.2265 5.92622 18.2852 6.30121 17.9103L5.8416 17.4506L6.30122 17.9103L7.62133 16.5901L7.16172 16.1305L7.62134 16.5901C7.8834 16.3281 7.93569 15.9341 7.77549 15.6176L7.19557 15.9112L7.77549 15.6176C7.3771 14.8307 7.15065 13.9448 7.15065 12.9999ZM9.26759 19.9923L9.72721 20.4519L9.26759 19.9923C8.94123 20.3187 8.94122 20.8478 9.26759 21.1742L13.1526 25.0592C13.679 25.5856 14.5792 25.2128 14.5792 24.4682V22.2943C19.4232 21.9607 23.2459 17.9287 23.2459 12.9999C23.2459 11.2593 22.7604 9.64008 21.9325 8.25028C21.6483 7.77331 21.0036 7.71459 20.6287 8.08957L19.3085 9.4097C19.0465 9.67176 18.9942 10.0658 19.1544 10.3822C19.5528 11.1691 19.7792 12.0551 19.7792 12.9999C19.7792 16.0125 17.5051 18.4913 14.5792 18.8143V16.6983C14.5792 15.9537 13.679 15.5809 13.1526 16.1073L13.6122 16.567L13.1526 16.1073L9.26759 19.9923Z" stroke="white" stroke-width="1.3" />
-											</g>
-											<defs>
-												<clipPath id="clip0_127_1619">
-													<rect width="26" height="26" fill="white" />
-												</clipPath>
-											</defs>
-										</svg>
-										<span>Update</span>
-									</button>
 								</div>
-								<div class="content-page__bottom-info bottom-info mobile">
+								<!-- Секція fw-update / Футер -->
+
+								<div class="section__bottom-info bottom-info">
 									<div class="bottom-info__item">FW: v1.3.2</div>
 									<div class="bottom-info__item">UI: v1.1.1</div>
 								</div>
 							</section>
 						</div>
-						<!-- Головний блок / Нижній блок з інфо -->
-
-						<!-- <div class="content-page__bottom-info bottom-info">
-                <div class="bottom-info__item">FW: v1.3.2</div>
-                <div class="bottom-info__item">UI: v1.1.1</div>
-              </div> -->
 					</div>
 				</div>
 			</div>
 		</main>
 	</div>
-	<script src="js/app.min.js?_v=20231208235443"></script>
+	<!-- loader -->
+	<div id="loader" class="loared active">
+		<h3>Please wait</h3>
+		<span></span>
+	</div>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<h3 class="popup__title">Are you sure?</h3>
+				<div class="popup__text">
+					Are you sure you want to perform this action?
+				</div>
+				<div class="popup__buttons">
+					<button data-close type="button" class="popup__button popup__button--yes">
+						Yes
+					</button>
+					<button data-close type="button" class="popup__button popup__button--no">
+						No
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="snackbar-info" class="snackbar snackbar--info">
+		<div class="snackbar__message">
+			<svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
+				<path d="M18.0003 32.0833C26.0212 32.0833 32.5837 25.5208 32.5837 17.5C32.5837 9.47913 26.0212 2.91663 18.0003 2.91663C9.97949 2.91663 3.41699 9.47913 3.41699 17.5C3.41699 25.5208 9.97949 32.0833 18.0003 32.0833Z" stroke="#498BDE" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M18 11.6666V18.9583" stroke="#498BDE" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M17.9912 23.3334H18.0043" stroke="#498BDE" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+			<span>Info!</span>
+		</div>
+		<button class="snackbar__close">
+			<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+				<path d="M17.5003 32.083C25.5212 32.083 32.0837 25.5205 32.0837 17.4997C32.0837 9.47888 25.5212 2.91638 17.5003 2.91638C9.47949 2.91638 2.91699 9.47888 2.91699 17.4997C2.91699 25.5205 9.47949 32.083 17.5003 32.083Z" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M13.373 21.627L21.6272 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M21.6272 21.627L13.373 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</button>
+	</div>
+	<div id="snackbar-error" class="snackbar snackbar--error">
+		<div class="snackbar__message">
+			<svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
+				<path d="M22.2295 2.91663H13.7712C12.7795 2.91663 11.3795 3.49997 10.6795 4.19997L4.70033 10.1791C4.00033 10.8791 3.41699 12.2791 3.41699 13.2708V21.7291C3.41699 22.7208 4.00033 24.1208 4.70033 24.8208L10.6795 30.8C11.3795 31.5 12.7795 32.0833 13.7712 32.0833H22.2295C23.2211 32.0833 24.6212 31.5 25.3212 30.8L31.3003 24.8208C32.0003 24.1208 32.5837 22.7208 32.5837 21.7291V13.2708C32.5837 12.2791 32.0003 10.8791 31.3003 10.1791L25.3212 4.19997C24.6212 3.49997 23.2211 2.91663 22.2295 2.91663Z" stroke="#C96565" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M12.8955 22.6042L23.1038 12.3959" stroke="#C96565" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M23.1038 22.6042L12.8955 12.3959" stroke="#C96565" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+			<span>Error!</span>
+		</div>
+		<button class="snackbar__close">
+			<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+				<path d="M17.5003 32.083C25.5212 32.083 32.0837 25.5205 32.0837 17.4997C32.0837 9.47888 25.5212 2.91638 17.5003 2.91638C9.47949 2.91638 2.91699 9.47888 2.91699 17.4997C2.91699 25.5205 9.47949 32.083 17.5003 32.083Z" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M13.373 21.627L21.6272 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M21.6272 21.627L13.373 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</button>
+	</div>
+	<div id="snackbar-warning" class="snackbar snackbar--warning">
+		<div class="snackbar__message">
+			<svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
+				<path d="M18 11.3019V18.9581" stroke="#F1A027" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M31.2421 12.5128V22.4877C31.2421 24.121 30.3671 25.6378 28.9525 26.469L20.29 31.4711C18.8754 32.2878 17.1254 32.2878 15.6962 31.4711L7.03373 26.469C5.61915 25.6523 4.74414 24.1356 4.74414 22.4877V12.5128C4.74414 10.8794 5.61915 9.36269 7.03373 8.53144L15.6962 3.52937C17.1108 2.7127 18.8609 2.7127 20.29 3.52937L28.9525 8.53144C30.3671 9.36269 31.2421 10.8648 31.2421 12.5128Z" stroke="#F1A027" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M18 23.6257V23.7716" stroke="#F1A027" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+			<span>Warning!</span>
+		</div>
+		<button class="snackbar__close">
+			<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+				<path d="M17.5003 32.083C25.5212 32.083 32.0837 25.5205 32.0837 17.4997C32.0837 9.47888 25.5212 2.91638 17.5003 2.91638C9.47949 2.91638 2.91699 9.47888 2.91699 17.4997C2.91699 25.5205 9.47949 32.083 17.5003 32.083Z" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M13.373 21.627L21.6272 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M21.6272 21.627L13.373 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</button>
+	</div>
+	<div id="snackbar-success" class="snackbar snackbar--success">
+		<div class="snackbar__message">
+			<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+				<path d="M17.5003 32.0834C25.5212 32.0834 32.0837 25.5209 32.0837 17.5C32.0837 9.47919 25.5212 2.91669 17.5003 2.91669C9.47949 2.91669 2.91699 9.47919 2.91699 17.5C2.91699 25.5209 9.47949 32.0834 17.5003 32.0834Z" stroke="#3E5E6D" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M11.3018 17.4999L15.4288 21.627L23.6976 13.3728" stroke="#3E5E6D" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+			<span>Success!</span>
+		</div>
+		<button class="snackbar__close">
+			<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+				<path d="M17.5003 32.083C25.5212 32.083 32.0837 25.5205 32.0837 17.4997C32.0837 9.47888 25.5212 2.91638 17.5003 2.91638C9.47949 2.91638 2.91699 9.47888 2.91699 17.4997C2.91699 25.5205 9.47949 32.083 17.5003 32.083Z" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M13.373 21.627L21.6272 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M21.6272 21.627L13.373 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</button>
+	</div>
+
+	<script src="js/app.min.js?_v=20231209113604"></script>
 </body>
 
 </html>
