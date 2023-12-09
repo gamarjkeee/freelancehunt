@@ -1591,6 +1591,9 @@ section.section.active {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 2.1875rem;
           flex: 0 0 2.1875rem;
+  -webkit-transform: translateY(-0.3125rem);
+      -ms-transform: translateY(-0.3125rem);
+          transform: translateY(-0.3125rem);
 }
 
 .snackbar__message span {
