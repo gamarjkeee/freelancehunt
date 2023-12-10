@@ -588,6 +588,13 @@
     updateButton.addEventListener("click", (() => {
         showToast();
     }));
+    window.addEventListener("resize", (() => {
+        let width = window.innerWidth;
+        if (width > 767 && document.documentElement.classList.contains("lock") && document.documentElement.classList.contains("menu-open")) {
+            document.documentElement.classList.remove("menu-open");
+            document.documentElement.classList.remove("lock");
+        }
+    }));
     window["FLS"] = false;
     isWebp();
     addLoadedClass();
