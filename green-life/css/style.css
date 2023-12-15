@@ -1246,14 +1246,39 @@ h6 {
 
 .exclusive__back {
   position: absolute;
-  opacity: 0;
-  z-index: 1;
   inset: 0;
+}
+
+.exclusive__back::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+}
+
+.exclusive__back img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 -80%;
+     object-position: 0 -80%;
+}
+
+.exclusive__back img:nth-child(1) {
+  z-index: 2;
+}
+
+.exclusive__back img:nth-child(2) {
+  display: none;
 }
 
 .exclusive__container {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1309,6 +1334,39 @@ h6 {
   -webkit-column-gap: 0.5rem;
      -moz-column-gap: 0.5rem;
           column-gap: 0.5rem;
+}
+
+.travel {
+  position: relative;
+}
+
+.travel__back {
+  position: absolute;
+  inset: 0;
+}
+
+.travel__back::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(255, 255, 255)), color-stop(5%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(95%, rgba(255, 255, 255, 0)), to(rgb(255, 255, 255)));
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%);
+}
+
+.travel__back img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.travel__container {
+  position: relative;
+  z-index: 2;
 }
 
 .content-travel {
@@ -1692,35 +1750,35 @@ h6 {
   }
 
   .page__exclusive {
-    padding-top: 3.75rem;
+    padding-top: 6.25rem;
   }
 
   .page__exclusive {
-    padding-bottom: 3.75rem;
+    padding-bottom: 6.25rem;
   }
 
   .page__travel {
-    padding-top: 3.75rem;
+    padding-top: 8.75rem;
   }
 
   .page__travel {
-    padding-bottom: 3.75rem;
+    padding-bottom: 8.75rem;
   }
 
   .page__news {
-    padding-top: 5rem;
+    padding-top: 6.25rem;
   }
 
   .page__news {
-    padding-bottom: 5rem;
+    padding-bottom: 6.25rem;
   }
 
   .page__start {
-    padding-top: 5rem;
+    padding-top: 6.25rem;
   }
 
   .page__start {
-    padding-bottom: 5.625rem;
+    padding-bottom: 6.25rem;
   }
 
   .body-hero__play {
@@ -2051,99 +2109,99 @@ h6 {
     }
 }
 
-@supports (padding-top: clamp( 2.5rem , 2.0789473684rem  +  2.1052631579vw , 3.75rem )) {
+@supports (padding-top: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem )) {
     .page__exclusive {
-      padding-top: clamp( 2.5rem , 2.0789473684rem  +  2.1052631579vw , 3.75rem );
+      padding-top: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem );
     }
 }
 
-@supports not (padding-top: clamp( 2.5rem , 2.0789473684rem  +  2.1052631579vw , 3.75rem )) {
+@supports not (padding-top: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem )) {
     .page__exclusive {
-      padding-top: calc(2.5rem + 1.25 * (100vw - 20rem) / 59.375);
+      padding-top: calc(2.5rem + 3.75 * (100vw - 20rem) / 59.375);
     }
 }
 
-@supports (padding-bottom: clamp( 2.5rem , 2.0789473684rem  +  2.1052631579vw , 3.75rem )) {
+@supports (padding-bottom: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem )) {
     .page__exclusive {
-      padding-bottom: clamp( 2.5rem , 2.0789473684rem  +  2.1052631579vw , 3.75rem );
+      padding-bottom: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 2.5rem , 2.0789473684rem  +  2.1052631579vw , 3.75rem )) {
+@supports not (padding-bottom: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem )) {
     .page__exclusive {
-      padding-bottom: calc(2.5rem + 1.25 * (100vw - 20rem) / 59.375);
+      padding-bottom: calc(2.5rem + 3.75 * (100vw - 20rem) / 59.375);
     }
 }
 
-@supports (padding-top: clamp( 2.5rem , 2.0789473684rem  +  2.1052631579vw , 3.75rem )) {
+@supports (padding-top: clamp( 2.5rem , 0.3947368421rem  +  10.5263157895vw , 8.75rem )) {
     .page__travel {
-      padding-top: clamp( 2.5rem , 2.0789473684rem  +  2.1052631579vw , 3.75rem );
+      padding-top: clamp( 2.5rem , 0.3947368421rem  +  10.5263157895vw , 8.75rem );
     }
 }
 
-@supports not (padding-top: clamp( 2.5rem , 2.0789473684rem  +  2.1052631579vw , 3.75rem )) {
+@supports not (padding-top: clamp( 2.5rem , 0.3947368421rem  +  10.5263157895vw , 8.75rem )) {
     .page__travel {
-      padding-top: calc(2.5rem + 1.25 * (100vw - 20rem) / 59.375);
+      padding-top: calc(2.5rem + 6.25 * (100vw - 20rem) / 59.375);
     }
 }
 
-@supports (padding-bottom: clamp( 2.5rem , 2.0789473684rem  +  2.1052631579vw , 3.75rem )) {
+@supports (padding-bottom: clamp( 2.5rem , 0.3947368421rem  +  10.5263157895vw , 8.75rem )) {
     .page__travel {
-      padding-bottom: clamp( 2.5rem , 2.0789473684rem  +  2.1052631579vw , 3.75rem );
+      padding-bottom: clamp( 2.5rem , 0.3947368421rem  +  10.5263157895vw , 8.75rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 2.5rem , 2.0789473684rem  +  2.1052631579vw , 3.75rem )) {
+@supports not (padding-bottom: clamp( 2.5rem , 0.3947368421rem  +  10.5263157895vw , 8.75rem )) {
     .page__travel {
-      padding-bottom: calc(2.5rem + 1.25 * (100vw - 20rem) / 59.375);
+      padding-bottom: calc(2.5rem + 6.25 * (100vw - 20rem) / 59.375);
     }
 }
 
-@supports (padding-top: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem )) {
+@supports (padding-top: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem )) {
     .page__news {
-      padding-top: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem );
+      padding-top: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem );
     }
 }
 
-@supports not (padding-top: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem )) {
+@supports not (padding-top: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem )) {
     .page__news {
-      padding-top: calc(2.5rem + 2.5 * (100vw - 20rem) / 59.375);
+      padding-top: calc(2.5rem + 3.75 * (100vw - 20rem) / 59.375);
     }
 }
 
-@supports (padding-bottom: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem )) {
+@supports (padding-bottom: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem )) {
     .page__news {
-      padding-bottom: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem );
+      padding-bottom: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem )) {
+@supports not (padding-bottom: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem )) {
     .page__news {
-      padding-bottom: calc(2.5rem + 2.5 * (100vw - 20rem) / 59.375);
+      padding-bottom: calc(2.5rem + 3.75 * (100vw - 20rem) / 59.375);
     }
 }
 
-@supports (padding-top: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem )) {
+@supports (padding-top: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem )) {
     .page__start {
-      padding-top: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem );
+      padding-top: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem );
     }
 }
 
-@supports not (padding-top: clamp( 2.5rem , 1.6578947368rem  +  4.2105263158vw , 5rem )) {
+@supports not (padding-top: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem )) {
     .page__start {
-      padding-top: calc(2.5rem + 2.5 * (100vw - 20rem) / 59.375);
+      padding-top: calc(2.5rem + 3.75 * (100vw - 20rem) / 59.375);
     }
 }
 
-@supports (padding-bottom: clamp( 2.5rem , 1.4473684211rem  +  5.2631578947vw , 5.625rem )) {
+@supports (padding-bottom: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem )) {
     .page__start {
-      padding-bottom: clamp( 2.5rem , 1.4473684211rem  +  5.2631578947vw , 5.625rem );
+      padding-bottom: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 2.5rem , 1.4473684211rem  +  5.2631578947vw , 5.625rem )) {
+@supports not (padding-bottom: clamp( 2.5rem , 1.2368421053rem  +  6.3157894737vw , 6.25rem )) {
     .page__start {
-      padding-bottom: calc(2.5rem + 3.125 * (100vw - 20rem) / 59.375);
+      padding-bottom: calc(2.5rem + 3.75 * (100vw - 20rem) / 59.375);
     }
 }
 
