@@ -3,34 +3,43 @@
 
 <head>
 	<title>Green Life Energy</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231216000305">
-	<link rel="shortcut icon" href="favicon.ico">
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<style>
+		body {
+			opacity: 0;
+			transition: opacity 0.3s ease 0.3s;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20231216131011" />
+	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<a href="#" class="header__logo"><img src="img/logo.svg" alt="Logo Image" /></a>
+				<a href="index.html" class="header__logo"><img src="img/logo.svg" alt="Logo Image" /></a>
 				<div class="header__menu menu">
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
 							<li class="menu__item">
-								<a href="#" class="menu__link">About Us</a>
+								<a href="#" data-goto-header data-goto=".page__ubout-us" class="menu__link">About Us</a>
 							</li>
-							<li class="menu__item"><a href="#" class="menu__link">Travel</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">News</a></li>
+							<li class="menu__item">
+								<a href="#" data-goto-header data-goto=".page__travel" class="menu__link">Travel</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" data-goto-header data-goto=".page__news" class="menu__link">News</a>
+							</li>
 						</ul>
 					</nav>
 				</div>
-				<div class="header__actions">
-					<a href="#" class="header__button button"><span>Contact Us</span>
+				<div data-da=".menu__body, 767.98" class="header__actions">
+					<a href="#" data-goto=".page__hero" class="header__button button"><span>Contact Us</span>
 						<img src="img/icons/contact.svg" alt="Contact Icon" /></a>
 				</div>
 			</div>
@@ -39,8 +48,9 @@
 		<main class="page">
 			<section class="page__hero hero">
 				<div class="hero__container">
+					<div class="hero__title-mobile"></div>
 					<div class="hero__body body-hero">
-						<div class="body-hero__title title-body-hero">
+						<div data-da=".hero__title-mobile,767.98, 0" class="body-hero__title title-body-hero">
 							<h1 class="title-body-hero__title">
 								Travel Clean, Travel <span>Green</span>
 							</h1>
@@ -56,7 +66,7 @@
 						</button>
 						<div class="body-hero__bottom bottom-body-hero">
 							<a href="#" class="bottom-body-hero__button button button--blur"><span>Welcome to GLE</span><img src="img/icons/welcome.svg" alt="Welcome Icon" /></a>
-							<div class="bottom-body-hero__text">
+							<div data-da=".hero__text-mobile,767.98, 0" class="bottom-body-hero__text">
 								<p>
 									We are revolutionizing the travel industry by innovating
 									sustainable, user-friendly solutions that make journeys more
@@ -71,6 +81,7 @@
 							<picture><source srcset="img/hero/hero.webp" type="image/webp"><img src="img/hero/hero.jpg" alt="" /></picture>
 						</div>
 					</div>
+					<div class="hero__text-mobile"></div>
 				</div>
 			</section>
 			<section class="page__ubout-us ubout-us">
@@ -128,10 +139,11 @@
 					</div>
 				</div>
 				<div class="ubout-us__bottom bottom-ubout-us">
-					<div class="bottom-ubout-us__line">
-						<span>BOOKINGS COMING SOON</span><span>BOOKING Packages COMING SOON</span>
-						<span>BOOKINGS COMING SOON</span><span>BOOKING Packages COMING SOON</span>
-					</div>
+					<marquee scrolldelay="60" truespeed class="bottom-ubout-us__line">
+						<span>BOOKINGS COMING SOON <i></i> BOOKING Packages COMING SOON
+							<i></i> BOOKINGS COMING SOON <i></i> BOOKING Packages COMING
+							SOON <i></i></span>
+					</marquee>
 					<div class="bottom-ubout-us__container">
 						<div class="bottom-ubout-us__items">
 							<div class="bottom-ubout-us__item item-bottom-ubout-us">
@@ -214,13 +226,14 @@
 					</div>
 					<div class="save__image image-save">
 						<div class="image-save__top-decor"></div>
-						<div class="image-save__buttons">
+						<div data-da=".save__buttons-mobile, 767.98" class="image-save__buttons">
 							<a href="#" class="image-save__button button button--lite"><span>Plant your first tree for free!</span></a>
 							<a href="#" class="image-save__arrow arrow">
 								<img src="img/icons/arrow.svg" alt="Arrow Icon" />
 							</a>
 						</div>
 					</div>
+					<div class="save__buttons-mobile"></div>
 				</div>
 			</section>
 			<section class="page__exclusive exclusive">
@@ -228,7 +241,7 @@
 					<img src="img/exclusive/back.svg" alt="Background Image" />
 				</div>
 				<div class="exclusive__container">
-					<div class="exclusive__image">
+					<div data-da=".exclusive__content, 767.98,3" class="exclusive__image">
 						<picture><source srcset="img/exclusive/phones.webp" type="image/webp"><img src="img/exclusive/phones.png" alt="Phones Images" /></picture>
 					</div>
 					<div class="exclusive__content content-exclusive">
@@ -260,13 +273,15 @@
 					<div class="travel__content content-travel">
 						<div class="content-travel__label label">Launch in 2024</div>
 						<h2 class="content-travel__title title">Travel with us!</h2>
-
 						<div class="content-travel__text">
 							<p>
 								Explore a vast array of accredited green accommodations
 								throughout Europe, seamlessly connected to you through
 								eco-friendly transportation options.
 							</p>
+						</div>
+						<div class="content-travel__map-mobile">
+							<img src="img/travel/back.svg" alt="Map Picture" />
 						</div>
 						<div class="content-travel__buttons">
 							<a href="#" class="content-travel__link button button--lite"><span>Choose destination...</span></a>
@@ -357,7 +372,7 @@
 				</div>
 				<div class="start__container">
 					<h2 class="start__title">Start your journey today!</h2>
-					<form method="post" action="#" class="start__form form-start">
+					<form action="#" class="start__form form-start">
 						<div class="form-start__item">
 							<input placeholder="name@email.com " class="form-start__input" type="email" />
 							<button type="submit" class="form-start__button">
@@ -396,7 +411,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20231216000305"></script>
+	<script src="js/app.min.js?_v=20231216131011"></script>
 </body>
 
 </html>
