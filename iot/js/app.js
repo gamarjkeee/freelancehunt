@@ -457,9 +457,9 @@
         if (window.innerWidth < 768) {
             document.documentElement.classList.remove("menu-open");
             document.documentElement.classList.toggle("lock");
-            titlesOfSections[2].classList.add("mobile");
+            titlesOfSections[1].classList.add("mobile");
             titlesOfSections[0].classList.remove("mobile");
-            titlesOfSections[1].classList.remove("mobile");
+            titlesOfSections[2].classList.remove("mobile");
         }
     }));
     fwButton.addEventListener("click", (() => {
@@ -472,9 +472,9 @@
         if (window.innerWidth < 768) {
             document.documentElement.classList.remove("menu-open");
             document.documentElement.classList.toggle("lock");
-            titlesOfSections[1].classList.add("mobile");
+            titlesOfSections[2].classList.add("mobile");
             titlesOfSections[0].classList.remove("mobile");
-            titlesOfSections[2].classList.remove("mobile");
+            titlesOfSections[1].classList.remove("mobile");
         }
     }));
     dashboardButton.addEventListener("click", (() => {
@@ -561,33 +561,16 @@
         inputFile.files = e.dataTransfer.files;
         alert("файл завантажився");
     }));
-    const loader = document.getElementById("loader");
-    setTimeout((() => {
-        loader.classList.remove("active");
-    }), 4e3);
-    const updateButton = document.getElementById("update-button");
+    document.getElementById("loader");
     const snackbars = document.querySelectorAll(".snackbar");
     const snackbarCloseButtons = document.querySelectorAll(".snackbar__close");
-    console.log(snackbars[0]);
+    console.log(snackbars[3]);
     snackbarCloseButtons.forEach((snackbarCloseButton => {
         snackbarCloseButton.addEventListener("click", (() => {
             snackbarCloseButton.parentNode.classList.remove("show");
         }));
     }));
-    const toastBox = document.querySelector(".snackbar-box");
-    let num = 0;
-    function showToast() {
-        let toast = snackbars[num];
-        if (num >= 3) num = 0; else num++;
-        toast.classList.add("show");
-        toastBox.appendChild(toast);
-        setTimeout((() => {
-            toast.classList.remove("show");
-        }), 4e3);
-    }
-    updateButton.addEventListener("click", (() => {
-        showToast();
-    }));
+    document.querySelector(".snackbar-box");
     window.addEventListener("resize", (() => {
         let width = window.innerWidth;
         if (width > 767 && document.documentElement.classList.contains("lock") && document.documentElement.classList.contains("menu-open")) {

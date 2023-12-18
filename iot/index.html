@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>HomePage</title>
+	<title>Interfacer</title>
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<style>
@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20231210083149" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20231218190008" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,17 +45,19 @@
 								<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Logo Image" /></picture>
 							</a>
 						</div>
+
 						<!-- Бокове меню МЕНЮ -->
 
 						<div class="aside-page__menu menu">
 							<!-- Меню ОБОЛОНКА МЕНЮ -->
-
+							<div class="menu__back-open"></div>
 							<nav class="menu__body">
 								<!-- Меню ЛОГО ДЛЯ МОБАЙЛ МЕНЮ -->
 
 								<a href="index.html" class="menu__logo">
 									<picture><source srcset="img/logo-small.webp" type="image/webp"><img src="img/logo-small.png" alt="Logo Image" /></picture>
 								</a>
+
 								<!-- Меню СПИСОК ПУНКТІВ МЕНЮ -->
 
 								<ul class="menu__list">
@@ -72,6 +74,7 @@
 											<span>Dashboard</span>
 										</button>
 									</li>
+
 									<!-- Меню ПУНКТ МЕНЮ -->
 
 									<li class="menu__item active">
@@ -95,6 +98,7 @@
 											</li>
 										</ul>
 									</li>
+
 									<!-- Меню ПУНКТ МЕНЮ -->
 
 									<li class="menu__item active">
@@ -125,6 +129,7 @@
 								</ul>
 							</nav>
 						</div>
+
 						<!-- Бокове меню КНОПКА ЗГОРТАННЯ-РОЗГОРТАННЯ -->
 
 						<button id="asideToggler" class="aside-page__toggler">
@@ -133,14 +138,16 @@
 							</svg>
 						</button>
 					</aside>
+
 					<!-- Головний блок -->
 
 					<div class="page__content content-page">
 						<!-- Головний блок / Project name -->
 
 						<div class="content-page__project-name">
-							<span>Project name</span>
+							<span>IoT Template ESP8266 Arduino</span>
 						</div>
+
 						<!-- Головний блок / Блок з контентом -->
 
 						<div class="content-page__main main-content-page">
@@ -148,6 +155,7 @@
 
 							<section class="main-content-page__dashboard dashboard-section section active">
 								<!-- Секція dashboard / Оболонка з контентом -->
+
 								<div class="section__content">
 									<div data-da=".content-page__project-name, 767.98, 2" class="dashboard-section__title title-section mobile">
 										<img src="img/icons/grid.svg" alt="Dashboard Icon" />
@@ -174,15 +182,21 @@
 												<img src="img/icons/speed.svg" alt="Pressure Icon" />
 												<span>Pressure</span>
 											</div>
-											<div class="item-dashboard-section__value">101,32</div>
+											<div class="item-dashboard-section__value">101.32</div>
 											<div class="item-dashboard-section__unit">Pa</div>
 										</div>
 										<div class="dashboard-section__item dashboard-section__item--mqtt item-dashboard-section">
 											<div class="item-dashboard-section__name">
 												<img src="img/icons/done.svg" alt="MQTT Icon" /><span>MQTT</span>
 											</div>
-											<div class="item-dashboard-section__status">
-												Connected
+											<div class="item-dashboard-section__status status-item-dashboard-section">
+												<div class="status-item-dashboard-section__status">
+													Connected
+												</div>
+												<div class="status-item-dashboard-section__info">
+													<div><span>Pub:</span><span>100</span></div>
+													<div><span>Sub:</span><span>10</span></div>
+												</div>
 											</div>
 										</div>
 										<div class="dashboard-section__item dashboard-section__item--date item-dashboard-section">
@@ -191,17 +205,21 @@
 												<span>Data / Time</span>
 											</div>
 											<div class="item-dashboard-section__status">
-												<span>14:55</span><span>26.11.2023</span>
+												<span>14:55:30</span><span>26.11.2023</span>
 											</div>
 										</div>
 									</div>
 								</div>
+
 								<!-- Секція dashboard / Футер -->
+
 								<div class="section__bottom-info bottom-info">
 									<div class="bottom-info__item">FW: v1.3.2</div>
+									<div>|</div>
 									<div class="bottom-info__item">UI: v1.1.1</div>
 								</div>
 							</section>
+
 							<!-- Головний блок / Блок з контентом / Секція wi-fi -->
 
 							<section class="main-content-page__wi-fi wi-fi-section section">
@@ -210,7 +228,7 @@
 								<div class="section__content">
 									<div data-da=".content-page__project-name, 767.98, 2" class="wi-fi-section__title title-section">
 										<img src="img/icons/wifi.svg" alt="Wi-Fi Icon" />
-										<span>WiFi (Page name)</span>
+										<span>WiFi</span>
 									</div>
 									<div class="wi-fi-section__modes">
 										<button id="ap-mode" class="wi-fi-section__mode wi-fi-section__mode--ap active">
@@ -224,7 +242,7 @@
 										<div class="form-wi-fi__state">
 											<div class="form-wi-fi__columm column-form">
 												<div class="form-wi-fi__item item-form select-item">
-													<label for="#">State</label>
+													<label for="#">State:</label>
 													<div class="select-item__select">
 														<button type="button" class="select-item__button button button--toggler button--visible">
 															<span>Select</span>
@@ -240,17 +258,17 @@
 													</div>
 												</div>
 												<div class="form-wi-fi__item item-form">
-													<label for="ssid">SSID</label>
+													<label for="ssid">SSID:</label>
 													<input name="ssid" autocomplete="off" type="text" class="form-wi-fi__input input-wi-fi" />
 												</div>
 											</div>
 											<div class="form-wi-fi__columm column-form column-form--r">
 												<div class="form-wi-fi__item item-form">
-													<label for="password">Password</label>
+													<label for="password">Password:</label>
 													<input name="password" autocomplete="off" type="password" class="form-wi-fi__input input-wi-fi" />
 												</div>
 												<div class="form-wi-fi__item item-form">
-													<label for="password-confirm">Password confirm</label>
+													<label for="password-confirm">Password confirm:</label>
 													<input name="password-confirm" autocomplete="off" type="password" class="item-form__input input-wi-fi" />
 												</div>
 											</div>
@@ -262,25 +280,58 @@
 											<div class="advanced-form__body open">
 												<div class="advanced-form__column column-form">
 													<div class="advanced-form__item item-form">
-														<label for="ip">IP address</label>
+														<label for="ip">IP address:</label>
 														<input name="ip" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
 													</div>
 													<div class="advanced-form__item item-form">
-														<label for="subnet-mask">Subnet mask</label>
+														<label for="subnet-mask">Subnet mask:</label>
 														<input name="subnet-mask" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
 													</div>
 													<div class="form-wi-fi__item item-form select-item">
-														<label for="#">Channel</label>
+														<label for="#">Channel:</label>
 														<div class="select-item__select">
 															<button type="button" class="select-item__button button button--toggler button--visible active">
 																<span>Select</span>
 															</button>
 															<div class="select-item__items">
-																<button id="option-1" type="button" class="select-item__item">
-																	Option-1
+																<button id="1" type="button" class="select-item__item">
+																	1
 																</button>
-																<button id="option-2" type="button" class="select-item__item">
-																	Option-2
+																<button id="2" type="button" class="select-item__item">
+																	2
+																</button>
+																<button id="3" type="button" class="select-item__item">
+																	3
+																</button>
+																<button id="4" type="button" class="select-item__item">
+																	4
+																</button>
+																<button id="5" type="button" class="select-item__item">
+																	5
+																</button>
+																<button id="6" type="button" class="select-item__item">
+																	6
+																</button>
+																<button id="7" type="button" class="select-item__item">
+																	7
+																</button>
+																<button id="8" type="button" class="select-item__item">
+																	8
+																</button>
+																<button id="9" type="button" class="select-item__item">
+																	9
+																</button>
+																<button id="10" type="button" class="select-item__item">
+																	10
+																</button>
+																<button id="11" type="button" class="select-item__item">
+																	11
+																</button>
+																<button id="12" type="button" class="select-item__item">
+																	12
+																</button>
+																<button id="13" type="button" class="select-item__item">
+																	13
 																</button>
 															</div>
 														</div>
@@ -288,38 +339,39 @@
 												</div>
 												<div class="advanced-form__column column-form column-form--r">
 													<div class="advanced-form__item item-form">
-														<label for="max-clients">Max connected clients</label>
+														<label for="max-clients">Max connected clients:</label>
 														<input name="max-clients" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
 													</div>
 													<div class="advanced-form__item item-form">
-														<label for="mac-address">MAC address</label>
-														<input name="mac-address" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
+														<label for="mac-address">MAC address:</label>
+														<span class="item-form__span span-wi-fi">Test</span>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="form-wi-fi__client client-form">
 											<div class="client-form__lable">
-												<img src="img/icons/profile.svg" alt="Profile Icon" />
 												<span>Client list</span>
 											</div>
 											<div class="client-form__items">
 												<div class="client-form__item item-client-form">
-													<div class="item-client-form__name">Name</div>
+													<div class="item-client-form__name">Name:</div>
 													<div class="item-client-form__value">
 														Interfacer
 													</div>
 												</div>
 												<div class="client-form__item item-client-form">
 													<div class="item-client-form__name">
-														MAC address
+														MAC address:
 													</div>
 													<div class="item-client-form__value">
 														00-08-74-4C-7F-1D
 													</div>
 												</div>
 												<div class="client-form__item item-client-form">
-													<div class="item-client-form__name">IP address</div>
+													<div class="item-client-form__name">
+														IP address:
+													</div>
 													<div class="item-client-form__value">
 														192.168.0.1
 													</div>
@@ -329,12 +381,12 @@
 										<div class="form-wi-fi__status status-form">
 											<div class="status-form__column column-form">
 												<div class="status-form__item item-form">
-													<label for="mac-address">Status</label>
-													<input name="status" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+													<label for="mac-address">Status:</label>
+													<span class="item-form__span span-wi-fi">Test</span>
 												</div>
 											</div>
 											<div class="status-form__column column-form column-form--r">
-												<button data-popup="#popup" type="submit" id="save-button" class="status-form__button button button--link button--section active">
+												<button type="submit" id="save-button" class="status-form__button button button--link button--section active">
 													<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
 														<path opacity="0.24" d="M10.3809 6.27439V2.29175H10.7924C11.0934 2.29175 11.3826 2.40914 11.5984 2.61897L15.3163 6.23363C15.5403 6.45133 15.6666 6.75035 15.6666 7.06266V7.43064H11.5371C10.8985 7.43064 10.3809 6.91297 10.3809 6.27439Z" fill="white" />
 														<path d="M17.2083 13.8542L14.1249 16.9376L12.5833 15.3959M10.3809 2.29175H5.64575C4.36859 2.29175 3.33325 3.32709 3.33325 4.60425V15.3959C3.33325 16.6731 4.36859 17.7084 5.64575 17.7084H9.49992M10.3809 2.29175V6.27439C10.3809 6.91297 10.8985 7.43064 11.5371 7.43064H15.6666M10.3809 2.29175H10.7924C11.0934 2.29175 11.3826 2.40914 11.5984 2.61897L15.3163 6.23363C15.5403 6.45133 15.6666 6.75035 15.6666 7.06266V7.43064M15.6666 7.43064V9.22925" stroke="white" stroke-width="1.54167" stroke-linecap="round" stroke-linejoin="round" />
@@ -348,7 +400,7 @@
 										<div class="form-wi-fi__state">
 											<div class="form-wi-fi__columm column-form">
 												<div class="form-wi-fi__item item-form select-item">
-													<label for="#">State</label>
+													<label for="#">State:</label>
 													<div class="select-item__select">
 														<button type="button" class="select-item__button button button--toggler button--visible">
 															<span>Select</span>
@@ -364,7 +416,7 @@
 													</div>
 												</div>
 												<div class="form-wi-fi__item item-form">
-													<label for="ssid">Scan for AP</label>
+													<label for="ssid">Scan for AP:</label>
 													<button class="status-form__button button button--link button--section scan active">
 														<span>Scan</span>
 													</button>
@@ -372,11 +424,11 @@
 											</div>
 											<div class="form-wi-fi__columm column-form column-form--r">
 												<div class="form-wi-fi__item item-form">
-													<label for="ssid">SSID</label>
+													<label for="ssid">SSID:</label>
 													<input id="ssid" name="ssid" autocomplete="off" type="text" class="form-wi-fi__input input-wi-fi" />
 												</div>
 												<div class="form-wi-fi__item item-form">
-													<label for="password">Password</label>
+													<label for="password">Password:</label>
 													<input id="password" name="password" autocomplete="off" type="password" class="form-wi-fi__input input-wi-fi" />
 												</div>
 											</div>
@@ -388,55 +440,52 @@
 											<div class="advanced-form__body open">
 												<div class="advanced-form__column column-form">
 													<div class="form-wi-fi__item item-form select-item">
-														<label for="#">IP mode</label>
+														<label for="#">IP mode:</label>
 														<div class="select-item__select">
 															<button type="button" class="select-item__button button button--toggler button--visible active">
 																<span>Select</span>
 															</button>
 															<div class="select-item__items">
-																<button id="option-1" type="button" class="select-item__item">
-																	Option-1
+																<button id="dynamic" type="button" class="select-item__item">
+																	Dynamic
 																</button>
-																<button id="option-2" type="button" class="select-item__item">
-																	Option-2
-																</button>
-																<button id="option-3" type="button" class="select-item__item">
-																	Option-3
+																<button id="static" type="button" class="select-item__item">
+																	Static
 																</button>
 															</div>
 														</div>
 													</div>
 													<div class="advanced-form__item item-form">
-														<label for="subnet-mask">Subnet mask</label>
+														<label for="subnet-mask">Subnet mask:</label>
 														<input id="subnet-mask" name="subnet-mask" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
 													</div>
 													<div class="advanced-form__item item-form">
-														<label for="dns">DNS</label>
-														<input id="dns" name="subnet-mask" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+														<label for="dns">DNS:</label>
+														<input id="dns" name="dns" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
 													</div>
 													<div class="advanced-form__item item-form">
 														<label for="reconnect-timeout">Reconnect <br />
-															timeout (s).</label>
-														<input id="reconnect-timeout" name="subnet-mask" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+															timeout (s):</label>
+														<input id="reconnect-timeout" name="reconnect-timeout" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
 													</div>
 												</div>
 												<div class="advanced-form__column column-form column-form--r">
 													<div class="advanced-form__item item-form">
-														<label for="ip">IP address</label>
+														<label for="ip">IP address:</label>
 														<input id="ip" name="ip" autocomplete="off" type="number" class="item-form__input input-wi-fi" />
 													</div>
 													<div class="advanced-form__item item-form">
 														<label for="default-gateway">Default <br />
-															Gateway</label>
+															Gateway:</label>
 														<input id="default-gateway" name="default-gateway" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
 													</div>
 													<div class="advanced-form__item item-form">
-														<label for="host-name">Hostname</label>
+														<label for="host-name">Hostname:</label>
 														<input id="host-name" name="host-name" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
 													</div>
 													<div class="advanced-form__item item-form">
-														<label for="mac-address">MAC address</label>
-														<input id="mac-address" name="mac-address" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+														<label for="mac-address">MAC address:</label>
+														<span class="item-form__span span-wi-fi">Test</span>
 													</div>
 												</div>
 											</div>
@@ -444,8 +493,8 @@
 										<div class="form-wi-fi__status status-form">
 											<div class="status-form__column column-form">
 												<div class="status-form__item item-form">
-													<label for="mac-address">Status</label>
-													<input name="status" autocomplete="off" type="text" class="item-form__input input-wi-fi" />
+													<label for="mac-address">Status:</label>
+													<span class="item-form__span span-wi-fi">Test</span>
 												</div>
 											</div>
 											<div class="status-form__column column-form column-form--r">
@@ -460,13 +509,16 @@
 										</div>
 									</form>
 								</div>
+
 								<!-- Секція wi-fi / Футер -->
 
 								<div class="section__bottom-info bottom-info">
 									<div class="bottom-info__item">FW: v1.3.2</div>
+									<div>|</div>
 									<div class="bottom-info__item">UI: v1.1.1</div>
 								</div>
 							</section>
+
 							<!-- Головний блок / Блок з контентом / Секція fw-update -->
 
 							<section class="main-content-page__fw-update fw-section section">
@@ -477,6 +529,7 @@
 										<img src="img/icons/refresh.svg" alt="Wi-Fi Icon" />
 										<span>FW Update</span>
 									</div>
+									<span class="content-page__current-version">Current Firmware version: v1.3.2</span>
 									<div class="fw-section__body">
 										<div class="fw-section__upload upload-fw-section">
 											<label for="file-input" id="drop-area">
@@ -486,7 +539,7 @@
 														Select or drop <br />
 														you FW file here
 													</h3>
-													<div class="upload-fw-section__type">(*.bin)</div>
+													<div class="upload-fw-section__type">(*intfw)</div>
 													<div type="button" class="upload-fw-section__button">
 														+
 													</div>
@@ -512,10 +565,12 @@
 										</button>
 									</div>
 								</div>
+
 								<!-- Секція fw-update / Футер -->
 
-								<div class="section__bottom-info bottom-info">
+								<div data-popup="#popup-yes" class="section__bottom-info bottom-info">
 									<div class="bottom-info__item">FW: v1.3.2</div>
+									<div>|</div>
 									<div class="bottom-info__item">UI: v1.1.1</div>
 								</div>
 							</section>
@@ -526,10 +581,13 @@
 		</main>
 	</div>
 	<!-- loader -->
-	<div id="loader" class="loared active">
+
+	<div id="loader" class="loader">
 		<h3>Please wait</h3>
 		<span></span>
 	</div>
+	<!-- попап -->
+
 	<div id="popup" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
@@ -548,6 +606,19 @@
 			</div>
 		</div>
 	</div>
+	<div id="popup-yes" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__buttons">
+					<button data-close type="button" class="popup__button popup__button--yes">
+						Yes
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- спливаючі повідомлення -->
+
 	<div class="snackbar-box"></div>
 	<div class="snackbar__collection">
 		<div id="snackbar-info" class="snackbar snackbar--info">
@@ -619,7 +690,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.min.js?_v=20231210083149"></script>
+	<script src="js/app.min.js?_v=20231218190008"></script>
 </body>
 
 </html>
