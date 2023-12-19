@@ -1718,8 +1718,8 @@ h6 {
   }
 
   .bottom-ubout-us__line span {
-    -webkit-animation: to-left 100s infinite linear;
-            animation: to-left 100s infinite linear;
+    -webkit-animation: to-left 130s infinite linear;
+            animation: to-left 130s infinite linear;
   }
 
   .image-save__buttons::before {
@@ -2416,8 +2416,8 @@ h6 {
 
   .bottom-ubout-us__line span {
     font-size: 1.5rem;
-    -webkit-animation: to-left-mobile 100s infinite linear;
-            animation: to-left-mobile 100s infinite linear;
+    -webkit-animation: to-left-mobile 130s infinite linear;
+            animation: to-left-mobile 130s infinite linear;
   }
 
   .bottom-ubout-us__items {
