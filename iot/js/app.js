@@ -457,9 +457,9 @@
         if (window.innerWidth < 768) {
             document.documentElement.classList.remove("menu-open");
             document.documentElement.classList.toggle("lock");
-            titlesOfSections[1].classList.add("mobile");
+            titlesOfSections[2].classList.add("mobile");
             titlesOfSections[0].classList.remove("mobile");
-            titlesOfSections[2].classList.remove("mobile");
+            titlesOfSections[1].classList.remove("mobile");
         }
     }));
     fwButton.addEventListener("click", (() => {
@@ -472,9 +472,9 @@
         if (window.innerWidth < 768) {
             document.documentElement.classList.remove("menu-open");
             document.documentElement.classList.toggle("lock");
-            titlesOfSections[2].classList.add("mobile");
+            titlesOfSections[1].classList.add("mobile");
             titlesOfSections[0].classList.remove("mobile");
-            titlesOfSections[1].classList.remove("mobile");
+            titlesOfSections[2].classList.remove("mobile");
         }
     }));
     dashboardButton.addEventListener("click", (() => {
