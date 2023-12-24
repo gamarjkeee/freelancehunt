@@ -1,0 +1,22 @@
+<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="linear/arrow">
+<g id="group">
+<g id="Send">
+<g id="Group">
+<path id="Vector" d="M14.6667 5.83333L5.33342 15.1667" stroke="url(#paint0_linear_290_4639)" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M14.6667 12.68V5.83333H7.82008" stroke="url(#paint1_linear_290_4639)" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_290_4639" x1="14.6667" y1="10.5" x2="5.33341" y2="10.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFBE65"/>
+<stop offset="1" stop-color="#BC9882"/>
+</linearGradient>
+<linearGradient id="paint1_linear_290_4639" x1="14.6667" y1="9.25666" x2="7.82008" y2="9.25666" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFBE65"/>
+<stop offset="1" stop-color="#BC9882"/>
+</linearGradient>
+</defs>
+</svg>
