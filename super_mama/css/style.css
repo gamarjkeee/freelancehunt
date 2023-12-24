@@ -312,7 +312,7 @@ body {
 }
 
 .title::after {
-  content: "01";
+  content: "";
   font-size: 1rem;
   font-weight: 500;
   line-height: 135%;
@@ -880,6 +880,10 @@ body {
   padding: 0 1.5rem;
 }
 
+.forwho__title::after {
+  content: "01";
+}
+
 .forwho__lable {
   text-align: right;
   font-family: "Miama Nueva";
@@ -1088,6 +1092,10 @@ body {
   position: relative;
   z-index: 2;
   padding: 0 1.5rem;
+}
+
+.canbe__title::after {
+  content: "02";
 }
 
 .canbe__decor-circles {
@@ -1614,6 +1622,255 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.everyweek {
+  position: relative;
+}
+
+.everyweek__container {
+  position: relative;
+  z-index: 2;
+  padding: 0 1.5rem;
+}
+
+.everyweek__title::after {
+  content: "03";
+}
+
+.everyweek__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.everyweek__decor-circles {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+}
+
+.everyweek__decor-circle {
+  position: absolute;
+  width: 34.7%;
+  min-width: 25rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.everyweek__decor-circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(0.625rem);
+          backdrop-filter: blur(0.625rem);
+}
+
+.everyweek__decor-circle img {
+  max-width: 100%;
+}
+
+.everyweek__decor-circle--1 {
+  top: -15%;
+  left: 0%;
+}
+
+.everyweek__decor-circle--2 {
+  top: 0%;
+  right: 17%;
+}
+
+.everyweek__decor-circle--3 {
+  top: 40%;
+  left: 20%;
+}
+
+.everyweek__decor-circle--4 {
+  top: 20%;
+  right: 10%;
+}
+
+.everyweek__decor-circle--5 {
+  top: 70%;
+  left: 5%;
+}
+
+.everyweek__decor-circle--6 {
+  top: 85%;
+  right: 0%;
+}
+
+.item-everyweek {
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #ffbe65;
+  background-color: #242424;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  row-gap: 1rem;
+  min-height: 16.875rem;
+  position: relative;
+}
+
+.item-everyweek::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  border: 1px solid rgba(255, 191, 101, 0.5);
+  -webkit-transform: translate(0.625rem, -0.625rem);
+      -ms-transform: translate(0.625rem, -0.625rem);
+          transform: translate(0.625rem, -0.625rem);
+}
+
+.item-everyweek__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.item-everyweek__icon img {
+  max-width: 100%;
+}
+
+.item-everyweek__title {
+  font-family: "KyivTypeSerif";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+}
+
+.item-everyweek__text {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  max-width: 15.625rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 165%;
+  letter-spacing: 0.0525rem;
+}
+
+.item-everyweek--active {
+  background: rgba(255, 190, 101, 0.05);
+}
+
+.item-everyweek--active::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  -webkit-backdrop-filter: blur(0.21875rem);
+          backdrop-filter: blur(0.21875rem);
+}
+
+.item-everyweek--active .item-everyweek__title {
+  background: -webkit-gradient(linear, left top, right top, from(#ffbe65), to(#bc9882));
+  background: linear-gradient(90deg, #ffbe65 0%, #bc9882 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.item-everyweek--active .item-everyweek__text {
+  background: -webkit-gradient(linear, left top, right top, from(#ffbe65), to(#bc9882));
+  background: linear-gradient(90deg, #ffbe65 0%, #bc9882 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bottom-everyweek {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bottom-everyweek__title {
+  max-width: 37.5rem;
+  margin: 0 auto;
+  font-family: "KyivTypeSerif";
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.09rem;
+  text-align: center;
+  background: var(--main-gradient, linear-gradient(90deg, #ffbe65 0%, #bc9882 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bottom-everyweek__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 4rem;
+}
+
+.bottom-everyweek__button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.item-bottom-everyweek {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  row-gap: 1rem;
+}
+
+.item-bottom-everyweek__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 2.5rem;
+          flex: 0 0 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.item-bottom-everyweek__icon img {
+  width: 100%;
+}
+
+.item-bottom-everyweek__text {
+  max-width: 17.5rem;
+  font-family: "KyivTypeSans";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  letter-spacing: 0.04rem;
+}
+
 @media (min-width: 47.99875em) {
   .hero__container {
     display: -webkit-box;
@@ -1742,6 +1999,14 @@ body {
   }
 
   .page__canbe {
+    padding-bottom: 3.75rem;
+  }
+
+  .page__everyweek {
+    padding-top: 3.75rem;
+  }
+
+  .page__everyweek {
     padding-bottom: 3.75rem;
   }
 
@@ -1878,6 +2143,46 @@ body {
   .content-item-bottom-canbe__day-item div span:nth-child(2) {
     font-size: 1rem;
   }
+
+  .everyweek__title {
+    margin-bottom: 2.625rem;
+  }
+
+  .everyweek__items {
+    gap: 2rem;
+  }
+
+  .everyweek__items {
+    margin-bottom: 5.5rem;
+  }
+
+  .item-everyweek__title {
+    font-size: 1.5rem;
+  }
+
+  .bottom-everyweek__title {
+    font-size: 2.25rem;
+  }
+
+  .bottom-everyweek__title {
+    margin-bottom: 2.625rem;
+  }
+
+  .bottom-everyweek__items {
+    gap: 4rem;
+  }
+
+  .bottom-everyweek__items {
+    margin-bottom: 4.625rem;
+  }
+
+  .bottom-everyweek__button {
+    margin-bottom: 2.5rem;
+  }
+
+  .item-bottom-everyweek__text {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 62em) {
@@ -1950,6 +2255,14 @@ body {
   }
 
   .page__canbe {
+    padding-bottom: 1.875rem;
+  }
+
+  .page__everyweek {
+    padding-top: 1.875rem;
+  }
+
+  .page__everyweek {
     padding-bottom: 1.875rem;
   }
 
@@ -2060,6 +2373,46 @@ body {
   .content-item-bottom-canbe__number-item {
     font-size: 0.875rem;
   }
+
+  .everyweek__title {
+    margin-bottom: 2rem;
+  }
+
+  .everyweek__items {
+    gap: 1rem;
+  }
+
+  .everyweek__items {
+    margin-bottom: 3.25rem;
+  }
+
+  .item-everyweek__title {
+    font-size: 1.125rem;
+  }
+
+  .bottom-everyweek__title {
+    font-size: 1.5rem;
+  }
+
+  .bottom-everyweek__title {
+    margin-bottom: 2rem;
+  }
+
+  .bottom-everyweek__items {
+    gap: 1.25rem;
+  }
+
+  .bottom-everyweek__items {
+    margin-bottom: 3.125rem;
+  }
+
+  .bottom-everyweek__button {
+    margin-bottom: 1.25rem;
+  }
+
+  .item-bottom-everyweek__text {
+    font-size: 0.875rem;
+  }
 }
 
 @media (max-width: 87.5em) {
@@ -2071,6 +2424,10 @@ body {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 30%;
             flex: 0 1 30%;
+  }
+
+  .bottom-everyweek__items {
+    padding: 0 0rem;
   }
 }
 
@@ -2158,6 +2515,11 @@ body {
     -webkit-transform: translateX(-80%);
         -ms-transform: translateX(-80%);
             transform: translateX(-80%);
+  }
+
+  .bottom-everyweek__items {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -2344,17 +2706,17 @@ body {
   }
 
   .canbe__decor-circle--4 {
-    top: 24%;
-    right: -20%;
+    top: 22%;
+    right: -50%;
   }
 
   .canbe__decor-circle--5 {
-    top: 35%;
-    left: -5%;
+    top: 32%;
+    left: -25%;
   }
 
   .canbe__decor-circle--6 {
-    top: 42%;
+    top: 44%;
     right: -20%;
   }
 
@@ -2423,6 +2785,76 @@ body {
             flex-direction: column;
     row-gap: 2.5rem;
   }
+
+  .everyweek__container {
+    padding: 0 1rem;
+  }
+
+  .everyweek__items {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .everyweek__decor-circle--1 {
+    top: -5%;
+    left: -30%;
+  }
+
+  .everyweek__decor-circle--2 {
+    top: 10%;
+    right: -20%;
+  }
+
+  .everyweek__decor-circle--3 {
+    top: 30%;
+    left: -5%;
+  }
+
+  .everyweek__decor-circle--4 {
+    top: 55%;
+    right: -50%;
+  }
+
+  .everyweek__decor-circle--5 {
+    top: 70%;
+    left: -25%;
+  }
+
+  .everyweek__decor-circle--6 {
+    top: 90%;
+    right: -20%;
+  }
+}
+
+@media (max-width: 32.5em) {
+  .everyweek__items {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .item-everyweek {
+    min-height: 0;
+  }
+
+  .bottom-everyweek__items {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .item-bottom-everyweek {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
+    -webkit-column-gap: 0.625rem;
+       -moz-column-gap: 0.625rem;
+            column-gap: 0.625rem;
+  }
+
+  .item-bottom-everyweek__text {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 29.99875em) {
@@ -2445,6 +2877,19 @@ body {
 
   .content-item-bottom-canbe__numbers {
     gap: 0.5rem;
+  }
+
+  .item-everyweek__icon {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+
+  .item-bottom-everyweek__icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 1.25rem;
+            flex: 0 0 1.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
   }
 }
 
@@ -2511,6 +2956,30 @@ body {
 
 @supports not (padding-bottom: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem )) {
     .page__canbe {
+      padding-bottom: calc(1.875rem + 1.875 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (padding-top: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem )) {
+    .page__everyweek {
+      padding-top: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem )) {
+    .page__everyweek {
+      padding-top: calc(1.875rem + 1.875 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem )) {
+    .page__everyweek {
+      padding-bottom: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem )) {
+    .page__everyweek {
       padding-bottom: calc(1.875rem + 1.875 * (100vw - 20rem) / 100);
     }
 }
@@ -2799,6 +3268,126 @@ body {
 
 @supports not (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
     .content-item-bottom-canbe__day-item div span:nth-child(2) {
+      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (margin-bottom: clamp( 2rem , 1.875rem  +  0.625vw , 2.625rem )) {
+    .everyweek__title {
+      margin-bottom: clamp( 2rem , 1.875rem  +  0.625vw , 2.625rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 2rem , 1.875rem  +  0.625vw , 2.625rem )) {
+    .everyweek__title {
+      margin-bottom: calc(2rem + 0.625 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (gap: clamp( 1rem , 0.8rem  +  1vw , 2rem )) {
+    .everyweek__items {
+      gap: clamp( 1rem , 0.8rem  +  1vw , 2rem );
+    }
+}
+
+@supports not (gap: clamp( 1rem , 0.8rem  +  1vw , 2rem )) {
+    .everyweek__items {
+      gap: calc(1rem + 1 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (margin-bottom: clamp( 3.25rem , 2.8rem  +  2.25vw , 5.5rem )) {
+    .everyweek__items {
+      margin-bottom: clamp( 3.25rem , 2.8rem  +  2.25vw , 5.5rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 3.25rem , 2.8rem  +  2.25vw , 5.5rem )) {
+    .everyweek__items {
+      margin-bottom: calc(3.25rem + 2.25 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (font-size: clamp( 1.125rem , 1.05rem  +  0.375vw , 1.5rem )) {
+    .item-everyweek__title {
+      font-size: clamp( 1.125rem , 1.05rem  +  0.375vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.125rem , 1.05rem  +  0.375vw , 1.5rem )) {
+    .item-everyweek__title {
+      font-size: calc(1.125rem + 0.375 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (font-size: clamp( 1.5rem , 1.35rem  +  0.75vw , 2.25rem )) {
+    .bottom-everyweek__title {
+      font-size: clamp( 1.5rem , 1.35rem  +  0.75vw , 2.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.5rem , 1.35rem  +  0.75vw , 2.25rem )) {
+    .bottom-everyweek__title {
+      font-size: calc(1.5rem + 0.75 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (margin-bottom: clamp( 2rem , 1.875rem  +  0.625vw , 2.625rem )) {
+    .bottom-everyweek__title {
+      margin-bottom: clamp( 2rem , 1.875rem  +  0.625vw , 2.625rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 2rem , 1.875rem  +  0.625vw , 2.625rem )) {
+    .bottom-everyweek__title {
+      margin-bottom: calc(2rem + 0.625 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (gap: clamp( 1.25rem , 0.7rem  +  2.75vw , 4rem )) {
+    .bottom-everyweek__items {
+      gap: clamp( 1.25rem , 0.7rem  +  2.75vw , 4rem );
+    }
+}
+
+@supports not (gap: clamp( 1.25rem , 0.7rem  +  2.75vw , 4rem )) {
+    .bottom-everyweek__items {
+      gap: calc(1.25rem + 2.75 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (margin-bottom: clamp( 3.125rem , 2.825rem  +  1.5vw , 4.625rem )) {
+    .bottom-everyweek__items {
+      margin-bottom: clamp( 3.125rem , 2.825rem  +  1.5vw , 4.625rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 3.125rem , 2.825rem  +  1.5vw , 4.625rem )) {
+    .bottom-everyweek__items {
+      margin-bottom: calc(3.125rem + 1.5 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (margin-bottom: clamp( 1.25rem , 1rem  +  1.25vw , 2.5rem )) {
+    .bottom-everyweek__button {
+      margin-bottom: clamp( 1.25rem , 1rem  +  1.25vw , 2.5rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.25rem , 1rem  +  1.25vw , 2.5rem )) {
+    .bottom-everyweek__button {
+      margin-bottom: calc(1.25rem + 1.25 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
+    .item-bottom-everyweek__text {
+      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
+    .item-bottom-everyweek__text {
       font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
     }
 }
