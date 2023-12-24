@@ -7,3 +7,5 @@ https://gamarjkeee.github.io/freelancehunt/iot/new/index.html
 https://gamarjkeee.github.io/freelancehunt/brave-robots/index.html
 
 https://gamarjkeee.github.io/freelancehunt/green-life/index.html
+
+https://gamarjkeee.github.io/freelancehunt/super_mama/index.html
