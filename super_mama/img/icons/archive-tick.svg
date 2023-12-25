@@ -1,0 +1,20 @@
+<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="linear/archive-tick">
+<g id="vuesax/linear/archive-tick">
+<g id="archive-tick">
+<path id="Vector" d="M14.0166 2.1665H5.98327C4.20827 2.1665 2.7666 3.6165 2.7666 5.38317V17.1248C2.7666 18.6248 3.8416 19.2582 5.15827 18.5332L9.22493 16.2748C9.65827 16.0332 10.3583 16.0332 10.7833 16.2748L14.8499 18.5332C16.1666 19.2665 17.2416 18.6332 17.2416 17.1248V5.38317C17.2333 3.6165 15.7916 2.1665 14.0166 2.1665Z" stroke="url(#paint0_linear_371_1909)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M7.99121 9.66683L9.24121 10.9168L12.5745 7.5835" stroke="url(#paint1_linear_371_1909)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_371_1909" x1="2.7666" y1="10.5025" x2="17.2416" y2="10.5025" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFBE65"/>
+<stop offset="1" stop-color="#BC9882"/>
+</linearGradient>
+<linearGradient id="paint1_linear_371_1909" x1="7.99121" y1="9.25016" x2="12.5745" y2="9.25016" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFBE65"/>
+<stop offset="1" stop-color="#BC9882"/>
+</linearGradient>
+</defs>
+</svg>

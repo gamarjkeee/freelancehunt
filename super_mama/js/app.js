@@ -264,6 +264,19 @@
             e.target.parentElement.classList.add("active");
         }));
     }));
+    const listOfThemes = document.querySelector(".listofthemes__list");
+    const buttonOfThemes = document.querySelector(".listofthemes__button");
+    buttonOfThemes.addEventListener("click", (() => {
+        listOfThemes.classList.toggle("open");
+        buttonOfThemes.classList.toggle("active");
+    }));
+    const showMoreButtons = document.querySelectorAll(".button-show-more");
+    showMoreButtons.forEach((showMoreButton => {
+        showMoreButton.addEventListener("click", (() => {
+            showMoreButton.parentElement.firstElementChild.classList.toggle("open");
+            showMoreButton.classList.toggle("active");
+        }));
+    }));
     window["FLS"] = true;
     isWebp();
     addLoadedClass();
