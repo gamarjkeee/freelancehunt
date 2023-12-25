@@ -2314,6 +2314,217 @@ body {
   font-weight: 700;
 }
 
+.price__container {
+  position: relative;
+  z-index: 2;
+  padding: 0 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.price__title::after {
+  content: "06";
+}
+
+.price__items {
+  max-width: 62.5rem;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.price__label {
+  margin: 0 -1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-top: 0.0625rem solid #ffbe65;
+  border-bottom: 0.0625rem solid #ffbe65;
+  background: rgba(255, 190, 101, 0.05);
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.price__label p {
+  max-width: 31.625rem;
+  background: -webkit-gradient(linear, left top, right top, from(#ffbe65), to(#bc9882));
+  background: linear-gradient(90deg, #ffbe65 0%, #bc9882 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "KyivTypeSans";
+  font-weight: 500;
+  line-height: 165%;
+  letter-spacing: 0.05rem;
+}
+
+.price__label p span {
+  font-family: "KyivTypeSerif";
+  letter-spacing: 0.1rem;
+}
+
+.item-price {
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #ffbe65;
+  background: #242424;
+  padding: 2.25rem 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  min-height: 16.875rem;
+  position: relative;
+}
+
+.item-price::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  border: 1px solid rgba(255, 191, 101, 0.5);
+  -webkit-transform: translate(0.625rem, -0.625rem);
+      -ms-transform: translate(0.625rem, -0.625rem);
+          transform: translate(0.625rem, -0.625rem);
+}
+
+.item-price__icon {
+  rotate: 90deg;
+  font-size: 2.25rem;
+  color: #ffbe65;
+}
+
+.item-price__white-text {
+  font-family: "KyivTypeSans";
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.04rem;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.item-price__gold-text {
+  font-family: "KyivTypeSans";
+  font-weight: 500;
+  line-height: 135%;
+  letter-spacing: 0.04rem;
+  background: -webkit-gradient(linear, left top, right top, from(#ffbe65), to(#bc9882));
+  background: linear-gradient(90deg, #ffbe65 0%, #bc9882 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.themes-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.themes-price__icon {
+  rotate: 90deg;
+  font-size: 2.25rem;
+  color: #ffbe65;
+  margin-bottom: 1.5rem;
+}
+
+.themes-price__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.item-themes-price {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-column-gap: 1.5rem;
+     -moz-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+
+.item-themes-price__text {
+  margin-top: 0.25rem;
+  font-family: "KyivTypeSans";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 135%;
+  letter-spacing: 0.04rem;
+}
+
+.item-themes-price__duration {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.item-themes-price__duration span {
+  rotate: -45deg;
+  font-size: 1.125rem;
+}
+
+.item-themes-price__duration div {
+  font-family: "KyivTypeSans";
+  font-weight: 500;
+  line-height: 165%;
+  letter-spacing: 0.05rem;
+  background: -webkit-gradient(linear, left top, right top, from(#ffbe65), to(#bc9882));
+  background: linear-gradient(90deg, #ffbe65 0%, #bc9882 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media (min-width: 47.99875em) {
   .hero__container {
     display: -webkit-box;
@@ -2408,6 +2619,53 @@ body {
     -webkit-backdrop-filter: blur(0.6875rem);
             backdrop-filter: blur(0.6875rem);
   }
+
+  .item-themes-price:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .item-themes-price:nth-child(even) .item-themes-price__text {
+    text-align: start;
+  }
+
+  .item-themes-price:nth-child(odd) .item-themes-price__duration {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+
+  .item-themes-price:nth-child(odd) .item-themes-price__duration span {
+    rotate: -135deg;
+  }
+
+  .item-themes-price:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.0625rem;
+    height: 100%;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(193, 132, 79, 0)), color-stop(45.31%, #e5bf97), to(#ffbe65));
+    background: linear-gradient(0deg, rgba(193, 132, 79, 0) 0%, #e5bf97 45.31%, #ffbe65 100%);
+  }
+
+  .item-themes-price:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.0625rem;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(193, 132, 79, 0)), color-stop(45.31%, #e5bf97), to(#ffbe65));
+    background: linear-gradient(180deg, rgba(193, 132, 79, 0) 0%, #e5bf97 45.31%, #ffbe65 100%);
+  }
 }
 
 @media (min-width: 61.99875em) {
@@ -2466,6 +2724,14 @@ body {
   }
 
   .page__bonus {
+    padding-bottom: 3.75rem;
+  }
+
+  .page__price {
+    padding-top: 3.75rem;
+  }
+
+  .page__price {
     padding-bottom: 3.75rem;
   }
 
@@ -2702,6 +2968,62 @@ body {
   .item-bonus__title {
     font-size: 1rem;
   }
+
+  .price__title {
+    margin-bottom: 5.625rem;
+  }
+
+  .price__items {
+    margin-bottom: 3.75rem;
+  }
+
+  .price__label p {
+    font-size: 1.25rem;
+  }
+
+  .price__label p span {
+    font-size: 2.5rem;
+  }
+
+  .item-price__icon {
+    margin-bottom: 2rem;
+  }
+
+  .item-price__white-text {
+    margin-bottom: 2rem;
+  }
+
+  .item-price__white-text {
+    font-size: 1rem;
+  }
+
+  .item-price__gold-text {
+    font-size: 1rem;
+  }
+
+  .item-themes-price {
+    padding-top: 2rem;
+  }
+
+  .item-themes-price {
+    padding-bottom: 2rem;
+  }
+
+  .item-themes-price {
+    padding-left: 2rem;
+  }
+
+  .item-themes-price {
+    padding-right: 2rem;
+  }
+
+  .item-themes-price__text {
+    font-size: 1rem;
+  }
+
+  .item-themes-price__duration div {
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 62em) {
@@ -2798,6 +3120,14 @@ body {
   }
 
   .page__bonus {
+    padding-bottom: 1.875rem;
+  }
+
+  .page__price {
+    padding-top: 1.875rem;
+  }
+
+  .page__price {
     padding-bottom: 1.875rem;
   }
 
@@ -3007,6 +3337,62 @@ body {
 
   .item-bonus__title {
     font-size: 0.875rem;
+  }
+
+  .price__title {
+    margin-bottom: 2.5rem;
+  }
+
+  .price__items {
+    margin-bottom: 2.5rem;
+  }
+
+  .price__label p {
+    font-size: 0.8125rem;
+  }
+
+  .price__label p span {
+    font-size: 1.375rem;
+  }
+
+  .item-price__icon {
+    margin-bottom: 1rem;
+  }
+
+  .item-price__white-text {
+    margin-bottom: 1rem;
+  }
+
+  .item-price__white-text {
+    font-size: 0.875rem;
+  }
+
+  .item-price__gold-text {
+    font-size: 0.875rem;
+  }
+
+  .item-themes-price {
+    padding-top: 1.5rem;
+  }
+
+  .item-themes-price {
+    padding-bottom: 1.5rem;
+  }
+
+  .item-themes-price {
+    padding-left: 1rem;
+  }
+
+  .item-themes-price {
+    padding-right: 1rem;
+  }
+
+  .item-themes-price__text {
+    font-size: 0.625rem;
+  }
+
+  .item-themes-price__duration div {
+    font-size: 0.75rem;
   }
 }
 
@@ -3590,6 +3976,53 @@ body {
   .item-bonus__item:not(:last-child) {
     margin-bottom: 0rem;
   }
+
+  .price__container {
+    padding: 0 1rem;
+  }
+
+  .price__items {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .price__label {
+    margin: 0 -1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .item-price {
+    min-height: 0rem;
+    padding: 1rem 0.75rem 1.5rem 0.75rem;
+  }
+
+  .themes-price__items {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .item-themes-price {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    padding: 0.75rem 0;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    text-align: start;
+  }
+
+  .item-themes-price__text {
+    font-weight: 400;
+  }
+
+  .item-themes-price__duration {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 7.375rem;
+            flex: 0 0 7.375rem;
+  }
 }
 
 @media (max-width: 32.5em) {
@@ -3660,6 +4093,16 @@ body {
             flex: 0 0 1.25rem;
     width: 1.25rem;
     height: 1.25rem;
+  }
+
+  .item-themes-price__duration {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 6rem;
+            flex: 0 0 6rem;
+  }
+
+  .item-themes-price__duration span {
+    font-size: 0.875rem;
   }
 }
 
@@ -3798,6 +4241,30 @@ body {
 
 @supports not (padding-bottom: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem )) {
     .page__bonus {
+      padding-bottom: calc(1.875rem + 1.875 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (padding-top: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem )) {
+    .page__price {
+      padding-top: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem )) {
+    .page__price {
+      padding-top: calc(1.875rem + 1.875 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem )) {
+    .page__price {
+      padding-bottom: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem )) {
+    .page__price {
       padding-bottom: calc(1.875rem + 1.875 * (100vw - 20rem) / 100);
     }
 }
@@ -4383,6 +4850,174 @@ body {
 @supports not (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
     .item-bonus__title {
       font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (margin-bottom: clamp( 2.5rem , 1.875rem  +  3.125vw , 5.625rem )) {
+    .price__title {
+      margin-bottom: clamp( 2.5rem , 1.875rem  +  3.125vw , 5.625rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 2.5rem , 1.875rem  +  3.125vw , 5.625rem )) {
+    .price__title {
+      margin-bottom: calc(2.5rem + 3.125 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (margin-bottom: clamp( 2.5rem , 2.25rem  +  1.25vw , 3.75rem )) {
+    .price__items {
+      margin-bottom: clamp( 2.5rem , 2.25rem  +  1.25vw , 3.75rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 2.5rem , 2.25rem  +  1.25vw , 3.75rem )) {
+    .price__items {
+      margin-bottom: calc(2.5rem + 1.25 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (font-size: clamp( 0.8125rem , 0.725rem  +  0.4375vw , 1.25rem )) {
+    .price__label p {
+      font-size: clamp( 0.8125rem , 0.725rem  +  0.4375vw , 1.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.8125rem , 0.725rem  +  0.4375vw , 1.25rem )) {
+    .price__label p {
+      font-size: calc(0.8125rem + 0.4375 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (font-size: clamp( 1.375rem , 1.15rem  +  1.125vw , 2.5rem )) {
+    .price__label p span {
+      font-size: clamp( 1.375rem , 1.15rem  +  1.125vw , 2.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.375rem , 1.15rem  +  1.125vw , 2.5rem )) {
+    .price__label p span {
+      font-size: calc(1.375rem + 1.125 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (margin-bottom: clamp( 1rem , 0.8rem  +  1vw , 2rem )) {
+    .item-price__icon {
+      margin-bottom: clamp( 1rem , 0.8rem  +  1vw , 2rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1rem , 0.8rem  +  1vw , 2rem )) {
+    .item-price__icon {
+      margin-bottom: calc(1rem + 1 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (margin-bottom: clamp( 1rem , 0.8rem  +  1vw , 2rem )) {
+    .item-price__white-text {
+      margin-bottom: clamp( 1rem , 0.8rem  +  1vw , 2rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1rem , 0.8rem  +  1vw , 2rem )) {
+    .item-price__white-text {
+      margin-bottom: calc(1rem + 1 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
+    .item-price__white-text {
+      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
+    .item-price__white-text {
+      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
+    .item-price__gold-text {
+      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
+    .item-price__gold-text {
+      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (padding-top: clamp( 1.5rem , 1.4rem  +  0.5vw , 2rem )) {
+    .item-themes-price {
+      padding-top: clamp( 1.5rem , 1.4rem  +  0.5vw , 2rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.5rem , 1.4rem  +  0.5vw , 2rem )) {
+    .item-themes-price {
+      padding-top: calc(1.5rem + 0.5 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.5rem , 1.4rem  +  0.5vw , 2rem )) {
+    .item-themes-price {
+      padding-bottom: clamp( 1.5rem , 1.4rem  +  0.5vw , 2rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.5rem , 1.4rem  +  0.5vw , 2rem )) {
+    .item-themes-price {
+      padding-bottom: calc(1.5rem + 0.5 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (padding-left: clamp( 1rem , 0.8rem  +  1vw , 2rem )) {
+    .item-themes-price {
+      padding-left: clamp( 1rem , 0.8rem  +  1vw , 2rem );
+    }
+}
+
+@supports not (padding-left: clamp( 1rem , 0.8rem  +  1vw , 2rem )) {
+    .item-themes-price {
+      padding-left: calc(1rem + 1 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (padding-right: clamp( 1rem , 0.8rem  +  1vw , 2rem )) {
+    .item-themes-price {
+      padding-right: clamp( 1rem , 0.8rem  +  1vw , 2rem );
+    }
+}
+
+@supports not (padding-right: clamp( 1rem , 0.8rem  +  1vw , 2rem )) {
+    .item-themes-price {
+      padding-right: calc(1rem + 1 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (font-size: clamp( 0.625rem , 0.55rem  +  0.375vw , 1rem )) {
+    .item-themes-price__text {
+      font-size: clamp( 0.625rem , 0.55rem  +  0.375vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.625rem , 0.55rem  +  0.375vw , 1rem )) {
+    .item-themes-price__text {
+      font-size: calc(0.625rem + 0.375 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (font-size: clamp( 0.75rem , 0.65rem  +  0.5vw , 1.25rem )) {
+    .item-themes-price__duration div {
+      font-size: clamp( 0.75rem , 0.65rem  +  0.5vw , 1.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.75rem , 0.65rem  +  0.5vw , 1.25rem )) {
+    .item-themes-price__duration div {
+      font-size: calc(0.75rem + 0.5 * (100vw - 20rem) / 100);
     }
 }
 }
