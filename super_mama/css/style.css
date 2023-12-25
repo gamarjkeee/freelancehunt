@@ -1816,7 +1816,6 @@ body {
 .item-everyweek__text {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  max-width: 15.625rem;
   text-align: left;
   font-size: 0.875rem;
   font-style: normal;
@@ -1957,10 +1956,20 @@ body {
   color: #ffbe65;
   text-align: right;
   font-family: "KyivTypeSans";
-  font-weight: 500;
+  font-weight: 400;
   line-height: 165%;
   letter-spacing: 0.0525rem;
   max-width: 31.25rem;
+}
+
+.listofthemes__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .listofthemes__list {
@@ -3608,6 +3617,10 @@ body {
   .item-everyweek__icon {
     width: 1.875rem;
     height: 1.875rem;
+  }
+
+  .item-everyweek__title {
+    margin-top: -0.9375rem;
   }
 
   .item-bottom-everyweek__icon {
