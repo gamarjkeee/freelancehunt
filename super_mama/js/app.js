@@ -3445,8 +3445,7 @@
             breakpoints: {
                 320: {
                     slidesPerView: 1,
-                    spaceBetween: 0,
-                    autoHeight: true
+                    spaceBetween: 0
                 },
                 560: {
                     slidesPerView: 2,
@@ -3479,8 +3478,7 @@
             breakpoints: {
                 320: {
                     slidesPerView: 1,
-                    spaceBetween: 0,
-                    autoHeight: true
+                    spaceBetween: 0
                 },
                 560: {
                     slidesPerView: 2,
