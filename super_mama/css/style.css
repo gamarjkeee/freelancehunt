@@ -1,50 +1,16 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "KyivTypeSans";
-  font-display: swap;
-  src: url("../fonts/KyivTypeSans-Bold.woff2") format("woff2"), url("../fonts/KyivTypeSans-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KyivTypeSans";
-  font-display: swap;
-  src: url("../fonts/KyivTypeSans-Medium.woff2") format("woff2"), url("../fonts/KyivTypeSans-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "KyivTypeSerif";
   font-display: swap;
-  src: url("../fonts/KyivTypeSerif-Medium.woff2") format("woff2"), url("../fonts/KyivTypeSerif-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/KyivTypeSerif.woff2") format("woff2"), url("../fonts/KyivTypeSerif.woff") format("woff");
   font-style: normal;
 }
 
 @font-face {
   font-family: "KyivTypeSans";
   font-display: swap;
-  src: url("../fonts/KyivTypeSans-Regular2.woff2") format("woff2"), url("../fonts/KyivTypeSans-Regular2.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KyivTypeSerif";
-  font-display: swap;
-  src: url("../fonts/KyivTypeSerif-Regular.woff2") format("woff2"), url("../fonts/KyivTypeSerif-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "KyivTypeSans";
-  font-display: swap;
-  src: url("../fonts/KyivTypeSans-Regular.woff2") format("woff2"), url("../fonts/KyivTypeSans-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/KyivTypeSans.woff2") format("woff2"), url("../fonts/KyivTypeSans.woff") format("woff");
   font-style: normal;
 }
 
@@ -486,11 +452,13 @@ body::after {
 .button--orange {
   background: -webkit-gradient(linear, left top, right top, from(#ff8845), to(#c83e3e));
   background: linear-gradient(90deg, #ff8845 0%, #c83e3e 100%);
+  -webkit-transition: all 0.15s ease 0s;
+  transition: all 0.15s ease 0s;
 }
 
 .button--orange::before {
   content: "";
-  background-color: #ff8845;
+  display: none;
 }
 
 .button-show-more {
@@ -3302,6 +3270,28 @@ body::after {
 
 .karpform__submit {
   margin: 0 auto;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 4rem;
+  padding: 0.5rem 0.75rem;
+  width: 20rem;
+  height: 3rem;
+  background: -webkit-gradient(linear, left top, right top, from(#ffbe65), to(#bc9882));
+  background: linear-gradient(90deg, #ffbe65 0%, #bc9882 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#ff8845), to(#c83e3e));
+  background: linear-gradient(90deg, #ff8845 0%, #c83e3e 100%);
+  -webkit-transition: all 0.15s ease 0s;
+  transition: all 0.15s ease 0s;
 }
 
 .karpform-result {
@@ -6067,6 +6057,13 @@ body::after {
             align-items: flex-end;
   }
 
+  .karpform__submit {
+    width: 16.25rem;
+    height: 2.5rem;
+    -webkit-box-shadow: -0.25rem -0.25rem -1.5rem 0px rgba(0, 0, 0, 0.2);
+            box-shadow: -0.25rem -0.25rem -1.5rem 0px rgba(0, 0, 0, 0.2);
+  }
+
   .why__decor-circle--1 {
     top: -20%;
     left: -10%;
@@ -7855,6 +7852,11 @@ body::after {
     width: 100%;
   }
 
+  .button--orange:hover {
+    -webkit-box-shadow: 0 0 0.1875rem #ff8845, 0 0 0.5625rem #ff8845, 0 0 1.6875rem #ff8845;
+            box-shadow: 0 0 0.1875rem #ff8845, 0 0 0.5625rem #ff8845, 0 0 1.6875rem #ff8845;
+  }
+
   .menu__link:hover span {
     color: #ffbe65;
   }
@@ -7869,6 +7871,11 @@ body::after {
 
   .footer__link:hover {
     color: #ffbe65;
+  }
+
+  .karpform__submit:hover {
+    -webkit-box-shadow: 0 0 0.1875rem #ff8845, 0 0 0.5625rem #ff8845, 0 0 1.6875rem #ff8845;
+            box-shadow: 0 0 0.1875rem #ff8845, 0 0 0.5625rem #ff8845, 0 0 1.6875rem #ff8845;
   }
 
   .why__button:hover {
