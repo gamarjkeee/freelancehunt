@@ -3927,6 +3927,13 @@
             }));
         }
     }));
+    const readMoreSliders = document.querySelectorAll(".slide-why__read");
+    readMoreSliders.forEach((readMoreSlider => {
+        readMoreSlider.addEventListener("click", (() => {
+            readMoreSlider.parentElement.classList.toggle("open");
+            readMoreSlider.classList.toggle("open");
+        }));
+    }));
     window["FLS"] = false;
     isWebp();
     addLoadedClass();
