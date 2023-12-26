@@ -3447,7 +3447,7 @@
                     slidesPerView: 1,
                     spaceBetween: 0
                 },
-                560: {
+                480: {
                     slidesPerView: 2,
                     spaceBetween: 20
                 },
@@ -3480,16 +3480,20 @@
                     slidesPerView: 1,
                     spaceBetween: 0
                 },
+                480: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 20
+                },
                 560: {
-                    slidesPerView: 2,
+                    slidesPerView: 2.5,
                     spaceBetween: 20
                 },
                 992: {
-                    slidesPerView: 3.5,
+                    slidesPerView: 4,
                     spaceBetween: 20
                 },
                 1360: {
-                    slidesPerView: 4,
+                    slidesPerView: 4.5,
                     spaceBetween: 30
                 }
             },
@@ -3651,6 +3655,15 @@
         showMoreButton.addEventListener("click", (() => {
             showMoreButton.parentElement.firstElementChild.classList.toggle("open");
             showMoreButton.classList.toggle("active");
+        }));
+    }));
+    const allLinks = document.querySelectorAll("[data-goto]");
+    window.addEventListener("resize", (() => {
+        let width = window.innerWidth;
+        if (width < 767.98) allLinks.forEach((allLink => {
+            allLink.setAttribute("data-goto-header", "");
+        })); else allLinks.forEach((allLink => {
+            allLink.removeAttribute("data-goto-header", "");
         }));
     }));
     window["FLS"] = true;
