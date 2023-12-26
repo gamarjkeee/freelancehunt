@@ -3658,13 +3658,13 @@
         }));
     }));
     const allLinks = document.querySelectorAll("[data-goto]");
+    let width = window.innerWidth;
     if (width < 767.98) allLinks.forEach((allLink => {
         allLink.setAttribute("data-goto-header", "");
     })); else allLinks.forEach((allLink => {
         allLink.removeAttribute("data-goto-header", "");
     }));
     window.addEventListener("resize", (() => {
-        let width = window.innerWidth;
         if (width < 767.98) allLinks.forEach((allLink => {
             allLink.setAttribute("data-goto-header", "");
         })); else allLinks.forEach((allLink => {
