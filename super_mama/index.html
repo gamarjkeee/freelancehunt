@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20231226121941" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20231226144243" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -785,7 +785,10 @@
 									</li>
 								</div>
 							</ul>
-							<button class="listofthemes__button button-show-more">
+							<button class="listofthemes__button button-show-more button-show-more--pc">
+								<span>читати повністю</span><span>згорнути список</span><span class="_icon-arrow"></span>
+							</button>
+							<button data-popup="#popup-themes" class="listofthemes__button button-show-more button-show-more--mobile">
 								<span>читати повністю</span><span>згорнути список</span><span class="_icon-arrow"></span>
 							</button>
 						</div>
@@ -1046,7 +1049,10 @@
 										68. Розвиток емоційного інтелекту.
 									</li>
 								</ul>
-								<button class="item-bonus__button button-show-more">
+								<button class="item-bonus__button button-show-more button-show-more--pc">
+									<span>читати повністю</span><span>згорнути список</span><span class="_icon-arrow"></span>
+								</button>
+								<button data-popup="#popup-themes" class="item-bonus__button button-show-more button-show-more--mobile">
 									<span>читати повністю</span><span>згорнути список</span><span class="_icon-arrow"></span>
 								</button>
 							</div>
@@ -1137,7 +1143,10 @@
 										25. Психологічний чек-лист для самооцінки та саморозвитку
 									</li>
 								</ul>
-								<button class="item-bonus__button button-show-more">
+								<button class="item-bonus__button button-show-more button-show-more--pc">
+									<span>читати повністю</span><span>згорнути список</span><span class="_icon-arrow"></span>
+								</button>
+								<button data-popup="#popup-life" class="item-bonus__button button-show-more button-show-more--mobile">
 									<span>читати повністю</span><span>згорнути список</span><span class="_icon-arrow"></span>
 								</button>
 							</div>
@@ -1148,33 +1157,33 @@
 							</h4>
 							<div class="item-bonus__body">
 								<ul class="item-bonus__list">
-									<li class="item-bonus__item item-bonus__item--gold">
+									<li class="item-bonus__item">
 										<div>1.</div>
 										<div>
 											<span>Емоційне вигорання мам</span><span>(від психотерапевта Марії Мельник)</span>
 										</div>
 									</li>
-									<li class="item-bonus__item item-bonus__item--gold">
+									<li class="item-bonus__item">
 										<div>2.</div>
 										<div>
 											<span>Професії майбутнього для вашої дитини</span><span>(від засновника HR-академії Михайла Притули)</span>
 										</div>
 									</li>
-									<li class="item-bonus__item item-bonus__item--gold">
+									<li class="item-bonus__item">
 										<div>3.</div>
 										<div>
 											<span>Дитяча травма, як формується та як впливає на
 												життя</span><span>(від психоаналітика Олени Єгорової)</span>
 										</div>
 									</li>
-									<li class="item-bonus__item item-bonus__item--gold">
+									<li class="item-bonus__item">
 										<div>4.</div>
 										<div>
 											<span>Тривожні розлади та депресія: причини та
 												профілактика</span><span>(від психіатра Вікторії Берізовські)</span>
 										</div>
 									</li>
-									<li class="item-bonus__item item-bonus__item--gold">
+									<li class="item-bonus__item">
 										<div>5.</div>
 										<div>
 											<span>Корисні та шкідливі косметологічні процедури для
@@ -1182,7 +1191,10 @@
 										</div>
 									</li>
 								</ul>
-								<button class="item-bonus__button button-show-more">
+								<button class="item-bonus__button button-show-more button-show-more--pc">
+									<span>читати повністю</span><span>згорнути список</span><span class="_icon-arrow"></span>
+								</button>
+								<button data-popup="#popup-5" class="item-bonus__button button-show-more button-show-more--mobile">
 									<span>читати повністю</span><span>згорнути список</span><span class="_icon-arrow"></span>
 								</button>
 							</div>
@@ -1343,14 +1355,11 @@
 						Щоб оформити підписку - заповніть форму та натисніть кнопку нижче
 					</div>
 					<div class="form__karpform karpform" id="karpform0" data-name="Оценка" data-type="product" data-debug="off" data-fill="on" data-func="on" data-errors="on" data-messages="on" data-loading="on" data-cellular="on" data-lang="ua" data-result="off">
-						<!-- Form -->
 						<form class="karpform__content" action="https://api3.karpachoff.com/bid/645e456bc80c1304de62a5f0/0" method="post">
-							<!-- Input Field -->
 							<div class="karpform__field required-field">
 								<input class="karpform__input" name="name" type="text" placeholder="Ім'я" maxlength="80" />
 								<span class="karpform__error"></span>
 							</div>
-							<!-- Input Field -->
 							<div class="karpform__field required-field">
 								<div class="karpform__field-inner">
 									<select class="karpform__select" name="country">
@@ -1673,19 +1682,15 @@
 								</div>
 								<span class="karpform__error"></span>
 							</div>
-
-							<!-- Input Field -->
 							<div class="karpform__field required-field">
 								<input class="karpform__input" name="email" type="email" placeholder="email@gmail.com" maxlength="150" />
 								<span class="karpform__error"></span>
 							</div>
-
 							<div class="karpform__icons">
 								<img src="img/form/01.svg" alt="Icon" />
 								<img src="img/form/02.svg" alt="Icon" />
 								<img src="img/form/03.svg" alt="Icon" />
 							</div>
-
 							<div class="karpform__prices-box">
 								<div class="karpform__price">
 									<span class="karpform__price-old">2400 грн.</span>
@@ -1696,25 +1701,17 @@
 									щомісяця. Відписатись можливо в будь-який момент.
 								</div>
 							</div>
-
-							<!-- Submit Button -->
 							<div class="karpform__btns">
 								<button class="karpform__submit button-submit button button--orange" data-form="-1">
 									<span>Перейти до оплати</span>
 								</button>
 							</div>
-
-							<!-- Loading -->
 							<div class="karpform__loading">
 								<img src="https://cdn.karpachoff.com/forms/loader.gif" class="karpform__loading-icon" alt="Зачекайте" />
 							</div>
 						</form>
-
-						<!-- Result -->
 						<div class="karpform-result">
-							<!-- Result Image -->
 							<img class="karpform-result__icon" src="https://cdn.karpachoff.com/forms/success.svg" alt="Иконка успеха" />
-							<!-- Result Text -->
 							<div class="karpform-result__content">
 								<p class="karpform-result__thanks">Спасибо.</p>
 								<p>Вы успешно зарегистрировались.</p>
@@ -2173,8 +2170,253 @@
 		</footer>
 
 	</div>
-	<script src="https://cdn.karpachoff.com/forms/forms.min.js?_v=20231226121941"></script>
-	<script src="js/app.min.js?_v=20231226121941"></script>
+	<div id="popup-themes" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__header">
+					<h3 class="popup__title">
+						<img src="img/icons/archive-tick.svg" alt="Icon" />
+						<span>68 ТЕМ</span>
+					</h3>
+					<button data-close type="button" class="popup__close">
+						<img src="img/icons/close.svg" alt="Close" />
+					</button>
+				</div>
+				<div class="popup__body">
+					<ul class="popup__list">
+						<li>1. Розуміння того, чого я насправді хочу; ревізія життя.</li>
+						<li>2. Як займатися бізнесом, залишаючись жінкою.</li>
+						<li>
+							3. Як знайти баланс між увагою до дітей та власним життям, коли
+							часу на все не вистачає.
+						</li>
+						<li>4. Як жити майже без роздратувань.</li>
+						<li>
+							5. Виховання відповідальності за свої вчинки та рішення у дитини
+							(та дорослого).
+						</li>
+						<li>6. Формування почуття власної гідності у дитини.</li>
+						<li>
+							7. Розвиток емпатії у дітей, співпереживання та підтримки інших.
+						</li>
+						<li>
+							8. Розвиток соціальних навичок у дітей, навичок співпраці та
+							кооперації.
+						</li>
+						<li>
+							9. Засвоєння основ стресостійкості, самоконтролю та здатності
+							проживати розчарування.
+						</li>
+						<li>10. Вміння просити допомогу та надавати підтримку.</li>
+						<li>11. Керування та вираження емоцій.</li>
+						<li>12. Вміння висловлювати власну думку та поважати чужу.</li>
+						<li>13. Ефективні методи спілкування з дітьми.</li>
+						<li>
+							14. Здатність розвивати дружні стосунки та знайомитися з новими
+							людьми.
+						</li>
+						<li>
+							15. Розвиток критичного мислення та аналітичних здібностей.
+						</li>
+						<li>16. Навички самоаналізу та саморефлексії дитини.</li>
+						<li>17. Розвиток творчих здібностей у дитини.</li>
+						<li>18. Дисципліна та авторитет батьків.</li>
+						<li>19. Формування особистих меж дитини.</li>
+						<li>20. Навички встановлення та досягнення цілей.</li>
+						<li>21. Засвоєння навичок вирішення складних проблем.</li>
+						<li>22. Розвиток почуття ідентичності у дитини.</li>
+						<li>23. Гроші та дитяча фінансова грамотність.</li>
+						<li>24. Виховання сили волі у дітей.</li>
+						<li>25. Розпізнавання та протидії маніпуляціям.</li>
+						<li>
+							26. Розуміння сильних сторін та талантів дитини (батьками та
+							дитиною).
+						</li>
+						<li>
+							27. Вільний час та його значення у формуванні особистості
+							підлітка.
+						</li>
+						<li>
+							28. Сепарація як процес підготовки дитини до самостійного життя.
+						</li>
+						<li>
+							29. Коректна підтримка дітей у навчанні. Мотивація на навчання.
+						</li>
+						<li>30. Роль матері у вихованні дитини.</li>
+						<li>31. Роль батька у вихованні дитини.</li>
+						<li>32. Здоровий спосіб життя та режим дня для дітей.</li>
+						<li>
+							33. Гаджети: користь, шкода, норми та комп'ютерна залежність.
+						</li>
+						<li>34. Правила безпеки в інтернеті дитячою мовою.</li>
+						<li>35. Формування навичок вирішення конфліктів та суперечок.</li>
+						<li>36. Конфлікти між рідними братами та сестрами.</li>
+						<li>
+							37. Обговорення питань стосунків та сексуальності з дітьми.
+						</li>
+						<li>38. Вплив типу темпераменту дитини на її життя.</li>
+						<li>39. Розвиток лідерських якостей.</li>
+						<li>40. Керування та запобігання істерикам.</li>
+						<li>41. Подолання лінощів у дітей.</li>
+						<li>
+							42. Комунікативні навички - вміння спілкуватися та слухати
+							інших.
+						</li>
+						<li>43. Вміння приймати критику та навчатися на помилках.</li>
+						<li>44. Вміння виражати вдячність та визнання.</li>
+						<li>
+							45. Навички планування часу та організації своєї діяльності.
+						</li>
+						<li>46. Вміння проявляти ініціативу та рішучість.</li>
+						<li>47. Коучинг у вихованні майбутньої особистості.</li>
+						<li>
+							48. Похвала як спосіб задовольнити базову потребу в повазі та
+							визнанні.
+						</li>
+						<li>49. Формування корисних звичок.</li>
+						<li>50. Цілі та інертність мислення.</li>
+						<li>51. Джерела ресурсів для досягнення цілей.</li>
+						<li>52. «Хочу» та «потрібно» у процесі досягнення цілей.</li>
+						<li>53. Захисні механізми психіки та робота з ними.</li>
+						<li>54. Робота з обмежуючими переконаннями.</li>
+						<li>55. Вторинні вигоди від недосягнення цілі.</li>
+						<li>56. Звідки брати мотивацію для досягнення цілей.</li>
+						<li>57. Прокрастинація та перфекціонізм.</li>
+						<li>58. Як навчитись говорити "ні".</li>
+						<li>59. Зниження сил: де знайти енергію.</li>
+						<li>60. Суперконтроль та як від нього позбутися.</li>
+						<li>
+							61. Розподіл обов'язків у сім'ї та пріоритети в сімейному житті.
+						</li>
+						<li>
+							62. Жіноче здоров'я: гормональний фон як причина вашого стану.
+						</li>
+						<li>63. Як підвищити свою сексуальність.</li>
+						<li>
+							64. Основи взаєморозуміння у стосунках: ролі чоловіка та жінки у
+							парі.
+						</li>
+						<li>
+							65. Де знайти хобі (та виділити на нього час) та чому це
+							важливо.
+						</li>
+						<li>66. Формула успіху 10-40-50.</li>
+						<li>67. Страхи, які блокують наш рух.</li>
+						<li>68. Розвиток емоційного інтелекту.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-life" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__header">
+					<h3 class="popup__title">
+						<img src="img/icons/archive-tick.svg" alt="Icon" />
+						<span>25 ЛАЙФХАКІВ ЯКІ ЗНАЧНО СПРОСТЯТЬ ВАМ ЖИТТЯ</span>
+					</h3>
+					<button data-close type="button" class="popup__close">
+						<img src="img/icons/close.svg" alt="Close" />
+					</button>
+				</div>
+				<div class="popup__body">
+					<ul class="popup__list">
+						<li>1. Як привчити дитину поважати ваші кордони</li>
+						<li>2. Як усунути погану поведінку дитини</li>
+						<li>
+							3. Як зупинити погану поведінку коли вона от-от розпочнеться
+						</li>
+						<li>4. Де взяти енергію: 100 пунктів, що вас заряджають</li>
+						<li>5. Як зрозуміти що насправді відчуває ваша дитина</li>
+						<li>6. Як звільнитись від негативних думок за 4 кроки</li>
+						<li>7. Метод "5 чому" від засновника Toyota</li>
+						<li>8. Яким висловам треба навчити дитину</li>
+						<li>
+							9. Коли у вас виникає конфлікт з близькими людьми варто спитати
+							себе...
+						</li>
+						<li>
+							10. Що робити коли старші родичі не вважають вас дорослою
+							людиною
+						</li>
+						<li>
+							11. Як зробити так, аби дитина була впевнена що її люблять
+						</li>
+						<li>12. Як перетворити критика у порадника</li>
+						<li>13. Як якісно проводити час з дитиною</li>
+						<li>14. Повідомлення вашому чоловікові</li>
+						<li>
+							15. Як краще розуміти себе та інших, коли ми говоримо про
+							важливе
+						</li>
+						<li>16. Як зберегти час (один з дієвих способів)</li>
+						<li>17. Як отримати додатково ще 1 день на тиждень</li>
+						<li>18. Легка вправа яка може змінити життя</li>
+						<li>19. Як не стати жертвою маніпуляцій</li>
+						<li>20. Вправа «50 відтінків задоволення»</li>
+						<li>21. Просто скажіть чоловікові «дякую»</li>
+						<li>22. Техніка релаксації — ASMR</li>
+						<li>23. Чого ви боїтеся і навіщо вам це</li>
+						<li>24. Техніка «Фрірайтинг»</li>
+						<li>25. Психологічний чек-лист для самооцінки та саморозвитку</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-5" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__header">
+					<h3 class="popup__title">
+						<img src="img/icons/archive-tick.svg" alt="Icon" />
+						<span>25 ЛАЙФХАКІВ ЯКІ ЗНАЧНО СПРОСТЯТЬ ВАМ ЖИТТЯ</span>
+					</h3>
+					<button data-close type="button" class="popup__close">
+						<img src="img/icons/close.svg" alt="Close" />
+					</button>
+				</div>
+				<div class="popup__body">
+					<ul class="popup__list">
+						<li>
+							<div>1.</div>
+							<div>
+								<span>Емоційне вигорання мам</span><span>(від психотерапевта Марії Мельник)</span>
+							</div>
+						</li>
+						<li>
+							<div>2.</div>
+							<div>
+								<span>Професії майбутнього для вашої дитини</span><span>(від засновника HR-академії Михайла Притули)</span>
+							</div>
+						</li>
+						<li>
+							<div>3.</div>
+							<div>
+								<span>Дитяча травма, як формується та як впливає на життя</span><span>(від психоаналітика Олени Єгорової)</span>
+							</div>
+						</li>
+						<li>
+							<div>4.</div>
+							<div>
+								<span>Тривожні розлади та депресія: причини та профілактика</span><span>(від психіатра Вікторії Берізовські)</span>
+							</div>
+						</li>
+						<li>
+							<div>5.</div>
+							<div>
+								<span>Корисні та шкідливі косметологічні процедури для
+									жінок</span><span>(від лікаря естетичної медицини Оксани Єсипчук)</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.karpachoff.com/forms/forms.min.js?_v=20231226144243"></script>
+	<script src="js/app.min.js?_v=20231226144243"></script>
 </body>
 
 </html>
