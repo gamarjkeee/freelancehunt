@@ -4,6 +4,8 @@
   font-family: "KyivTypeSerif";
   font-display: swap;
   src: url("../fonts/KyivTypeSerif.woff2") format("woff2"), url("../fonts/KyivTypeSerif.woff") format("woff");
+  font-weight: 400;
+  font-variation-settings: "wght" 500, "CONT" 700;
   font-style: normal;
 }
 
@@ -11,6 +13,7 @@
   font-family: "KyivTypeSans";
   font-display: swap;
   src: url("../fonts/KyivTypeSans.woff2") format("woff2"), url("../fonts/KyivTypeSans.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -125,6 +128,7 @@ h6 {
 }
 
 body {
+  font-variation-settings: "wght" 400, "CONT" 1000;
   background-color: #242424;
   -webkit-transition: opacity 0.3s ease 0.3s;
   transition: opacity 0.3s ease 0.3s;
@@ -407,6 +411,7 @@ body::after {
 }
 
 .button {
+  font-family: "KyivTypeSans";
   position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -571,6 +576,7 @@ body::after {
   display: -ms-inline-flexbox;
   display: inline-flex;
   font-family: "KyivTypeSerif";
+  font-variation-settings: "wght" 500, "CONT" 700;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -864,6 +870,10 @@ body::after {
   -webkit-column-gap: 0.25rem;
      -moz-column-gap: 0.25rem;
           column-gap: 0.25rem;
+}
+
+.menu__link.active span {
+  color: #ffbe65;
 }
 
 .menu__link span:nth-child(1) {
@@ -1307,27 +1317,6 @@ body::after {
           flex-direction: column;
 }
 
-.forwho__decor {
-  pointer-events: none;
-  margin-left: -1.5rem;
-  width: calc(100% + 3rem);
-  aspect-ratio: 1440/152;
-  position: relative;
-  margin-bottom: 1.875rem;
-}
-
-.forwho__decor img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
 .forwho__decor-circles {
   position: absolute;
   z-index: 1;
@@ -1443,6 +1432,7 @@ body::after {
 .item-forwho__title {
   font-family: "KyivTypeSerif";
   font-weight: 500;
+  font-variation-settings: "wght" 500, "CONT" 500;
   line-height: normal;
   letter-spacing: 0.1rem;
   background: -webkit-gradient(linear, left top, right top, from(#ffbe65), to(#bc9882));
@@ -1654,6 +1644,7 @@ body::after {
   font-weight: 500;
   line-height: 165%;
   letter-spacing: 0.05rem;
+  font-variation-settings: "wght" 500, "CONT" 700;
 }
 
 .items-canbe__title span {
@@ -1741,6 +1732,7 @@ body::after {
 
 .item-items-canbe__title {
   font-family: "KyivTypeSerif";
+  font-variation-settings: "wght" 500, "CONT" 700;
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.06rem;
@@ -1782,6 +1774,7 @@ body::after {
   font-family: "KyivTypeSerif";
   font-style: normal;
   font-weight: 500;
+  font-variation-settings: "wght" 500, "CONT" 700;
   line-height: normal;
   letter-spacing: 0.09rem;
   background: -webkit-gradient(linear, left top, right top, from(#ffbe65), to(#bc9882));
@@ -1838,6 +1831,7 @@ body::after {
 }
 
 .content-item-bottom-canbe__day-item span {
+  font-variation-settings: "wght" 500, "CONT" 700;
   font-style: normal;
   font-weight: 500;
   line-height: 135%;
@@ -2186,6 +2180,7 @@ body::after {
   max-width: 37.5rem;
   margin: 0 auto;
   font-family: "KyivTypeSerif";
+  font-variation-settings: "wght" 500, "CONT" 700;
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.09rem;
@@ -2239,6 +2234,7 @@ body::after {
 .item-bottom-everyweek__text {
   max-width: 17.5rem;
   font-family: "KyivTypeSans";
+  font-variation-settings: "wght" 400, "CONT" 500;
   font-style: normal;
   font-weight: 400;
   line-height: 135%;
@@ -2319,6 +2315,7 @@ body::after {
 
 .listofthemes__list-item {
   font-family: "KyivTypeSans";
+  font-variation-settings: "wght" 400, "CONT" 700;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 165%;
@@ -2489,6 +2486,7 @@ body::after {
   text-align: right;
   color: #ffbe65;
   font-family: "KyivTypeSans";
+  font-variation-settings: "wght" 400, "CONT" 700;
   font-weight: 400;
   line-height: 165%;
   letter-spacing: 0.0525rem;
@@ -2752,6 +2750,7 @@ body::after {
   font-weight: 500;
   line-height: 165%;
   letter-spacing: 0.05rem;
+  font-variation-settings: "wght" 500, "CONT" 700;
 }
 
 .price__label p span {
@@ -2862,6 +2861,7 @@ body::after {
 
 .item-price__gold-text {
   font-family: "KyivTypeSans";
+  font-variation-settings: "wght" 500, "CONT" 700;
   font-weight: 500;
   line-height: 135%;
   letter-spacing: 0.04rem;
@@ -2951,6 +2951,7 @@ body::after {
 
 .item-themes-price__duration div {
   font-family: "KyivTypeSans";
+  font-variation-settings: "wght" 500, "CONT" 700;
   font-weight: 500;
   line-height: 165%;
   letter-spacing: 0.05rem;
@@ -2986,7 +2987,8 @@ body::after {
 
 .form__label {
   font-family: "KyivTypeSans";
-  font-weight: 500;
+  font-weight: 400;
+  font-variation-settings: "wght" 400, "CONT" 1000;
   line-height: 165%;
   letter-spacing: 0.05rem;
 }
@@ -3117,6 +3119,7 @@ body::after {
   color: #eef2fe;
   font-family: "KyivTypeSans";
   font-weight: 400;
+  font-variation-settings: "wght" 400, "CONT" 700;
   line-height: 165%;
   letter-spacing: 0.0525rem;
   max-width: 30rem;
@@ -3659,6 +3662,7 @@ body::after {
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;
+  font-variation-settings: "wght" 400, "CONT" 700;
   font-style: normal;
   font-weight: 400;
   line-height: 145%;
@@ -3698,6 +3702,7 @@ body::after {
   font-weight: 500;
   line-height: 135%;
   letter-spacing: 0.075rem;
+  font-variation-settings: "wght" 500, "CONT" 700;
 }
 
 .slide-why__link span:nth-child(2) {
@@ -5670,10 +5675,6 @@ body::after {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-  }
-
-  .forwho__decor {
-    margin-top: 1.875rem;
   }
 
   .forwho__decor-circle--1 {
