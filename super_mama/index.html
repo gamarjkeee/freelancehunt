@@ -3,13 +3,17 @@
 
 <head>
 	<title>SuperMama ClubUa</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231226103609">
-	<link rel="shortcut icon" href="favicon.ico">
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<style>
+		body {
+			opacity: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20231226121941" />
+	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
@@ -1338,12 +1342,15 @@
 					<div class="form__label">
 						Щоб оформити підписку - заповніть форму та натисніть кнопку нижче
 					</div>
-					<div class="form__karpform karpform" id="karpform0" data-name="SuperMama" data-type="product" data-debug="off" data-fill="on" data-func="on" data-errors="on" data-messages="on" data-loading="on" data-cellular="on" data-lang="ua" data-result="off">
-						<form class="karpform__content" action="https://api3.karpachoff.com/bid/650c6be557c81030f712f806" method="post">
+					<div class="form__karpform karpform" id="karpform0" data-name="Оценка" data-type="product" data-debug="off" data-fill="on" data-func="on" data-errors="on" data-messages="on" data-loading="on" data-cellular="on" data-lang="ua" data-result="off">
+						<!-- Form -->
+						<form class="karpform__content" action="https://api3.karpachoff.com/bid/645e456bc80c1304de62a5f0/0" method="post">
+							<!-- Input Field -->
 							<div class="karpform__field required-field">
 								<input class="karpform__input" name="name" type="text" placeholder="Ім'я" maxlength="80" />
 								<span class="karpform__error"></span>
 							</div>
+							<!-- Input Field -->
 							<div class="karpform__field required-field">
 								<div class="karpform__field-inner">
 									<select class="karpform__select" name="country">
@@ -1631,7 +1638,7 @@
 											Узбекистан +998
 										</option>
 										<option value="UA" data-text="+380" selected="selected">
-											+380
+											Україна +380
 										</option>
 										<option value="UY" data-text="+598">Уругвай +598</option>
 										<option value="FO" data-text="+298">
@@ -1666,10 +1673,13 @@
 								</div>
 								<span class="karpform__error"></span>
 							</div>
+
+							<!-- Input Field -->
 							<div class="karpform__field required-field">
 								<input class="karpform__input" name="email" type="email" placeholder="email@gmail.com" maxlength="150" />
 								<span class="karpform__error"></span>
 							</div>
+
 							<div class="karpform__icons">
 								<img src="img/form/01.svg" alt="Icon" />
 								<img src="img/form/02.svg" alt="Icon" />
@@ -1687,12 +1697,29 @@
 								</div>
 							</div>
 
-							<div class="karpform__button-box">
-								<button class="karpform__button button-submit button button--orange" data-form="650c6be557c81030f712f806">
-									<span> ОФОРМИТИ ПІДПИСКУ</span><span class="_icon-arrow"></span>
+							<!-- Submit Button -->
+							<div class="karpform__btns">
+								<button class="karpform__submit button-submit button button--orange" data-form="-1">
+									<span>Перейти до оплати</span>
 								</button>
 							</div>
+
+							<!-- Loading -->
+							<div class="karpform__loading">
+								<img src="https://cdn.karpachoff.com/forms/loader.gif" class="karpform__loading-icon" alt="Зачекайте" />
+							</div>
 						</form>
+
+						<!-- Result -->
+						<div class="karpform-result">
+							<!-- Result Image -->
+							<img class="karpform-result__icon" src="https://cdn.karpachoff.com/forms/success.svg" alt="Иконка успеха" />
+							<!-- Result Text -->
+							<div class="karpform-result__content">
+								<p class="karpform-result__thanks">Спасибо.</p>
+								<p>Вы успешно зарегистрировались.</p>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="form__decor-circles">
@@ -2146,7 +2173,8 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20231226103609"></script>
+	<script src="https://cdn.karpachoff.com/forms/forms.min.js?_v=20231226121941"></script>
+	<script src="js/app.min.js?_v=20231226121941"></script>
 </body>
 
 </html>

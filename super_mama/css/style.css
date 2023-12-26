@@ -160,6 +160,8 @@ h6 {
 
 body {
   background-color: #242424;
+  -webkit-transition: opacity 0.3s ease 0.3s;
+  transition: opacity 0.3s ease 0.3s;
 }
 
 .lock body {
@@ -168,6 +170,10 @@ body {
       touch-action: none;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
+}
+
+.loaded body {
+  opacity: 1;
 }
 
 .wrapper {
@@ -2867,119 +2873,6 @@ body {
   left: -20%;
 }
 
-.karpform {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.karpform__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-}
-
-.karpform__field {
-  max-width: 27.125rem;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 1.25rem;
-}
-
-.karpform__input {
-  font-family: "KyivTypeSans";
-  width: 100%;
-  border-radius: 3.625rem;
-  border: 0.0625rem solid #ffbe65;
-  background: #242424;
-  padding: 0.875rem 1.125rem;
-  color: #eef2fe;
-  font-weight: 500;
-  line-height: 135%;
-  letter-spacing: 0.04rem;
-  opacity: 1;
-}
-
-.karpform__input::-webkit-input-placeholder {
-  color: #eef2fe;
-  font-weight: 500;
-  line-height: 135%;
-  letter-spacing: 0.04rem;
-  opacity: 0.7;
-}
-
-.karpform__input::-moz-placeholder {
-  color: #eef2fe;
-  font-weight: 500;
-  line-height: 135%;
-  letter-spacing: 0.04rem;
-  opacity: 0.7;
-}
-
-.karpform__input:-ms-input-placeholder {
-  color: #eef2fe;
-  font-weight: 500;
-  line-height: 135%;
-  letter-spacing: 0.04rem;
-  opacity: 0.7;
-}
-
-.karpform__input::-ms-input-placeholder {
-  color: #eef2fe;
-  font-weight: 500;
-  line-height: 135%;
-  letter-spacing: 0.04rem;
-  opacity: 0.7;
-}
-
-.karpform__input::placeholder {
-  color: #eef2fe;
-  font-weight: 500;
-  line-height: 135%;
-  letter-spacing: 0.04rem;
-  opacity: 0.7;
-}
-
-.karpform__input:focus {
-  outline: none;
-}
-
-.karpform__select {
-  font-family: "KyivTypeSans";
-  padding-left: 1rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  border-radius: 3.625rem 0 0 3.625rem;
-  background-color: transparent;
-  color: #eef2fe;
-  font-weight: 500;
-  line-height: 135%;
-  letter-spacing: 0.04rem;
-  opacity: 0.7;
-}
-
-.karpform__select:focus {
-  outline: none;
-}
-
 .karpform__icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2990,6 +2883,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 27.125rem;
 }
 
 .karpform__prices-box {
@@ -3053,6 +2947,312 @@ body {
   line-height: 165%;
   letter-spacing: 0.0525rem;
   max-width: 30rem;
+}
+
+.karpform {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.karpform__field {
+  display: block;
+  width: 100%;
+  max-width: 27.125rem;
+}
+
+.karpform__field:nth-child(2) .karpform__input {
+  border-radius: 0 3.625rem 3.625rem 0;
+}
+
+.karpform__field:not(:last-of-type) {
+  margin: 1.2rem 0;
+}
+
+.karpform__field-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.karpform__field.error {
+  color: red;
+}
+
+.karpform__field.error .karpform__input::-webkit-input-placeholder {
+  color: red;
+}
+
+.karpform__field.error .karpform__input::-moz-placeholder {
+  color: red;
+}
+
+.karpform__field.error .karpform__input:-ms-input-placeholder {
+  color: red;
+}
+
+.karpform__field.error .karpform__input::-ms-input-placeholder {
+  color: red;
+}
+
+.karpform__field.error .karpform__input::placeholder {
+  color: red;
+}
+
+.karpform__field.error .karpform__error {
+  display: block;
+}
+
+.karpform__select {
+  width: 100px;
+}
+
+.karpform__content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.karpform__content.disabled {
+  display: none;
+}
+
+.karpform__loading {
+  display: none;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.karpform__loading-icon {
+  max-height: 95%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.karpform__loading.act {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.karpform__input {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  outline: none;
+  border-radius: 3.625rem;
+  border: 0.0625rem solid #ffbe65;
+  background: #242424;
+  color: #eef2fe;
+  font-weight: 400;
+  line-height: 135%;
+  letter-spacing: 0.04rem;
+}
+
+.karpform__error {
+  display: none;
+  font-size: 12px;
+  padding: 5px 0 0 0.5em;
+}
+
+.karpform__phone {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.karpform__btns {
+  text-align: center;
+}
+
+.karpform__submit {
+  margin: 0 auto;
+}
+
+.karpform-result {
+  display: none;
+  text-align: center;
+}
+
+.karpform-result.act {
+  display: block;
+}
+
+.karpform-result__icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 0.5em;
+}
+
+.karpselect {
+  color: #fff;
+  border-radius: 6px;
+}
+
+.karpselect__actual {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #eef2fe;
+  background: transparent;
+  padding: 10px 15px 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3.625rem 0 0 3.625rem;
+  border: 0.0625rem solid #ffbe65;
+  border-right: none;
+  color: #eef2fe;
+  font-weight: 400;
+  line-height: 135%;
+  letter-spacing: 0.04rem;
+}
+
+.karpselect__actual svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.karpselect__actual-arrow {
+  border: solid #eef2fe;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  float: right;
+  pointer-events: none;
+  margin-left: 10px;
+}
+
+.karpselect__list {
+  position: absolute;
+  margin-top: 10px;
+  padding: 0;
+  display: none;
+  border: 2px solid #ffbe65;
+  border-radius: 8px;
+  z-index: 1;
+  max-height: 300px;
+  overflow-x: auto;
+  background-color: #eef2fe;
+}
+
+.karpselect__list::-webkit-scrollbar {
+  width: 1rem;
+  border-radius: 0 1.25rem 1.25rem 0;
+  background-color: #eef2fe;
+}
+
+.karpselect__list::-webkit-scrollbar-thumb {
+  background-color: #ffbe65;
+  height: 2.5rem;
+  border: 0.125rem solid #eef2fe;
+  border-radius: 1.25rem;
+}
+
+.karpselect__list li {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  list-style: none;
+  color: #242424;
+  padding: 12px 28px 10px 10px;
+}
+
+.karpselect__list li:hover {
+  background-color: #fff;
+}
+
+.karpselect__list li svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.karpselect-mobile {
+  width: 80% !important;
+  position: fixed !important;
+  top: 5% !important;
+  left: 10% !important;
+  border: 0 !important;
+  height: 90% !important;
+  margin: 0 !important;
+  overflow-y: scroll;
+  z-index: 10 !important;
+  max-height: 100% !important;
+}
+
+.karpselect-mobile li {
+  padding: 20px !important;
+}
+
+.karpselect-mobile-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9;
+}
+
+.karpselect .up {
+  -ms-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.karpselect .down {
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.karpselect .stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 
 .why {
@@ -4320,42 +4520,6 @@ body {
     margin-bottom: 3.75rem;
   }
 
-  .karpform__field:nth-child(2) .karpform__input {
-    padding-left: 6.25rem;
-  }
-
-  .karpform__input {
-    font-size: 1rem;
-  }
-
-  .karpform__input::-webkit-input-placeholder {
-    font-size: 1rem;
-  }
-
-  .karpform__input::-moz-placeholder {
-    font-size: 1rem;
-  }
-
-  .karpform__input:-ms-input-placeholder {
-    font-size: 1rem;
-  }
-
-  .karpform__input::-ms-input-placeholder {
-    font-size: 1rem;
-  }
-
-  .karpform__input::placeholder {
-    font-size: 1rem;
-  }
-
-  .karpform__select {
-    width: 5.625rem;
-  }
-
-  .karpform__select {
-    font-size: 1rem;
-  }
-
   .karpform__icons {
     -webkit-column-gap: 3rem;
        -moz-column-gap: 3rem;
@@ -4380,6 +4544,14 @@ body {
 
   .karpform__text {
     font-size: 0.875rem;
+  }
+
+  .karpform__input {
+    font-size: 1rem;
+  }
+
+  .karpselect__actual {
+    font-size: 1rem;
   }
 
   .why__title {
@@ -4888,42 +5060,6 @@ body {
     margin-bottom: 2.5rem;
   }
 
-  .karpform__field:nth-child(2) .karpform__input {
-    padding-left: 5.875rem;
-  }
-
-  .karpform__input {
-    font-size: 0.875rem;
-  }
-
-  .karpform__input::-webkit-input-placeholder {
-    font-size: 0.875rem;
-  }
-
-  .karpform__input::-moz-placeholder {
-    font-size: 0.875rem;
-  }
-
-  .karpform__input:-ms-input-placeholder {
-    font-size: 0.875rem;
-  }
-
-  .karpform__input::-ms-input-placeholder {
-    font-size: 0.875rem;
-  }
-
-  .karpform__input::placeholder {
-    font-size: 0.875rem;
-  }
-
-  .karpform__select {
-    width: 5.25rem;
-  }
-
-  .karpform__select {
-    font-size: 0.875rem;
-  }
-
   .karpform__icons {
     -webkit-column-gap: 1rem;
        -moz-column-gap: 1rem;
@@ -4948,6 +5084,14 @@ body {
 
   .karpform__text {
     font-size: 0.625rem;
+  }
+
+  .karpform__input {
+    font-size: 0.875rem;
+  }
+
+  .karpselect__actual {
+    font-size: 0.875rem;
   }
 
   .why__title {
@@ -5686,10 +5830,6 @@ body {
   .form__decor-circle--5 {
     top: 40%;
     left: 0%;
-  }
-
-  .karpform__input {
-    padding: 0.75rem 1rem;
   }
 
   .karpform__prices-box {
@@ -7002,90 +7142,6 @@ body {
     }
 }
 
-@supports (padding-left: clamp( 5.875rem , 5.8rem  +  0.375vw , 6.25rem )) {
-    .karpform__field:nth-child(2) .karpform__input {
-      padding-left: clamp( 5.875rem , 5.8rem  +  0.375vw , 6.25rem );
-    }
-}
-
-@supports not (padding-left: clamp( 5.875rem , 5.8rem  +  0.375vw , 6.25rem )) {
-    .karpform__field:nth-child(2) .karpform__input {
-      padding-left: calc(5.875rem + 0.375 * (100vw - 20rem) / 100);
-    }
-}
-
-@supports (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
-    .karpform__input {
-      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
-    }
-}
-
-@supports not (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
-    .karpform__input {
-      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
-    }
-}
-
-@supports (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
-    .karpform__input::-webkit-input-placeholder {
-      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
-    }
-    .karpform__input::-moz-placeholder {
-      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
-    }
-    .karpform__input:-ms-input-placeholder {
-      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
-    }
-    .karpform__input::-ms-input-placeholder {
-      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
-    }
-    .karpform__input::placeholder {
-      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
-    }
-}
-
-@supports not (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
-    .karpform__input::-webkit-input-placeholder {
-      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
-    }
-    .karpform__input::-moz-placeholder {
-      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
-    }
-    .karpform__input:-ms-input-placeholder {
-      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
-    }
-    .karpform__input::-ms-input-placeholder {
-      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
-    }
-    .karpform__input::placeholder {
-      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
-    }
-}
-
-@supports (width: clamp( 5.25rem , 5.175rem  +  0.375vw , 5.625rem )) {
-    .karpform__select {
-      width: clamp( 5.25rem , 5.175rem  +  0.375vw , 5.625rem );
-    }
-}
-
-@supports not (width: clamp( 5.25rem , 5.175rem  +  0.375vw , 5.625rem )) {
-    .karpform__select {
-      width: calc(5.25rem + 0.375 * (100vw - 20rem) / 100);
-    }
-}
-
-@supports (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
-    .karpform__select {
-      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
-    }
-}
-
-@supports not (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
-    .karpform__select {
-      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
-    }
-}
-
 @supports ((-moz-column-gap: clamp( 1rem , 0.6rem  +  2vw , 3rem )) or (column-gap: clamp( 1rem , 0.6rem  +  2vw , 3rem ))) {
     .karpform__icons {
       -webkit-column-gap: clamp( 1rem , 0.6rem  +  2vw , 3rem );
@@ -7159,6 +7215,30 @@ body {
 @supports not (font-size: clamp( 0.625rem , 0.575rem  +  0.25vw , 0.875rem )) {
     .karpform__text {
       font-size: calc(0.625rem + 0.25 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
+    .karpform__input {
+      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
+    .karpform__input {
+      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
+    .karpselect__actual {
+      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
+    .karpselect__actual {
+      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
     }
 }
 
