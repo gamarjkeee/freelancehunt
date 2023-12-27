@@ -378,6 +378,33 @@ body::after {
   border-radius: 1.25rem;
 }
 
+.popup__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0.9375rem;
+}
+
+.popup__image-box {
+  padding: 0 0.9375rem 0.9375rem 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup__image img {
+  max-width: 100%;
+}
+
 .ibg {
   width: 100%;
   height: 100%;
