@@ -3506,6 +3506,7 @@ body::after {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   pointer-events: none;
+  height: 312px;
 }
 
 .slide-why.swiper-slide-active {
@@ -3514,6 +3515,7 @@ body::after {
   background: #242424;
   scale: 1;
   pointer-events: all;
+  height: auto;
 }
 
 .slide-why.swiper-slide-active .slide-why.swiper-slide-active .slide-why__link span:nth-child(1) {
@@ -3633,6 +3635,7 @@ body::after {
   -webkit-column-gap: 0.25rem;
      -moz-column-gap: 0.25rem;
           column-gap: 0.25rem;
+  text-wrap: nowrap;
 }
 
 .slide-why__link span:nth-child(1) {
@@ -5248,7 +5251,7 @@ body::after {
   }
 
   .slide-why__link span:nth-child(1) {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 
   .telegram__title {
@@ -5645,8 +5648,8 @@ body::after {
   }
 
   .forwho__decor-circle--1 {
-    top: -10%;
-    left: -30%;
+    top: -5%;
+    left: -5%;
   }
 
   .forwho__decor-circle--2 {
@@ -5669,8 +5672,8 @@ body::after {
   }
 
   .canbe__decor-circle--1 {
-    top: -5%;
-    left: -30%;
+    top: -4%;
+    left: -5%;
   }
 
   .canbe__decor-circle--2 {
@@ -5771,8 +5774,8 @@ body::after {
   }
 
   .everyweek__decor-circle--1 {
-    top: -5%;
-    left: -30%;
+    top: -7%;
+    left: -5%;
   }
 
   .everyweek__decor-circle--2 {
@@ -5809,8 +5812,8 @@ body::after {
   }
 
   .listofthemes__decor-circle--1 {
-    top: -30%;
-    left: -30%;
+    top: -20%;
+    left: -5%;
   }
 
   .listofthemes__decor-circle--2 {
@@ -5875,8 +5878,8 @@ body::after {
   }
 
   .bonus__decor-circle--1 {
-    top: -10%;
-    left: -20%;
+    top: -7%;
+    left: -5%;
   }
 
   .bonus__decor-circle--2 {
@@ -5947,7 +5950,7 @@ body::after {
 
   .price__decor-circle--1 {
     top: -10%;
-    left: -20%;
+    left: -5%;
   }
 
   .price__decor-circle--2 {
@@ -6015,8 +6018,8 @@ body::after {
   }
 
   .form__decor-circle--1 {
-    top: -20%;
-    left: -10%;
+    top: -16%;
+    left: -5%;
   }
 
   .form__decor-circle--2 {
@@ -6062,7 +6065,7 @@ body::after {
 
   .why__decor-circle--1 {
     top: -20%;
-    left: -10%;
+    left: -5%;
   }
 
   .why__decor-circle--2 {
@@ -6085,8 +6088,8 @@ body::after {
   }
 
   .telegram__decor-circle--1 {
-    top: -20%;
-    left: -10%;
+    top: -11%;
+    left: -5%;
   }
 
   .telegram__decor-circle--2 {
@@ -6110,7 +6113,7 @@ body::after {
 
   .questions__decor-circle--1 {
     top: -20%;
-    left: -10%;
+    left: -5%;
   }
 
   .questions__decor-circle--2 {
@@ -7536,15 +7539,15 @@ body::after {
     }
 }
 
-@supports (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
+@supports (font-size: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem )) {
     .slide-why__link span:nth-child(1) {
-      font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
+      font-size: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem );
     }
 }
 
-@supports not (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem )) {
     .slide-why__link span:nth-child(1) {
-      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 100);
+      font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 100);
     }
 }
 
