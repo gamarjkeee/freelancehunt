@@ -1217,6 +1217,7 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .content-hero__title {
@@ -1229,7 +1230,31 @@ body::after {
 }
 
 .content-hero__button {
+  margin-bottom: 1rem;
+}
+
+.content-hero__text {
+  width: 100%;
   margin-bottom: 3.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content-hero__text span {
+  max-width: 18.75rem;
+  color: #eef2fe;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 135%;
+  letter-spacing: 0.04rem;
 }
 
 .content-hero__arrow-down {
@@ -2957,6 +2982,18 @@ body::after {
   letter-spacing: 0.05rem;
 }
 
+.form__content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 3.125rem;
+     -moz-column-gap: 3.125rem;
+          column-gap: 3.125rem;
+}
+
 .form__decor-circles {
   position: absolute;
   z-index: 1;
@@ -2999,6 +3036,74 @@ body::after {
 .form__decor-circle--5 {
   top: 50%;
   left: -20%;
+}
+
+.book-form {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+}
+
+.book-form__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.book-form__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 2.5rem;
+          flex: 0 0 2.5rem;
+}
+
+.book-form__icon img {
+  max-width: 100%;
+}
+
+.book-form__title {
+  color: #ffbe65;
+  font-family: "KyivTypeSerif";
+  font-weight: 500;
+  letter-spacing: 0.96px 0.06rem;
+  margin-bottom: 1rem;
+}
+
+.book-form__text {
+  color: #eef2fe;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 165%;
+  letter-spacing: 0.84px;
+}
+
+.book-form__image {
+  aspect-ratio: 1991/1674;
+}
+
+.book-form__image img {
+  max-width: 100%;
 }
 
 .karpform__icons {
@@ -4250,6 +4355,16 @@ body::after {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(193, 132, 79, 0)), color-stop(45.31%, #e5bf97), to(#ffbe65));
     background: linear-gradient(180deg, rgba(193, 132, 79, 0) 0%, #e5bf97 45.31%, #ffbe65 100%);
   }
+
+  .book-form__info {
+    max-width: 23.25rem;
+    border: 1px solid var(--main-gradient, #ffbe65);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 190, 101, 0.25)), to(rgba(255, 190, 101, 0.25))), rgba(0, 0, 0, 0.24);
+    background: linear-gradient(0deg, rgba(255, 190, 101, 0.25) 0%, rgba(255, 190, 101, 0.25) 100%), rgba(0, 0, 0, 0.24);
+    -webkit-backdrop-filter: blur(45px);
+            backdrop-filter: blur(45px);
+    padding: 1rem 1.5rem;
+  }
 }
 
 @media (min-width: 61.99875em) {
@@ -4263,6 +4378,16 @@ body::after {
 
   .content-item-bottom-canbe__number-item {
     font-size: 1rem;
+  }
+
+  .book-form__info {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 
@@ -4679,6 +4804,18 @@ body::after {
     margin-bottom: 3.75rem;
   }
 
+  .book-form {
+    padding-left: 11.875rem;
+  }
+
+  .book-form__icon {
+    margin-bottom: 1rem;
+  }
+
+  .book-form__title {
+    font-size: 1.5rem;
+  }
+
   .karpform__icons {
     -webkit-column-gap: 3rem;
        -moz-column-gap: 3rem;
@@ -4827,6 +4964,12 @@ body::after {
 @media (max-width: 50em) {
   .hero__image img {
     left: -15%;
+  }
+}
+
+@media (max-width: 48em) {
+  .book-form {
+    padding-left: 0.0000000625rem;
   }
 }
 
@@ -5220,7 +5363,15 @@ body::after {
   }
 
   .form__label {
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .book-form__icon {
+    margin-bottom: 0.75rem;
+  }
+
+  .book-form__title {
+    font-size: 1.375rem;
   }
 
   .karpform__icons {
@@ -5498,6 +5649,18 @@ body::after {
     width: 25rem;
   }
 
+  .book-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 0.625rem;
+  }
+
+  .book-form__image {
+    max-width: 80%;
+  }
+
   .why__decor-circle {
     width: 25rem;
   }
@@ -5661,6 +5824,20 @@ body::after {
   .content-hero__title {
     max-width: 25rem;
     text-shadow: 0px 0px 0.9375rem rgba(0, 0, 0, 0.5);
+  }
+
+  .content-hero__text {
+    width: calc(100% + 3.25rem);
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--main-gradient, #ffbe65);
+    border-bottom: 1px solid var(--main-gradient, #ffbe65);
+    background: rgba(255, 190, 101, 0.25);
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+  }
+
+  .content-hero__text span {
+    color: #ffbe65;
   }
 
   .forwho__bottom {
@@ -6040,6 +6217,13 @@ body::after {
     font-weight: 400;
   }
 
+  .form__content-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   .form__decor-circle {
     width: 18.75rem;
   }
@@ -6067,6 +6251,31 @@ body::after {
   .form__decor-circle--5 {
     top: 40%;
     left: 0%;
+  }
+
+  .book-form {
+    width: 100%;
+    margin-bottom: 0.625rem;
+  }
+
+  .book-form__info {
+    max-width: 27.5rem;
+  }
+
+  .book-form__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 1.5rem;
+            flex: 0 0 1.5rem;
+  }
+
+  .book-form__text span {
+    color: #ffbe65;
+  }
+
+  .book-form__image {
+    max-width: 22.5rem;
   }
 
   .karpform__prices-box {
@@ -6252,6 +6461,10 @@ body::after {
 
   .item-themes-price__duration span {
     font-size: 0.875rem;
+  }
+
+  .book-form {
+    row-gap: 0.3125rem;
   }
 
   .slide-why {
@@ -7394,15 +7607,39 @@ body::after {
     }
 }
 
-@supports (margin-bottom: clamp( 2.5rem , 2.25rem  +  1.25vw , 3.75rem )) {
+@supports (margin-bottom: clamp( 0.625rem , 0.0000000625rem  +  3.125vw , 3.75rem )) {
     .form__label {
-      margin-bottom: clamp( 2.5rem , 2.25rem  +  1.25vw , 3.75rem );
+      margin-bottom: clamp( 0.625rem , 0.0000000625rem  +  3.125vw , 3.75rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 2.5rem , 2.25rem  +  1.25vw , 3.75rem )) {
+@supports not (margin-bottom: clamp( 0.625rem , 0.0000000625rem  +  3.125vw , 3.75rem )) {
     .form__label {
-      margin-bottom: calc(2.5rem + 1.25 * (100vw - 20rem) / 100);
+      margin-bottom: calc(0.625rem + 3.125 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (margin-bottom: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem )) {
+    .book-form__icon {
+      margin-bottom: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem )) {
+    .book-form__icon {
+      margin-bottom: calc(0.75rem + 0.25 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (font-size: clamp( 1.375rem , 1.35rem  +  0.125vw , 1.5rem )) {
+    .book-form__title {
+      font-size: clamp( 1.375rem , 1.35rem  +  0.125vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.375rem , 1.35rem  +  0.125vw , 1.5rem )) {
+    .book-form__title {
+      font-size: calc(1.375rem + 0.125 * (100vw - 20rem) / 100);
     }
 }
 
@@ -7873,6 +8110,20 @@ body::after {
 @supports not (font-size: clamp( 0.875rem , 0.8154744189rem  +  0.2976279056vw , 1rem )) {
     .content-item-bottom-canbe__number-item {
       font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 41.99875);
+    }
+}
+}
+
+@media (min-width: 48em) and (max-width: 120em) {
+@supports (padding-left: clamp( 0.0000000625rem , -7.9166665625rem  +  16.4930554688vw , 11.875rem )) {
+    .book-form {
+      padding-left: clamp( 0.0000000625rem , -7.9166665625rem  +  16.4930554688vw , 11.875rem );
+    }
+}
+
+@supports not (padding-left: clamp( 0.0000000625rem , -7.9166665625rem  +  16.4930554688vw , 11.875rem )) {
+    .book-form {
+      padding-left: calc(0.0000000625rem + 11.8749999375 * (100vw - 48rem) / 72);
     }
 }
 }
