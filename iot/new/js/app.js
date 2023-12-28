@@ -907,6 +907,7 @@
     }
     const da = new DynamicAdapt("max");
     da.init();
+    const htmlBlock = document.documentElement;
     const allButtonsSpan = document.querySelectorAll(".aside-button > span");
     allButtonsSpan.forEach((span => {
         span.style.textWrap = "nowrap";
@@ -1045,27 +1046,26 @@
     }));
     const dropArea = document.getElementById("drop-area");
     const inputFile = document.getElementById("file-input");
-    document.querySelector(".upload-fw-section__type");
+    const uploadFileName = document.querySelector(".upload-fw-section__type");
     inputFile.addEventListener("change", uploadFife);
     processSelectedFiles(inputFile);
-    function processSelectedFiles(fileInput) {
+    function processSelectedFiles(inputFile) {
         let files;
-        if (fileInput) {
-            files = fileInput.files;
-            for (var i = 0; i < files.length; i++) alert("Filename " + files[i].name);
+        if (inputFile) {
+            files = inputFile.files;
+            for (let i = 0; i < files.length; i++) uploadFileName.innerHTML = "" + files[i].name;
         }
     }
     function uploadFife() {
-        alert("файл завантажився");
+        processSelectedFiles(inputFile);
     }
     dropArea.addEventListener("dragover", (function(e) {
         e.preventDefault();
-        alert("файл завантажився");
     }));
     dropArea.addEventListener("drop", (function(e) {
         e.preventDefault();
         inputFile.files = e.dataTransfer.files;
-        alert("файл завантажився");
+        uploadFife();
     }));
     document.getElementById("loader");
     document.querySelectorAll(".snackbar");
@@ -1172,11 +1172,13 @@
         }));
     }
     const fullscreenButton = document.querySelector(".header-content-page__fullscreen-button");
+    document.addEventListener("fullscreenchange", (function() {
+        if (document.fullscreenElement) htmlBlock.classList.add("fullscreen"); else htmlBlock.classList.remove("fullscreen");
+    }));
     fullscreenButton.addEventListener("click", (() => {
         toggleFullScreen();
     }));
     function toggleFullScreen() {
-        const htmlBlock = document.documentElement;
         if (!document.fullscreenElement) {
             document.documentElement.requestFullscreen();
             htmlBlock.classList.add("fullscreen");
@@ -1187,21 +1189,34 @@
     }
     const toTopButton = document.querySelector(".button-to-top");
     const sections = document.querySelectorAll(".section");
+    const buttonsMenu = document.querySelectorAll(".btn-menu");
     sections.forEach((section => {
         toTopButton.style.visibility = "hidden";
-        sections.forEach((section => {
-            section.addEventListener("scroll", (() => {
-                let heightToTop = section.scrollTop;
-                section.onscroll;
-                if (heightToTop > 50) toTopButton.style.visibility = "visible"; else toTopButton.style.visibility = "hidden";
+        if (section) {
+            sections.forEach((section => {
+                section.addEventListener("scroll", (() => {
+                    let heightToTop = section.scrollTop;
+                    section.onscroll;
+                    if (heightToTop > 50) toTopButton.style.visibility = "visible"; else toTopButton.style.visibility = "hidden";
+                }));
             }));
-        }));
-        toTopButton.addEventListener("click", (() => {
-            section.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: "smooth"
-            });
+            toTopButton.addEventListener("click", (() => {
+                section.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth"
+                });
+            }));
+        }
+    }));
+    buttonsMenu.forEach((buttonMenu => {
+        buttonMenu.addEventListener("click", (() => {
+            sections.forEach((section => {
+                section.scrollTo({
+                    top: 0,
+                    left: 0
+                });
+            }));
         }));
     }));
     window["FLS"] = false;
