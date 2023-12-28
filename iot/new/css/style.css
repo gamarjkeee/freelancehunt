@@ -477,6 +477,7 @@ body::after {
      -moz-column-gap: 0.9375rem;
           column-gap: 0.9375rem;
   padding: 0.625rem;
+  cursor: pointer;
 }
 
 .form-popup__line label div {
@@ -586,6 +587,8 @@ input[type=radio]:checked:after {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  -webkit-transition: background-color 0.3s ease 0s, padding 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s, padding 0.3s ease 0s;
 }
 
 .button svg {
@@ -643,6 +646,8 @@ input[type=radio]:checked:after {
   background-image: url("../img/icons/arrow-up.svg");
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   rotate: 0deg;
 }
 
@@ -670,6 +675,8 @@ input[type=radio]:checked:after {
   height: 2.75rem;
   border-radius: 0.625rem 0.625rem 0px 0px;
   background: #eeeff2;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .dark .button.button--toggler.button--visible.advanced {
@@ -906,6 +913,8 @@ input[type=radio]:checked:after {
           align-items: center;
   padding: 0.625rem 1.0625rem;
   line-height: normal;
+  -webkit-transition: background-color 0.15s ease 0s;
+  transition: background-color 0.15s ease 0s;
 }
 
 .dark .select-item__item {
@@ -1013,6 +1022,8 @@ svg.stroke path {
       -ms-flex-pack: center;
           justify-content: center;
   opacity: 0.7;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
 }
 
 .dark .button-to-top {
@@ -1078,6 +1089,10 @@ svg.stroke path {
 }
 
 .aside-page {
+  -webkit-transition: width 0.3s ease 0s, padding 0.3s ease 0s, -webkit-box-flex 0.3s ease 0s;
+  transition: width 0.3s ease 0s, padding 0.3s ease 0s, -webkit-box-flex 0.3s ease 0s;
+  transition: width 0.3s ease 0s, flex 0.3s ease 0s, padding 0.3s ease 0s;
+  transition: width 0.3s ease 0s, flex 0.3s ease 0s, padding 0.3s ease 0s, -webkit-box-flex 0.3s ease 0s, -ms-flex 0.3s ease 0s;
   background-color: #fff;
 }
 
@@ -1168,6 +1183,8 @@ svg.stroke path {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: height 0.3s ease 0s, margin-top 0.3s ease 0s;
+  transition: height 0.3s ease 0s, margin-top 0.3s ease 0s;
   margin-top: 0rem;
 }
 
@@ -1392,6 +1409,8 @@ svg.stroke path {
   z-index: 0;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
   overflow-y: auto;
   overflow-x: hidden;
   display: -webkit-box;
@@ -1708,6 +1727,8 @@ section.section.active {
   width: 0;
   height: 0.3125rem;
   background-color: #234663;
+  -webkit-transition: width 0.3s ease 0s;
+  transition: width 0.3s ease 0s;
 }
 
 .dark .wi-fi-section__mode::before {
@@ -2092,6 +2113,8 @@ section.section.active {
   font-weight: 400;
   line-height: 150%;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .loader {
@@ -2461,6 +2484,10 @@ section.section.active {
   .aside-page__logo img {
     width: 15rem;
     height: 100%;
+    -webkit-transition: -webkit-transform 0.3s ease 0s;
+    transition: -webkit-transform 0.3s ease 0s;
+    transition: transform 0.3s ease 0s;
+    transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
     -webkit-transform: translateX(-0.5625rem);
         -ms-transform: translateX(-0.5625rem);
             transform: translateX(-0.5625rem);
@@ -2494,6 +2521,8 @@ section.section.active {
 
   .aside-page__toggler svg {
     display: inline-block;
+    -webkit-transition: rotate 0.3s ease 0s;
+    transition: rotate 0.3s ease 0s;
   }
 
   .close .aside-page__toggler svg {
@@ -2519,6 +2548,8 @@ section.section.active {
         -ms-flex: 0 0 5.5625rem;
             flex: 0 0 5.5625rem;
     width: 15rem;
+    -webkit-transition: width 0.3s ease 0s;
+    transition: width 0.3s ease 0s;
   }
 
   .close .aside-page__logo {
@@ -3010,6 +3041,8 @@ section.section.active {
   .icon-menu::before,
   .icon-menu::after {
     content: "";
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -3531,6 +3564,10 @@ section.section.active {
     background-color: #e2e2e2;
   }
 
+  .form-popup__line label:hover {
+    background-color: #f0f0f0;
+  }
+
   .button:hover {
     background-color: #f6f6f6;
   }
@@ -3540,7 +3577,7 @@ section.section.active {
   }
 
   .button.button--link.active:hover {
-    background-color: #3e5e6d;
+    background-color: #36525f;
   }
 
   .dark .button.button--link.active:hover {
