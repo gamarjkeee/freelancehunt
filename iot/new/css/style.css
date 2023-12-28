@@ -3652,12 +3652,16 @@ section.section.active {
     background: #cbe5f0;
   }
 
+  .upload-fw-section:hover label {
+    border: 1px dashed rgba(0, 174, 239, 0.8);
+  }
+
   .dark .upload-fw-section:hover {
     background: #222222;
   }
 
-  .upload-fw-section:hover label {
-    border: 1px dashed rgba(0, 174, 239, 0.8);
+  .dark .upload-fw-section:hover label {
+    border: 1px dashed rgba(0, 0, 0, 0.8);
   }
 
   .upload-fw-section__button:hover {
