@@ -521,11 +521,17 @@ body::after {
   stroke: #344449;
 }
 
+input[type=radio] {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 0.9375rem;
+          flex: 0 0 0.9375rem;
+}
+
 input[type=radio]:after {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: -2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  top: -1px;
   left: -1px;
   position: relative;
   background-color: #fff;
@@ -536,10 +542,10 @@ input[type=radio]:after {
 }
 
 input[type=radio]:checked:after {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: -2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  top: -1px;
   left: -1px;
   position: relative;
   background-color: #3e5e6d;
@@ -2757,7 +2763,7 @@ section.section.active {
   }
 
   .form-popup__line label div span {
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
   }
 
   .header-content-page__title {
@@ -3329,15 +3335,15 @@ section.section.active {
 }
 
 @media (min-width: 20em) and (max-width: 37.5em) {
-@supports (font-size: clamp( 0.75rem , 0.4642857143rem  +  1.4285714286vw , 1rem )) {
+@supports (font-size: clamp( 0.8125rem , 0.5982142857rem  +  1.0714285714vw , 1rem )) {
     .form-popup__line label div span {
-      font-size: clamp( 0.75rem , 0.4642857143rem  +  1.4285714286vw , 1rem );
+      font-size: clamp( 0.8125rem , 0.5982142857rem  +  1.0714285714vw , 1rem );
     }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.4642857143rem  +  1.4285714286vw , 1rem )) {
+@supports not (font-size: clamp( 0.8125rem , 0.5982142857rem  +  1.0714285714vw , 1rem )) {
     .form-popup__line label div span {
-      font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 17.5);
+      font-size: calc(0.8125rem + 0.1875 * (100vw - 20rem) / 17.5);
     }
 }
 }
