@@ -1265,16 +1265,6 @@ h6 {
   position: relative;
 }
 
-.news__articles::before {
-  content: "";
-  position: absolute;
-  z-index: 3;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.25);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-}
-
 .header-top {
   display: -webkit-box;
   display: -ms-flexbox;
