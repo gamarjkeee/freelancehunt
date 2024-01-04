@@ -719,7 +719,7 @@ input[type=radio]:checked:after {
           column-gap: 0.625rem;
 }
 
-.title-section img {
+.title-section svg {
   width: 1.5rem;
   height: 1.5rem;
   -webkit-box-flex: 0;
@@ -977,12 +977,28 @@ svg path {
   fill: #fff;
 }
 
-.menu__sub-link.menu__sub-link--wi.active .wi-fi path {
+.menu__sub-link.active .wi-fi path {
   fill: #fff;
 }
 
-.dark .menu__sub-link.menu__sub-link--wi.active .wi-fi path {
+.dark .menu__sub-link.active .wi-fi path {
   fill: #344449;
+}
+
+.backup path {
+  fill: #344449;
+}
+
+.dark .backup path {
+  fill: #fff;
+}
+
+.menu__sub-link.active .backup path {
+  fill: #fff;
+}
+
+.dark .menu__sub-link.active .backup path {
+  fill: #fff;
 }
 
 svg.blue path {
@@ -3178,7 +3194,7 @@ section.section.active {
   }
 
   .aside-page__logo img {
-    max-width: 13.75rem;
+    width: 13.75rem;
   }
 
   .menu__body {

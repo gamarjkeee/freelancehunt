@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240104141844" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240104144717" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,8 +34,8 @@
 						<div class="aside-page__header">
 							<!-- Бокове меню ЛОГО -->
 							<a href="index.html" class="aside-page__logo">
-								<img src="img/logo.png" alt="Logo Image" />
-								<img src="img/logo-white.png" alt="Logo Image" />
+								<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Logo Image" /></picture>
+								<picture><source srcset="img/logo-white.webp" type="image/webp"><img src="img/logo-white.png" alt="Logo Image" /></picture>
 							</a>
 						</div>
 						<!-- Бокове меню МЕНЮ -->
@@ -45,8 +45,8 @@
 							<nav class="menu__body">
 								<!-- Меню ЛОГО ДЛЯ МОБАЙЛ МЕНЮ -->
 								<a href="index.html" class="menu__logo">
-									<img src="img/logo-small.png" alt="Logo Image" />
-									<img src="img/small-white-logo.png" alt="Logo Image" />
+									<picture><source srcset="img/logo-small.webp" type="image/webp"><img src="img/logo-small.png" alt="Logo Image" /></picture>
+									<picture><source srcset="img/small-white-logo.webp" type="image/webp"><img src="img/small-white-logo.png" alt="Logo Image" /></picture>
 								</a>
 								<!-- Меню СПИСОК ПУНКТІВ МЕНЮ -->
 								<ul class="menu__list">
@@ -110,15 +110,8 @@
 											</li>
 											<li class="menu__sub-item">
 												<button id="backup-and-reset" class="menu__sub-link button button--link btn-menu">
-													<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-														<g clip-path="url(#clip0_127_1595)">
-															<path d="M10.3502 6.19244V7.86997C10.3502 8.58906 11.2196 8.94918 11.7281 8.44071L15.0154 5.15342C15.3306 4.83821 15.3306 4.32716 15.0154 4.01194L11.7281 0.724656C11.2196 0.21618 10.3502 0.576309 10.3502 1.29539V3.04208C6.24367 3.37274 3.01687 6.80756 3.01687 10.9993C3.01687 12.4911 3.43303 13.8788 4.14232 15.0695C4.41707 15.5307 5.04012 15.587 5.40216 15.225L6.51918 14.1079C6.77236 13.8548 6.82266 13.4744 6.66813 13.1691C6.33787 12.5168 6.1502 11.7826 6.1502 10.9993C6.1502 8.53999 7.97827 6.50967 10.3502 6.19244ZM7.77075 16.8453L8.23037 17.3049L7.77075 16.8453C7.45554 17.1605 7.45554 17.6715 7.77075 17.9868L11.058 21.274L11.5028 20.8292L11.058 21.274C11.5665 21.7825 12.4359 21.4224 12.4359 20.7033V18.9566C16.5425 18.626 19.7692 15.1911 19.7692 10.9993C19.7692 9.50756 19.3531 8.11991 18.6438 6.92924C18.3691 6.46802 17.746 6.41169 17.384 6.77373L16.2669 7.89076C16.0138 8.14393 15.9635 8.52432 16.118 8.82955C16.4482 9.4819 16.6359 10.2161 16.6359 10.9993C16.6359 13.4587 14.8078 15.489 12.4359 15.8063V14.1287C12.4359 13.4096 11.5665 13.0495 11.058 13.558L7.77075 16.8453Z" stroke="#344449" stroke-width="1.3" />
-														</g>
-														<defs>
-															<clipPath id="clip0_127_1595">
-																<rect width="22" height="22" fill="white" />
-															</clipPath>
-														</defs>
+													<svg class="fill backup" xmlns="http://www.w3.org/2000/svg" id="mdi-backup-restore" viewBox="0 0 24 24">
+														<path d="M12,3A9,9 0 0,0 3,12H0L4,16L8,12H5A7,7 0 0,1 12,5A7,7 0 0,1 19,12A7,7 0 0,1 12,19C10.5,19 9.09,18.5 7.94,17.7L6.5,19.14C8.04,20.3 9.94,21 12,21A9,9 0 0,0 21,12A9,9 0 0,0 12,3M14,12A2,2 0 0,0 12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12Z" />
 													</svg>
 													<span style="text-wrap: nowrap">Backup & Reset</span>
 												</button>
@@ -718,15 +711,8 @@
 								<!-- Секція backup and reset / Оболонка з контентом -->
 								<div class="section__content">
 									<div class="backup-and-reset-section__title title-section">
-										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<g id="update 1" clip-path="url(#clip0_127_1595)">
-												<path id="Vector" d="M10.3502 6.19244V7.86997C10.3502 8.58906 11.2196 8.94918 11.7281 8.44071L15.0154 5.15342C15.3306 4.83821 15.3306 4.32716 15.0154 4.01194L11.7281 0.724656C11.2196 0.21618 10.3502 0.576309 10.3502 1.29539V3.04208C6.24367 3.37274 3.01687 6.80756 3.01687 10.9993C3.01687 12.4911 3.43303 13.8788 4.14232 15.0695C4.41707 15.5307 5.04012 15.587 5.40216 15.225L6.51918 14.1079C6.77236 13.8548 6.82266 13.4744 6.66813 13.1691C6.33787 12.5168 6.1502 11.7826 6.1502 10.9993C6.1502 8.53999 7.97827 6.50967 10.3502 6.19244ZM7.77075 16.8453L8.23037 17.3049L7.77075 16.8453C7.45554 17.1605 7.45554 17.6715 7.77075 17.9868L11.058 21.274L11.5028 20.8292L11.058 21.274C11.5665 21.7825 12.4359 21.4224 12.4359 20.7033V18.9566C16.5425 18.626 19.7692 15.1911 19.7692 10.9993C19.7692 9.50756 19.3531 8.11991 18.6438 6.92924C18.3691 6.46802 17.746 6.41169 17.384 6.77373L16.2669 7.89076C16.0138 8.14393 15.9635 8.52432 16.118 8.82955C16.4482 9.4819 16.6359 10.2161 16.6359 10.9993C16.6359 13.4587 14.8078 15.489 12.4359 15.8063V14.1287C12.4359 13.4096 11.5665 13.0495 11.058 13.558L7.77075 16.8453Z" stroke="#344449" stroke-width="1.3" />
-											</g>
-											<defs>
-												<clipPath id="clip0_127_1595">
-													<rect width="22" height="22" fill="white" />
-												</clipPath>
-											</defs>
+										<svg class="fill" xmlns="http://www.w3.org/2000/svg" id="mdi-backup-restore" viewBox="0 0 24 24">
+											<path d="M12,3A9,9 0 0,0 3,12H0L4,16L8,12H5A7,7 0 0,1 12,5A7,7 0 0,1 19,12A7,7 0 0,1 12,19C10.5,19 9.09,18.5 7.94,17.7L6.5,19.14C8.04,20.3 9.94,21 12,21A9,9 0 0,0 21,12A9,9 0 0,0 12,3M14,12A2,2 0 0,0 12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12Z" />
 										</svg>
 										<span>Backup and Reset</span>
 									</div>
@@ -999,7 +985,7 @@
 				<span>Success!</span><span class="snackbar__message-text--3"></span>
 			</div>
 			<button class="snackbar__close">
-				<svg class="fill" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+				<svg class="fill stroke" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
 					<path d="M17.5003 32.083C25.5212 32.083 32.0837 25.5205 32.0837 17.4997C32.0837 9.47888 25.5212 2.91638 17.5003 2.91638C9.47949 2.91638 2.91699 9.47888 2.91699 17.4997C2.91699 25.5205 9.47949 32.083 17.5003 32.083Z" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
 					<path d="M13.373 21.627L21.6272 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
 					<path d="M21.6272 21.627L13.373 13.3728" stroke="#292D32" stroke-width="2.1875" stroke-linecap="round" stroke-linejoin="round" />
@@ -1007,7 +993,7 @@
 			</button>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240104141844"></script>
+	<script src="js/app.min.js?_v=20240104144717"></script>
 </body>
 
 </html>
