@@ -3010,12 +3010,6 @@ section.section.active {
   }
 }
 
-@media (max-width: 25em) {
-  .aside-page__logo img {
-    width: 10rem;
-  }
-}
-
 @media (max-width: 20em) {
   .popup__title {
     margin-bottom: 0.9375rem;
@@ -3171,10 +3165,6 @@ section.section.active {
             justify-content: space-between;
     padding: 0.625rem 1.25rem 0.625rem 5.625rem;
     height: 6.33625rem;
-  }
-
-  .aside-page__logo img {
-    width: 13.75rem;
   }
 
   .menu__body {
@@ -3522,6 +3512,10 @@ section.section.active {
             flex: 0 0 10rem;
     margin: 0 auto;
   }
+
+  .aside-page__logo img {
+    width: 10rem;
+  }
 }
 
 @media (max-width: 23.75em) {
@@ -3656,6 +3650,10 @@ section.section.active {
         -ms-flex-pack: center;
             justify-content: center;
     margin: 0 auto;
+  }
+
+  .aside-page__logo img {
+    width: 13.75rem;
   }
 }
 
