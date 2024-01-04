@@ -232,7 +232,7 @@
                     return;
                 }
                 const buttonClose = e.target.closest(`[${this.options.attributeCloseButton}]`);
-                if (buttonClose || !e.target.closest(`.${this.options.classes.popupContent}`) && this.isOpen) {
+                if (buttonClose || !e.target.closest(`.${this.options.classes.popupContent}`) && this.isOpen && !this.targetOpen.element.classList.contains("not-close")) {
                     e.preventDefault();
                     this.close();
                     return;
@@ -939,53 +939,83 @@
     const dashboardButton = document.getElementById("dashboard-button");
     const wiFiButton = document.getElementById("wi-fi-button");
     const fwButton = document.getElementById("fw-button");
+    const backupAndResetButton = document.getElementById("backup-and-reset");
     const dashboardSection = document.querySelector(".dashboard-section");
     const wiFiSection = document.querySelector(".wi-fi-section");
     const fwSection = document.querySelector(".fw-section");
+    const backupAndResetSection = document.querySelector(".backup-and-reset-section");
     const dashboardTitle = document.querySelector(".dashboard-section__title");
     const wifiTitle = document.querySelector(".wi-fi-section__title");
     const fwTitle = document.querySelector(".fw-section__title");
+    const backupAndResetTitle = document.querySelector(".backup-and-reset-section__title");
     wiFiButton.addEventListener("click", (() => {
         wiFiButton.classList.add("active");
         dashboardButton.classList.remove("active");
         fwButton.classList.remove("active");
+        backupAndResetButton.classList.remove("active");
         wiFiSection.classList.add("active");
         dashboardSection.classList.remove("active");
         fwSection.classList.remove("active");
+        backupAndResetSection.classList.remove("active");
         if (window.innerWidth < 768) {
             document.documentElement.classList.remove("menu-open");
             document.documentElement.classList.toggle("lock");
             wifiTitle.classList.add("mobile");
             dashboardTitle.classList.remove("mobile");
             fwTitle.classList.remove("mobile");
+            backupAndResetTitle.classList.remove("mobile");
         }
     }));
     fwButton.addEventListener("click", (() => {
         fwButton.classList.add("active");
         wiFiButton.classList.remove("active");
         dashboardButton.classList.remove("active");
+        backupAndResetButton.classList.remove("active");
         fwSection.classList.add("active");
         wiFiSection.classList.remove("active");
         dashboardSection.classList.remove("active");
+        backupAndResetSection.classList.remove("active");
         if (window.innerWidth < 768) {
             document.documentElement.classList.remove("menu-open");
             document.documentElement.classList.toggle("lock");
             fwTitle.classList.add("mobile");
             wifiTitle.classList.remove("mobile");
             dashboardTitle.classList.remove("mobile");
+            backupAndResetTitle.classList.remove("mobile");
         }
     }));
     dashboardButton.addEventListener("click", (() => {
         dashboardButton.classList.add("active");
         wiFiButton.classList.remove("active");
         fwButton.classList.remove("active");
+        backupAndResetButton.classList.remove("active");
         dashboardSection.classList.add("active");
+        fwSection.classList.remove("active");
+        wiFiSection.classList.remove("active");
+        backupAndResetSection.classList.remove("active");
+        if (window.innerWidth < 768) {
+            document.documentElement.classList.remove("menu-open");
+            document.documentElement.classList.toggle("lock");
+            dashboardTitle.classList.add("mobile");
+            fwTitle.classList.remove("mobile");
+            wifiTitle.classList.remove("mobile");
+            backupAndResetTitle.classList.remove("mobile");
+        }
+    }));
+    backupAndResetButton.addEventListener("click", (() => {
+        backupAndResetButton.classList.add("active");
+        wiFiButton.classList.remove("active");
+        fwButton.classList.remove("active");
+        dashboardButton.classList.remove("active");
+        backupAndResetSection.classList.add("active");
+        dashboardSection.classList.remove("active");
         fwSection.classList.remove("active");
         wiFiSection.classList.remove("active");
         if (window.innerWidth < 768) {
             document.documentElement.classList.remove("menu-open");
             document.documentElement.classList.toggle("lock");
-            dashboardTitle.classList.add("mobile");
+            backupAndResetTitle.classList.add("mobile");
+            dashboardTitle.classList.remove("mobile");
             fwTitle.classList.remove("mobile");
             wifiTitle.classList.remove("mobile");
         }
@@ -1047,6 +1077,9 @@
     const dropArea = document.getElementById("drop-area");
     const inputFile = document.getElementById("file-input");
     const uploadFileName = document.querySelector(".upload-fw-section__type");
+    const dropAreaBackup = document.getElementById("drop-area-backup");
+    const inputFileBackup = document.getElementById("file-input-backup");
+    const uploadFileNameBackup = document.querySelector(".upload-backup-and-reset-section__type");
     inputFile.addEventListener("change", uploadFife);
     processSelectedFiles(inputFile);
     function processSelectedFiles(inputFile) {
@@ -1066,6 +1099,26 @@
         e.preventDefault();
         inputFile.files = e.dataTransfer.files;
         uploadFife();
+    }));
+    inputFileBackup.addEventListener("change", uploadFifeBackup);
+    processSelectedFilesBackup(inputFileBackup);
+    function processSelectedFilesBackup(inputFileBackup) {
+        let files;
+        if (inputFileBackup) {
+            files = inputFileBackup.files;
+            for (let i = 0; i < files.length; i++) uploadFileNameBackup.innerHTML = "" + files[i].name;
+        }
+    }
+    function uploadFifeBackup() {
+        processSelectedFilesBackup(inputFileBackup);
+    }
+    dropAreaBackup.addEventListener("dragover", (function(e) {
+        e.preventDefault();
+    }));
+    dropAreaBackup.addEventListener("drop", (function(e) {
+        e.preventDefault();
+        inputFileBackup.files = e.dataTransfer.files;
+        uploadFifeBackup();
     }));
     document.getElementById("loader");
     document.querySelectorAll(".snackbar");
@@ -1094,18 +1147,28 @@
                     dashboardTitle.classList.add("mobile");
                     wifiTitle.classList.remove("mobile");
                     fwTitle.classList.remove("mobile");
+                    backupAndResetTitle.classList.remove("mobile");
                     break;
 
                   case 1:
                     dashboardTitle.classList.remove("mobile");
                     wifiTitle.classList.add("mobile");
                     fwTitle.classList.remove("mobile");
+                    backupAndResetTitle.classList.remove("mobile");
                     break;
 
                   case 2:
                     dashboardTitle.classList.remove("mobile");
                     wifiTitle.classList.remove("mobile");
                     fwTitle.classList.add("mobile");
+                    backupAndResetTitle.classList.remove("mobile");
+                    break;
+
+                  case 3:
+                    backupAndResetTitle.classList.add("mobile");
+                    dashboardTitle.classList.remove("mobile");
+                    wifiTitle.classList.remove("mobile");
+                    fwTitle.classList.remove("mobile");
                     break;
                 }
             }
@@ -1118,6 +1181,7 @@
     window.addEventListener("load", windowLoad);
     function windowLoad() {
         const htmlBlock = document.documentElement;
+        htmlBlock.classList.add("auto");
         const saveUserTheme = localStorage.getItem("user-theme");
         let userTheme;
         if (window.matchMedia) userTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
@@ -1137,14 +1201,17 @@
         lightButton.addEventListener("click", (() => {
             changeTheme(true, 1);
             themesList.classList.toggle("active");
+            htmlBlock.classList.remove("auto");
         }));
         darkButton.addEventListener("click", (() => {
             changeTheme(true, 2);
             themesList.classList.toggle("active");
+            htmlBlock.classList.remove("auto");
         }));
         autoButton.addEventListener("click", (() => {
             changeTheme(false, 3);
             themesList.classList.remove("active");
+            htmlBlock.classList.add("auto");
         }));
         function setThemeClass() {
             if (saveUserTheme) {
