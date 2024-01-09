@@ -11,3 +11,5 @@ https://gamarjkeee.github.io/freelancehunt/green-life/index.html
 https://gamarjkeee.github.io/freelancehunt/super_mama/index.html
 
 https://gamarjkeee.github.io/freelancehunt/kaz/index.html
+
+https://gamarjkeee.github.io/freelancehunt/jarvis/index.html
