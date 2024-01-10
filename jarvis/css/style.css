@@ -287,7 +287,7 @@ body {
 
 .header {
   position: fixed;
-  z-index: 10;
+  z-index: 12;
   top: 0;
   left: 0;
   width: 100%;
@@ -599,6 +599,15 @@ body {
 
 .social-footer__item:last-child {
   font-size: 2.125rem;
+}
+
+.menu-open .page {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  pointer-events: none;
 }
 
 @-webkit-keyframes to-rigth {
@@ -995,8 +1004,18 @@ body {
           transform: translateX(-1.25rem);
 }
 
-.info__decor-item--1 {
+.info__decor-item {
   position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.info__decor-item img {
+  width: 100%;
+}
+
+.info__decor-item--1 {
+  width: 15%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1462,6 +1481,7 @@ body {
 
 .token__decor-item {
   position: absolute;
+  z-index: 3;
   pointer-events: none;
 }
 
@@ -1481,7 +1501,25 @@ body {
   width: 18%;
 }
 
+.distributed__container {
+  position: relative;
+}
+
+.distributed__decor-item {
+  position: absolute;
+  z-index: 3;
+  top: 10%;
+  left: -7.5rem;
+  pointer-events: none;
+}
+
+.distributed__decor-item img {
+  width: 100%;
+}
+
 .distributed__items {
+  position: relative;
+  z-index: 2;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -2423,6 +2461,11 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .info__decor-item--1 {
+    width: 25%;
+    right: 0;
+  }
+
   .suite__header {
     margin-bottom: 2.5rem;
   }
@@ -2531,6 +2574,22 @@ body {
             column-gap: 0.9375rem;
   }
 
+  .token__decor-item--1 {
+    top: 10%;
+    left: 0%;
+    width: 40%;
+  }
+
+  .token__decor-item--2 {
+    bottom: 25%;
+    right: 5%;
+    width: 25%;
+  }
+
+  .distributed__decor-item {
+    display: none;
+  }
+
   .distributed__items {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
@@ -2637,6 +2696,14 @@ body {
 
   .token__button {
     margin-top: -0.625rem;
+  }
+
+  .token__decor-item--1 {
+    width: 50%;
+  }
+
+  .token__decor-item--2 {
+    width: 30%;
   }
 
   .distributed__item {
