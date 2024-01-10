@@ -3467,18 +3467,9 @@
             spaceBetween: 70,
             speed: 800,
             loop: true,
-            effect: "fade",
             autoplay: {
                 delay: 2e3,
                 disableOnInteraction: false
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            },
-            navigation: {
-                prevEl: ".swiper-button-prev",
-                nextEl: ".swiper-button-next"
             },
             breakpoints: {
                 320: {
@@ -3656,13 +3647,13 @@
     const goToTops = document.querySelectorAll("[data-goto-top]");
     let width = window.innerWidth;
     if (width < 991.98) goToTops.forEach((goToTop => {
-        goToTop.setAttribute("data-goto-top", "84");
+        goToTop.setAttribute("data-goto-top", "128");
     })); else goToTops.forEach((goToTop => {
         goToTop.removeAttribute("data-goto-header", "50");
     }));
     window.addEventListener("resize", (() => {
         if (width < 991.98) goToTops.forEach((goToTop => {
-            goToTop.setAttribute("data-goto-top", "84");
+            goToTop.setAttribute("data-goto-top", "128");
         })); else goToTops.forEach((goToTop => {
             goToTop.removeAttribute("data-goto-header", "50");
         }));
