@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240109201937" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240110120229" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,11 +28,24 @@
 								<a href="" class="menu__link active">Home</a>
 							</li>
 							<li class="menu__item"><a href="" class="menu__link">Token</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Help</a></li>
-							<li class="menu__item">
+							<li class="menu__item pc"><a href="" class="menu__link">Help</a></li>
+							<li class="menu__item pc">
 								<a href="" class="menu__link">Assistant</a>
 							</li>
+							<li class="menu__item mobile">
+								<a href="" class="menu__link">How to buy</a>
+							</li>
+							<li class="menu__item mobile">
+								<a href="" class="menu__link">Tokenomics</a>
+							</li>
 						</ul>
+						<div class="menu__social social-menu">
+							<a href="#" class="social-menu__item _icon-telegram"></a>
+							<a href="#" class="social-menu__item _icon-twitter"></a>
+							<a href="#" class="social-menu__item _icon-github"></a>
+							<a href="#" class="social-menu__item _icon-unknown"></a>
+							<a href="#" class="social-menu__item _icon-mail-1"></a>
+						</div>
 					</nav>
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 				</div>
@@ -44,21 +57,22 @@
 				<div class="hero__container">
 					<div class="hero__content content-hero">
 						<h1 class="content-hero__title">
-							<span>Jarvis: </span><span>AI Powered Assistant _</span>
+							<span>Jarvis: </span><span>Jarvis: AI Powered
+								<span>Assistant <span>_</span></span></span>
 						</h1>
 						<div class="content-hero__text">
 							Decentralized finance is a wild world, Jarvis has got your back
 							with all Token Research, Price Predictions & Trading Needs
 						</div>
+
 						<div class="content-hero__actions">
 							<a href="#" class="content-hero__action content-hero__action--white"><span>Activate Jarvis</span></a>
 							<a href="#" class="content-hero__action content-hero__action--black"><span>Jarvis Handbook</span></a>
 						</div>
 					</div>
-					<div class="hero__image image-hero">
+					<div data-da=".hero__content, 991.98, 1" class="hero__image image-hero">
 						<div class="image-hero__image">
-							<img src="img/hero/main.png" alt="Main Image" />
-							<img src="img/hero/bottom.svg" alt="Main Image Bottom" />
+							<picture><source srcset="img/hero/main.webp" type="image/webp"><img src="img/hero/main.png" alt="Main Image" /></picture>
 						</div>
 						<div class="image-hero__decor-item image-hero__decor-item--1">
 							<picture><source srcset="img/decor/01.webp" type="image/webp"><img data-prlx-mouse src="img/decor/01.png" alt="Decor Item" /></picture>
@@ -211,7 +225,7 @@
 			</section>
 			<div class="page__distributed distributed">
 				<div class="distributed__container">
-					<div data-watch data-watch-threshold="0.7" data-watch-once class="distributed__items">
+					<div data-watch data-watch-threshold="0.5" data-watch-once class="distributed__items">
 						<div class="distributed__item item-distributed">
 							<h3 class="item-distributed__title">Token Tax Share</h3>
 							<div class="item-distributed__info">
@@ -330,7 +344,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20240109201937"></script>
+	<script src="js/app.min.js?_v=20240110120229"></script>
 </body>
 
 </html>
