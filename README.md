@@ -14,4 +14,4 @@ https://gamarjkeee.github.io/freelancehunt/kaz/index.html
 
 https://gamarjkeee.github.io/freelancehunt/jarvis/index.html
 
-https://gamarjkeee.github.io/freelancehunt/jarvis2/index.html
+
