@@ -1356,6 +1356,7 @@ body {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.25rem;
+  padding-bottom: 0.1875rem;
 }
 
 .item-answers__title::before {
