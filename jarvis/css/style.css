@@ -139,7 +139,6 @@ body {
   color: #fff;
   -webkit-transition: opacity 0.3s ease 0.15s;
   transition: opacity 0.3s ease 0.15s;
-  -webkit-overflow-scrolling: touch;
 }
 
 .lock body {
@@ -164,7 +163,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 @supports (overflow: clip) {
@@ -288,7 +286,9 @@ body {
 }
 
 .header {
-  position: absolute;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  position: fixed;
   z-index: 12;
   top: 0;
   left: 0;
