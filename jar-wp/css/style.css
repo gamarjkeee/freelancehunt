@@ -139,7 +139,6 @@ body {
   color: #fff;
   -webkit-transition: opacity 0.3s ease 0.15s;
   transition: opacity 0.3s ease 0.15s;
-  -webkit-overflow-scrolling: touch;
 }
 
 .lock body {
@@ -164,7 +163,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
-  -webkit-overflow-scrolling: touch;
 }
 
 @supports (overflow: clip) {
@@ -490,27 +488,6 @@ body {
 
 .social-footer__item:last-child {
   font-size: 2.125rem;
-}
-
-.menu-open .page {
-  overflow: hidden;
-  -ms-touch-action: none;
-      touch-action: none;
-  -ms-scroll-chaining: none;
-      overscroll-behavior: none;
-  pointer-events: none;
-}
-
-@-webkit-keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
 }
 
 .hero {
@@ -1833,7 +1810,7 @@ body {
   }
 
   .hero {
-    min-height: auto;
+    min-height: none;
   }
 
   .hero__container {
