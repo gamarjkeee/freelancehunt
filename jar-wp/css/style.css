@@ -601,6 +601,15 @@ body {
   font-size: 2.125rem;
 }
 
+.menu-open .page {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  pointer-events: none;
+}
+
 @-webkit-keyframes to-rigth {
   0% {
     left: 0;
@@ -1916,6 +1925,13 @@ body {
 }
 
 @media (min-width: 61.99875em) {
+  .header {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-animation: opacity 0.45s ease 1.8s forwards;
+            animation: opacity 0.45s ease 1.8s forwards;
+  }
+
   .hero::before {
     content: "";
     position: absolute;
