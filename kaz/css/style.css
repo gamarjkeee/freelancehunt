@@ -230,8 +230,6 @@ body {
   -webkit-transform: skew(30deg);
       -ms-transform: skew(30deg);
           transform: skew(30deg);
-  -webkit-animation: button-3 7.5s ease 1s infinite;
-          animation: button-3 7.5s ease 1s infinite;
 }
 
 .button::after {
@@ -297,29 +295,21 @@ body {
 
 @-webkit-keyframes button-3 {
   0% {
-    left: -110%;
-  }
-
-  90% {
-    left: -110%;
+    left: -105%;
   }
 
   100% {
-    left: 110%;
+    left: 105%;
   }
 }
 
 @keyframes button-3 {
   0% {
-    left: -110%;
-  }
-
-  90% {
-    left: -110%;
+    left: -105%;
   }
 
   100% {
-    left: 110%;
+    left: 105%;
   }
 }
 
@@ -888,15 +878,15 @@ body {
   z-index: 2;
   top: 0;
   left: -110%;
-  width: 3.125rem;
+  width: 2.5rem;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1012780112)), color-stop(50%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.1012780112)));
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1012780112) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.1012780112) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1012780112)), color-stop(50%, rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1012780112)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1012780112) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.1012780112) 100%);
   -webkit-transform: skew(30deg);
       -ms-transform: skew(30deg);
           transform: skew(30deg);
-  -webkit-animation: button-3 7.5s ease 0s infinite;
-          animation: button-3 7.5s ease 0s infinite;
+  -webkit-animation: button-3 6s linear 0s infinite;
+          animation: button-3 6s linear 0s infinite;
 }
 
 .item-card__line span {
@@ -2464,7 +2454,6 @@ body {
   }
 
   .form-body__item {
-    width: 13.75rem;
     height: 3.5rem;
   }
 }
@@ -2546,7 +2535,6 @@ body {
   }
 
   .form-body__item {
-    width: 13.125rem;
     height: 3.25rem;
   }
 }
@@ -2597,7 +2585,6 @@ body {
   }
 
   .form-body__item {
-    width: 12.5rem;
     height: 3.125rem;
   }
 }
