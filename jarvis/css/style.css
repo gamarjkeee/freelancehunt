@@ -286,7 +286,7 @@ body {
 }
 
 .header {
-  display: none;
+  position: fixed;
   z-index: 12;
   top: 0;
   left: 0;
