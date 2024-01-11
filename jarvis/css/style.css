@@ -2582,8 +2582,7 @@ body {
   }
 
   .menu__body {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    position: fixed;
     width: 100%;
     height: auto;
     left: 0;
