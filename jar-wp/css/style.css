@@ -139,6 +139,7 @@ body {
   color: #fff;
   -webkit-transition: opacity 0.3s ease 0.15s;
   transition: opacity 0.3s ease 0.15s;
+  -webkit-overflow-scrolling: touch;
 }
 
 .lock body {
@@ -163,6 +164,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 @supports (overflow: clip) {
