@@ -1913,7 +1913,7 @@ body {
   }
 
   .page__slider {
-    padding-bottom: 2.5rem;
+    padding-bottom: 3.75rem;
   }
 
   .page__answers {
@@ -2043,7 +2043,7 @@ body {
   }
 
   .item-item-answers {
-    max-width: 21.25rem;
+    max-width: 20rem;
   }
 
   .item-item-answers__text {
@@ -2137,11 +2137,11 @@ body {
   }
 
   .page__slider {
-    padding-top: 3.375rem;
+    padding-top: 1.875rem;
   }
 
   .page__slider {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.875rem;
   }
 
   .page__answers {
@@ -2723,27 +2723,27 @@ body {
     }
 }
 
-@supports (padding-top: clamp( 3.375rem , 3.2609315589rem  +  0.5703422053vw , 3.75rem )) {
+@supports (padding-top: clamp( 1.875rem , 1.3046577947rem  +  2.8517110266vw , 3.75rem )) {
     .page__slider {
-      padding-top: clamp( 3.375rem , 3.2609315589rem  +  0.5703422053vw , 3.75rem );
+      padding-top: clamp( 1.875rem , 1.3046577947rem  +  2.8517110266vw , 3.75rem );
     }
 }
 
-@supports not (padding-top: clamp( 3.375rem , 3.2609315589rem  +  0.5703422053vw , 3.75rem )) {
+@supports not (padding-top: clamp( 1.875rem , 1.3046577947rem  +  2.8517110266vw , 3.75rem )) {
     .page__slider {
-      padding-top: calc(3.375rem + 0.375 * (100vw - 20rem) / 65.75);
+      padding-top: calc(1.875rem + 1.875 * (100vw - 20rem) / 65.75);
     }
 }
 
-@supports (padding-bottom: clamp( 1.5rem , 1.1958174905rem  +  1.5209125475vw , 2.5rem )) {
+@supports (padding-bottom: clamp( 1.875rem , 1.3046577947rem  +  2.8517110266vw , 3.75rem )) {
     .page__slider {
-      padding-bottom: clamp( 1.5rem , 1.1958174905rem  +  1.5209125475vw , 2.5rem );
+      padding-bottom: clamp( 1.875rem , 1.3046577947rem  +  2.8517110266vw , 3.75rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 1.5rem , 1.1958174905rem  +  1.5209125475vw , 2.5rem )) {
+@supports not (padding-bottom: clamp( 1.875rem , 1.3046577947rem  +  2.8517110266vw , 3.75rem )) {
     .page__slider {
-      padding-bottom: calc(1.5rem + 1 * (100vw - 20rem) / 65.75);
+      padding-bottom: calc(1.875rem + 1.875 * (100vw - 20rem) / 65.75);
     }
 }
 
@@ -3123,15 +3123,15 @@ body {
     }
 }
 
-@supports (max-width: clamp( 8.90625rem , 5.1514971483rem  +  18.7737642586vw , 21.25rem )) {
+@supports (max-width: clamp( 8.90625rem , 5.5317252852rem  +  16.8726235741vw , 20rem )) {
     .item-item-answers {
-      max-width: clamp( 8.90625rem , 5.1514971483rem  +  18.7737642586vw , 21.25rem );
+      max-width: clamp( 8.90625rem , 5.5317252852rem  +  16.8726235741vw , 20rem );
     }
 }
 
-@supports not (max-width: clamp( 8.90625rem , 5.1514971483rem  +  18.7737642586vw , 21.25rem )) {
+@supports not (max-width: clamp( 8.90625rem , 5.5317252852rem  +  16.8726235741vw , 20rem )) {
     .item-item-answers {
-      max-width: calc(8.90625rem + 12.34375 * (100vw - 20rem) / 65.75);
+      max-width: calc(8.90625rem + 11.09375 * (100vw - 20rem) / 65.75);
     }
 }
 
