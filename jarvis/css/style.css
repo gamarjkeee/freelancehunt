@@ -288,7 +288,7 @@ body {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   z-index: 12;
   top: 0;
   left: 0;
