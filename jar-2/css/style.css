@@ -2931,6 +2931,17 @@ body {
             column-gap: 0.9375rem;
   }
 
+  .token__button {
+    border: 0.0625rem solid #dde6f7;
+    border-radius: 5rem;
+    width: 100%;
+    padding: 0.625rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 18.125rem;
+  }
+
   .token__decor-item--1 {
     top: 10%;
     left: 0%;
@@ -3041,11 +3052,7 @@ body {
   }
 
   .token__field {
-    padding: 0.625rem 1rem;
-  }
-
-  .token__button {
-    margin-top: -0.625rem;
+    padding: 0.875rem 1rem;
   }
 
   .token__decor-item--1 {
@@ -3064,6 +3071,15 @@ body {
 
   .item-distributed::after {
     width: 100%;
+  }
+
+  .item-distributed:nth-child(1) .item-distributed__image {
+    width: 85%;
+    right: -10%;
+  }
+
+  .item-distributed:nth-child(2) .item-distributed__image {
+    width: 65%;
   }
 }
 
