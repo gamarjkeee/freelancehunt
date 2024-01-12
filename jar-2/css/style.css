@@ -869,6 +869,8 @@ body {
 }
 
 .content-hero__actions {
+  position: relative;
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
