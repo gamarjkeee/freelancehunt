@@ -410,12 +410,10 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 25%;
   aspect-ratio: 1;
   border-radius: 31.25rem;
   background: #511cc1;
   -webkit-filter: blur(230px);
-          filter: blur(230px);
   pointer-events: none;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -428,17 +426,15 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 20%;
   aspect-ratio: 1;
   border-radius: 31.25rem;
   background: #21c345;
   -webkit-filter: blur(230px);
-          filter: blur(230px);
   pointer-events: none;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
-  -webkit-transform: translate3d(50%, 0%, 0);
-  -moz-transform: translate3d(50%, 0%, 0);
+  -webkit-transform: translate3d(50%, -50%, 0);
+  -moz-transform: translate3d(50%, -50%, 0);
 }
 
 .footer__container {
@@ -994,7 +990,6 @@ body {
   aspect-ratio: 1;
   background: #511cc1;
   -webkit-filter: blur(230px);
-          filter: blur(230px);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(0, -50%, 0);
@@ -1282,11 +1277,10 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 60%;
+  width: 70%;
   aspect-ratio: 1;
   border-radius: 20.375rem;
   -webkit-filter: blur(159.8500061035px);
-          filter: blur(159.8500061035px);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(40%, 40%, 0);
@@ -1513,7 +1507,6 @@ body {
   border-radius: 25rem;
   background: #1c41c1;
   -webkit-filter: blur(159.8500061035px);
-          filter: blur(159.8500061035px);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(-50%, -50%, 0);
@@ -1623,11 +1616,10 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 60%;
+  width: 70%;
   aspect-ratio: 1;
   border-radius: 20.375rem;
   -webkit-filter: blur(159.8500061035px);
-          filter: blur(159.8500061035px);
   -webkit-transition: width 0.3s ease 0s;
   transition: width 0.3s ease 0s;
   -webkit-backface-visibility: hidden;
@@ -2052,6 +2044,14 @@ body {
     padding-bottom: 1.25rem;
   }
 
+  .footer::before {
+    width: 37.5rem;
+  }
+
+  .footer::after {
+    width: 37.5rem;
+  }
+
   .footer__top {
     padding-top: 4rem;
   }
@@ -2268,6 +2268,14 @@ body {
     padding-bottom: 0.625rem;
   }
 
+  .footer::before {
+    width: 31.25rem;
+  }
+
+  .footer::after {
+    width: 25rem;
+  }
+
   .footer__top {
     padding-top: 2.5rem;
   }
@@ -2438,14 +2446,6 @@ body {
 }
 
 @media (max-width: 61.99875em) {
-  .footer::before {
-    width: 40%;
-  }
-
-  .footer::after {
-    width: 40%;
-  }
-
   .hero__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2712,14 +2712,6 @@ body {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
-  }
-
-  .footer::before {
-    width: 60%;
-  }
-
-  .footer::after {
-    width: 60%;
   }
 
   .hero {
@@ -3013,14 +3005,6 @@ body {
     padding: 0.75rem 0.875rem;
   }
 
-  .footer::before {
-    width: 80%;
-  }
-
-  .footer::after {
-    width: 80%;
-  }
-
   .footer__column {
     min-width: 7.75rem;
   }
@@ -3033,15 +3017,19 @@ body {
   }
 
   .items-suite__row:nth-child(1) .items-suite__item:nth-child(1) {
-    aspect-ratio: 1.6/1;
+    aspect-ratio: 1.3/1;
   }
 
   .items-suite__row:nth-child(2) .items-suite__item:nth-child(1) {
-    aspect-ratio: 1.6/1;
+    aspect-ratio: 1.3/1;
   }
 
   .items-suite__row:nth-child(2) .items-suite__item:nth-child(2) {
-    aspect-ratio: 1.6/1;
+    aspect-ratio: 1.3/1;
+  }
+
+  .item-suite::after {
+    width: 100%;
   }
 
   .item-suite__label {
@@ -3066,6 +3054,10 @@ body {
 
   .distributed__item {
     aspect-ratio: 1.3/1;
+  }
+
+  .item-distributed::after {
+    width: 100%;
   }
 }
 
@@ -3174,6 +3166,30 @@ body {
 @supports not (padding-bottom: clamp( 0.625rem , 0.4144736842rem  +  1.0526315789vw , 1.25rem )) {
     .header__container {
       padding-bottom: calc(0.625rem + 0.625 * (100vw - 20rem) / 59.375);
+    }
+}
+
+@supports (width: clamp( 31.25rem , 29.1447368421rem  +  10.5263157895vw , 37.5rem )) {
+    .footer::before {
+      width: clamp( 31.25rem , 29.1447368421rem  +  10.5263157895vw , 37.5rem );
+    }
+}
+
+@supports not (width: clamp( 31.25rem , 29.1447368421rem  +  10.5263157895vw , 37.5rem )) {
+    .footer::before {
+      width: calc(31.25rem + 6.25 * (100vw - 20rem) / 59.375);
+    }
+}
+
+@supports (width: clamp( 25rem , 20.7894736842rem  +  21.0526315789vw , 37.5rem )) {
+    .footer::after {
+      width: clamp( 25rem , 20.7894736842rem  +  21.0526315789vw , 37.5rem );
+    }
+}
+
+@supports not (width: clamp( 25rem , 20.7894736842rem  +  21.0526315789vw , 37.5rem )) {
+    .footer::after {
+      width: calc(25rem + 12.5 * (100vw - 20rem) / 59.375);
     }
 }
 
