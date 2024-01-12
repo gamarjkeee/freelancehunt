@@ -417,8 +417,6 @@ body {
   aspect-ratio: 1;
   border-radius: 31.25rem;
   background: #511cc1;
-  -webkit-filter: blur(230px);
-          filter: blur(230px);
   pointer-events: none;
 }
 
@@ -434,8 +432,6 @@ body {
   aspect-ratio: 1;
   border-radius: 31.25rem;
   background: #21c345;
-  -webkit-filter: blur(230px);
-          filter: blur(230px);
   pointer-events: none;
 }
 
@@ -1013,8 +1009,6 @@ body {
   border-top: 0.0625rem solid rgba(255, 255, 255, 0.15);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.55%, rgba(255, 255, 255, 0.07)), color-stop(99.77%, rgba(255, 255, 255, 0)));
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0.55%, rgba(255, 255, 255, 0) 99.77%);
-  -webkit-backdrop-filter: blur(27.1499996185px);
-          backdrop-filter: blur(27.1499996185px);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -1281,8 +1275,6 @@ body {
   width: 60%;
   aspect-ratio: 1;
   border-radius: 20.375rem;
-  -webkit-filter: blur(159.8500061035px);
-          filter: blur(159.8500061035px);
   -webkit-transition: width 0.3s ease 0s;
   transition: width 0.3s ease 0s;
 }
@@ -1507,8 +1499,6 @@ body {
           transform: translate(-50%, -50%);
   border-radius: 25rem;
   background: #1c41c1;
-  -webkit-filter: blur(159.8500061035px);
-          filter: blur(159.8500061035px);
 }
 
 .token__button {
@@ -1620,8 +1610,6 @@ body {
   width: 60%;
   aspect-ratio: 1;
   border-radius: 20.375rem;
-  -webkit-filter: blur(159.8500061035px);
-          filter: blur(159.8500061035px);
   -webkit-transition: width 0.3s ease 0s;
   transition: width 0.3s ease 0s;
 }
@@ -2585,8 +2573,6 @@ body {
     background: rgba(255, 255, 255, 0.06);
     -webkit-box-shadow: 0px 4px 51.5px 0px #000;
             box-shadow: 0px 4px 51.5px 0px #000;
-    -webkit-backdrop-filter: blur(27.1499996185px);
-            backdrop-filter: blur(27.1499996185px);
   }
 
   .menu-open .menu__body {
