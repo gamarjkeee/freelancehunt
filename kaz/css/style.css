@@ -1561,6 +1561,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 0.9375rem;
+  margin-bottom: 1.25rem;
 }
 
 .item-answers__red-list li {
@@ -1640,13 +1641,13 @@ body {
   width: 100%;
 }
 
-.item-item-answers:nth-child(3) .item-item-answers__icon img {
+.item-item-answers:nth-child(2) .item-item-answers__icon img {
   -webkit-transform: translateY(-0.9375rem);
       -ms-transform: translateY(-0.9375rem);
           transform: translateY(-0.9375rem);
 }
 
-.item-item-answers:nth-child(4) .item-item-answers__icon img {
+.item-item-answers:nth-child(8) .item-item-answers__icon img {
   -webkit-transform: translateY(-0.3125rem);
       -ms-transform: translateY(-0.3125rem);
           transform: translateY(-0.3125rem);
@@ -1801,6 +1802,26 @@ body {
   opacity: 0.4;
 }
 
+.info {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f4f4f4));
+  background: linear-gradient(180deg, #f9f9f9 0%, #f4f4f4 100%);
+}
+
+.info__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.25rem;
+}
+
+.info__body p {
+  line-height: 1.4;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -1932,6 +1953,14 @@ body {
     padding-bottom: 5rem;
   }
 
+  .page__info {
+    padding-top: 5rem;
+  }
+
+  .page__info {
+    padding-bottom: 5rem;
+  }
+
   .hero__title {
     font-size: 2.5rem;
   }
@@ -2043,11 +2072,11 @@ body {
   }
 
   .item-item-answers {
-    max-width: 20rem;
+    max-width: 26.5625rem;
   }
 
   .item-item-answers__text {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 
   .form__title {
@@ -2059,6 +2088,10 @@ body {
   }
 
   .form-body__input {
+    font-size: 0.9375rem;
+  }
+
+  .info__body p {
     font-size: 0.9375rem;
   }
 }
@@ -2157,6 +2190,14 @@ body {
   }
 
   .page__form {
+    padding-bottom: 3.125rem;
+  }
+
+  .page__info {
+    padding-top: 3.375rem;
+  }
+
+  .page__info {
     padding-bottom: 3.125rem;
   }
 
@@ -2267,15 +2308,15 @@ body {
   }
 
   .item-item-answers {
-    padding: 0.0000000625rem;
+    padding: 0.625rem;
   }
 
   .item-item-answers {
-    max-width: 8.90625rem;
+    max-width: 18.125rem;
   }
 
   .item-item-answers__text {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 
   .form__title {
@@ -2287,6 +2328,10 @@ body {
   }
 
   .form-body__input {
+    font-size: 0.875rem;
+  }
+
+  .info__body p {
     font-size: 0.875rem;
   }
 }
@@ -2795,6 +2840,30 @@ body {
     }
 }
 
+@supports (padding-top: clamp( 3.375rem , 2.8807034221rem  +  2.4714828897vw , 5rem )) {
+    .page__info {
+      padding-top: clamp( 3.375rem , 2.8807034221rem  +  2.4714828897vw , 5rem );
+    }
+}
+
+@supports not (padding-top: clamp( 3.375rem , 2.8807034221rem  +  2.4714828897vw , 5rem )) {
+    .page__info {
+      padding-top: calc(3.375rem + 1.625 * (100vw - 20rem) / 65.75);
+    }
+}
+
+@supports (padding-bottom: clamp( 3.125rem , 2.5546577947rem  +  2.8517110266vw , 5rem )) {
+    .page__info {
+      padding-bottom: clamp( 3.125rem , 2.5546577947rem  +  2.8517110266vw , 5rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 3.125rem , 2.5546577947rem  +  2.8517110266vw , 5rem )) {
+    .page__info {
+      padding-bottom: calc(3.125rem + 1.875 * (100vw - 20rem) / 65.75);
+    }
+}
+
 @supports (font-size: clamp( 1.625rem , 1.3588403042rem  +  1.3307984791vw , 2.5rem )) {
     .hero__title {
       font-size: clamp( 1.625rem , 1.3588403042rem  +  1.3307984791vw , 2.5rem );
@@ -3111,39 +3180,39 @@ body {
     }
 }
 
-@supports (padding: clamp( 0.0000000625rem , -0.3802280554rem  +  1.9011405894vw , 1.25rem )) {
+@supports (padding: clamp( 0.625rem , 0.4348859316rem  +  0.9505703422vw , 1.25rem )) {
     .item-item-answers {
-      padding: clamp( 0.0000000625rem , -0.3802280554rem  +  1.9011405894vw , 1.25rem );
+      padding: clamp( 0.625rem , 0.4348859316rem  +  0.9505703422vw , 1.25rem );
     }
 }
 
-@supports not (padding: clamp( 0.0000000625rem , -0.3802280554rem  +  1.9011405894vw , 1.25rem )) {
+@supports not (padding: clamp( 0.625rem , 0.4348859316rem  +  0.9505703422vw , 1.25rem )) {
     .item-item-answers {
-      padding: calc(0.0000000625rem + 1.2499999375 * (100vw - 20rem) / 65.75);
+      padding: calc(0.625rem + 0.625 * (100vw - 20rem) / 65.75);
     }
 }
 
-@supports (max-width: clamp( 8.90625rem , 5.5317252852rem  +  16.8726235741vw , 20rem )) {
+@supports (max-width: clamp( 18.125rem , 15.558460076rem  +  12.8326996198vw , 26.5625rem )) {
     .item-item-answers {
-      max-width: clamp( 8.90625rem , 5.5317252852rem  +  16.8726235741vw , 20rem );
+      max-width: clamp( 18.125rem , 15.558460076rem  +  12.8326996198vw , 26.5625rem );
     }
 }
 
-@supports not (max-width: clamp( 8.90625rem , 5.5317252852rem  +  16.8726235741vw , 20rem )) {
+@supports not (max-width: clamp( 18.125rem , 15.558460076rem  +  12.8326996198vw , 26.5625rem )) {
     .item-item-answers {
-      max-width: calc(8.90625rem + 11.09375 * (100vw - 20rem) / 65.75);
+      max-width: calc(18.125rem + 8.4375 * (100vw - 20rem) / 65.75);
     }
 }
 
-@supports (font-size: clamp( 0.75rem , 0.5979087452rem  +  0.7604562738vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.9619771863rem  +  0.1901140684vw , 1.125rem )) {
     .item-item-answers__text {
-      font-size: clamp( 0.75rem , 0.5979087452rem  +  0.7604562738vw , 1.25rem );
+      font-size: clamp( 1rem , 0.9619771863rem  +  0.1901140684vw , 1.125rem );
     }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.5979087452rem  +  0.7604562738vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.9619771863rem  +  0.1901140684vw , 1.125rem )) {
     .item-item-answers__text {
-      font-size: calc(0.75rem + 0.5 * (100vw - 20rem) / 65.75);
+      font-size: calc(1rem + 0.125 * (100vw - 20rem) / 65.75);
     }
 }
 
@@ -3179,6 +3248,18 @@ body {
 
 @supports not (font-size: clamp( 0.875rem , 0.8559885932rem  +  0.0950570342vw , 0.9375rem )) {
     .form-body__input {
+      font-size: calc(0.875rem + 0.0625 * (100vw - 20rem) / 65.75);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8559885932rem  +  0.0950570342vw , 0.9375rem )) {
+    .info__body p {
+      font-size: clamp( 0.875rem , 0.8559885932rem  +  0.0950570342vw , 0.9375rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8559885932rem  +  0.0950570342vw , 0.9375rem )) {
+    .info__body p {
       font-size: calc(0.875rem + 0.0625 * (100vw - 20rem) / 65.75);
     }
 }
