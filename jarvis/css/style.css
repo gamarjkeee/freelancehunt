@@ -411,15 +411,16 @@ body {
   bottom: 0;
   left: 0;
   width: 25%;
-  -webkit-transform: translate(-50%, 50%);
-      -ms-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
   aspect-ratio: 1;
   border-radius: 31.25rem;
   background: #511cc1;
   -webkit-filter: blur(230px);
           filter: blur(230px);
   pointer-events: none;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(-50%, 50%, 0);
+  -moz-transform: translate3d(-50%, 50%, 0);
 }
 
 .footer::after {
@@ -428,15 +429,16 @@ body {
   top: 0;
   right: 0;
   width: 20%;
-  -webkit-transform: translate(50%, 0%);
-      -ms-transform: translate(50%, 0%);
-          transform: translate(50%, 0%);
   aspect-ratio: 1;
   border-radius: 31.25rem;
   background: #21c345;
   -webkit-filter: blur(230px);
           filter: blur(230px);
   pointer-events: none;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(50%, 0%, 0);
+  -moz-transform: translate3d(50%, 0%, 0);
 }
 
 .footer__container {
@@ -986,9 +988,6 @@ body {
 
 .image-hero__decor-item--4 {
   top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
   z-index: 1;
   border-radius: 50%;
   width: 18.75rem;
@@ -996,6 +995,10 @@ body {
   background: #511cc1;
   -webkit-filter: blur(230px);
           filter: blur(230px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
 }
 
 .info__container {
@@ -1015,6 +1018,10 @@ body {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0.55%, rgba(255, 255, 255, 0) 99.77%);
   -webkit-backdrop-filter: blur(27.1499996185px);
           backdrop-filter: blur(27.1499996185px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -1275,14 +1282,15 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  -webkit-transform: translate(40%, 40%);
-      -ms-transform: translate(40%, 40%);
-          transform: translate(40%, 40%);
   width: 60%;
   aspect-ratio: 1;
   border-radius: 20.375rem;
   -webkit-filter: blur(159.8500061035px);
           filter: blur(159.8500061035px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(40%, 40%, 0);
+  -moz-transform: translate3d(40%, 40%, 0);
   -webkit-transition: width 0.3s ease 0s;
   transition: width 0.3s ease 0s;
 }
@@ -1502,13 +1510,14 @@ body {
   left: 50%;
   width: 23.75rem;
   height: 8.75rem;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   border-radius: 25rem;
   background: #1c41c1;
   -webkit-filter: blur(159.8500061035px);
           filter: blur(159.8500061035px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
 }
 
 .token__button {
@@ -1614,9 +1623,6 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  -webkit-transform: translate(40%, 40%);
-      -ms-transform: translate(40%, 40%);
-          transform: translate(40%, 40%);
   width: 60%;
   aspect-ratio: 1;
   border-radius: 20.375rem;
@@ -1624,6 +1630,10 @@ body {
           filter: blur(159.8500061035px);
   -webkit-transition: width 0.3s ease 0s;
   transition: width 0.3s ease 0s;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(40%, 40%, 0);
+  -moz-transform: translate3d(40%, 40%, 0);
 }
 
 .item-distributed:nth-child(1)::after {
@@ -2573,7 +2583,7 @@ body {
   .menu__body {
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: auto;
     left: 0;
     top: -100%;
     overflow: auto;
@@ -2587,6 +2597,14 @@ body {
             box-shadow: 0px 4px 51.5px 0px #000;
     -webkit-backdrop-filter: blur(27.1499996185px);
             backdrop-filter: blur(27.1499996185px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+  }
+
+  .no-anim .menu__body {
+    height: 100%;
   }
 
   .menu-open .menu__body {
