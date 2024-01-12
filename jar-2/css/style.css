@@ -414,6 +414,7 @@ body {
   border-radius: 31.25rem;
   background: #511cc1;
   -webkit-filter: blur(230px);
+  -webkit-backdrop-filter: blur(230px);
   pointer-events: none;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -430,6 +431,7 @@ body {
   border-radius: 31.25rem;
   background: #21c345;
   -webkit-filter: blur(230px);
+  -webkit-backdrop-filter: blur(230px);
   pointer-events: none;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -980,6 +982,7 @@ body {
   aspect-ratio: 1;
   background: #511cc1;
   -webkit-filter: blur(230px);
+  -webkit-backdrop-filter: blur(230px);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(0, -50%, 0);
@@ -1001,8 +1004,8 @@ body {
   border-top: 0.0625rem solid rgba(255, 255, 255, 0.15);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.55%, rgba(255, 255, 255, 0.07)), color-stop(99.77%, rgba(255, 255, 255, 0)));
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0.55%, rgba(255, 255, 255, 0) 99.77%);
+  backdrop-filter: blur(27.1499996185px);
   -webkit-backdrop-filter: blur(27.1499996185px);
-          backdrop-filter: blur(27.1499996185px);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
@@ -1178,8 +1181,6 @@ body {
   position: relative;
   z-index: 6;
   background: rgba(90, 90, 90, 0.25);
-  -webkit-backdrop-filter: blur(47.2999992371px);
-          backdrop-filter: blur(47.2999992371px);
 }
 
 .items-suite__row:nth-child(2) .items-suite__item:nth-child(2)::after {
@@ -1268,6 +1269,7 @@ body {
   aspect-ratio: 1;
   border-radius: 20.375rem;
   -webkit-filter: blur(159.8500061035px);
+  -webkit-backdrop-filter: blur(159.8500061035px);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(40%, 40%, 0);
@@ -1494,6 +1496,7 @@ body {
   border-radius: 25rem;
   background: #1c41c1;
   -webkit-filter: blur(159.8500061035px);
+  -webkit-backdrop-filter: blur(159.8500061035px);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(-50%, -50%, 0);
@@ -1607,6 +1610,7 @@ body {
   aspect-ratio: 1;
   border-radius: 20.375rem;
   -webkit-filter: blur(159.8500061035px);
+  -webkit-backdrop-filter: blur(159.8500061035px);
   -webkit-transition: width 0.3s ease 0s;
   transition: width 0.3s ease 0s;
   -webkit-backface-visibility: hidden;
@@ -2578,8 +2582,8 @@ body {
     background: rgba(255, 255, 255, 0.06);
     -webkit-box-shadow: 0px 4px 51.5px 0px #000;
             box-shadow: 0px 4px 51.5px 0px #000;
+    backdrop-filter: blur(27.1499996185px);
     -webkit-backdrop-filter: blur(27.1499996185px);
-            backdrop-filter: blur(27.1499996185px);
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
