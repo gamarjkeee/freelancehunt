@@ -754,7 +754,7 @@ body {
 }
 
 .footer__bottom-designed-by a {
-  opacity: 0.3;
+  opacity: 0.15;
   -webkit-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
 }
@@ -5426,7 +5426,7 @@ body {
   }
 
   .footer__bottom-designed-by a:hover {
-    opacity: 1;
+    opacity: 0.3;
   }
 
   .social-footer__item:hover {
