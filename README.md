@@ -15,3 +15,5 @@ https://gamarjkeee.github.io/freelancehunt/kaz/index.html
 https://gamarjkeee.github.io/freelancehunt/jarvis/index.html
 
 https://gamarjkeee.github.io/freelancehunt/jar-2/index.html
+
+https://gamarjkeee.github.io/freelancehunt/mochi/index.html
