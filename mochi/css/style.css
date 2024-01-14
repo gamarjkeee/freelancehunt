@@ -400,6 +400,13 @@ h6 {
   color: #f56221;
 }
 
+.hero__title picture {
+  position: absolute;
+  z-index: 2;
+  width: 32%;
+  aspect-ratio: 398/247;
+}
+
 .hero__title img {
   position: absolute;
   z-index: 2;
@@ -590,7 +597,7 @@ h6 {
     top: -100%;
     overflow: auto;
     background-color: #f56221;
-    padding: 6.875rem 0.9375rem 1.875rem 0.9375rem;
+    padding: 8.125rem 0.9375rem 1.875rem 0.9375rem;
     -webkit-transition: top 0.3s;
     transition: top 0.3s;
   }
@@ -641,6 +648,10 @@ h6 {
 
   .menu__link > div img:nth-child(1) {
     display: none;
+  }
+
+  .menu__link--mochi > span {
+    font-size: 2.875rem;
   }
 
   .menu__link--mochi > span {
