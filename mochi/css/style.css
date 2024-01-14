@@ -212,8 +212,26 @@ h6 {
   transition: height 0.3s ease 0s, margin-bottom 0.3s ease 0s;
 }
 
+.header__logo i {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 4.1875rem;
+  border-radius: 50%;
+  height: 4.1875rem;
+  background-color: #ff9e49;
+  border: 0.1875rem solid #fff;
+}
+
 .header__logo img {
-  max-width: 100%;
+  position: relative;
+  z-index: 2;
+  display: block;
+  max-width: 90%;
 }
 
 .header__menu {
