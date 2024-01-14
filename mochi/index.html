@@ -1,98 +1,115 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <title>Mochi</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- <style>body{opacity: 0;}</style> -->
+    <link rel="stylesheet" href="css/style.min.css?_v=20240114190227" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- <meta name="robots" content="noindex, nofollow"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<head>
-	<title>Mochi</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240114190227">
-	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__box">
+          <a href="index.html" class="header__logo"
+            ><picture
+              ><source srcset="img/logo.webp" type="image/webp" />
+              <img src="img/logo.png" alt="Logo Icon" /></picture
+          ></a>
+          <div class="header__menu menu">
+            <button type="button" class="menu__icon icon-menu">
+              <span></span><i></i>
+            </button>
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="" class="menu__link menu__link--mochi">
+                    <span>Mochi</span>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">
+                    <span>Art</span>
+                    <div>
+                      <img src="img/icons/01.svg" alt="Icon" /><img
+                        src="img/icons/01-white.svg"
+                        alt="Icon" />
+                    </div>
+                  </a>
+                </li>
 
-<body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="header__box">
-				<a href="index.html" class="header__logo"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Logo Icon" /></picture></a>
-				<div class="header__menu menu">
-					<button type="button" class="menu__icon icon-menu">
-						<span></span><i></i>
-					</button>
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li class="menu__item">
-								<a href="" class="menu__link menu__link--mochi">
-									<span>Mochi</span>
-								</a>
-							</li>
-							<li class="menu__item">
-								<a href="" class="menu__link">
-									<span>Art</span>
-									<div>
-										<img src="img/icons/01.svg" alt="Icon" /><img src="img/icons/01-white.svg" alt="Icon" />
-									</div>
-								</a>
-							</li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">
+                    <span>Mint</span>
+                    <div>
+                      <img src="img/icons/02.svg" alt="Icon" /><img
+                        src="img/icons/02-white.svg"
+                        alt="Icon" />
+                    </div>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">
+                    <span>Inspector Bot</span>
+                    <div>
+                      <img src="img/icons/03.svg" alt="Icon" /><img
+                        src="img/icons/03-white.svg"
+                        alt="Icon" />
+                    </div>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link menu__link--dark">
+                    <span>How to buy <span>$mochi</span></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
 
-							<li class="menu__item">
-								<a href="" class="menu__link">
-									<span>Mint</span>
-									<div>
-										<img src="img/icons/02.svg" alt="Icon" /><img src="img/icons/02-white.svg" alt="Icon" />
-									</div>
-								</a>
-							</li>
-							<li class="menu__item">
-								<a href="" class="menu__link">
-									<span>Inspector Bot</span>
-									<div>
-										<img src="img/icons/03.svg" alt="Icon" /><img src="img/icons/03-white.svg" alt="Icon" />
-									</div>
-								</a>
-							</li>
-							<li class="menu__item">
-								<a href="" class="menu__link menu__link--dark">
-									<span>How to buy <span>$mochi</span></span>
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
-
-		<main class="page">
-			<div class="page__hero hero">
-				<div class="hero__background">
-					<picture><source srcset="img/hero/sky.webp" type="image/webp"><img src="img/hero/sky.png" alt="Sky Image" /></picture>
-				</div>
-				<div class="hero__container">
-					<h1 class="hero__title">
-						<span>MEET <span>Mochi</span></span>
-						<picture><source srcset="img/hero/cat.webp" type="image/webp"><img src="img/hero/cat.png" alt="Cat Image" /></picture>
-					</h1>
-					<div class="hero__bottom">
-						<div class="hero__bottom-text">
-							<p>Base chain’s favourite feline!</p>
-							<p>ベースチェーンの推しの猫！</p>
-						</div>
-						<div class="hero__bottom-buttons">
-							<a href="#" class="hero__bottom-button"><span>Dextools Chart</span><img src="img/icons/arrow.svg" alt="Arrow Icon" /></a>
-							<a href="#" class="hero__bottom-button hero__bottom-button--white"><span>Join us</span></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-		<footer class="footer">
-			<div class="footer__container">
-			</div>
-		</footer>
-	</div>
-	<script src="js/app.min.js?_v=20240114190227"></script>
-</body>
-
+      <main class="page">
+        <div class="page__hero hero">
+          <div class="hero__background">
+            <picture
+              ><source srcset="img/hero/sky.webp" type="image/webp" />
+              <img src="img/hero/sky.png" alt="Sky Image"
+            /></picture>
+          </div>
+          <div class="hero__container">
+            <h1 class="hero__title">
+              <span>MEET <span>Mochi</span></span>
+              <img src="img/hero/cat.png" alt="Cat Image" />
+            </h1>
+            <div class="hero__bottom">
+              <div class="hero__bottom-text">
+                <p>Base chain’s favourite feline!</p>
+                <p>ベースチェーンの推しの猫！</p>
+              </div>
+              <div class="hero__bottom-buttons">
+                <a href="#" class="hero__bottom-button"
+                  ><span>Dextools Chart</span
+                  ><img src="img/icons/arrow.svg" alt="Arrow Icon"
+                /></a>
+                <a
+                  href="#"
+                  class="hero__bottom-button hero__bottom-button--white"
+                  ><span>Join us</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container"></div>
+      </footer>
+    </div>
+    <script src="js/app.min.js?_v=20240114190227"></script>
+  </body>
 </html>
