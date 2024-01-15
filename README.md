@@ -16,4 +16,6 @@ https://gamarjkeee.github.io/freelancehunt/jarvis/index.html
 
 https://gamarjkeee.github.io/freelancehunt/jar-2/index.html
 
+https://gamarjkeee.github.io/freelancehunt/jar-gold/index.html
+
 https://gamarjkeee.github.io/freelancehunt/mochi/index.html
