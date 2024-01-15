@@ -2236,6 +2236,12 @@ body {
   gap: 1.25rem;
 }
 
+.no-wrap {
+  text-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
 @media (min-width: 47.99875em) {
   ._header-scroll .header__container {
     padding-top: 0.625rem;
