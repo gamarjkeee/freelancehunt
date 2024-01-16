@@ -75,6 +75,63 @@
             }));
         }
     }), 0);
+    const frontBookItems = document.querySelectorAll(".book-top-how-to-buy__item--front");
+    const backBookItems = document.querySelectorAll(".book-top-how-to-buy__item--back");
+    const deviceWidth = window.innerWidth;
+    frontBookItems.forEach((frontBookItem => {
+        frontBookItem.addEventListener("click", (() => {
+            if (deviceWidth > 767.98) {
+                frontBookItem.parentElement.style.transformOrigin = "left";
+                frontBookItem.parentElement.style.transform = "rotateY(-180deg)";
+                frontBookItem.parentElement.classList.add("open");
+            } else {
+                frontBookItem.parentElement.style.transformOrigin = "top";
+                frontBookItem.parentElement.style.transform = "rotateX(180deg)";
+                frontBookItem.parentElement.classList.add("open");
+            }
+        }));
+    }));
+    backBookItems.forEach((backBookItem => {
+        backBookItem.addEventListener("click", (() => {
+            if (deviceWidth > 767.98) {
+                backBookItem.parentElement.style.transformOrigin = "left";
+                backBookItem.parentElement.style.transform = "rotateY(0)";
+                backBookItem.parentElement.classList.remove("open");
+            } else {
+                backBookItem.parentElement.style.transformOrigin = "top";
+                backBookItem.parentElement.style.transform = "rotateX(0)";
+                backBookItem.parentElement.classList.remove("open");
+            }
+        }));
+    }));
+    const howToBuyButtons = document.querySelectorAll(".top-how-to-buy__button");
+    const howToBuyBooks = document.querySelectorAll(".top-how-to-buy__book");
+    howToBuyButtons.forEach(((howToBuyButton, index) => {
+        howToBuyButton.addEventListener("click", (() => {
+            howToBuyBooks.forEach((howToBuyBook => {
+                howToBuyBook.classList.remove("active");
+                if (howToBuyBook === howToBuyBooks[index]) howToBuyBook.classList.add("active");
+            }));
+            howToBuyButtons.forEach((element => {
+                element.classList.remove("active");
+            }));
+            howToBuyButton.classList.add("active");
+        }));
+    }));
+    const projectsButtons = document.querySelectorAll(".bottom-how-to-buy__button");
+    const projectsCats = document.querySelectorAll(".bottom-how-to-buy__item");
+    projectsButtons.forEach(((projectsButton, index) => {
+        projectsButton.addEventListener("click", (() => {
+            projectsCats.forEach((projectsCat => {
+                projectsCat.classList.remove("active");
+                if (projectsCat === projectsCats[index]) projectsCat.classList.add("active");
+            }));
+            projectsButtons.forEach((element => {
+                element.classList.remove("active");
+            }));
+            projectsButton.classList.add("active");
+        }));
+    }));
     window["FLS"] = false;
     isWebp();
     addLoadedClass();
