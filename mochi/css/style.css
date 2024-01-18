@@ -2484,27 +2484,27 @@ span.orange {
 }
 
 .book-top-how-to-buy__item-wrapper:nth-child(2) {
-  z-index: 3;
+  z-index: 5;
 }
 
 .book-top-how-to-buy__item-wrapper:nth-child(3) {
-  z-index: 2;
+  z-index: 4;
 }
 
 .book-top-how-to-buy__item-wrapper:nth-child(4) {
-  z-index: 1;
+  z-index: 3;
 }
 
 .book-top-how-to-buy__item-wrapper.open:nth-child(2) {
-  z-index: 1;
+  z-index: 3;
 }
 
 .book-top-how-to-buy__item-wrapper.open:nth-child(3) {
-  z-index: 2;
+  z-index: 4;
 }
 
 .book-top-how-to-buy__item-wrapper.open:nth-child(4) {
-  z-index: 3;
+  z-index: 5;
 }
 
 .book-top-how-to-buy__item {
@@ -3214,7 +3214,7 @@ span.orange {
   top: -90%;
   left: 0;
   width: 100%;
-  height: 180%;
+  height: 200%;
 }
 
 .join__main-back i {
@@ -3227,10 +3227,10 @@ span.orange {
 
 .join__main-back img {
   position: absolute;
-  top: 0;
+  top: 10%;
   left: 0;
   width: 100%;
-  height: 120%;
+  height: 125%;
   -o-object-fit: cover;
      object-fit: cover;
 }
