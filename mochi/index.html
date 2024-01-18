@@ -4,14 +4,66 @@
     <title>Mochi</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
-    <!-- <style>body{opacity: 0;}</style> -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20240117210052" />
+    <style>
+      @keyframes exit-load {
+        0% {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        100% {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      @keyframes load-scale {
+        0% {
+          scale: 0.5;
+        }
+
+        50% {
+          scale: 1;
+        }
+
+        100% {
+          scale: 0.5;
+        }
+      }
+
+      .loader {
+        position: fixed;
+        inset: 0;
+        z-index: 500;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: none;
+      }
+
+      .loaded .loader {
+        animation: exit-load 0.45s ease 1s forwards;
+      }
+
+      .loader img {
+        display: inline-block;
+        width: 200px;
+        animation: load-scale 1.5s linear infinite;
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.min.css?_v=20240118162207" />
     <link rel="shortcut icon" href="favicon.ico" />
     <!-- <meta name="robots" content="noindex, nofollow"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
   <body>
+    <div class="loader">
+      <img src="img/hero/cat.png" alt="Cat Image" />
+    </div>
     <div class="wrapper">
       <header class="header">
         <div class="header__box">
@@ -74,13 +126,19 @@
       <main class="page">
         <section class="page__hero hero">
           <div class="hero__background">
-            <img src="img/hero/sky.webp" alt="Sky Image" />
-            <img src="img/hero/sky.webp" alt="Sky Image" />
-            <img src="img/hero/sky.webp" alt="Sky Image" />
+            <img src="img/hero/sky.png" alt="Sky Image" />
+            <img src="img/hero/sky.png" alt="Sky Image" />
+            <img src="img/hero/sky.png" alt="Sky Image" />
           </div>
           <div class="hero__container">
             <h1 class="hero__title">
-              <span>MEET <span>Mochi</span></span>
+              <p><span>M</span><span>E</span><span>E</span><span>T</span></p>
+              <br />
+              <p class="orange">
+                <span>M</span><span>o</span><span>c</span><span>h</span
+                ><span>i</span>
+              </p>
+
               <img src="img/hero/cat.png" alt="Cat Image" />
             </h1>
             <div class="hero__bottom">
@@ -107,9 +165,21 @@
             <img src="img/buy/background.png" alt="Background picture" />
           </div>
           <div class="buy-mochi__box">
-            <div class="buy-mochi__content content-buy-mochi">
+            <div
+              data-watch-threshold="0.5"
+              data-watch-once
+              data-watch
+              class="buy-mochi__content content-buy-mochi">
               <div class="content-buy-mochi__background"></div>
-              <h2 class="content-buy-mochi__title">Buy $MOCHI</h2>
+              <h2
+                data-watch-threshold="0.5"
+                data-watch-once
+                data-watch
+                class="content-buy-mochi__title">
+                <span>B</span><span>u</span><span>y</span> <br />
+                <span>$</span><span>M</span><span>O</span><span>C</span
+                ><span>H</span><span>I</span>
+              </h2>
               <div class="content-buy-mochi__images">
                 <div class="content-buy-mochi__image-text">
                   <img src="img/buy/01.svg" alt="Icon" />
@@ -156,8 +226,15 @@
               <img src="img/base/decor2.png" alt="Decor Image" />
               <img src="img/base/decor-3.svg" alt="Decor Image" />
             </div>
-            <div class="base__header">
-              <h2 class="base__header-title"><span>Mochi!</span><i></i></h2>
+            <div
+              data-watch-threshold="0.6"
+              data-watch-once
+              data-watch
+              class="base__header">
+              <h2 class="base__header-title">
+                <span>M</span><span>o</span><span>c</span><span>h</span
+                ><span>i</span><span>!</span><i></i>
+              </h2>
               <div class="base__header-label">Based on Base</div>
             </div>
             <div class="base__items">
@@ -168,7 +245,11 @@
                   Coinbase's push to bring the masses onchain to Base. The
                   masses will love Mochi, and thousands on Base already do.
                 </div>
-                <div class="item-base__image">
+                <div
+                  data-watch-threshold="0.8"
+                  data-watch-once
+                  data-watch
+                  class="item-base__image">
                   <span
                     >That's quite <br />
                     the combo!
@@ -181,7 +262,11 @@
                   Mochi is cute, orange, living onchain and helping Coinbase in
                   their mission to onboard 1 Billion people to Base.
                 </div>
-                <div class="item-base__image">
+                <div
+                  data-watch-threshold="0.8"
+                  data-watch-once
+                  data-watch
+                  class="item-base__image">
                   <span
                     >We've already done <br />
                     (and won) a lot!</span
@@ -200,7 +285,11 @@
                   <span><span class="no-wrap">a grant</span> <i></i></span>
                   <span><span>from Coinbase.</span></span>
                 </div>
-                <div class="item-base__image">
+                <div
+                  data-watch-threshold="0.8"
+                  data-watch-once
+                  data-watch
+                  class="item-base__image">
                   <span>Yes that's right!</span>
                   <img src="img/base/03.svg" alt="Icon" />
                 </div>
@@ -263,7 +352,11 @@
               </div>
             </div>
           </div>
-          <div class="line__cloud">
+          <div
+            data-watch-threshold="0.8"
+            data-watch-once
+            data-watch
+            class="line__cloud">
             <div class="line__cloud-background">
               <img src="img/line/cloud.svg" alt="Cloud Image" />
             </div>
@@ -290,9 +383,16 @@
           </div>
           <div class="items__container">
             <div class="items__body">
-              <div class="items__item item-items">
+              <div
+                data-watch-threshold="0.3"
+                data-watch-once
+                data-watch
+                class="items__item item-items">
                 <span class="item-items__decor-top"><i></i><i></i></span>
-                <h3 class="item-items__title">3% Tax</h3>
+                <h3 class="item-items__title">
+                  <span>3</span><span>%</span> <span>i</span><span>T</span
+                  ><span>a</span><span>x</span>
+                </h3>
                 <div class="item-items__text">
                   This will be lowered to 0% in the future! You can read why we
                   implemented tax here
@@ -301,16 +401,33 @@
                   ><span>read more</span></a
                 >
               </div>
-              <div class="items__item item-items">
+              <div
+                data-watch-threshold="0.3"
+                data-watch-once
+                data-watch
+                class="items__item item-items">
                 <span class="item-items__decor-top"><i></i><i></i></span>
-                <h3 class="item-items__title">Locked LP</h3>
+                <h3 class="item-items__title">
+                  <span>L</span><span>o</span><span>c</span><span>k</span
+                  ><span>e</span><span>d</span><span>i</span> <span>L</span
+                  ><span>P</span>
+                </h3>
                 <div class="item-items__text">
                   Rest assured! Mochi's liquidity is locked away forever
                 </div>
               </div>
-              <div class="items__item item-items">
+              <div
+                data-watch-threshold="0.3"
+                data-watch-once
+                data-watch
+                class="items__item item-items">
                 <span class="item-items__decor-top"><i></i><i></i></span>
-                <h3 class="item-items__title">Safe Contract</h3>
+                <h3 class="item-items__title">
+                  <span>S</span><span>a</span><span>f</span><span>e</span>
+                  <span>i</span><span>C</span><span>o</span><span>n</span
+                  ><span>t</span><span>r</span><span>a</span><span>c</span
+                  ><span>t</span>
+                </h3>
                 <div class="item-items__text">
                   The contract has no malicious functions. Tax can only be
                   lowered. View the audit by GoPlus here
@@ -372,7 +489,11 @@
             <div class="top-how-to-buy__container">
               <div class="top-how-to-buy__book active book-top-how-to-buy">
                 <div class="book-top-how-to-buy__box">
-                  <div class="book-top-how-to-buy__item-first-page">
+                  <div
+                    data-watch-threshold="0.5"
+                    data-watch-once
+                    data-watch
+                    class="book-top-how-to-buy__item-first-page">
                     <div class="book-top-how-to-buy__item-first-page-lables">
                       <div class="book-top-how-to-buy__item-first-page-lable">
                         <img
@@ -391,8 +512,15 @@
                     </div>
                     <div class="book-top-how-to-buy__item-first-page-body">
                       <h2 class="book-top-how-to-buy__item-first-page-title">
-                        How to Buy <br />
-                        <span>$MOCHI</span>
+                        <span>H</span><span>o</span><span>w</span> <span>i</span
+                        ><span>t</span><span>o</span> <span>i</span
+                        ><span>B</span><span>u</span><span>y</span> <br />
+                        <span class="orange">$</span
+                        ><span class="orange">M</span
+                        ><span class="orange">O</span
+                        ><span class="orange">C</span
+                        ><span class="orange">H</span
+                        ><span class="orange">I</span>
                       </h2>
                       <p>ON DESKTOP</p>
                     </div>
@@ -566,7 +694,11 @@
               </div>
               <div class="top-how-to-buy__book book-top-how-to-buy">
                 <div class="book-top-how-to-buy__box">
-                  <div class="book-top-how-to-buy__item-first-page">
+                  <div
+                    data-watch-threshold="0.5"
+                    data-watch-once
+                    data-watch
+                    class="book-top-how-to-buy__item-first-page">
                     <div class="book-top-how-to-buy__item-first-page-lables">
                       <div class="book-top-how-to-buy__item-first-page-lable">
                         <img src="img/how-to-buy/label-box.svg" alt="Icon" />
@@ -585,8 +717,15 @@
                     </div>
                     <div class="book-top-how-to-buy__item-first-page-body">
                       <h2 class="book-top-how-to-buy__item-first-page-title">
-                        How to Buy <br />
-                        <span>$MOCHI</span>
+                        <span>H</span><span>o</span><span>w</span> <span>i</span
+                        ><span>t</span><span>o</span> <span>i</span
+                        ><span>B</span><span>u</span><span>y</span> <br />
+                        <span class="orange">$</span
+                        ><span class="orange">M</span
+                        ><span class="orange">O</span
+                        ><span class="orange">C</span
+                        ><span class="orange">H</span
+                        ><span class="orange">I</span>
                       </h2>
                       <p>ON MOBILE</p>
                     </div>
@@ -760,7 +899,11 @@
               </div>
               <div class="top-how-to-buy__book book-top-how-to-buy">
                 <div class="book-top-how-to-buy__box">
-                  <div class="book-top-how-to-buy__item-first-page">
+                  <div
+                    data-watch-threshold="0.5"
+                    data-watch-once
+                    data-watch
+                    class="book-top-how-to-buy__item-first-page">
                     <div class="book-top-how-to-buy__item-first-page-lables">
                       <div class="book-top-how-to-buy__item-first-page-lable">
                         <img src="img/how-to-buy/label-box.svg" alt="Icon" />
@@ -779,8 +922,15 @@
                     </div>
                     <div class="book-top-how-to-buy__item-first-page-body">
                       <h2 class="book-top-how-to-buy__item-first-page-title">
-                        How to Buy <br />
-                        <span>$MOCHI</span>
+                        <span>H</span><span>o</span><span>w</span> <span>i</span
+                        ><span>t</span><span>o</span> <span>i</span
+                        ><span>B</span><span>u</span><span>y</span> <br />
+                        <span class="orange">$</span
+                        ><span class="orange">M</span
+                        ><span class="orange">O</span
+                        ><span class="orange">C</span
+                        ><span class="orange">H</span
+                        ><span class="orange">I</span>
                       </h2>
                       <p>BY CB WALLET</p>
                     </div>
@@ -957,12 +1107,21 @@
           <div class="how-to-buy__bottom bottom-how-to-buy">
             <div data-prlx-parent class="bottom-how-to-buy__bacground">
               <i></i>
-              <img data-prlx src="img/hero/sky.webp" alt="Sky Image" />
+              <img data-prlx src="img/hero/sky.png" alt="Sky Image" />
               <img src="img/how-to-buy/floor.png" alt="Floor Image" />
             </div>
             <div class="bottom-how-to-buy__container">
-              <h2 class="bottom-how-to-buy__title">
-                Projects <span>&</span> Utilities
+              <h2
+                data-watch-threshold="0.5"
+                data-watch-once
+                data-watch
+                class="bottom-how-to-buy__title">
+                <span>P</span><span>r</span><span>o</span><span>j</span
+                ><span>e</span><span>c</span><span>t</span><span>s</span>
+                <span>i</span> <span class="orange">&</span> <span>i</span>
+                <span>U</span><span>t</span><span>i</span><span>l</span
+                ><span>i</span><span>t</span><span>i</span><span>e</span
+                ><span>s</span>
               </h2>
               <div class="bottom-how-to-buy__items">
                 <div class="bottom-how-to-buy__item active">
@@ -1021,13 +1180,33 @@
         </section>
         <section class="page__road-map road-map">
           <div class="road-map__container">
-            <h2 class="road-map__title">ROADMAP</h2>
-            <div data-prlx-parent class="road-map__image">
+            <h2
+              data-watch-threshold="0.5"
+              data-watch-once
+              data-watch
+              class="road-map__title">
+              <span>R</span><span>O</span><span>A</span><span>D</span
+              ><span>M</span><span>A</span><span>P</span>
+            </h2>
+            <div
+              data-watch-threshold="0.5"
+              data-watch-once
+              data-watch
+              data-prlx-parent
+              class="road-map__image">
               <img data-prlx src="img/roadmap/01.png" alt="Island with Cats" />
             </div>
-            <div class="road-map__steps steps-road-map">
+            <div
+              data-watch-threshold="0.5"
+              data-watch-once
+              data-watch
+              class="road-map__steps steps-road-map">
               <div class="steps-road-map__row">
-                <div class="steps-road-map__row-item item-steps-road-map">
+                <div
+                  data-watch-threshold="0.5"
+                  data-watch-once
+                  data-watch
+                  class="steps-road-map__row-item item-steps-road-map">
                   <h3 class="item-steps-road-map__title">
                     <span
                       >Tamamochi — <br />
@@ -1075,7 +1254,11 @@
                     </svg>
                   </div>
                 </div>
-                <div class="steps-road-map__row-item item-steps-road-map">
+                <div
+                  data-watch-threshold="0.5"
+                  data-watch-once
+                  data-watch
+                  class="steps-road-map__row-item item-steps-road-map">
                   <h3 class="item-steps-road-map__title">
                     <span>Mochindise</span>
                   </h3>
@@ -1096,7 +1279,11 @@
                 </div>
               </div>
               <div class="steps-road-map__row">
-                <div class="steps-road-map__row-item item-steps-road-map">
+                <div
+                  data-watch-threshold="0.5"
+                  data-watch-once
+                  data-watch
+                  class="steps-road-map__row-item item-steps-road-map">
                   <h3 class="item-steps-road-map__title">
                     <span>Foundations Onchain</span>
                   </h3>
@@ -1131,7 +1318,11 @@
               </div>
               <div class="steps-road-map__row">
                 <div class="steps-road-map__row-road"></div>
-                <div class="steps-road-map__row-item item-steps-road-map">
+                <div
+                  data-watch-threshold="0.5"
+                  data-watch-once
+                  data-watch
+                  class="steps-road-map__row-item item-steps-road-map">
                   <h3 class="item-steps-road-map__title">
                     <span>Mochimon PFP NFTs</span>
                   </h3>
@@ -1149,12 +1340,19 @@
         <section class="page__join join">
           <div data-prlx-parent class="join__main-back">
             <i></i>
-            <img data-prlx src="img/hero/sky.webp" alt="Sky Image" />
+            <img data-prlx src="img/hero/sky.png" alt="Sky Image" />
           </div>
           <div class="join__container">
-            <div class="join__body">
+            <div
+              data-watch-threshold="0.6"
+              data-watch-once
+              data-watch
+              class="join__body">
               <div class="join__main-block">
-                <h2 class="join__title">Join Us</h2>
+                <h2 class="join__title">
+                  <span>J</span><span>o</span><span>i</span><span>n</span
+                  ><span>i</span><span> </span><span>U</span><span>s</span>
+                </h2>
                 <a href="#" class="join__button"><span>BUY NOW</span></a>
               </div>
               <div class="join__items">
@@ -1252,7 +1450,11 @@
           </div>
         </div>
       </main>
-      <footer class="footer">
+      <footer
+        data-watch-threshold="0.6"
+        data-watch-once
+        data-watch
+        class="footer">
         <div class="footer__container">
           <div class="footer__box">
             <div class="footer__top">
@@ -1300,6 +1502,6 @@
         </div>
       </footer>
     </div>
-    <script src="js/app.min.js?_v=20240117210052"></script>
+    <script src="js/app.min.js?_v=20240118162207"></script>
   </body>
 </html>
