@@ -307,6 +307,16 @@
             projectsButton.classList.add("active");
         }));
     }));
+    const tokenValue = document.querySelector(".line__cloud-number");
+    const totenCopyButton = document.querySelector(".line__cloud-button");
+    totenCopyButton.addEventListener("click", writeClipboardText(tokenValue.innerHTML));
+    async function writeClipboardText(text) {
+        try {
+            await navigator.clipboard.writeText(text);
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
     window["FLS"] = false;
     isWebp();
     addLoadedClass();

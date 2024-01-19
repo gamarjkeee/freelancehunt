@@ -3973,7 +3973,7 @@ span.orange {
   }
 
   .bottom-how-to-buy__title {
-    margin-bottom: 1.875rem;
+    margin-bottom: 2.25rem;
   }
 
   .bottom-how-to-buy__title span {
@@ -4571,7 +4571,7 @@ span.orange {
   }
 
   .bottom-how-to-buy__title {
-    margin-bottom: 1.25rem;
+    margin-bottom: 2rem;
   }
 
   .bottom-how-to-buy__title span {
@@ -4585,11 +4585,11 @@ span.orange {
   }
 
   .bottom-how-to-buy__button {
-    padding-top: 0.5rem;
+    padding-top: 0.75rem;
   }
 
   .bottom-how-to-buy__button {
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
   }
 
   .bottom-how-to-buy__button {
@@ -4601,7 +4601,7 @@ span.orange {
   }
 
   .bottom-how-to-buy__button > span {
-    font-size: 1.625rem;
+    font-size: 2rem;
   }
 
   .road-map__title span {
@@ -4921,8 +4921,8 @@ span.orange {
   }
 
   .line__line {
-    -webkit-animation: line 14s linear infinite;
-            animation: line 14s linear infinite;
+    -webkit-animation: line-2 14s linear infinite;
+            animation: line-2 14s linear infinite;
   }
 
   .items__background {
@@ -4990,8 +4990,8 @@ span.orange {
   }
 
   .line__line {
-    -webkit-animation: line 12s linear infinite;
-            animation: line 12s linear infinite;
+    -webkit-animation: line-2 12s linear infinite;
+            animation: line-2 12s linear infinite;
   }
 
   .line__line-item.line__line-item--mob {
@@ -5070,6 +5070,11 @@ span.orange {
        object-fit: cover;
   }
 
+  .bottom-how-to-buy__bacground img:nth-child(2) {
+    -o-object-position: right;
+       object-position: right;
+  }
+
   .bottom-how-to-buy__bacground img:nth-child(3) {
     top: 75%;
     height: 27%;
@@ -5085,6 +5090,23 @@ span.orange {
   .bottom-how-to-buy__buttons {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .bottom-how-to-buy__button {
+    margin: 0;
+  }
+
+  .bottom-how-to-buy__button:nth-child(1) {
+    margin-bottom: -0.0625rem;
+  }
+
+  .bottom-how-to-buy__button:nth-child(2) {
+    margin-bottom: -0.0625rem;
+    margin-top: -0.0625rem;
+  }
+
+  .bottom-how-to-buy__button:nth-child(3) {
+    margin-top: -0.0625rem;
   }
 
   .join__title span {
@@ -5918,15 +5940,15 @@ span.orange {
     }
 }
 
-@supports (margin-bottom: clamp( 1.25rem , 1.0429606625rem  +  1.0351966874vw , 1.875rem )) {
+@supports (margin-bottom: clamp( 2rem , 1.917184265rem  +  0.4140786749vw , 2.25rem )) {
     .bottom-how-to-buy__title {
-      margin-bottom: clamp( 1.25rem , 1.0429606625rem  +  1.0351966874vw , 1.875rem );
+      margin-bottom: clamp( 2rem , 1.917184265rem  +  0.4140786749vw , 2.25rem );
     }
 }
 
-@supports not (margin-bottom: clamp( 1.25rem , 1.0429606625rem  +  1.0351966874vw , 1.875rem )) {
+@supports not (margin-bottom: clamp( 2rem , 1.917184265rem  +  0.4140786749vw , 2.25rem )) {
     .bottom-how-to-buy__title {
-      margin-bottom: calc(1.25rem + 0.625 * (100vw - 20rem) / 60.375);
+      margin-bottom: calc(2rem + 0.25 * (100vw - 20rem) / 60.375);
     }
 }
 
@@ -5958,27 +5980,27 @@ span.orange {
     }
 }
 
-@supports (padding-top: clamp( 0.5rem , 0.33436853rem  +  0.8281573499vw , 1rem )) {
+@supports (padding-top: clamp( 0.75rem , 0.667184265rem  +  0.4140786749vw , 1rem )) {
     .bottom-how-to-buy__button {
-      padding-top: clamp( 0.5rem , 0.33436853rem  +  0.8281573499vw , 1rem );
+      padding-top: clamp( 0.75rem , 0.667184265rem  +  0.4140786749vw , 1rem );
     }
 }
 
-@supports not (padding-top: clamp( 0.5rem , 0.33436853rem  +  0.8281573499vw , 1rem )) {
+@supports not (padding-top: clamp( 0.75rem , 0.667184265rem  +  0.4140786749vw , 1rem )) {
     .bottom-how-to-buy__button {
-      padding-top: calc(0.5rem + 0.5 * (100vw - 20rem) / 60.375);
+      padding-top: calc(0.75rem + 0.25 * (100vw - 20rem) / 60.375);
     }
 }
 
-@supports (padding-bottom: clamp( 0.5rem , 0.33436853rem  +  0.8281573499vw , 1rem )) {
+@supports (padding-bottom: clamp( 0.75rem , 0.667184265rem  +  0.4140786749vw , 1rem )) {
     .bottom-how-to-buy__button {
-      padding-bottom: clamp( 0.5rem , 0.33436853rem  +  0.8281573499vw , 1rem );
+      padding-bottom: clamp( 0.75rem , 0.667184265rem  +  0.4140786749vw , 1rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 0.5rem , 0.33436853rem  +  0.8281573499vw , 1rem )) {
+@supports not (padding-bottom: clamp( 0.75rem , 0.667184265rem  +  0.4140786749vw , 1rem )) {
     .bottom-how-to-buy__button {
-      padding-bottom: calc(0.5rem + 0.5 * (100vw - 20rem) / 60.375);
+      padding-bottom: calc(0.75rem + 0.25 * (100vw - 20rem) / 60.375);
     }
 }
 
@@ -6003,18 +6025,6 @@ span.orange {
 @supports not (padding-right: clamp( 0.75rem , 0.501552795rem  +  1.2422360248vw , 1.5rem )) {
     .bottom-how-to-buy__button {
       padding-right: calc(0.75rem + 0.75 * (100vw - 20rem) / 60.375);
-    }
-}
-
-@supports (font-size: clamp( 1.625rem , 1.2523291925rem  +  1.8633540373vw , 2.75rem )) {
-    .bottom-how-to-buy__button > span {
-      font-size: clamp( 1.625rem , 1.2523291925rem  +  1.8633540373vw , 2.75rem );
-    }
-}
-
-@supports not (font-size: clamp( 1.625rem , 1.2523291925rem  +  1.8633540373vw , 2.75rem )) {
-    .bottom-how-to-buy__button > span {
-      font-size: calc(1.625rem + 1.125 * (100vw - 20rem) / 60.375);
     }
 }
 
@@ -6163,6 +6173,18 @@ span.orange {
       font-size: calc(4.75rem + 3.25 * (100vw - 48rem) / 32.375);
     }
 }
+
+@supports (font-size: clamp( 2.125rem , 1.1983590734rem  +  1.9305019305vw , 2.75rem )) {
+    .bottom-how-to-buy__button > span {
+      font-size: clamp( 2.125rem , 1.1983590734rem  +  1.9305019305vw , 2.75rem );
+    }
+}
+
+@supports not (font-size: clamp( 2.125rem , 1.1983590734rem  +  1.9305019305vw , 2.75rem )) {
+    .bottom-how-to-buy__button > span {
+      font-size: calc(2.125rem + 0.625 * (100vw - 48rem) / 32.375);
+    }
+}
 }
 
 @media (min-width: 20em) and (max-width: 47.99875em) {
@@ -6175,6 +6197,18 @@ span.orange {
 @supports not (font-size: clamp( 3.875rem , 2.5356544935rem  +  6.6967275325vw , 5.75rem )) {
     .book-top-how-to-buy__item-first-page-title span {
       font-size: calc(3.875rem + 1.875 * (100vw - 20rem) / 27.99875);
+    }
+}
+
+@supports (font-size: clamp( 2rem , 1.4642617974rem  +  2.678691013vw , 2.75rem )) {
+    .bottom-how-to-buy__button > span {
+      font-size: clamp( 2rem , 1.4642617974rem  +  2.678691013vw , 2.75rem );
+    }
+}
+
+@supports not (font-size: clamp( 2rem , 1.4642617974rem  +  2.678691013vw , 2.75rem )) {
+    .bottom-how-to-buy__button > span {
+      font-size: calc(2rem + 0.75 * (100vw - 20rem) / 27.99875);
     }
 }
 }
