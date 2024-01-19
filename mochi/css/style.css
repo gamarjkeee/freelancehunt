@@ -530,6 +530,18 @@ h6 {
   width: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 0.75rem;
+  border-radius: 0 1rem 1rem 0;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff9e49;
+  border: 0.0625rem solid #fff;
+  border-radius: 1.25rem;
+}
+
 @-webkit-keyframes fly {
   0% {
     -webkit-transform: translateY(0rem);
@@ -6263,6 +6275,10 @@ span.orange {
 
   .footer__email:hover {
     opacity: 0.7;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #f56221;
   }
 
   .hero__bottom-button:hover {
