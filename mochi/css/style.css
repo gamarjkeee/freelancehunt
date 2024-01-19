@@ -1325,6 +1325,10 @@ span.orange {
 }
 
 .content-buy-mochi__title {
+  text-wrap: nowrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1397,6 +1401,9 @@ span.orange {
 }
 
 .content-buy-mochi__images {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
   position: relative;
   z-index: 3;
   -ms-flex-item-align: end;
@@ -1446,6 +1453,12 @@ span.orange {
 .content-buy-mochi__image-cat {
   width: 100%;
   min-width: 16.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .content-buy-mochi__image-cat img {
@@ -2757,6 +2770,10 @@ span.orange {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+}
+
+.bottom-how-to-buy__title {
   text-align: center;
 }
 
@@ -4326,6 +4343,12 @@ span.orange {
   }
 }
 
+@media (max-width: 32em) {
+  .bottom-how-to-buy__title {
+    max-width: 23.125rem;
+  }
+}
+
 @media (max-width: 20em) {
   .footer {
     padding-top: 2.5rem;
@@ -4408,7 +4431,7 @@ span.orange {
   }
 
   .content-buy-mochi__title span {
-    font-size: 4.5rem;
+    font-size: 5.125rem;
   }
 
   .item-buy-mochi__title span {
@@ -4544,7 +4567,7 @@ span.orange {
   }
 
   .book-top-how-to-buy__item-first-page-title span {
-    font-size: 4rem;
+    font-size: 3.875rem;
   }
 
   .bottom-how-to-buy__title {
@@ -4586,7 +4609,7 @@ span.orange {
   }
 
   .item-steps-road-map__title span {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .item-steps-road-map__text p {
@@ -4613,7 +4636,7 @@ span.orange {
     -webkit-column-gap: 1.25rem;
        -moz-column-gap: 1.25rem;
             column-gap: 1.25rem;
-    row-gap: 1.875rem;
+    row-gap: 2.5rem;
   }
 
   .steps-road-map__row-item._watcher-view {
@@ -4936,6 +4959,12 @@ span.orange {
   }
 }
 
+@media (max-width: 49.5em) {
+  .bottom-how-to-buy__title {
+    max-width: 26.875rem;
+  }
+}
+
 @media (max-width: 47.5em) {
   .footer__top {
     -webkit-box-orient: vertical;
@@ -5106,6 +5135,12 @@ span.orange {
   }
 }
 
+@media (max-width: 38.75em) {
+  .bottom-how-to-buy__title {
+    max-width: 24.375rem;
+  }
+}
+
 @media (max-width: 34.5em) {
   .footer__bottom {
     -webkit-box-orient: vertical;
@@ -5202,6 +5237,11 @@ span.orange {
             flex: 0 0 1.25rem;
   }
 
+  .item-items__button {
+    max-width: 15.625rem;
+    padding: 1rem 1.25rem;
+  }
+
   .book-top-how-to-buy__box {
     height: 43.75rem;
   }
@@ -5260,6 +5300,18 @@ span.orange {
   .join__link {
     width: 5rem;
     height: 5rem;
+  }
+}
+
+@media (max-width: 28.75em) {
+  .bottom-how-to-buy__title {
+    max-width: 21.25rem;
+  }
+}
+
+@media (max-width: 23.75em) {
+  .bottom-how-to-buy__title {
+    max-width: 19.375rem;
   }
 }
 
@@ -5515,18 +5567,6 @@ span.orange {
 @supports not (padding-bottom: clamp( 1.25rem , 0.8359213251rem  +  2.0703933747vw , 2.5rem )) {
     .content-buy-mochi__title {
       padding-bottom: calc(1.25rem + 1.25 * (100vw - 20rem) / 60.375);
-    }
-}
-
-@supports (font-size: clamp( 4.5rem , 3.3405797101rem  +  5.7971014493vw , 8rem )) {
-    .content-buy-mochi__title span {
-      font-size: clamp( 4.5rem , 3.3405797101rem  +  5.7971014493vw , 8rem );
-    }
-}
-
-@supports not (font-size: clamp( 4.5rem , 3.3405797101rem  +  5.7971014493vw , 8rem )) {
-    .content-buy-mochi__title span {
-      font-size: calc(4.5rem + 3.5 * (100vw - 20rem) / 60.375);
     }
 }
 
@@ -5990,18 +6030,6 @@ span.orange {
     }
 }
 
-@supports (font-size: clamp( 1.5rem , 1.0652173913rem  +  2.1739130435vw , 2.8125rem )) {
-    .item-steps-road-map__title span {
-      font-size: clamp( 1.5rem , 1.0652173913rem  +  2.1739130435vw , 2.8125rem );
-    }
-}
-
-@supports not (font-size: clamp( 1.5rem , 1.0652173913rem  +  2.1739130435vw , 2.8125rem )) {
-    .item-steps-road-map__title span {
-      font-size: calc(1.5rem + 1.3125 * (100vw - 20rem) / 60.375);
-    }
-}
-
 @supports (font-size: clamp( 0.875rem , 0.8335921325rem  +  0.2070393375vw , 1rem )) {
     .item-steps-road-map__text p {
       font-size: clamp( 0.875rem , 0.8335921325rem  +  0.2070393375vw , 1rem );
@@ -6011,6 +6039,34 @@ span.orange {
 @supports not (font-size: clamp( 0.875rem , 0.8335921325rem  +  0.2070393375vw , 1rem )) {
     .item-steps-road-map__text p {
       font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 60.375);
+    }
+}
+}
+
+@media (min-width: 62em) and (max-width: 80.375em) {
+@supports (font-size: clamp( 5.375rem , -3.4821428571rem  +  14.2857142857vw , 8rem )) {
+    .content-buy-mochi__title span {
+      font-size: clamp( 5.375rem , -3.4821428571rem  +  14.2857142857vw , 8rem );
+    }
+}
+
+@supports not (font-size: clamp( 5.375rem , -3.4821428571rem  +  14.2857142857vw , 8rem )) {
+    .content-buy-mochi__title span {
+      font-size: calc(5.375rem + 2.625 * (100vw - 62rem) / 18.375);
+    }
+}
+}
+
+@media (min-width: 20em) and (max-width: 61.99875em) {
+@supports (font-size: clamp( 5.125rem , 4.3511674455rem  +  3.8691627727vw , 6.75rem )) {
+    .content-buy-mochi__title span {
+      font-size: clamp( 5.125rem , 4.3511674455rem  +  3.8691627727vw , 6.75rem );
+    }
+}
+
+@supports not (font-size: clamp( 5.125rem , 4.3511674455rem  +  3.8691627727vw , 6.75rem )) {
+    .content-buy-mochi__title span {
+      font-size: calc(5.125rem + 1.625 * (100vw - 20rem) / 41.99875);
     }
 }
 }
@@ -6096,29 +6152,57 @@ span.orange {
 }
 
 @media (min-width: 48em) and (max-width: 80.375em) {
-@supports (font-size: clamp( 5.125rem , 0.8624517375rem  +  8.8803088803vw , 8rem )) {
+@supports (font-size: clamp( 4.75rem , -0.0685328185rem  +  10.0386100386vw , 8rem )) {
     .book-top-how-to-buy__item-first-page-title span {
-      font-size: clamp( 5.125rem , 0.8624517375rem  +  8.8803088803vw , 8rem );
+      font-size: clamp( 4.75rem , -0.0685328185rem  +  10.0386100386vw , 8rem );
     }
 }
 
-@supports not (font-size: clamp( 5.125rem , 0.8624517375rem  +  8.8803088803vw , 8rem )) {
+@supports not (font-size: clamp( 4.75rem , -0.0685328185rem  +  10.0386100386vw , 8rem )) {
     .book-top-how-to-buy__item-first-page-title span {
-      font-size: calc(5.125rem + 2.875 * (100vw - 48rem) / 32.375);
+      font-size: calc(4.75rem + 3.25 * (100vw - 48rem) / 32.375);
     }
 }
 }
 
 @media (min-width: 20em) and (max-width: 47.99875em) {
-@supports (font-size: clamp( 4rem , 3.1963926961rem  +  4.0180365195vw , 5.125rem )) {
+@supports (font-size: clamp( 3.875rem , 2.5356544935rem  +  6.6967275325vw , 5.75rem )) {
     .book-top-how-to-buy__item-first-page-title span {
-      font-size: clamp( 4rem , 3.1963926961rem  +  4.0180365195vw , 5.125rem );
+      font-size: clamp( 3.875rem , 2.5356544935rem  +  6.6967275325vw , 5.75rem );
     }
 }
 
-@supports not (font-size: clamp( 4rem , 3.1963926961rem  +  4.0180365195vw , 5.125rem )) {
+@supports not (font-size: clamp( 3.875rem , 2.5356544935rem  +  6.6967275325vw , 5.75rem )) {
     .book-top-how-to-buy__item-first-page-title span {
-      font-size: calc(4rem + 1.125 * (100vw - 20rem) / 27.99875);
+      font-size: calc(3.875rem + 1.875 * (100vw - 20rem) / 27.99875);
+    }
+}
+}
+
+@media (min-width: 48.125em) and (max-width: 80.375em) {
+@supports (font-size: clamp( 2.5rem , 2.0336724806rem  +  0.9689922481vw , 2.8125rem )) {
+    .item-steps-road-map__title span {
+      font-size: clamp( 2.5rem , 2.0336724806rem  +  0.9689922481vw , 2.8125rem );
+    }
+}
+
+@supports not (font-size: clamp( 2.5rem , 2.0336724806rem  +  0.9689922481vw , 2.8125rem )) {
+    .item-steps-road-map__title span {
+      font-size: calc(2.5rem + 0.3125 * (100vw - 48.125rem) / 32.25);
+    }
+}
+}
+
+@media (min-width: 20em) and (max-width: 48.12375em) {
+@supports (font-size: clamp( 2rem , 1.4666429619rem  +  2.6667851905vw , 2.75rem )) {
+    .item-steps-road-map__title span {
+      font-size: clamp( 2rem , 1.4666429619rem  +  2.6667851905vw , 2.75rem );
+    }
+}
+
+@supports not (font-size: clamp( 2rem , 1.4666429619rem  +  2.6667851905vw , 2.75rem )) {
+    .item-steps-road-map__title span {
+      font-size: calc(2rem + 0.75 * (100vw - 20rem) / 28.12375);
     }
 }
 }
