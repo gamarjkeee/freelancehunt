@@ -1503,5 +1503,20 @@
       </footer>
     </div>
     <script src="js/app.min.js?_v=20240118162207"></script>
+     <script >const totenCopyButton = document.querySelector('.line__cloud-button');
+totenCopyButton.addEventListener(
+  'click',
+  writeClipboardText(tokenValue.innerHTML)
+);
+
+async function writeClipboardText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (error) {
+    console.error(error.message);
+  }
+}</script>
+    const tokenValue = document.querySelector('.line__cloud-number');
+
   </body>
 </html>
