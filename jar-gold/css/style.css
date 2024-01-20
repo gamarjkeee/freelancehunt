@@ -2614,6 +2614,9 @@ body {
 
   .ai-token__button {
     opacity: 0;
+  }
+
+  .loaded .ai-token__button {
     -webkit-animation: opacity 0.45s ease 1.8s forwards;
             animation: opacity 0.45s ease 1.8s forwards;
   }
@@ -2641,6 +2644,9 @@ body {
 
   .research__button {
     opacity: 0;
+  }
+
+  .loaded .research__button {
     -webkit-animation: opacity 0.45s ease 1.8s forwards;
             animation: opacity 0.45s ease 1.8s forwards;
   }
@@ -2668,6 +2674,9 @@ body {
 
   .tools__button {
     opacity: 0;
+  }
+
+  .loaded .tools__button {
     -webkit-animation: opacity 0.45s ease 1.8s forwards;
             animation: opacity 0.45s ease 1.8s forwards;
   }
