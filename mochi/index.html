@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mochi</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <style>
+      @keyframes exit-load {
+        0% {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        100% {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      @keyframes load-scale {
+        0% {
+          scale: 0.5;
+        }
+
+        50% {
+          scale: 1;
+        }
+
+        100% {
+          scale: 0.5;
+        }
+      }
+
+      .loader {
+        position: fixed;
+        inset: 0;
+        z-index: 500;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: none;
+      }
+
+      .loaded .loader {
+        animation: exit-load 0.45s ease 1s forwards;
+      }
+
+      .loader img {
+        display: inline-block;
+        width: 200px;
+        animation: load-scale 1.5s linear infinite;
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.min.css?_v=20240119190645" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- <meta name="robots" content="noindex, nofollow"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="loader">
+      <img src="img/hero/cat.png" alt="Cat Image" />
+    </div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__box">
+          <a href="index.html" class="header__logo">
+            <img src="img/hero/cat.png" alt="Logo Icon" /><i></i
+          ></a>
+          <div class="header__menu menu">
+            <button type="button" class="menu__icon icon-menu">
+              <span></span><i></i>
+            </button>
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="" class="menu__link menu__link--mochi">
+                    <span>Mochi</span>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">
+                    <span>Art</span>
+                    <div>
+                      <img src="img/icons/01.svg" alt="Icon" /><img
+                        src="img/icons/01-white.svg"
+                        alt="Icon" />
+                    </div>
+                  </a>
+                </li>
+
+                <li class="menu__item">
+                  <a href="" class="menu__link">
+                    <span>Mint</span>
+                    <div>
+                      <img src="img/icons/02.svg" alt="Icon" /><img
+                        src="img/icons/02-white.svg"
+                        alt="Icon" />
+                    </div>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">
+                    <span>Inspector Bot</span>
+                    <div>
+                      <img src="img/icons/03.svg" alt="Icon" /><img
+                        src="img/icons/03-white.svg"
+                        alt="Icon" />
+                    </div>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link menu__link--dark">
+                    <span>How to buy <span>$mochi</span></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main class="page">
+        <section class="page__hero hero">
+          <div class="hero__background">
+            <img src="img/hero/sky.png" alt="Sky Image" />
+            <img src="img/hero/sky.png" alt="Sky Image" />
+            <img src="img/hero/sky.png" alt="Sky Image" />
+          </div>
+          <div class="hero__container">
+            <h1 class="hero__title">
+              <p><span>M</span><span>E</span><span>E</span><span>T</span></p>
+              <br />
+              <p class="orange">
+                <span>M</span><span>o</span><span>c</span><span>h</span
+                ><span>i</span>
+              </p>
+              <img src="img/hero/cat.png" alt="Cat Image" />
+            </h1>
+            <div class="hero__bottom">
+              <div class="hero__bottom-text">
+                <p>Base chain’s favourite feline!</p>
+                <p>ベースチェーンの推しの猫！</p>
+              </div>
+              <div class="hero__bottom-buttons">
+                <a href="#" class="hero__bottom-button"
+                  ><span>Dextools Chart</span
+                  ><img src="img/icons/arrow.svg" alt="Arrow Icon"
+                /></a>
+                <a
+                  href="#"
+                  class="hero__bottom-button hero__bottom-button--white"
+                  ><span>Join us</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__buy-mochi buy-mochi">
+          <div class="buy-mochi__backgroung">
+            <img src="img/buy/background.png" alt="Background picture" />
+          </div>
+          <div class="buy-mochi__box">
+            <div
+              data-watch-threshold="0.5"
+              data-watch-once
+              data-watch
+              class="buy-mochi__content content-buy-mochi">
+              <div class="content-buy-mochi__background"></div>
+              <h2
+                data-watch-threshold="0.5"
+                data-watch-once
+                data-watch
+                class="content-buy-mochi__title">
+                <span>B</span><span>u</span><span>y</span> <br />
+                <span>$</span><span>M</span><span>O</span><span>C</span
+                ><span>H</span><span>I</span>
+              </h2>
+              <div class="content-buy-mochi__images">
+                <div class="content-buy-mochi__image-text">
+                  <img src="img/buy/01.svg" alt="Icon" />
+                  <span>こんにちは</span>
+                </div>
+                <div class="content-buy-mochi__image-cat">
+                  <img src="img/buy/01.png" alt="Cat Image" />
+                </div>
+              </div>
+            </div>
+            <div class="buy-mochi__items">
+              <a href="#" class="buy-mochi__item item-buy-mochi">
+                <h3 class="item-buy-mochi__title">
+                  <span>How to buy</span
+                  ><img src="img/icons/arrow.svg" alt="Arrow Icon" />
+                </h3>
+                <div class="item-buy-mochi__text">
+                  $MOCHI is on Base. View our tutorial here.
+                </div>
+              </a>
+              <a href="#" class="buy-mochi__item item-buy-mochi">
+                <h3 class="item-buy-mochi__title">
+                  <span>SushiSwap</span>
+                  <img src="img/buy/02.png" alt="Image" />
+                  <img src="img/icons/arrow.svg" alt="Arrow Icon" />
+                </h3>
+              </a>
+              <a href="#" class="buy-mochi__item item-buy-mochi">
+                <h3 class="item-buy-mochi__title">
+                  <span>MEXC</span>
+                  <img src="img/buy/03.png" alt="Image" />
+                  <img src="img/icons/arrow.svg" alt="Arrow Icon" />
+                </h3>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="page__base base">
+          <div class="base__container">
+            <div class="base__decor-item base__decor-item--1">
+              <img src="img/base/decor1.png" alt="Decor Image" />
+            </div>
+            <div class="base__decor-item base__decor-item--2">
+              <img src="img/base/decor2.png" alt="Decor Image" />
+              <img src="img/base/decor-3.svg" alt="Decor Image" />
+            </div>
+            <div
+              data-watch-threshold="0.6"
+              data-watch-once
+              data-watch
+              class="base__header">
+              <h2 class="base__header-title">
+                <span>M</span><span>o</span><span>c</span><span>h</span
+                ><span>i</span><span>!</span><i></i>
+              </h2>
+              <div class="base__header-label">Based on Base</div>
+            </div>
+            <div class="base__items">
+              <div class="base__item item-base">
+                <div class="item-base__text">
+                  Named after the CEO of Coinbase's pet cat, $MOCHI pairs the
+                  unstoppable narrative of being Brian Armstrong's cat with
+                  Coinbase's push to bring the masses onchain to Base. The
+                  masses will love Mochi, and thousands on Base already do.
+                </div>
+                <div
+                  data-watch-threshold="0.8"
+                  data-watch-once
+                  data-watch
+                  class="item-base__image">
+                  <span
+                    >That's quite <br />
+                    the combo!
+                  </span>
+                  <img src="img/base/01.svg" alt="Icon" />
+                </div>
+              </div>
+              <div class="base__item item-base">
+                <div class="item-base__text">
+                  Mochi is cute, orange, living onchain and helping Coinbase in
+                  their mission to onboard 1 Billion people to Base.
+                </div>
+                <div
+                  data-watch-threshold="0.8"
+                  data-watch-once
+                  data-watch
+                  class="item-base__image">
+                  <span
+                    >We've already done <br />
+                    (and won) a lot!</span
+                  >
+                  <img src="img/base/02.svg" alt="Icon" />
+                </div>
+              </div>
+              <div class="base__item item-base">
+                <div class="item-base__text">
+                  <span>
+                    <span>
+                      Seen support from top Base executives, KYC'd to Coinbase,
+                      and receiver of
+                    </span>
+                  </span>
+                  <span><span class="no-wrap">a grant</span> <i></i></span>
+                  <span><span>from Coinbase.</span></span>
+                </div>
+                <div
+                  data-watch-threshold="0.8"
+                  data-watch-once
+                  data-watch
+                  class="item-base__image">
+                  <span>Yes that's right!</span>
+                  <img src="img/base/03.svg" alt="Icon" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="page__line line">
+          <div class="line__line">
+            <div class="line__line-row">
+              <div class="line__line-item">
+                <span>Based on Base</span>
+                <img src="img/line/01.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--mob">
+                <span>Based on Base</span>
+                <img src="img/line/02.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--tab">
+                <span>Based on Base</span>
+                <img src="img/line/03.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--tab">
+                <span>Based on Base</span>
+                <img src="img/line/01.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--pc">
+                <span>Based on Base</span>
+                <img src="img/line/02.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--pc">
+                <span>Based on Base</span>
+                <img src="img/line/03.svg" alt="Smile Icon" />
+              </div>
+            </div>
+            <div class="line__line-row">
+              <div class="line__line-item">
+                <span>Based on Base</span>
+                <img src="img/line/01.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--mob">
+                <span>Based on Base</span>
+                <img src="img/line/02.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--tab">
+                <span>Based on Base</span>
+                <img src="img/line/03.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--tab">
+                <span>Based on Base</span>
+                <img src="img/line/01.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--pc">
+                <span>Based on Base</span>
+                <img src="img/line/02.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--pc">
+                <span>Based on Base</span>
+                <img src="img/line/03.svg" alt="Smile Icon" />
+              </div>
+            </div>
+          </div>
+          <div
+            data-watch-threshold="0.8"
+            data-watch-once
+            data-watch
+            class="line__cloud">
+            <div class="line__cloud-background">
+              <img src="img/line/cloud.svg" alt="Cloud Image" />
+            </div>
+            <div class="line__cloud-body">
+              <div class="line__cloud-body-background">
+                <img src="img/line/cat.png" alt="Cat Image" />
+              </div>
+              <h3 class="line__cloud-title">$MOCHI Contract Address</h3>
+              <div class="line__cloud-bottom">
+                <div class="line__cloud-number">
+                  Oxffe932cal2afa26665dc4dde727be02a7c0250
+                </div>
+                <button type="button" class="line__cloud-button">
+                  <img src="img/line/copy.svg" alt="Copy Icon" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="page__items items">
+          <div class="items__background">
+            <div>
+              <img src="img/items/01.png" alt="Background Image" />
+            </div>
+            <div>
+              <img src="img/items/cat.png" alt="Cat Image" />
+            </div>
+          </div>
+          <div class="items__container">
+            <div class="items__body">
+              <div
+                data-watch-threshold="0.3"
+                data-watch-once
+                data-watch
+                class="items__item item-items">
+                <span class="item-items__decor-top"><i></i><i></i></span>
+                <h3 class="item-items__title">
+                  <span>3</span><span>%</span> <span>i</span><span>T</span
+                  ><span>a</span><span>x</span>
+                </h3>
+                <div class="item-items__text">
+                  This will be lowered to 0% in the future! You can read why we
+                  implemented tax here
+                </div>
+                <a href="#" class="item-items__button"
+                  ><span>read more</span></a
+                >
+              </div>
+              <div
+                data-watch-threshold="0.3"
+                data-watch-once
+                data-watch
+                class="items__item item-items">
+                <span class="item-items__decor-top"><i></i><i></i></span>
+                <h3 class="item-items__title">
+                  <span>L</span><span>o</span><span>c</span><span>k</span
+                  ><span>e</span><span>d</span><span>i</span> <span>L</span
+                  ><span>P</span>
+                </h3>
+                <div class="item-items__text">
+                  Rest assured! Mochi's liquidity is locked away forever
+                </div>
+              </div>
+              <div
+                data-watch-threshold="0.3"
+                data-watch-once
+                data-watch
+                class="items__item item-items">
+                <span class="item-items__decor-top"><i></i><i></i></span>
+                <h3 class="item-items__title">
+                  <span>S</span><span>a</span><span>f</span><span>e</span>
+                  <span>i</span><span>C</span><span>o</span><span>n</span
+                  ><span>t</span><span>r</span><span>a</span><span>c</span
+                  ><span>t</span>
+                </h3>
+                <div class="item-items__text">
+                  The contract has no malicious functions. Tax can only be
+                  lowered. View the audit by GoPlus here
+                </div>
+                <a href="#" class="item-items__button"
+                  ><span>read more</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__how-to-buy how-to-buy">
+          <div class="how-to-buy__top top-how-to-buy">
+            <div class="top-how-to-buy__buttons">
+              <button class="top-how-to-buy__button active">
+                <span>Desktop</span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  fill="none">
+                  <path
+                    fill="#fff"
+                    d="M2 6h44v30H26v4h8v4H14v-4h8v-4H2V6Zm4 4v22h36V10H6Z" />
+                  <path fill="#fff" d="M20 36h8v4h-8z" />
+                </svg>
+              </button>
+              <button class="top-how-to-buy__button">
+                <span>Mobile</span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  fill="none">
+                  <path
+                    fill="#000"
+                    d="M33 0h-3v6H12v42h21V0ZM18 42h-3v-3h3v3Zm0-6h-3v-3h3v3Zm0-6h-3v-3h3v3Zm6 12h-3v-3h3v3Zm0-6h-3v-3h3v3Zm0-6h-3v-3h3v3Zm6 12h-3v-3h3v3Zm0-6h-3v-3h3v3Zm0-6h-3v-3h3v3Zm0-6H15V12h15v12Z" />
+                </svg>
+              </button>
+              <button class="top-how-to-buy__button">
+                <span>CB Wallet</span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none">
+                  <path
+                    d="M27.0103 19.9902H18.9897V28.0109H27.0103V19.9902Z"
+                    fill="#155DF7" />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8 10V12H6V36H8V38H10V40H12V42H34V40H36V38H38V36H40V12H38V10H36V8H34V6H12V8H10V10H8ZM34.1249 17.1553H32.4134V15.4438H30.7019V13.7322H28.9903V12.0207H17.0097V13.7322H15.2981V15.4438H13.5866V17.1553H11.8751V30.8475H13.5866V32.559H15.2981V34.2706H17.0097V35.9821H28.9903V34.2706H30.7019V32.559H32.4134V30.8475H34.1249V17.1553Z"
+                    fill="#155DF7" />
+                </svg>
+              </button>
+            </div>
+            <div class="top-how-to-buy__container">
+              <div class="top-how-to-buy__book active book-top-how-to-buy">
+                <div class="book-top-how-to-buy__box">
+                  <div
+                    data-watch-threshold="0.5"
+                    data-watch-once
+                    data-watch
+                    class="book-top-how-to-buy__item-first-page">
+                    <div class="book-top-how-to-buy__item-first-page-lables">
+                      <div class="book-top-how-to-buy__item-first-page-lable">
+                        <img
+                          src="img/how-to-buy/label-box-active.svg"
+                          alt="Icon" />
+                        <img src="img/how-to-buy/desktop.svg" alt="Icon" />
+                      </div>
+                      <div class="book-top-how-to-buy__item-first-page-lable">
+                        <img src="img/how-to-buy/label-box.svg" alt="Icon" />
+                        <img src="img/how-to-buy/mobile.svg" alt="Icon" />
+                      </div>
+                      <div class="book-top-how-to-buy__item-first-page-lable">
+                        <img src="img/how-to-buy/label-box.svg" alt="Icon" />
+                        <img src="img/how-to-buy/wallet.svg" alt="Icon" />
+                      </div>
+                    </div>
+                    <div class="book-top-how-to-buy__item-first-page-body">
+                      <h2 class="book-top-how-to-buy__item-first-page-title">
+                        <span>H</span><span>o</span><span>w</span> <span>i</span
+                        ><span>t</span><span>o</span> <span>i</span
+                        ><span>B</span><span>u</span><span>y</span> <br />
+                        <span class="orange">$</span
+                        ><span class="orange">M</span
+                        ><span class="orange">O</span
+                        ><span class="orange">C</span
+                        ><span class="orange">H</span
+                        ><span class="orange">I</span>
+                      </h2>
+                      <p>ON DESKTOP</p>
+                    </div>
+                    <div class="book-top-how-to-buy__item-label">Mochi</div>
+                  </div>
+                  <div class="book-top-how-to-buy__item-wrapper">
+                    <div
+                      class="book-top-how-to-buy__item book-top-how-to-buy__item--front">
+                      <div class="book-top-how-to-buy__item-body">
+                        <h3 class="book-top-how-to-buy__item-title">
+                          STEP <span>1</span>
+                        </h3>
+                        <div class="book-top-how-to-buy__item-text">
+                          <p>
+                            You need to add the Base Network to your wallet of
+                            choice.
+                          </p>
+                          <p>
+                            Check out the official @BuildOnBase docs on how here
+                          </p>
+                          <p>
+                            For a quicker way, use
+                            <a target="_blank" href="https://chainlist.org"
+                              >https://chainlist.org</a
+                            >
+                            and add Base from there.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="book-top-how-to-buy__item-label">Mochi</div>
+                      <button
+                        type="button"
+                        class="book-top-how-to-buy__item-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none">
+                          <path
+                            d="M22.6667 14.6666V13.3333H21.3333V12H18.6667V9.33329H16V6.66663H13.3333V3.99996H10.6667V2.66663H8V6.66663H10.6667V9.33329H13.3333V12H16V14.6666H18.6667V17.3333H16V20H13.3333V22.6666H10.6667V25.3333H8V29.3333H10.6667V28H13.3333V25.3333H16V24V22.6666H18.6667V21.3333V20H21.3333V18.6666H22.6667V17.3333H24V16V14.6666H22.6667Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      class="book-top-how-to-buy__item book-top-how-to-buy__item--back">
+                      <div class="book-top-how-to-buy__item-body">
+                        <h3 class="book-top-how-to-buy__item-title">
+                          STEP <span>2</span>
+                        </h3>
+                        <div class="book-top-how-to-buy__item-text">
+                          <p>
+                            You need to add the Base Network to your wallet of
+                            choice.
+                          </p>
+                          <p>
+                            Check out the official @BuildOnBase docs on how here
+                          </p>
+                          <p>
+                            For a quicker way, use
+                            <a target="_blank" href="https://chainlist.org"
+                              >https://chainlist.org</a
+                            >
+                            and add Base from there.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="book-top-how-to-buy__item-label">Mochi</div>
+                      <button
+                        type="button"
+                        class="book-top-how-to-buy__item-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none">
+                          <path
+                            d="M22.6667 14.6666V13.3333H21.3333V12H18.6667V9.33329H16V6.66663H13.3333V3.99996H10.6667V2.66663H8V6.66663H10.6667V9.33329H13.3333V12H16V14.6666H18.6667V17.3333H16V20H13.3333V22.6666H10.6667V25.3333H8V29.3333H10.6667V28H13.3333V25.3333H16V24V22.6666H18.6667V21.3333V20H21.3333V18.6666H22.6667V17.3333H24V16V14.6666H22.6667Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="book-top-how-to-buy__item-wrapper">
+                    <div
+                      class="book-top-how-to-buy__item book-top-how-to-buy__item--front">
+                      <div class="book-top-how-to-buy__item-body">
+                        <h3 class="book-top-how-to-buy__item-title">
+                          STEP <span>3</span>
+                        </h3>
+                        <div class="book-top-how-to-buy__item-text">
+                          <p>
+                            You need to add the Base Network to your wallet of
+                            choice.
+                          </p>
+                          <p>
+                            Check out the official @BuildOnBase docs on how here
+                          </p>
+                          <p>
+                            For a quicker way, use
+                            <a target="_blank" href="https://chainlist.org"
+                              >https://chainlist.org</a
+                            >
+                            and add Base from there.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="book-top-how-to-buy__item-label">Mochi</div>
+                      <button
+                        type="button"
+                        class="book-top-how-to-buy__item-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none">
+                          <path
+                            d="M22.6667 14.6666V13.3333H21.3333V12H18.6667V9.33329H16V6.66663H13.3333V3.99996H10.6667V2.66663H8V6.66663H10.6667V9.33329H13.3333V12H16V14.6666H18.6667V17.3333H16V20H13.3333V22.6666H10.6667V25.3333H8V29.3333H10.6667V28H13.3333V25.3333H16V24V22.6666H18.6667V21.3333V20H21.3333V18.6666H22.6667V17.3333H24V16V14.6666H22.6667Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      class="book-top-how-to-buy__item book-top-how-to-buy__item--back">
+                      <div class="book-top-how-to-buy__item-body">
+                        <h3 class="book-top-how-to-buy__item-title">
+                          STEP <span>4</span>
+                        </h3>
+                        <div class="book-top-how-to-buy__item-text">
+                          <p>
+                            You need to add the Base Network to your wallet of
+                            choice.
+                          </p>
+                          <p>
+                            Check out the official @BuildOnBase docs on how here
+                          </p>
+                          <p>
+                            For a quicker way, use
+                            <a target="_blank" href="https://chainlist.org"
+                              >https://chainlist.org</a
+                            >
+                            and add Base from there.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="book-top-how-to-buy__item-label">Mochi</div>
+                      <button
+                        type="button"
+                        class="book-top-how-to-buy__item-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none">
+                          <path
+                            d="M22.6667 14.6666V13.3333H21.3333V12H18.6667V9.33329H16V6.66663H13.3333V3.99996H10.6667V2.66663H8V6.66663H10.6667V9.33329H13.3333V12H16V14.6666H18.6667V17.3333H16V20H13.3333V22.6666H10.6667V25.3333H8V29.3333H10.6667V28H13.3333V25.3333H16V24V22.6666H18.6667V21.3333V20H21.3333V18.6666H22.6667V17.3333H24V16V14.6666H22.6667Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="book-top-how-to-buy__item-last-page">
+                    <div class="book-top-how-to-buy__item-label">Mochi</div>
+                  </div>
+                </div>
+              </div>
+              <div class="top-how-to-buy__book book-top-how-to-buy">
+                <div class="book-top-how-to-buy__box">
+                  <div
+                    data-watch-threshold="0.5"
+                    data-watch-once
+                    data-watch
+                    class="book-top-how-to-buy__item-first-page">
+                    <div class="book-top-how-to-buy__item-first-page-lables">
+                      <div class="book-top-how-to-buy__item-first-page-lable">
+                        <img src="img/how-to-buy/label-box.svg" alt="Icon" />
+                        <img src="img/how-to-buy/desktop.svg" alt="Icon" />
+                      </div>
+                      <div class="book-top-how-to-buy__item-first-page-lable">
+                        <img
+                          src="img/how-to-buy/label-box-active.svg"
+                          alt="Icon" />
+                        <img src="img/how-to-buy/mobile.svg" alt="Icon" />
+                      </div>
+                      <div class="book-top-how-to-buy__item-first-page-lable">
+                        <img src="img/how-to-buy/label-box.svg" alt="Icon" />
+                        <img src="img/how-to-buy/wallet.svg" alt="Icon" />
+                      </div>
+                    </div>
+                    <div class="book-top-how-to-buy__item-first-page-body">
+                      <h2 class="book-top-how-to-buy__item-first-page-title">
+                        <span>H</span><span>o</span><span>w</span> <span>i</span
+                        ><span>t</span><span>o</span> <span>i</span
+                        ><span>B</span><span>u</span><span>y</span> <br />
+                        <span class="orange">$</span
+                        ><span class="orange">M</span
+                        ><span class="orange">O</span
+                        ><span class="orange">C</span
+                        ><span class="orange">H</span
+                        ><span class="orange">I</span>
+                      </h2>
+                      <p>ON MOBILE</p>
+                    </div>
+                    <div class="book-top-how-to-buy__item-label">Mochi</div>
+                  </div>
+                  <div class="book-top-how-to-buy__item-wrapper">
+                    <div
+                      class="book-top-how-to-buy__item book-top-how-to-buy__item--front">
+                      <div class="book-top-how-to-buy__item-body">
+                        <h3 class="book-top-how-to-buy__item-title">
+                          STEP <span>1</span>
+                        </h3>
+                        <div class="book-top-how-to-buy__item-text">
+                          <p>
+                            You need to add the Base Network to your wallet of
+                            choice.
+                          </p>
+                          <p>
+                            Check out the official @BuildOnBase docs on how here
+                          </p>
+                          <p>
+                            For a quicker way, use
+                            <a target="_blank" href="https://chainlist.org"
+                              >https://chainlist.org</a
+                            >
+                            and add Base from there.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="book-top-how-to-buy__item-label">Mochi</div>
+                      <button
+                        type="button"
+                        class="book-top-how-to-buy__item-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none">
+                          <path
+                            d="M22.6667 14.6666V13.3333H21.3333V12H18.6667V9.33329H16V6.66663H13.3333V3.99996H10.6667V2.66663H8V6.66663H10.6667V9.33329H13.3333V12H16V14.6666H18.6667V17.3333H16V20H13.3333V22.6666H10.6667V25.3333H8V29.3333H10.6667V28H13.3333V25.3333H16V24V22.6666H18.6667V21.3333V20H21.3333V18.6666H22.6667V17.3333H24V16V14.6666H22.6667Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      class="book-top-how-to-buy__item book-top-how-to-buy__item--back">
+                      <div class="book-top-how-to-buy__item-body">
+                        <h3 class="book-top-how-to-buy__item-title">
+                          STEP <span>2</span>
+                        </h3>
+                        <div class="book-top-how-to-buy__item-text">
+                          <p>
+                            You need to add the Base Network to your wallet of
+                            choice.
+                          </p>
+                          <p>
+                            Check out the official @BuildOnBase docs on how here
+                          </p>
+                          <p>
+                            For a quicker way, use
+                            <a target="_blank" href="https://chainlist.org"
+                              >https://chainlist.org</a
+                            >
+                            and add Base from there.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="book-top-how-to-buy__item-label">Mochi</div>
+                      <button
+                        type="button"
+                        class="book-top-how-to-buy__item-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none">
+                          <path
+                            d="M22.6667 14.6666V13.3333H21.3333V12H18.6667V9.33329H16V6.66663H13.3333V3.99996H10.6667V2.66663H8V6.66663H10.6667V9.33329H13.3333V12H16V14.6666H18.6667V17.3333H16V20H13.3333V22.6666H10.6667V25.3333H8V29.3333H10.6667V28H13.3333V25.3333H16V24V22.6666H18.6667V21.3333V20H21.3333V18.6666H22.6667V17.3333H24V16V14.6666H22.6667Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="book-top-how-to-buy__item-wrapper">
+                    <div
+                      class="book-top-how-to-buy__item book-top-how-to-buy__item--front">
+                      <div class="book-top-how-to-buy__item-body">
+                        <h3 class="book-top-how-to-buy__item-title">
+                          STEP <span>3</span>
+                        </h3>
+                        <div class="book-top-how-to-buy__item-text">
+                          <p>
+                            You need to add the Base Network to your wallet of
+                            choice.
+                          </p>
+                          <p>
+                            Check out the official @BuildOnBase docs on how here
+                          </p>
+                          <p>
+                            For a quicker way, use
+                            <a target="_blank" href="https://chainlist.org"
+                              >https://chainlist.org</a
+                            >
+                            and add Base from there.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="book-top-how-to-buy__item-label">Mochi</div>
+                      <button
+                        type="button"
+                        class="book-top-how-to-buy__item-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none">
+                          <path
+                            d="M22.6667 14.6666V13.3333H21.3333V12H18.6667V9.33329H16V6.66663H13.3333V3.99996H10.6667V2.66663H8V6.66663H10.6667V9.33329H13.3333V12H16V14.6666H18.6667V17.3333H16V20H13.3333V22.6666H10.6667V25.3333H8V29.3333H10.6667V28H13.3333V25.3333H16V24V22.6666H18.6667V21.3333V20H21.3333V18.6666H22.6667V17.3333H24V16V14.6666H22.6667Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      class="book-top-how-to-buy__item book-top-how-to-buy__item--back">
+                      <div class="book-top-how-to-buy__item-body">
+                        <h3 class="book-top-how-to-buy__item-title">
+                          STEP <span>4</span>
+                        </h3>
+                        <div class="book-top-how-to-buy__item-text">
+                          <p>
+                            You need to add the Base Network to your wallet of
+                            choice.
+                          </p>
+                          <p>
+                            Check out the official @BuildOnBase docs on how here
+                          </p>
+                          <p>
+                            For a quicker way, use
+                            <a target="_blank" href="https://chainlist.org"
+                              >https://chainlist.org</a
+                            >
+                            and add Base from there.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="book-top-how-to-buy__item-label">Mochi</div>
+                      <button
+                        type="button"
+                        class="book-top-how-to-buy__item-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none">
+                          <path
+                            d="M22.6667 14.6666V13.3333H21.3333V12H18.6667V9.33329H16V6.66663H13.3333V3.99996H10.6667V2.66663H8V6.66663H10.6667V9.33329H13.3333V12H16V14.6666H18.6667V17.3333H16V20H13.3333V22.6666H10.6667V25.3333H8V29.3333H10.6667V28H13.3333V25.3333H16V24V22.6666H18.6667V21.3333V20H21.3333V18.6666H22.6667V17.3333H24V16V14.6666H22.6667Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="book-top-how-to-buy__item-last-page">
+                    <div class="book-top-how-to-buy__item-label">Mochi</div>
+                  </div>
+                </div>
+              </div>
+              <div class="top-how-to-buy__book book-top-how-to-buy">
+                <div class="book-top-how-to-buy__box">
+                  <div
+                    data-watch-threshold="0.5"
+                    data-watch-once
+                    data-watch
+                    class="book-top-how-to-buy__item-first-page">
+                    <div class="book-top-how-to-buy__item-first-page-lables">
+                      <div class="book-top-how-to-buy__item-first-page-lable">
+                        <img src="img/how-to-buy/label-box.svg" alt="Icon" />
+                        <img src="img/how-to-buy/desktop.svg" alt="Icon" />
+                      </div>
+                      <div class="book-top-how-to-buy__item-first-page-lable">
+                        <img src="img/how-to-buy/label-box.svg" alt="Icon" />
+                        <img src="img/how-to-buy/mobile.svg" alt="Icon" />
+                      </div>
+                      <div class="book-top-how-to-buy__item-first-page-lable">
+                        <img
+                          src="img/how-to-buy/label-box-active.svg"
+                          alt="Icon" />
+                        <img src="img/how-to-buy/wallet.svg" alt="Icon" />
+                      </div>
+                    </div>
+                    <div class="book-top-how-to-buy__item-first-page-body">
+                      <h2 class="book-top-how-to-buy__item-first-page-title">
+                        <span>H</span><span>o</span><span>w</span> <span>i</span
+                        ><span>t</span><span>o</span> <span>i</span
+                        ><span>B</span><span>u</span><span>y</span> <br />
+                        <span class="orange">$</span
+                        ><span class="orange">M</span
+                        ><span class="orange">O</span
+                        ><span class="orange">C</span
+                        ><span class="orange">H</span
+                        ><span class="orange">I</span>
+                      </h2>
+                      <p>ON CB WALLET</p>
+                    </div>
+                    <div class="book-top-how-to-buy__item-label">Mochi</div>
+                  </div>
+                  <div class="book-top-how-to-buy__item-wrapper">
+                    <div
+                      class="book-top-how-to-buy__item book-top-how-to-buy__item--front">
+                      <div class="book-top-how-to-buy__item-body">
+                        <h3 class="book-top-how-to-buy__item-title">
+                          STEP <span>1</span>
+                        </h3>
+                        <div class="book-top-how-to-buy__item-text">
+                          <p>
+                            You need to add the Base Network to your wallet of
+                            choice.
+                          </p>
+                          <p>
+                            Check out the official @BuildOnBase docs on how here
+                          </p>
+                          <p>
+                            For a quicker way, use
+                            <a target="_blank" href="https://chainlist.org"
+                              >https://chainlist.org</a
+                            >
+                            and add Base from there.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="book-top-how-to-buy__item-label">Mochi</div>
+                      <button
+                        type="button"
+                        class="book-top-how-to-buy__item-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none">
+                          <path
+                            d="M22.6667 14.6666V13.3333H21.3333V12H18.6667V9.33329H16V6.66663H13.3333V3.99996H10.6667V2.66663H8V6.66663H10.6667V9.33329H13.3333V12H16V14.6666H18.6667V17.3333H16V20H13.3333V22.6666H10.6667V25.3333H8V29.3333H10.6667V28H13.3333V25.3333H16V24V22.6666H18.6667V21.3333V20H21.3333V18.6666H22.6667V17.3333H24V16V14.6666H22.6667Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      class="book-top-how-to-buy__item book-top-how-to-buy__item--back">
+                      <div class="book-top-how-to-buy__item-body">
+                        <h3 class="book-top-how-to-buy__item-title">
+                          STEP <span>2</span>
+                        </h3>
+                        <div class="book-top-how-to-buy__item-text">
+                          <p>
+                            You need to add the Base Network to your wallet of
+                            choice.
+                          </p>
+                          <p>
+                            Check out the official @BuildOnBase docs on how here
+                          </p>
+                          <p>
+                            For a quicker way, use
+                            <a target="_blank" href="https://chainlist.org"
+                              >https://chainlist.org</a
+                            >
+                            and add Base from there.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="book-top-how-to-buy__item-label">Mochi</div>
+                      <button
+                        type="button"
+                        class="book-top-how-to-buy__item-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none">
+                          <path
+                            d="M22.6667 14.6666V13.3333H21.3333V12H18.6667V9.33329H16V6.66663H13.3333V3.99996H10.6667V2.66663H8V6.66663H10.6667V9.33329H13.3333V12H16V14.6666H18.6667V17.3333H16V20H13.3333V22.6666H10.6667V25.3333H8V29.3333H10.6667V28H13.3333V25.3333H16V24V22.6666H18.6667V21.3333V20H21.3333V18.6666H22.6667V17.3333H24V16V14.6666H22.6667Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="book-top-how-to-buy__item-wrapper">
+                    <div
+                      class="book-top-how-to-buy__item book-top-how-to-buy__item--front">
+                      <div class="book-top-how-to-buy__item-body">
+                        <h3 class="book-top-how-to-buy__item-title">
+                          STEP <span>3</span>
+                        </h3>
+                        <div class="book-top-how-to-buy__item-text">
+                          <p>
+                            You need to add the Base Network to your wallet of
+                            choice.
+                          </p>
+                          <p>
+                            Check out the official @BuildOnBase docs on how here
+                          </p>
+                          <p>
+                            For a quicker way, use
+                            <a target="_blank" href="https://chainlist.org"
+                              >https://chainlist.org</a
+                            >
+                            and add Base from there.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="book-top-how-to-buy__item-label">Mochi</div>
+                      <button
+                        type="button"
+                        class="book-top-how-to-buy__item-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none">
+                          <path
+                            d="M22.6667 14.6666V13.3333H21.3333V12H18.6667V9.33329H16V6.66663H13.3333V3.99996H10.6667V2.66663H8V6.66663H10.6667V9.33329H13.3333V12H16V14.6666H18.6667V17.3333H16V20H13.3333V22.6666H10.6667V25.3333H8V29.3333H10.6667V28H13.3333V25.3333H16V24V22.6666H18.6667V21.3333V20H21.3333V18.6666H22.6667V17.3333H24V16V14.6666H22.6667Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      class="book-top-how-to-buy__item book-top-how-to-buy__item--back">
+                      <div class="book-top-how-to-buy__item-body">
+                        <h3 class="book-top-how-to-buy__item-title">
+                          STEP <span>4</span>
+                        </h3>
+                        <div class="book-top-how-to-buy__item-text">
+                          <p>
+                            You need to add the Base Network to your wallet of
+                            choice.
+                          </p>
+                          <p>
+                            Check out the official @BuildOnBase docs on how here
+                          </p>
+                          <p>
+                            For a quicker way, use
+                            <a target="_blank" href="https://chainlist.org"
+                              >https://chainlist.org</a
+                            >
+                            and add Base from there.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="book-top-how-to-buy__item-label">Mochi</div>
+                      <button
+                        type="button"
+                        class="book-top-how-to-buy__item-button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none">
+                          <path
+                            d="M22.6667 14.6666V13.3333H21.3333V12H18.6667V9.33329H16V6.66663H13.3333V3.99996H10.6667V2.66663H8V6.66663H10.6667V9.33329H13.3333V12H16V14.6666H18.6667V17.3333H16V20H13.3333V22.6666H10.6667V25.3333H8V29.3333H10.6667V28H13.3333V25.3333H16V24V22.6666H18.6667V21.3333V20H21.3333V18.6666H22.6667V17.3333H24V16V14.6666H22.6667Z"
+                            fill="black" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="book-top-how-to-buy__item-last-page">
+                    <div class="book-top-how-to-buy__item-label">Mochi</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="how-to-buy__bottom bottom-how-to-buy">
+            <div data-prlx-parent class="bottom-how-to-buy__bacground">
+              <i></i>
+              <img data-prlx src="img/hero/sky.png" alt="Sky Image" />
+              <img src="img/how-to-buy/floor.png" alt="Floor Image" />
+            </div>
+            <div class="bottom-how-to-buy__container">
+              <h2
+                data-watch-threshold="0.5"
+                data-watch-once
+                data-watch
+                class="bottom-how-to-buy__title">
+                <span>P</span><span>r</span><span>o</span><span>j</span
+                ><span>e</span><span>c</span><span>t</span><span>s</span>
+                <span>i</span> <span class="orange">&</span> <span>i</span>
+                <span>U</span><span>t</span><span>i</span><span>l</span
+                ><span>i</span><span>t</span><span>i</span><span>e</span
+                ><span>s</span>
+              </h2>
+              <div class="bottom-how-to-buy__items">
+                <div class="bottom-how-to-buy__item active">
+                  <img src="img/how-to-buy/01.png" alt="Cat-1 Image" />
+                </div>
+                <div class="bottom-how-to-buy__item">
+                  <img src="img/how-to-buy/02.png" alt="Cat-2 Image" />
+                </div>
+                <div class="bottom-how-to-buy__item">
+                  <img src="img/how-to-buy/03.png" alt="Cat-3 Image" />
+                </div>
+              </div>
+            </div>
+            <div class="bottom-how-to-buy__buttons">
+              <a class="bottom-how-to-buy__button active"
+                ><span>Mochi Inspector Bot</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none">
+                  <path
+                    d="M7 19V18H8V17H9V16H10V15H11V14H12V13H13V12H14V11H15V10H16V9H17V15H19V5H9V7H15V8H14V9H13V10H12V11H11V12H10V13H9V14H8V15H7V16H6V17H5V19H7Z"
+                    fill="black" />
+                </svg>
+              </a>
+              <a class="bottom-how-to-buy__button"
+                ><span>Mochi Art</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none">
+                  <path
+                    d="M7 19V18H8V17H9V16H10V15H11V14H12V13H13V12H14V11H15V10H16V9H17V15H19V5H9V7H15V8H14V9H13V10H12V11H11V12H10V13H9V14H8V15H7V16H6V17H5V19H7Z"
+                    fill="black" />
+                </svg>
+              </a>
+              <a class="bottom-how-to-buy__button"
+                ><span>Coinbase Grant</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none">
+                  <path
+                    d="M7 19V18H8V17H9V16H10V15H11V14H12V13H13V12H14V11H15V10H16V9H17V15H19V5H9V7H15V8H14V9H13V10H12V11H11V12H10V13H9V14H8V15H7V16H6V17H5V19H7Z"
+                    fill="black" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="page__road-map road-map">
+          <div class="road-map__container">
+            <h2
+              data-watch-threshold="0.5"
+              data-watch-once
+              data-watch
+              class="road-map__title">
+              <span>R</span><span>O</span><span>A</span><span>D</span
+              ><span>M</span><span>A</span><span>P</span>
+            </h2>
+            <div
+              data-watch-threshold="0.5"
+              data-watch-once
+              data-watch
+              data-prlx-parent
+              class="road-map__image">
+              <img data-prlx src="img/roadmap/01.png" alt="Island with Cats" />
+            </div>
+            <div
+              data-watch-threshold="0.5"
+              data-watch-once
+              data-watch
+              class="road-map__steps steps-road-map">
+              <div class="steps-road-map__row">
+                <div
+                  data-watch-threshold="0.5"
+                  data-watch-once
+                  data-watch
+                  class="steps-road-map__row-item item-steps-road-map">
+                  <h3 class="item-steps-road-map__title">
+                    <span
+                      >Tamamochi — <br />
+                      Mochi’s own NFT <br />
+                      Game.</span
+                    >
+                  </h3>
+                  <div class="item-steps-road-map__text">
+                    <p>
+                      Connect with your pet Mochi in an onchain tamagotchi style
+                      game that will attract the masses.
+                    </p>
+                    <p><span>$MOCHI will benefit hugely!</span></p>
+                  </div>
+                </div>
+                <div class="steps-road-map__row-road">
+                  <div class="steps-road-map__row-road-image">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="879"
+                      height="164"
+                      viewBox="0 0 879 164"
+                      fill="none">
+                      <path
+                        d="M0 1H759.102C917.633 0.999026 917.633 163 759.102 163"
+                        stroke="black"
+                        stroke-width="2" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="steps-road-map__row">
+                <div class="steps-road-map__row-road">
+                  <div class="steps-road-map__row-road-image">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="566"
+                      height="164"
+                      viewBox="0 0 566 164"
+                      fill="none">
+                      <path
+                        d="M566 1H77.5115C-24.5038 0.999026 -24.5038 163 77.5115 163"
+                        stroke="black"
+                        stroke-width="2" />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  data-watch-threshold="0.5"
+                  data-watch-once
+                  data-watch
+                  class="steps-road-map__row-item item-steps-road-map">
+                  <h3 class="item-steps-road-map__title">
+                    <span>Mochindise</span>
+                  </h3>
+                  <div class="item-steps-road-map__text">
+                    <p>
+                      <span>Ready for hats, hoodies and plushies? </span>
+                    </p>
+                    <p>
+                      This cute cat is coming offchain for a moment in the form
+                      of merchandise so all Mochi Maxi’s can have a piece of the
+                      orange fur-ball in real life.
+                    </p>
+                    <p>
+                      All profits will go back into the project, and a
+                      percentage will go to charity.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="steps-road-map__row">
+                <div
+                  data-watch-threshold="0.5"
+                  data-watch-once
+                  data-watch
+                  class="steps-road-map__row-item item-steps-road-map">
+                  <h3 class="item-steps-road-map__title">
+                    <span>Foundations Onchain</span>
+                  </h3>
+                  <div class="item-steps-road-map__text">
+                    <p>
+                      Onchain is the new online. MOCHI is bringing charity
+                      foundations onchain with a huge campaign that benefits
+                      everyone involved and uses Base to remove the middleman in
+                      crypto and charities.
+                    </p>
+                    <p>
+                      A good look for $MOCHI but more importantly Base and
+                      Coinbase.
+                    </p>
+                  </div>
+                </div>
+                <div class="steps-road-map__row-road">
+                  <div class="steps-road-map__row-road-image">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="203"
+                      height="171"
+                      viewBox="0 0 203 171"
+                      fill="none">
+                      <path
+                        d="M202 171V58.5C202 27.0198 176.48 1.5 145 1.5H0"
+                        stroke="black"
+                        stroke-width="2" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="steps-road-map__row">
+                <div class="steps-road-map__row-road"></div>
+                <div
+                  data-watch-threshold="0.5"
+                  data-watch-once
+                  data-watch
+                  class="steps-road-map__row-item item-steps-road-map">
+                  <h3 class="item-steps-road-map__title">
+                    <span>Mochimon PFP NFTs</span>
+                  </h3>
+                  <div class="item-steps-road-map__text">
+                    <p>
+                      Profile pictures for the whole $MOCHI family to show off
+                      as Mochi becomes the face of catcoins.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__join join">
+          <div data-prlx-parent class="join__main-back">
+            <i></i>
+            <img data-prlx src="img/hero/sky.png" alt="Sky Image" />
+          </div>
+          <div class="join__container">
+            <div
+              data-watch-threshold="0.6"
+              data-watch-once
+              data-watch
+              class="join__body">
+              <div class="join__main-block">
+                <h2 class="join__title">
+                  <span>J</span><span>o</span><span>i</span><span>n</span
+                  ><span>i</span><span> </span><span>U</span><span>s</span>
+                </h2>
+                <a href="#" class="join__button"><span>BUY NOW</span></a>
+              </div>
+              <div class="join__items">
+                <div class="join__item" style="--i: 1">
+                  <a href="#" class="join__link">
+                    <img src="img/join/01.svg" alt="Icon" />
+                  </a>
+                </div>
+                <div class="join__item" style="--i: 2">
+                  <a href="#" class="join__link">
+                    <img src="img/join/02.svg" alt="Icon" />
+                  </a>
+                </div>
+                <div class="join__item" style="--i: 3">
+                  <a href="#" class="join__link">
+                    <img src="img/join/03.svg" alt="Icon" />
+                  </a>
+                </div>
+                <div class="join__item" style="--i: 4">
+                  <a href="#" class="join__link">
+                    <img src="img/join/04.svg" alt="Icon" />
+                  </a>
+                </div>
+                <div class="join__item" style="--i: 5">
+                  <a href="#" class="join__link">
+                    <img src="img/join/05.svg" alt="Icon" />
+                  </a>
+                </div>
+                <div class="join__item" style="--i: 6">
+                  <a href="#" class="join__link">
+                    <img src="img/join/06.svg" alt="Icon" />
+                  </a>
+                </div>
+              </div>
+              <div class="join__background">
+                <img src="img/join/cat.svg" alt="Cat Icon" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="page__line line">
+          <div class="line__line">
+            <div class="line__line-row">
+              <div class="line__line-item">
+                <span>Based on Base</span>
+                <img src="img/line/01.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--mob">
+                <span>Based on Base</span>
+                <img src="img/line/02.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--tab">
+                <span>Based on Base</span>
+                <img src="img/line/03.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--tab">
+                <span>Based on Base</span>
+                <img src="img/line/01.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--pc">
+                <span>Based on Base</span>
+                <img src="img/line/02.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--pc">
+                <span>Based on Base</span>
+                <img src="img/line/03.svg" alt="Smile Icon" />
+              </div>
+            </div>
+            <div class="line__line-row">
+              <div class="line__line-item">
+                <span>Based on Base</span>
+                <img src="img/line/01.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--mob">
+                <span>Based on Base</span>
+                <img src="img/line/02.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--tab">
+                <span>Based on Base</span>
+                <img src="img/line/03.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--tab">
+                <span>Based on Base</span>
+                <img src="img/line/01.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--pc">
+                <span>Based on Base</span>
+                <img src="img/line/02.svg" alt="Smile Icon" />
+              </div>
+              <div class="line__line-item line__line-item--pc">
+                <span>Based on Base</span>
+                <img src="img/line/03.svg" alt="Smile Icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer
+        data-watch-threshold="0.6"
+        data-watch-once
+        data-watch
+        class="footer">
+        <div class="footer__container">
+          <div class="footer__box">
+            <div class="footer__top">
+              <div class="footer__columns">
+                <div class="footer__column">
+                  <a href="#" class="footer__column-item active">how to buy</a>
+                  <a href="#" class="footer__column-item">Inspector bot</a>
+                  <a href="#" class="footer__column-item">CONTACT US</a>
+                </div>
+                <div class="footer__column">
+                  <a href="#" class="footer__column-item">ART</a>
+                  <a href="#" class="footer__column-item">Mint</a>
+                  <a href="#" class="footer__column-item">About</a>
+                </div>
+              </div>
+              <div class="footer__social">
+                <a href="#" class="footer__social-item">
+                  <img src="img/footer/01.svg" alt="Icon" />
+                </a>
+                <a href="#" class="footer__social-item">
+                  <img src="img/footer/02.svg" alt="Icon" />
+                </a>
+                <a href="#" class="footer__social-item">
+                  <img src="img/footer/03.svg" alt="Icon" />
+                </a>
+                <a href="#" class="footer__social-item">
+                  <img src="img/footer/04.svg" alt="Icon" />
+                </a>
+                <a href="#" class="footer__social-item">
+                  <img src="img/footer/05.svg" alt="Icon" />
+                </a>
+              </div>
+            </div>
+            <div class="footer__bottom">
+              <div class="footer__bottom-top">
+                <a href="mailto:info@mochithecatcoin.com" class="footer__email"
+                  ><span>INFO@MOCHITHECATCOIN.COM</span
+                  ><img src="img/footer/email.svg" alt="Email Icon"
+                /></a>
+                <div class="footer__copy">2023 © ALL RIGHTS RESERVED</div>
+              </div>
+              <div class="footer__bottom-bottom">
+                Made with ❤ by Ruslan Musienko
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__decor">
+          <img src="img/footer/cat.png" alt="Cat Image" />
+        </div>
+      </footer>
+    </div>
+    <script src="js/app.min.js?_v=20240119190645"></script>
+  </body>
+</html>

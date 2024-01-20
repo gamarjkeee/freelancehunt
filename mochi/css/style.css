@@ -457,6 +457,16 @@ h6 {
 }
 
 .footer__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__bottom-top {
   padding: 1.875rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -473,6 +483,21 @@ h6 {
      -moz-column-gap: 2.5rem;
           column-gap: 2.5rem;
   border-top: 0.125rem solid #fff;
+}
+
+.footer__bottom-bottom {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-bottom: 1.25rem;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+  text-shadow: 0.0625rem 0.0625rem 0rem #000, 0.0625rem -0.0625rem 0rem #000, -0.0625rem 0.0625rem 0rem #000, -0.0625rem -0.0625rem 0rem #000;
+}
+
+.footer__bottom-bottom a {
+  text-decoration: underline;
 }
 
 .footer__email {
@@ -3795,6 +3820,10 @@ span.orange {
     font-size: 4rem;
   }
 
+  .footer__bottom-bottom {
+    font-size: 1rem;
+  }
+
   .footer__email span {
     font-size: 1rem;
   }
@@ -4383,6 +4412,10 @@ span.orange {
 
   .footer__column-item {
     font-size: 2.25rem;
+  }
+
+  .footer__bottom-bottom {
+    font-size: 0.875rem;
   }
 
   .footer__email span {
@@ -5187,7 +5220,7 @@ span.orange {
 }
 
 @media (max-width: 34.5em) {
-  .footer__bottom {
+  .footer__bottom-top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -5416,6 +5449,18 @@ span.orange {
 @supports not (font-size: clamp( 2.25rem , 1.6702898551rem  +  2.8985507246vw , 4rem )) {
     .footer__column-item {
       font-size: calc(2.25rem + 1.75 * (100vw - 20rem) / 60.375);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8335921325rem  +  0.2070393375vw , 1rem )) {
+    .footer__bottom-bottom {
+      font-size: clamp( 0.875rem , 0.8335921325rem  +  0.2070393375vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8335921325rem  +  0.2070393375vw , 1rem )) {
+    .footer__bottom-bottom {
+      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 60.375);
     }
 }
 
@@ -6290,6 +6335,10 @@ span.orange {
 
   .footer__social-item:hover {
     scale: 0.95;
+  }
+
+  .footer__bottom-bottom a:hover {
+    text-decoration: none;
   }
 
   .footer__email:hover {
