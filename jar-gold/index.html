@@ -1,390 +1,461 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <title>Jarvis</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <style>
+      body {
+        opacity: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.min.css?_v=20240120101241" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- <meta name="robots" content="noindex, nofollow"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<head>
-	<title>Jarvis</title>
-	<meta charset="UTF-8" />
-	<meta name="format-detection" content="telephone=no" />
-	<style>
-		body {
-			opacity: 0;
-		}
-	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240115154550" />
-	<link rel="shortcut icon" href="favicon.ico" />
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!-- Twitter conversion tracking base code -->
-	<script>
-		!(function(e, t, n, s, u, a) {
-			e.twq ||
-				((s = e.twq =
-						function() {
-							s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
-						}),
-					(s.version = '1.1'),
-					(s.queue = []),
-					(u = t.createElement(n)),
-					(u.async = !0),
-					(u.src = 'https://static.ads-twitter.com/uwt.js'),
-					(a = t.getElementsByTagName(n)[0]),
-					a.parentNode.insertBefore(u, a));
-		})(window, document, 'script');
-		twq('config', 'oiwln');
-	</script>
-	<!-- End Twitter conversion tracking base code -->
-</head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__left">
+            <a href="index.html" class="header__logo"
+              ><img src="img/logo.png" alt="Logo Icon"
+            /></a>
+            <div class="header__menu menu">
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="index.html" class="menu__link active">Home</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="ai-enabled-token.html" class="menu__link">Token</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="research-and-analysis.html" class="menu__link"
+                      >Research</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a href="tranding-tools.html" class="menu__link"
+                      >Trading Tools</a
+                    >
+                  </li>
+                </ul>
+                <div class="menu__social social-menu">
+                  <a
+                    target="_blank"
+                    href="https://t.me/jarviserc"
+                    class="social-menu__item _icon-telegram"></a>
+                  <a
+                    target="_blank"
+                    href="https://x.com/Jarviserc"
+                    class="social-menu__item _icon-twitter"></a>
+                  <a
+                    target="_blank"
+                    href="https://jarvis-documentations.gitbook.io/jarvis-documentations/"
+                    class="social-menu__item _icon-github"></a>
+                  <a
+                    target="_blank"
+                    href="https://t.me/jarviserc_bot"
+                    class="social-menu__item _icon-unknown"></a>
+                  <a
+                    href="mailto:team@jarviserc.ai"
+                    class="social-menu__item _icon-mail-1"></a>
+                </div>
+              </nav>
+              <button type="button" class="menu__icon icon-menu">
+                <span></span>
+              </button>
+            </div>
+          </div>
+          <div class="header__right">
+            <a
+              target="_blank"
+              href="https://t.me/jarviserc"
+              class="header__button button"
+              ><span>Join Us</span></a
+            >
+          </div>
+        </div>
+      </header>
 
-<body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="header__container">
-				<div class="header__left">
-					<a href="index.html" class="header__logo"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Logo Icon" /></picture></a>
-					<div class="header__menu menu">
-						<nav class="menu__body">
-							<ul class="menu__list">
-								<li class="menu__item">
-									<a href="index.html" class="menu__link active">Home</a>
-								</li>
-								<li class="menu__item">
-									<a href="index.html#page-token" class="menu__link">Token</a>
-								</li>
-								<li class="menu__item">
-									<a target="_blank" href="https://t.me/JarvisSupportGroup" class="menu__link">Help</a>
-								</li>
-								<li class="menu__item">
-									<a target="_blank" href="https://t.me/jarviserc_bot" class="menu__link">Assistant</a>
-								</li>
-							</ul>
-							<div class="menu__social social-menu">
-								<a target="_blank" href="https://t.me/jarviserc" class="social-menu__item _icon-telegram"></a>
-								<a target="_blank" href="https://x.com/Jarviserc" class="social-menu__item _icon-twitter"></a>
-								<a target="_blank" href="https://jarvis-documentations.gitbook.io/jarvis-documentations/" class="social-menu__item _icon-github"></a>
-								<a target="_blank" href="https://t.me/jarviserc_bot" class="social-menu__item _icon-unknown"></a>
-								<a href="mailto:team@jarviserc.ai" class="social-menu__item _icon-mail-1"></a>
-							</div>
-						</nav>
-						<button type="button" class="menu__icon icon-menu">
-							<span></span>
-						</button>
-					</div>
-				</div>
-				<div class="header__right">
-					<a target="_blank" href="https://t.me/jarviserc" class="header__button button"><span>Join Us</span></a>
-				</div>
-			</div>
-		</header>
-
-		<main class="page">
-			<section class="page__hero hero">
-				<div class="hero__container">
-					<div class="hero__content content-hero">
-						<h1 class="content-hero__title">
-							<span>Jarvis: </span><span>AI Powered <br />
-								<span class="no-wrap">Assistant <span>_</span></span></span>
-						</h1>
-						<div class="content-hero__text">
-							Price Predictions, Token Analysis & Trading Tools
-						</div>
-						<div class="content-hero__actions">
-							<a target="_blank" href="https://t.me/jarviserc_bot" class="content-hero__action content-hero__action--white"><span>Activate Jarvis</span></a>
-							<a target="_blank" href="https://jarvis-documentations.gitbook.io/jarvis-documentations/" class="content-hero__action content-hero__action--black"><span>Jarvis Handbook</span></a>
-						</div>
-					</div>
-					<div data-da=".hero__content, 991.98, 1" class="hero__image image-hero">
-						<div class="image-hero__image">
-							<picture><source srcset="img/hero/main.webp" type="image/webp"><img src="img/hero/main.png" alt="Main Image" /></picture>
-						</div>
-						<!-- <div class="image-hero__decor-item image-hero__decor-item--1">
-                <img
-                  data-prlx-mouse
-                  data-prlx-dyr
-                  src="img/decor/01.png"
-                  alt="Decor Item" />
+      <main class="page">
+        <section class="page__hero hero">
+          <div class="hero__container">
+            <div class="hero__content content-hero">
+              <h1 class="content-hero__title">
+                <span>Jarvis: </span
+                ><span
+                  >AI Powered <br />
+                  <span class="no-wrap">Assistant <span>_</span></span></span
+                >
+              </h1>
+              <div class="content-hero__text">
+                Price Predictions, Token Analysis & Trading Tools
               </div>
-              <div class="image-hero__decor-item image-hero__decor-item--3">
-                <img
-                  data-prlx-mouse
-                  data-prlx-dxr
-                  src="img/decor/03.png"
-                  alt="Decor Item" />
-              </div> -->
-						<div class="image-hero__decor-item image-hero__decor-item--4"></div>
-					</div>
-				</div>
-			</section>
-			<div class="page__info info">
-				<div class="info__container">
-					<div data-watch data-watch-threshold="0.7" data-watch-once class="info__items">
-						<div class="info__item item-info">
-							<div class="item-info__counter">0.88</div>
-							<div class="item-info__name">Model F1 Score</div>
-						</div>
-						<div class="info__item item-info">
-							<div class="item-info__counter">67.3%</div>
-							<div class="item-info__name">Prediction Accuracy</div>
-						</div>
-						<div class="info__item item-info">
-							<div class="item-info__counter">87.2K</div>
-							<div class="item-info__name">Total Volume</div>
-						</div>
-						<div class="info__item item-info">
-							<div class="item-info__counter">82</div>
-							<div class="item-info__name">Jarvis Users</div>
-						</div>
-					</div>
-					<div class="info__decor-item info__decor-item--1">
-						<picture><source srcset="img/decor/04.webp" type="image/webp"><img data-prlx-mouse src="img/decor/04.png" alt="Decor Item" /></picture>
-					</div>
-				</div>
-			</div>
-			<section id="page-suite" class="page__suite suite">
-				<div class="suite__container">
-					<div data-watch data-watch-threshold="0.8" data-watch-once class="suite__header header-suite">
-						<div class="header-suite__label label">
-							<span>Allowing AI to Power Your DeFi Endeavors</span>
-						</div>
-						<h2 class="header-suite__title title">Suite of Engineering</h2>
-						<div class="header-suite__text text">
-							<p>
-								Decentralized Finance is a wild world. Jarvis’s innovative
-								suite of tools is here to give you the edge you need.
-							</p>
-						</div>
-					</div>
-					<div data-watch data-watch-threshold="0.5" data-watch-once class="suite__items items-suite">
-						<div class="items-suite__row">
-							<div data-watch data-watch-threshold="0.5" data-watch-once class="items-suite__item item-suite">
-								<div class="item-suite__top">
-									<div class="item-suite__label">
-										ML powered token projection
-									</div>
-									<h3 class="item-suite__title">Price Predictions</h3>
-								</div>
-								<a href="ai-enabled-token.html" class="item-suite__button learn-more"><span>Learn More</span><span class="_icon-arrow1"></span></a>
-								<div class="item-suite__image">
-									<picture><source srcset="img/suite/01.webp" type="image/webp"><img src="img/suite/01.png" alt="Image" /></picture>
-								</div>
-							</div>
-							<div class="items-suite__decor">
-								<div class="items-suite__decor-item items-suite__decor-item--1">
-									<picture><source srcset="img/suite/04.webp" type="image/webp"><img data-prlx-mouse data-prlx-dxr data-prlx-cx="150" data-prlx-cy="150" src="img/suite/04.png" alt="Image" /></picture>
-								</div>
-								<!-- <div
-                    class="items-suite__decor-item items-suite__decor-item--2">
+              <div class="content-hero__actions">
+                <a
+                  target="_blank"
+                  href="https://t.me/jarviserc_bot"
+                  class="content-hero__action content-hero__action--white"
+                  ><span>Activate Jarvis</span></a
+                >
+                <a
+                  target="_blank"
+                  href="https://jarvis-documentations.gitbook.io/jarvis-documentations/"
+                  class="content-hero__action content-hero__action--black"
+                  ><span>Jarvis Handbook</span></a
+                >
+              </div>
+            </div>
+            <div
+              data-da=".hero__content, 991.98, 1"
+              class="hero__image image-hero">
+              <div class="image-hero__image">
+                <img src="img/hero/main.png" alt="Main Image" />
+              </div>
+              <div
+                class="image-hero__decor-item image-hero__decor-item--4"></div>
+            </div>
+          </div>
+        </section>
+        <div class="page__info info">
+          <div class="info__container">
+            <div
+              data-watch
+              data-watch-threshold="0.7"
+              data-watch-once
+              class="info__items">
+              <div class="info__item item-info">
+                <div class="item-info__counter">0.88</div>
+                <div class="item-info__name">Model F1 Score</div>
+              </div>
+              <div class="info__item item-info">
+                <div class="item-info__counter">67.3%</div>
+                <div class="item-info__name">Prediction Accuracy</div>
+              </div>
+              <div class="info__item item-info">
+                <div class="item-info__counter">87.2K</div>
+                <div class="item-info__name">Total Volume</div>
+              </div>
+              <div class="info__item item-info">
+                <div class="item-info__counter">82</div>
+                <div class="item-info__name">Jarvis Users</div>
+              </div>
+            </div>
+            <div class="info__decor-item info__decor-item--1">
+              <img data-prlx-mouse src="img/decor/04.png" alt="Decor Item" />
+            </div>
+          </div>
+        </div>
+        <section id="page-suite" class="page__suite suite">
+          <div class="suite__container">
+            <div
+              data-watch
+              data-watch-threshold="0.8"
+              data-watch-once
+              class="suite__header header-suite">
+              <div class="header-suite__label label">
+                <span>Allowing AI to Power Your DeFi Endeavors</span>
+              </div>
+              <h2 class="header-suite__title title">Suite of Engineering</h2>
+              <div class="header-suite__text text">
+                <p>
+                  Decentralized Finance is a wild world. Jarvis’s innovative
+                  suite of tools is here to give you the edge you need.
+                </p>
+              </div>
+            </div>
+            <div
+              data-watch
+              data-watch-threshold="0.5"
+              data-watch-once
+              class="suite__items items-suite">
+              <div class="items-suite__row">
+                <div
+                  data-watch
+                  data-watch-threshold="0.5"
+                  data-watch-once
+                  class="items-suite__item item-suite">
+                  <div class="item-suite__top">
+                    <div class="item-suite__label">
+                      ML powered token projection
+                    </div>
+                    <h3 class="item-suite__title">Price Predictions</h3>
+                  </div>
+                  <a
+                    href="ai-enabled-token.html"
+                    class="item-suite__button learn-more"
+                    ><span>Learn More</span><span class="_icon-arrow1"></span
+                  ></a>
+                  <div class="item-suite__image">
+                    <img src="img/suite/01.png" alt="Image" />
+                  </div>
+                </div>
+                <div class="items-suite__decor">
+                  <div
+                    class="items-suite__decor-item items-suite__decor-item--1">
                     <img
                       data-prlx-mouse
                       data-prlx-dxr
-                      data-prlx-dyr
-                      data-prlx-cx="50"
-                      data-prlx-cy="50"
-                      src="img/suite/05.png"
+                      data-prlx-cx="150"
+                      data-prlx-cy="150"
+                      src="img/suite/04.png"
                       alt="Image" />
                   </div>
-                  <div
-                    class="items-suite__decor-item items-suite__decor-item--3">
-                    <img
-                      data-prlx-mouse
-                      data-prlx-cx="350"
-                      data-prlx-cy="350"
-                      src="img/suite/06.png"
-                      alt="Image" />
-                  </div> -->
-							</div>
-						</div>
-						<div class="items-suite__row">
-							<div data-watch data-watch-threshold="0.5" data-watch-once class="items-suite__item item-suite">
-								<div class="item-suite__top">
-									<div class="item-suite__label">
-										AI assisted trading tools
-									</div>
-									<h3 class="item-suite__title">
-										Buy, Sell, & Trade with Jarvis
-									</h3>
-								</div>
-								<a href="tranding-tools.html" class="item-suite__button learn-more"><span>Learn More</span><span class="_icon-arrow1"></span></a>
-								<div class="item-suite__image">
-									<picture><source srcset="img/suite/02.webp" type="image/webp"><img src="img/suite/02.png" alt="Image" /></picture>
-								</div>
-							</div>
-							<div data-watch data-watch-threshold="0.5" data-watch-once class="items-suite__item item-suite">
-								<div class="item-suite__top">
-									<div class="item-suite__label">
-										On chain & off chain data
-									</div>
-									<h3 class="item-suite__title">Token Analysis</h3>
-								</div>
-								<a href="research-and-analysis.html" class="item-suite__button learn-more"><span>Learn More</span><span class="_icon-arrow1"></span></a>
-								<div class="item-suite__image">
-									<picture><source srcset="img/suite/03.webp" type="image/webp"><img src="img/suite/03.png" alt="Image" /></picture>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="page-token" class="page__token token">
-				<div class="token__container">
-					<h2 data-watch data-watch-threshold="0.8" data-watch-once class="token__title title">
-						ERC Token & Revenue Divisions
-					</h2>
-					<div class="token__body">
-						<div data-watch data-watch-threshold="0.5" data-watch-once class="token__items">
-							<div class="token__item">
-								<h3 class="token__item-title">Jarvis</h3>
-								<div class="token__item-text">Name/Ticker</div>
-							</div>
-							<div class="token__item">
-								<h3 class="token__item-title">1 Million</h3>
-								<div class="token__item-text">Total Supply</div>
-							</div>
-							<div class="token__item">
-								<h3 class="token__item-title">5%</h3>
-								<div class="token__item-text">Buy/Sell Fee</div>
-							</div>
-						</div>
-						<div data-watch data-watch-threshold="0.8" data-watch-once class="token__bottom">
-							<div class="token__smart">
-								<span>Smart Contract</span>
-								<span>[ERC20]</span>
-							</div>
-							<div class="token__field">0x000000000000000000000000000</div>
-							<button class="token__button">
-								<span>Copy</span><span class="_icon-copy"></span>
-							</button>
-						</div>
-					</div>
-					<!-- <div class="token__decor-item token__decor-item--1">
-              <img
-                data-prlx-mouse
-                data-prlx-dxr
-                data-prlx-cx="150"
-                data-prlx-cy="150"
-                src="img/token/01.png"
-                alt="Decor Image" />
+                </div>
+              </div>
+              <div class="items-suite__row">
+                <div
+                  data-watch
+                  data-watch-threshold="0.5"
+                  data-watch-once
+                  class="items-suite__item item-suite">
+                  <div class="item-suite__top">
+                    <div class="item-suite__label">
+                      AI assisted trading tools
+                    </div>
+                    <h3 class="item-suite__title">
+                      Buy, Sell, & Trade with Jarvis
+                    </h3>
+                  </div>
+                  <a
+                    href="tranding-tools.html"
+                    class="item-suite__button learn-more"
+                    ><span>Learn More</span><span class="_icon-arrow1"></span
+                  ></a>
+                  <div class="item-suite__image">
+                    <img src="img/suite/02.png" alt="Image" />
+                  </div>
+                </div>
+                <div
+                  data-watch
+                  data-watch-threshold="0.5"
+                  data-watch-once
+                  class="items-suite__item item-suite">
+                  <div class="item-suite__top">
+                    <div class="item-suite__label">
+                      On chain & off chain data
+                    </div>
+                    <h3 class="item-suite__title">Token Analysis</h3>
+                  </div>
+                  <a
+                    href="research-and-analysis.html"
+                    class="item-suite__button learn-more"
+                    ><span>Learn More</span><span class="_icon-arrow1"></span
+                  ></a>
+                  <div class="item-suite__image">
+                    <img src="img/suite/03.png" alt="Image" />
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="token__decor-item token__decor-item--2">
-              <img
-                data-prlx-mouse
-                data-prlx-dyr
-                data-prlx-cx="150"
-                data-prlx-cy="150"
-                src="img/token/02.png"
-                alt="Decor Image" />
-            </div> -->
-				</div>
-			</section>
-			<div class="page__distributed distributed">
-				<div class="distributed__container">
-					<div data-watch data-watch-threshold="0.5" data-watch-once class="distributed__items">
-						<div data-watch data-watch-threshold="0.5" data-watch-once class="distributed__item item-distributed">
-							<h3 class="item-distributed__title">Token Tax Share</h3>
-							<div class="item-distributed__info">
-								<div class="item-distributed__percent">10%</div>
-								<div class="item-distributed__text">
-									Distributed Proportionally
-								</div>
-							</div>
-							<a target="_blank" href="https://jarvis-documentations.gitbook.io/jarvis-documentations/" class="item-distributed__button learn-more"><span>learn more</span><span class="_icon-arrow1"></span></a>
-							<div class="item-distributed__image">
-								<picture><source srcset="img/distributed/01.webp" type="image/webp"><img src="img/distributed/01.png" alt="Image" /></picture>
-							</div>
-						</div>
-						<div data-watch data-watch-threshold="0.5" data-watch-once class="distributed__item item-distributed">
-							<h3 class="item-distributed__title">Trading Fees</h3>
-							<div class="item-distributed__info">
-								<div class="item-distributed__percent">100%</div>
-								<div class="item-distributed__text">
-									Distributed Proportionally
-								</div>
-							</div>
-							<a target="_blank" href="https://jarvis-documentations.gitbook.io/jarvis-documentations/" class="item-distributed__button learn-more"><span>learn more</span><span class="_icon-arrow1"></span></a>
-							<div class="item-distributed__image">
-								<picture><source srcset="img/distributed/02.webp" type="image/webp"><img src="img/distributed/02.png" alt="Image" /></picture>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-		<footer class="footer">
-			<div class="footer__container">
-				<div class="footer__top">
-					<div class="footer__header">
-						<a href="#" class="footer__logo">
-							<picture><source srcset="img/logo-footer.webp" type="image/webp"><img src="img/logo-footer.png" alt="Logo Icon" /></picture>
-							<span>jarvis _ </span>
-						</a>
-						<div class="footer__social social-footer">
-							<a target="_blank" href="https://t.me/jarviserc" class="social-footer__item _icon-telegram"></a>
-							<a target="_blank" href="https://x.com/Jarviserc" class="social-footer__item _icon-twitter"></a>
-							<a target="_blank" href="https://jarvis-documentations.gitbook.io/jarvis-documentations/" class="social-footer__item _icon-github"></a>
-							<!-- <a
-            target="_blank"
-            href="https://t.me/jarviserc_bot"
-            class="social-footer__item _icon-unknown"></a> -->
-						</div>
-					</div>
-					<div class="footer__body">
-						<div class="footer__column">
-							<h4 class="footer__column-title">
-								<a href="index.html">Home</a>
-							</h4>
-							<ul class="footer__column-list">
-								<li class="footer__column-item">
-									<a href="index.html#page-suite" class="footer__column-link">Suite of Engineering</a>
-								</li>
-								<li class="footer__column-item">
-									<a href="index.html#page-token" class="footer__column-link">ERC Token & Revenue Divisions</a>
-								</li>
-							</ul>
-						</div>
-						<div class="footer__column">
-							<h4 class="footer__column-title">
-								<a href="index.html#page-suite">Suite of Engineering</a>
-							</h4>
-							<ul class="footer__column-list">
-								<li class="footer__column-item">
-									<a href="ai-enabled-token.html" class="footer__column-link">Price Predictions</a>
-								</li>
-								<li class="footer__column-item">
-									<a href="tranding-tools.html" class="footer__column-link">Buy, Sell, & Trade</a>
-								</li>
-								<li class="footer__column-item">
-									<a href="research-and-analysis.html" class="footer__column-link">Token Analysis</a>
-								</li>
-							</ul>
-						</div>
-						<div class="footer__column">
-							<h4 class="footer__column-title"><a href="#">About</a></h4>
-							<ul class="footer__column-list">
-								<li class="footer__column-item">
-									<a href="#" class="footer__column-link">Terms of Conditions</a>
-								</li>
-								<li class="footer__column-item">
-									<a href="#" class="footer__column-link">Privacy Policy</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="footer__bottom">
-					<div class="footer__bottom-body">
-						<a href="mailto:team@jarviserc.ai" class="footer__bottom-email"><span>team@jarviserc.ai</span><img src="img/mail.svg" alt="Email Icon" /></a>
-						<div class="footer__bottom-designed-by">
-							<a href="https://t.me/osnovoco" class="">Design by Osnovo Co. </a>
-						</div>
-						<div class="footer__bottom-copy">
-							Jarvis © 2024. All Right Reserved
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-
-	</div>
-	<script src="js/app.min.js?_v=20240115154550"></script>
-</body>
-
+          </div>
+        </section>
+        <section id="page-token" class="page__token token">
+          <div class="token__container">
+            <h2
+              data-watch
+              data-watch-threshold="0.8"
+              data-watch-once
+              class="token__title title">
+              ERC Token & Revenue Divisions
+            </h2>
+            <div class="token__body">
+              <div
+                data-watch
+                data-watch-threshold="0.5"
+                data-watch-once
+                class="token__items">
+                <div class="token__item">
+                  <h3 class="token__item-title">Jarvis</h3>
+                  <div class="token__item-text">Name/Ticker</div>
+                </div>
+                <div class="token__item">
+                  <h3 class="token__item-title">1 Million</h3>
+                  <div class="token__item-text">Total Supply</div>
+                </div>
+                <div class="token__item">
+                  <h3 class="token__item-title">5%</h3>
+                  <div class="token__item-text">Buy/Sell Fee</div>
+                </div>
+              </div>
+              <div
+                data-watch
+                data-watch-threshold="0.8"
+                data-watch-once
+                class="token__bottom">
+                <div class="token__smart">
+                  <span>Smart Contract</span>
+                  <span>[ERC20]</span>
+                </div>
+                <div class="token__field">0x000000000000000000000000000</div>
+                <button class="token__button">
+                  <span>Copy</span><span class="_icon-copy"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="page__distributed distributed">
+          <div class="distributed__container">
+            <div
+              data-watch
+              data-watch-threshold="0.5"
+              data-watch-once
+              class="distributed__items">
+              <div
+                data-watch
+                data-watch-threshold="0.5"
+                data-watch-once
+                class="distributed__item item-distributed">
+                <h3 class="item-distributed__title">Token Tax Share</h3>
+                <div class="item-distributed__info">
+                  <div class="item-distributed__percent">10%</div>
+                  <div class="item-distributed__text">
+                    Distributed Proportionally
+                  </div>
+                </div>
+                <a
+                  target="_blank"
+                  href="https://jarvis-documentations.gitbook.io/jarvis-documentations/"
+                  class="item-distributed__button learn-more"
+                  ><span>learn more</span><span class="_icon-arrow1"></span
+                ></a>
+                <div class="item-distributed__image">
+                  <img src="img/distributed/01.png" alt="Image" />
+                </div>
+              </div>
+              <div
+                data-watch
+                data-watch-threshold="0.5"
+                data-watch-once
+                class="distributed__item item-distributed">
+                <h3 class="item-distributed__title">Trading Fees</h3>
+                <div class="item-distributed__info">
+                  <div class="item-distributed__percent">100%</div>
+                  <div class="item-distributed__text">
+                    Distributed Proportionally
+                  </div>
+                </div>
+                <a
+                  target="_blank"
+                  href="https://jarvis-documentations.gitbook.io/jarvis-documentations/"
+                  class="item-distributed__button learn-more"
+                  ><span>learn more</span><span class="_icon-arrow1"></span
+                ></a>
+                <div class="item-distributed__image">
+                  <img src="img/distributed/02.png" alt="Image" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__top">
+            <div class="footer__header">
+              <a href="#" class="footer__logo">
+                <img src="img/logo.png" alt="Logo Icon" />
+                <span>jarvis _ </span>
+              </a>
+              <div class="footer__social social-footer">
+                <a
+                  target="_blank"
+                  href="https://t.me/jarviserc"
+                  class="social-footer__item _icon-telegram"></a>
+                <a
+                  target="_blank"
+                  href="https://x.com/Jarviserc"
+                  class="social-footer__item _icon-twitter"></a>
+                <a
+                  target="_blank"
+                  href="https://jarvis-documentations.gitbook.io/jarvis-documentations/"
+                  class="social-footer__item _icon-github"></a>
+              </div>
+            </div>
+            <div class="footer__body">
+              <div class="footer__column">
+                <h4 class="footer__column-title">
+                  <a href="index.html">Home</a>
+                </h4>
+                <ul class="footer__column-list">
+                  <li class="footer__column-item">
+                    <a href="index.html#page-suite" class="footer__column-link"
+                      >Suite of Engineering</a
+                    >
+                  </li>
+                  <li class="footer__column-item">
+                    <a href="index.html#page-token" class="footer__column-link"
+                      >ERC Token & Revenue Divisions</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <h4 class="footer__column-title">
+                  <a href="index.html#page-suite">Suite of Engineering</a>
+                </h4>
+                <ul class="footer__column-list">
+                  <li class="footer__column-item">
+                    <a href="ai-enabled-token.html" class="footer__column-link"
+                      >Price Predictions</a
+                    >
+                  </li>
+                  <li class="footer__column-item">
+                    <a href="tranding-tools.html" class="footer__column-link"
+                      >Buy, Sell, & Trade</a
+                    >
+                  </li>
+                  <li class="footer__column-item">
+                    <a
+                      href="research-and-analysis.html"
+                      class="footer__column-link"
+                      >Token Analysis</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <h4 class="footer__column-title"><a href="#">About</a></h4>
+                <ul class="footer__column-list">
+                  <li class="footer__column-item">
+                    <a href="#" class="footer__column-link"
+                      >Terms of Conditions</a
+                    >
+                  </li>
+                  <li class="footer__column-item">
+                    <a href="#" class="footer__column-link">Privacy Policy</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__bottom-body">
+              <a href="mailto:team@jarviserc.ai" class="footer__bottom-email"
+                ><span>team@jarviserc.ai</span
+                ><img src="img/mail.svg" alt="Email Icon"
+              /></a>
+              <div class="footer__bottom-designed-by">
+                Made with ❤ by
+                <a
+                  target="_blank"
+                  href="https://gamarjkeee.github.io/main/index.html"
+                  >Ruslan Musienko</a
+                >
+              </div>
+              <div class="footer__bottom-copy">
+                Jarvis © 2024. All Right Reserved
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/app.min.js?_v=20240120101241"></script>
+  </body>
 </html>
