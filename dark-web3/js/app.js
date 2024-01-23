@@ -14,6 +14,13 @@
             document.documentElement.classList.add(className);
         }));
     }
+    function addLoadedClass() {
+        if (!document.documentElement.classList.contains("loading")) window.addEventListener("load", (function() {
+            setTimeout((function() {
+                document.documentElement.classList.add("loaded");
+            }), 0);
+        }));
+    }
     let bodyLockStatus = true;
     let bodyUnlock = (delay = 500) => {
         let body = document.querySelector("body");
@@ -3442,6 +3449,12 @@
     }), 0);
     const phrases = [ "INITIALIZING DARK WEB3...\n", "DELETING COOKIES\n", "LOADING: KIT ARENA\n", "LOADING: PAMP ARENA\n", "LOADING: PRESS RELEASE CLUB\n", "JOINING THE SERVER...\n", "JOINED ANALYTICAL CENTER\n", "SECRET MARKET>>>\n", "Insider Library>>>\n", "Crypto Soundromat>>>\n", "Scam Laboratory>>>\n", ">>>\n", ">>>\n", ">>>\n", "WELCOME" ];
     const typeText = document.getElementById("text");
+    const startSection = document.querySelector(".page__start");
+    const header = document.querySelector(".header");
+    const heroBack = document.querySelector(".main-section__background img");
+    const heroTitle = document.querySelector(".main-section__info-title");
+    const heroButtons = document.querySelectorAll(".main-section__button");
+    const joinUs = document.querySelector(".main-section__join");
     let phraseIndex = 0;
     let letterIndex = 0;
     function type() {
@@ -3452,10 +3465,53 @@
         } else {
             letterIndex = 0;
             phraseIndex++;
-            if (phraseIndex < phrases.length) setTimeout(type, 500 / 3);
+            if (phraseIndex < phrases.length) setTimeout(type, 150 / 3);
         }
     }
-    type();
+    const typeLabel = document.querySelector(".main-section__info-label");
+    const textHero = "FORUM OF CRYPTO ELITES";
+    let letterIndex2 = 0;
+    function type2() {
+        if (letterIndex2 < textHero.length) {
+            typeLabel.textContent += textHero.charAt(letterIndex2);
+            letterIndex2++;
+            setTimeout(type2, 75 / 3);
+        }
+    }
+    let letterIndex3 = 0;
+    const infoText = "is a secret forum where the fate of bitcoin and other cryptocurrencies is decided, where vast fortunes are moved with the click of a mouse.";
+    const placeForHeroText = document.getElementById("info-text");
+    function type3() {
+        if (letterIndex3 < infoText.length) {
+            placeForHeroText.textContent += infoText.charAt(letterIndex3);
+            letterIndex3++;
+            setTimeout(type3, 50 / 3);
+        }
+    }
+    if (document.documentElement.classList.contains("main")) window.addEventListener("load", (() => {
+        setTimeout((() => {
+            type();
+        }), 1e3);
+        setTimeout((() => {
+            startSection.classList.add("hidden");
+            heroBack.style.animation = "back-start 1.6s ease forwards";
+            heroTitle.style.animation = "title-start 1.6s ease 1.6s forwards";
+            placeForHeroText.parentElement.style.animation = "opacity 0.3s ease 4s forwards";
+            heroButtons.forEach(((heroButton, index) => {
+                if (index === 3) heroButton.style.animation = `opacity 0.6s ease ${0 + 7}s forwards`; else if (index === 4 || index === 2 || index === 5) heroButton.style.animation = `opacity 0.6s ease ${.6 + 7}s forwards`; else heroButton.style.animation = `opacity 0.6s ease ${1.2 + 7}s forwards`;
+            }));
+            header.style.animation = "opacity 0.45s ease 9s forwards";
+            joinUs.style.animation = "opacity 0.45s ease 9s forwards";
+        }), 7e3);
+        letterIndex = 0;
+        setTimeout((() => {
+            type2();
+        }), 10200);
+        letterIndex = 0;
+        setTimeout((() => {
+            type3();
+        }), 11600);
+    }));
     const enButton = document.getElementById("en");
     const ruButton = document.getElementById("ru");
     enButton.addEventListener("click", (() => {
@@ -3468,4 +3524,5 @@
     }));
     window["FLS"] = false;
     isWebp();
+    addLoadedClass();
 })();
