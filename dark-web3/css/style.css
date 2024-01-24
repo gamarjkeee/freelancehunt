@@ -1433,6 +1433,10 @@ body::after {
   outline: 0.0625rem solid #0bfb01;
 }
 
+.form__text {
+  color: #ffd700;
+}
+
 .swiper {
   overflow: hidden;
 }
