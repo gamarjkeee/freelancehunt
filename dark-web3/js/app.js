@@ -3461,11 +3461,11 @@
         if (letterIndex < phrases[phraseIndex].length) {
             typeText.textContent += phrases[phraseIndex].charAt(letterIndex);
             letterIndex++;
-            setTimeout(type, 50 / 3);
+            setTimeout(type, 25 / 3);
         } else {
             letterIndex = 0;
             phraseIndex++;
-            if (phraseIndex < phrases.length) setTimeout(type, 150 / 3);
+            if (phraseIndex < phrases.length) setTimeout(type, 75 / 3);
         }
     }
     const typeLabel = document.querySelector(".main-section__info-label");
@@ -3479,7 +3479,7 @@
         }
     }
     let letterIndex3 = 0;
-    const infoText = "is a secret forum where the fate of bitcoin and other cryptocurrencies is decided, where vast fortunes are moved with the click of a mouse.";
+    const infoText = "- is a secret forum where the fate of bitcoin and other cryptocurrencies is decided, where vast fortunes are moved with the click of a mouse.";
     const placeForHeroText = document.getElementById("info-text");
     function type3() {
         if (letterIndex3 < infoText.length) {
@@ -3498,19 +3498,19 @@
             heroTitle.style.animation = "title-start 1.6s ease 1.6s forwards";
             placeForHeroText.parentElement.style.animation = "opacity 0.3s ease 4s forwards";
             heroButtons.forEach(((heroButton, index) => {
-                if (index === 3) heroButton.style.animation = `opacity 0.6s ease ${0 + 7}s forwards`; else if (index === 4 || index === 2 || index === 5) heroButton.style.animation = `opacity 0.6s ease ${.6 + 7}s forwards`; else heroButton.style.animation = `opacity 0.6s ease ${1.2 + 7}s forwards`;
+                if (index === 0) heroButton.style.animation = `opacity 0.6s ease ${0 + 7}s forwards`; else if (index === 4 || index === 2 || index === 5) heroButton.style.animation = `opacity 0.6s ease ${.6 + 7}s forwards`; else heroButton.style.animation = `opacity 0.6s ease ${1.2 + 7}s forwards`;
             }));
             header.style.animation = "opacity 0.45s ease 9s forwards";
             joinUs.style.animation = "opacity 0.45s ease 9s forwards";
-        }), 7e3);
+        }), 4400);
         letterIndex = 0;
         setTimeout((() => {
             type2();
-        }), 10200);
+        }), 7600);
         letterIndex = 0;
         setTimeout((() => {
             type3();
-        }), 11600);
+        }), 9e3);
     }));
     const enButton = document.getElementById("en");
     const ruButton = document.getElementById("ru");
