@@ -300,15 +300,27 @@ body::after {
 
 #popup-attention .popup__title span,
 #popup-attention-ru .popup__title span {
+  position: relative;
   color: #ffd700;
+  margin-left: 20%;
 }
 
-#popup-attention .popup__title img,
-#popup-attention-ru .popup__title img {
-  -webkit-transform: translateY(5%);
-      -ms-transform: translateY(5%);
-          transform: translateY(5%);
-  max-width: 5rem;
+.no-webp #popup-attention .popup__title span::before, .no-webp #popup-attention-ru .popup__title span::before{
+  background-image: url("../img/attention.png"); }
+
+#popup-attention .popup__title span::before,
+#popup-attention-ru .popup__title span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -0.625rem;
+  height: 100%;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  aspect-ratio: 100/88;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #popup-attention .popup__text,
@@ -445,6 +457,7 @@ body::after {
 }
 
 .title {
+  font-family: "supernation2";
   margin-bottom: 0.25rem;
 }
 
@@ -1569,6 +1582,10 @@ body::after {
     font-size: 3.3125rem;
   }
 
+  .ru .main-section__info-label {
+    font-size: 3.0625rem;
+  }
+
   .main-section__info-text {
     font-size: 1.625rem;
   }
@@ -1689,6 +1706,10 @@ body::after {
     font-size: 1.375rem;
   }
 
+  .ru .main-section__info-label {
+    font-size: 1.375rem;
+  }
+
   .main-section__info-text {
     font-size: 1.125rem;
   }
@@ -1751,11 +1772,6 @@ body::after {
 }
 
 @media (max-width: 47.99875em) {
-  #popup-attention .popup__title img,
-  #popup-attention-ru .popup__title img {
-    width: 3.875rem;
-  }
-
   .page {
     min-height: 100svh;
   }
@@ -1768,11 +1784,6 @@ body::after {
 @media (max-width: 29.99875em) {
   .popup__content {
     padding: 1.875rem 0.9375rem;
-  }
-
-  #popup-attention .popup__title img,
-  #popup-attention-ru .popup__title img {
-    width: 3.125rem;
   }
 
   .button {
@@ -1936,6 +1947,18 @@ body::after {
 @supports not (font-size: clamp( 1.375rem , 0.9875rem  +  1.9375vw , 3.3125rem )) {
     .main-section__info-label {
       font-size: calc(1.375rem + 1.9375 * (100vw - 20rem) / 100);
+    }
+}
+
+@supports (font-size: clamp( 1.375rem , 1.0375rem  +  1.6875vw , 3.0625rem )) {
+    .ru .main-section__info-label {
+      font-size: clamp( 1.375rem , 1.0375rem  +  1.6875vw , 3.0625rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.375rem , 1.0375rem  +  1.6875vw , 3.0625rem )) {
+    .ru .main-section__info-label {
+      font-size: calc(1.375rem + 1.6875 * (100vw - 20rem) / 100);
     }
 }
 
@@ -2285,3 +2308,5 @@ body::after {
     scale: 1;
   }
 }
+
+.webp #popup-attention .popup__title span::before, .webp #popup-attention-ru .popup__title span::before{ background-image: url(../img/attention.webp); }
