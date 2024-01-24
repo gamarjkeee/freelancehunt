@@ -276,7 +276,7 @@ body::after {
       -ms-flex-direction: column;
           flex-direction: column;
   border: 0.0625rem solid #0bfb01;
-  max-width: 38.75rem;
+  max-width: 36.25rem;
 }
 
 #popup-attention .popup__title,
@@ -1552,22 +1552,22 @@ body::after {
 
   #popup-attention .popup__title span,
   #popup-attention-ru .popup__title span {
-    font-size: 5.125rem;
+    font-size: 4.125rem;
   }
 
   .ru #popup-attention .popup__title span,
   .ru #popup-attention-ru .popup__title span {
-    font-size: 4.25rem;
+    font-size: 3.25rem;
   }
 
   #popup-attention .popup__text,
   #popup-attention-ru .popup__text {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .ru #popup-attention .popup__text,
   .ru #popup-attention-ru .popup__text {
-    font-size: 1.125rem;
+    font-size: 0.875rem;
   }
 
   .button span {
@@ -1676,22 +1676,22 @@ body::after {
 
   #popup-attention .popup__title span,
   #popup-attention-ru .popup__title span {
-    font-size: 2.75rem;
+    font-size: 2.25rem;
   }
 
   .ru #popup-attention .popup__title span,
   .ru #popup-attention-ru .popup__title span {
-    font-size: 2.25rem;
+    font-size: 1.625rem;
   }
 
   #popup-attention .popup__text,
   #popup-attention-ru .popup__text {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 
   .ru #popup-attention .popup__text,
   .ru #popup-attention-ru .popup__text {
-    font-size: 0.75rem;
+    font-size: 0.625rem;
   }
 
   .button span {
@@ -1850,59 +1850,59 @@ body::after {
     }
 }
 
-@supports (font-size: clamp( 2.75rem , 2.275rem  +  2.375vw , 5.125rem )) {
+@supports (font-size: clamp( 2.25rem , 1.875rem  +  1.875vw , 4.125rem )) {
     #popup-attention .popup__title span,
     #popup-attention-ru .popup__title span {
-      font-size: clamp( 2.75rem , 2.275rem  +  2.375vw , 5.125rem );
+      font-size: clamp( 2.25rem , 1.875rem  +  1.875vw , 4.125rem );
     }
 }
 
-@supports not (font-size: clamp( 2.75rem , 2.275rem  +  2.375vw , 5.125rem )) {
+@supports not (font-size: clamp( 2.25rem , 1.875rem  +  1.875vw , 4.125rem )) {
     #popup-attention .popup__title span,
     #popup-attention-ru .popup__title span {
-      font-size: calc(2.75rem + 2.375 * (100vw - 20rem) / 100);
+      font-size: calc(2.25rem + 1.875 * (100vw - 20rem) / 100);
     }
 }
 
-@supports (font-size: clamp( 2.25rem , 1.85rem  +  2vw , 4.25rem )) {
+@supports (font-size: clamp( 1.625rem , 1.3rem  +  1.625vw , 3.25rem )) {
     .ru #popup-attention .popup__title span,
     .ru #popup-attention-ru .popup__title span {
-      font-size: clamp( 2.25rem , 1.85rem  +  2vw , 4.25rem );
+      font-size: clamp( 1.625rem , 1.3rem  +  1.625vw , 3.25rem );
     }
 }
 
-@supports not (font-size: clamp( 2.25rem , 1.85rem  +  2vw , 4.25rem )) {
+@supports not (font-size: clamp( 1.625rem , 1.3rem  +  1.625vw , 3.25rem )) {
     .ru #popup-attention .popup__title span,
     .ru #popup-attention-ru .popup__title span {
-      font-size: calc(2.25rem + 2 * (100vw - 20rem) / 100);
+      font-size: calc(1.625rem + 1.625 * (100vw - 20rem) / 100);
     }
 }
 
-@supports (font-size: clamp( 0.875rem , 0.8rem  +  0.375vw , 1.25rem )) {
+@supports (font-size: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem )) {
     #popup-attention .popup__text,
     #popup-attention-ru .popup__text {
-      font-size: clamp( 0.875rem , 0.8rem  +  0.375vw , 1.25rem );
+      font-size: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem );
     }
 }
 
-@supports not (font-size: clamp( 0.875rem , 0.8rem  +  0.375vw , 1.25rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.7rem  +  0.25vw , 1rem )) {
     #popup-attention .popup__text,
     #popup-attention-ru .popup__text {
-      font-size: calc(0.875rem + 0.375 * (100vw - 20rem) / 100);
+      font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 100);
     }
 }
 
-@supports (font-size: clamp( 0.75rem , 0.675rem  +  0.375vw , 1.125rem )) {
+@supports (font-size: clamp( 0.625rem , 0.575rem  +  0.25vw , 0.875rem )) {
     .ru #popup-attention .popup__text,
     .ru #popup-attention-ru .popup__text {
-      font-size: clamp( 0.75rem , 0.675rem  +  0.375vw , 1.125rem );
+      font-size: clamp( 0.625rem , 0.575rem  +  0.25vw , 0.875rem );
     }
 }
 
-@supports not (font-size: clamp( 0.75rem , 0.675rem  +  0.375vw , 1.125rem )) {
+@supports not (font-size: clamp( 0.625rem , 0.575rem  +  0.25vw , 0.875rem )) {
     .ru #popup-attention .popup__text,
     .ru #popup-attention-ru .popup__text {
-      font-size: calc(0.75rem + 0.375 * (100vw - 20rem) / 100);
+      font-size: calc(0.625rem + 0.25 * (100vw - 20rem) / 100);
     }
 }
 
