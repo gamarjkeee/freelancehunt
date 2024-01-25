@@ -213,18 +213,21 @@ body::after {
       -ms-flex-pack: center;
           justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .popup__wrapper.left {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  text-align: left;
 }
 
 .popup__wrapper.right {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  text-align: right;
 }
 
 .popup__content {
@@ -308,7 +311,9 @@ body::after {
 #popup-attention-ru .popup__title span {
   position: relative;
   color: #ffd700;
-  margin-left: 20%;
+  -webkit-transform: translateX(10%);
+      -ms-transform: translateX(10%);
+          transform: translateX(10%);
 }
 
 .no-webp #popup-attention .popup__title span::before, .no-webp #popup-attention-ru .popup__title span::before{
@@ -333,9 +338,9 @@ body::after {
 .ru #popup-attention-ru .popup__title span::before {
   height: 80%;
   top: 50%;
-  -webkit-transform: translateX(-100%) translateY(-47%);
-      -ms-transform: translateX(-100%) translateY(-47%);
-          transform: translateX(-100%) translateY(-47%);
+  -webkit-transform: translateX(-100%) translateY(-50%);
+      -ms-transform: translateX(-100%) translateY(-50%);
+          transform: translateX(-100%) translateY(-50%);
 }
 
 .ru #popup-attention .popup__title span,
@@ -567,7 +572,12 @@ body::after {
 }
 
 .header__audio-button img:nth-child(2) {
+  display: none;
   z-index: 2;
+}
+
+.header__audio-button.play img:nth-child(2) {
+  display: inline-block;
 }
 
 .header__languages {
@@ -737,8 +747,8 @@ body::after {
 }
 
 .loaded.main-ru .page::before {
-  -webkit-animation: page 0s ease 0s forwards;
-          animation: page 0s ease 0s forwards;
+  -webkit-animation: page 1s ease 0.3s forwards;
+          animation: page 1s ease 0.3s forwards;
 }
 
 .page__main-section {
@@ -1164,8 +1174,8 @@ body::after {
   overflow: hidden;
   position: absolute;
   width: 100%;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   aspect-ratio: 1920/1080;
 }
 
@@ -1721,6 +1731,11 @@ body::after {
 }
 
 @media (min-width: 47.99875em) {
+  #popup-attention.popup,
+  #popup-attention-ru.popup {
+    padding: 6.25rem;
+  }
+
   .main-section__background img:nth-child(2) {
     display: none;
     -webkit-animation: none;
@@ -1735,10 +1750,6 @@ body::after {
 
   .ru .page__fariff-palns .button span {
     font-size: 1.625rem;
-  }
-
-  .page__form .button span {
-    font-size: 2.625rem;
   }
 
   .item-fariff-palns__title {
@@ -1825,6 +1836,10 @@ body::after {
     font-size: 2rem;
   }
 
+  .page__form .button span {
+    font-size: 2.625rem;
+  }
+
   .ru .page__form .button span {
     font-size: 1.625rem;
   }
@@ -1907,6 +1922,10 @@ body::after {
 }
 
 @media (max-width: 62em) {
+  .page__fariff-palns .button span {
+    font-size: 1.125rem;
+  }
+
   .main-section__button {
     width: 2rem;
   }
@@ -1927,6 +1946,11 @@ body::after {
 
   .ru .popup__text {
     font-size: 0.875rem;
+  }
+
+  #popup-attention.popup,
+  #popup-attention-ru.popup {
+    padding: 1.25rem;
   }
 
   #popup-attention .popup__title span,
@@ -1961,6 +1985,10 @@ body::after {
     font-size: 0.75rem;
   }
 
+  .page__form .button span {
+    font-size: 1.375rem;
+  }
+
   .ru .page__form .button span {
     font-size: 1rem;
   }
@@ -1978,7 +2006,7 @@ body::after {
   }
 
   .main-section__info-text {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .ru .main-section__info-text {
@@ -1994,19 +2022,31 @@ body::after {
   }
 
   .item-fariff-palns__title {
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
   }
 
   .ru .item-fariff-palns__title {
     font-size: 1.0625rem;
   }
 
+  .item-fariff-palns__item {
+    font-size: 0.875rem;
+  }
+
   .ru .item-fariff-palns__item {
     font-size: 0.75rem;
   }
 
+  .item-fariff-palns__verification-title {
+    font-size: 1.125rem;
+  }
+
   .ru .item-fariff-palns__verification-title {
     font-size: 0.875rem;
+  }
+
+  .item-fariff-palns__verification-item {
+    font-size: 0.75rem;
   }
 
   .ru .item-fariff-palns__verification-item {
@@ -2125,41 +2165,49 @@ body::after {
   .main-section__button--1 {
     bottom: 22%;
     left: 39%;
+    scale: 1;
   }
 
   .main-section__button--2 {
     bottom: 42.5%;
     left: 18%;
+    scale: 0.6;
   }
 
   .main-section__button--3 {
     bottom: 41%;
     left: 28%;
+    scale: 0.6;
   }
 
   .main-section__button--4 {
     bottom: 25%;
     left: 23.5%;
+    scale: 0.8;
   }
 
   .main-section__button--5 {
     bottom: 38.5%;
-    left: 78%;
+    left: 79%;
+    scale: 0.6;
   }
 
   .main-section__button--6 {
     bottom: 27%;
-    left: 63%;
+    left: 63.5%;
+    scale: 0.8;
   }
 
   .main-section__button--7 {
-    bottom: 40%;
+    bottom: 42%;
     left: 55.5%;
+    scale: 0.6;
   }
 
   .main-section__button--8 {
     bottom: 22%;
     left: 83.5%;
+    scale: 0.8;
   }
 
   .fariff-palns__title {
@@ -2173,7 +2221,7 @@ body::after {
 
 @media (max-width: 29.99875em) {
   .popup__content {
-    padding: 1.875rem 0.3125rem;
+    padding: 1.875rem 0.625rem;
   }
 
   .button {
@@ -2332,6 +2380,18 @@ body::after {
     }
 }
 
+@supports (font-size: clamp( 1.375rem , 1.125rem  +  1.25vw , 2.625rem )) {
+    .page__form .button span {
+      font-size: clamp( 1.375rem , 1.125rem  +  1.25vw , 2.625rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.375rem , 1.125rem  +  1.25vw , 2.625rem )) {
+    .page__form .button span {
+      font-size: calc(1.375rem + 1.25 * (100vw - 20rem) / 100);
+    }
+}
+
 @supports (font-size: clamp( 1rem , 0.875rem  +  0.625vw , 1.625rem )) {
     .ru .page__form .button span {
       font-size: clamp( 1rem , 0.875rem  +  0.625vw , 1.625rem );
@@ -2380,15 +2440,15 @@ body::after {
     }
 }
 
-@supports (font-size: clamp( 1rem , 0.875rem  +  0.625vw , 1.625rem )) {
+@supports (font-size: clamp( 0.875rem , 0.725rem  +  0.75vw , 1.625rem )) {
     .main-section__info-text {
-      font-size: clamp( 1rem , 0.875rem  +  0.625vw , 1.625rem );
+      font-size: clamp( 0.875rem , 0.725rem  +  0.75vw , 1.625rem );
     }
 }
 
-@supports not (font-size: clamp( 1rem , 0.875rem  +  0.625vw , 1.625rem )) {
+@supports not (font-size: clamp( 0.875rem , 0.725rem  +  0.75vw , 1.625rem )) {
     .main-section__info-text {
-      font-size: calc(1rem + 0.625 * (100vw - 20rem) / 100);
+      font-size: calc(0.875rem + 0.75 * (100vw - 20rem) / 100);
     }
 }
 
@@ -2573,6 +2633,22 @@ body::after {
 }
 }
 
+@media (min-width: 20em) and (max-width: 47.99875em) {
+@supports (padding: clamp( 1.25rem , -2.3215880173rem  +  17.8579400866vw , 6.25rem )) {
+    #popup-attention.popup,
+    #popup-attention-ru.popup {
+      padding: clamp( 1.25rem , -2.3215880173rem  +  17.8579400866vw , 6.25rem );
+    }
+}
+
+@supports not (padding: clamp( 1.25rem , -2.3215880173rem  +  17.8579400866vw , 6.25rem )) {
+    #popup-attention.popup,
+    #popup-attention-ru.popup {
+      padding: calc(1.25rem + 5 * (100vw - 20rem) / 27.99875);
+    }
+}
+}
+
 @media (min-width: 62em) and (max-width: 112.5em) {
 @supports (font-size: clamp( 1.375rem , -0.1596534653rem  +  2.4752475248vw , 2.625rem )) {
     .page__fariff-palns .button span {
@@ -2586,6 +2662,18 @@ body::after {
     }
 }
 
+@supports (font-size: clamp( 1.125rem , -0.4096534653rem  +  2.4752475248vw , 2.375rem )) {
+    .page__fariff-palns .button span {
+      font-size: clamp( 1.125rem , -0.4096534653rem  +  2.4752475248vw , 2.375rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.125rem , -0.4096534653rem  +  2.4752475248vw , 2.375rem )) {
+    .page__fariff-palns .button span {
+      font-size: calc(1.125rem + 1.25 * (100vw - 62rem) / 50.5);
+    }
+}
+
 @supports (font-size: clamp( 0.875rem , -0.0457920792rem  +  1.4851485149vw , 1.625rem )) {
     .ru .page__fariff-palns .button span {
       font-size: clamp( 0.875rem , -0.0457920792rem  +  1.4851485149vw , 1.625rem );
@@ -2595,18 +2683,6 @@ body::after {
 @supports not (font-size: clamp( 0.875rem , -0.0457920792rem  +  1.4851485149vw , 1.625rem )) {
     .ru .page__fariff-palns .button span {
       font-size: calc(0.875rem + 0.75 * (100vw - 62rem) / 50.5);
-    }
-}
-
-@supports (font-size: clamp( 1.375rem , -0.1596534653rem  +  2.4752475248vw , 2.625rem )) {
-    .page__form .button span {
-      font-size: clamp( 1.375rem , -0.1596534653rem  +  2.4752475248vw , 2.625rem );
-    }
-}
-
-@supports not (font-size: clamp( 1.375rem , -0.1596534653rem  +  2.4752475248vw , 2.625rem )) {
-    .page__form .button span {
-      font-size: calc(1.375rem + 1.25 * (100vw - 62rem) / 50.5);
     }
 }
 
@@ -2720,15 +2796,15 @@ body::after {
     }
 }
 
-@supports (font-size: clamp( 1.0625rem , 0.4374813983rem  +  3.1250930087vw , 2.375rem )) {
+@supports (font-size: clamp( 1.25rem , 0.7142697699rem  +  2.6786511503vw , 2.375rem )) {
     .item-fariff-palns__title {
-      font-size: clamp( 1.0625rem , 0.4374813983rem  +  3.1250930087vw , 2.375rem );
+      font-size: clamp( 1.25rem , 0.7142697699rem  +  2.6786511503vw , 2.375rem );
     }
 }
 
-@supports not (font-size: clamp( 1.0625rem , 0.4374813983rem  +  3.1250930087vw , 2.375rem )) {
+@supports not (font-size: clamp( 1.25rem , 0.7142697699rem  +  2.6786511503vw , 2.375rem )) {
     .item-fariff-palns__title {
-      font-size: calc(1.0625rem + 1.3125 * (100vw - 20rem) / 41.99875);
+      font-size: calc(1.25rem + 1.125 * (100vw - 20rem) / 41.99875);
     }
 }
 
@@ -2744,6 +2820,18 @@ body::after {
     }
 }
 
+@supports (font-size: clamp( 0.875rem , 0.5773720944rem  +  1.488139528vw , 1.5rem )) {
+    .item-fariff-palns__item {
+      font-size: clamp( 0.875rem , 0.5773720944rem  +  1.488139528vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.5773720944rem  +  1.488139528vw , 1.5rem )) {
+    .item-fariff-palns__item {
+      font-size: calc(0.875rem + 0.625 * (100vw - 20rem) / 41.99875);
+    }
+}
+
 @supports (font-size: clamp( 0.75rem , 0.6309488378rem  +  0.5952558112vw , 1rem )) {
     .ru .item-fariff-palns__item {
       font-size: clamp( 0.75rem , 0.6309488378rem  +  0.5952558112vw , 1rem );
@@ -2753,6 +2841,18 @@ body::after {
 @supports not (font-size: clamp( 0.75rem , 0.6309488378rem  +  0.5952558112vw , 1rem )) {
     .ru .item-fariff-palns__item {
       font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 41.99875);
+    }
+}
+
+@supports (font-size: clamp( 1.125rem , 0.9464232566rem  +  0.8928837168vw , 1.5rem )) {
+    .item-fariff-palns__verification-title {
+      font-size: clamp( 1.125rem , 0.9464232566rem  +  0.8928837168vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.125rem , 0.9464232566rem  +  0.8928837168vw , 1.5rem )) {
+    .item-fariff-palns__verification-title {
+      font-size: calc(1.125rem + 0.375 * (100vw - 20rem) / 41.99875);
     }
 }
 
@@ -2768,6 +2868,18 @@ body::after {
     }
 }
 
+@supports (font-size: clamp( 0.75rem , 0.6904744189rem  +  0.2976279056vw , 0.875rem )) {
+    .item-fariff-palns__verification-item {
+      font-size: clamp( 0.75rem , 0.6904744189rem  +  0.2976279056vw , 0.875rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.75rem , 0.6904744189rem  +  0.2976279056vw , 0.875rem )) {
+    .item-fariff-palns__verification-item {
+      font-size: calc(0.75rem + 0.125 * (100vw - 20rem) / 41.99875);
+    }
+}
+
 @supports (font-size: clamp( 0.625rem , 0.5654744189rem  +  0.2976279056vw , 0.75rem )) {
     .ru .item-fariff-palns__verification-item {
       font-size: clamp( 0.625rem , 0.5654744189rem  +  0.2976279056vw , 0.75rem );
@@ -2779,6 +2891,42 @@ body::after {
       font-size: calc(0.625rem + 0.125 * (100vw - 20rem) / 41.99875);
     }
 }
+}
+
+@media (min-width: 47.99875em) and (max-width: 64em) and (min-height: 64em) {
+  .main-section__background {
+    bottom: 12.5rem;
+  }
+
+  .main-section__background::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(90%, rgba(0, 0, 0, 0)), to(rgb(0, 0, 0)));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 90%, rgb(0, 0, 0) 100%);
+  }
+
+  .main-section__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 7.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+
+  .main-section__info-text {
+    padding-top: 0rem;
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 @media (min-width: 62em) and (max-width: 100em) {
