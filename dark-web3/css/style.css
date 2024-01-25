@@ -509,7 +509,7 @@ body::after {
   z-index: 3;
 }
 
-.en .header {
+.main.en .header {
   opacity: 0;
   visibility: hidden;
 }

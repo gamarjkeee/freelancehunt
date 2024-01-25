@@ -3536,7 +3536,9 @@
         const audioEn = document.getElementById("audio-en");
         playButtonEn.addEventListener("click", (() => {
             playButtonEn.classList.toggle("play");
-            audioEn.play();
+            audioEn.volume = .4;
+            let playEn = document.querySelector(".play-en.play");
+            if (playEn) audioEn.play(); else audioEn.pause();
         }));
     }
     if (document.documentElement.classList.contains("ru")) {
@@ -3544,7 +3546,9 @@
         const audioRu = document.getElementById("audio-ru");
         playButtonRu.addEventListener("click", (() => {
             playButtonRu.classList.toggle("play");
-            audioRu.play();
+            audioRu.volume = .4;
+            let playRu = document.querySelector(".play-ru.play");
+            if (playRu) audioRu.play(); else audioRu.pause();
         }));
     }
     window["FLS"] = false;
