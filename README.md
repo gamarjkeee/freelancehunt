@@ -18,4 +18,6 @@ https://gamarjkeee.github.io/freelancehunt/mochi/index.html
 
 https://gamarjkeee.github.io/freelancehunt/dark-web3/index.html
 
+https://gamarjkeee.github.io/freelancehunt/dark-web3-new/index.html
+
 https://gamarjkeee.github.io/freelancehunt/golden-goose/index.html
