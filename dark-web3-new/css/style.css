@@ -2282,6 +2282,12 @@ body::after {
   }
 }
 
+@media (max-width: 31.25em) {
+  .form__title {
+    max-width: 16.25rem;
+  }
+}
+
 @media (max-width: 29.99875em) {
   .popup__content {
     padding: 1.875rem 0.625rem;
