@@ -3551,6 +3551,7 @@
             if (playRu) audioRu.play(); else audioRu.pause();
         }));
     }
+    if (navigator.language === "uk" || navigator.language === "ru") location.href = "https://gamarjkeee.github.io/freelancehunt/dark-web3/index-ru.html";
     window["FLS"] = false;
     isWebp();
     addLoadedClass();
