@@ -9,6 +9,13 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <!-- <meta name="robots" content="noindex, nofollow"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script>
+    setTimeout(() => {
+      if (navigator.language === 'uk' || navigator.language === 'ru') {
+        location.href = `${location.origin}/index-ru.html`;
+      }
+    }, 1000);
+  </script>
   </head>
 
   <body>
