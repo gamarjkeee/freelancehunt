@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="en main">
+<html lang="ru" class="ru main-ru">
   <head>
     <title>Dark Web3</title>
     <meta charset="UTF-8" />
@@ -17,29 +17,31 @@
         <div class="header__box">
           <div class="header__audio">
             <button
-              class="header__audio-button play-en"
-              id="play-en"
+              class="header__audio-button play-ru"
+              id="play-ru"
               type="button">
               <img src="img/vol.png" alt="Volume off" />
               <img src="img/vol-2.png" alt="Volume on" />
             </button>
-            <audio id="audio-en">
-              <source type="audio/mpeg" src="audio/01.mp3" />
+            <audio id="audio-ru">
+              <source type="audio/mpeg" src="audio/02.mp3" />
             </audio>
           </div>
           <div class="header__languages">
-            <a href="index.html" id="en" class="header__language active">EN</a>
-            <a href="index-ru.html" id="ru" class="header__language">RU</a>
+            <a href="index.html" id="en" class="header__language">EN</a>
+            <a href="index-ru.html" id="ru" class="header__language active"
+              >RU</a
+            >
           </div>
-          <button type="button" class="header__logo">
-            <img src="img/logo.png" alt="Logo Image" />
-          </button>
+          <a href="index-ru.html" class="header__logo"
+            ><img src="img/logo.png" alt="Logo Image"
+          /></a>
         </div>
       </header>
 
       <main class="page">
         <span class="page__decor"></span>
-        <div class="page__start start">
+        <div class="page__start start hidden">
           <div id="text" class="start__text"></div>
         </div>
         <section id="main-section" class="page__main-section main-section">
@@ -51,52 +53,52 @@
               alt="Background Image Mobile" />
             <div class="main-section__buttons">
               <button
-                data-popup="#popup-01"
+                data-popup="#popup-01-ru"
                 type="button"
                 class="main-section__button main-section__button--1">
-                <span>Satoshi's Crypto Code</span>
+                <span>Крипто-Код Сатоши</span>
               </button>
               <button
-                data-popup="#popup-02"
+                data-popup="#popup-02-ru"
                 type="button"
                 class="main-section__button main-section__button--2">
-                <span>Pump Arena</span>
+                <span>Памп - Арена</span>
               </button>
               <button
-                data-popup="#popup-03"
+                data-popup="#popup-03-ru"
                 type="button"
                 class="main-section__button main-section__button--3">
-                <span>Presale Club</span>
+                <span>Пресейл-Клуб</span>
               </button>
               <button
-                data-popup="#popup-04"
+                data-popup="#popup-04-ru"
                 type="button"
                 class="main-section__button main-section__button--4">
-                <span>Analytical Center</span>
+                <span>Аналитический Центр</span>
               </button>
               <button
-                data-popup="#popup-05"
+                data-popup="#popup-05-ru"
                 type="button"
                 class="main-section__button main-section__button--5">
-                <span>Secret Market</span>
+                <span>"Тайный Рынок"</span>
               </button>
               <button
-                data-popup="#popup-06"
+                data-popup="#popup-06-ru"
                 type="button"
                 class="main-section__button main-section__button--6">
-                <span>Insider Library</span>
+                <span>Инсайдерская Библиотека</span>
               </button>
               <button
-                data-popup="#popup-07"
+                data-popup="#popup-07-ru"
                 type="button"
                 class="main-section__button main-section__button--7">
-                <span>Crypto Camouflage</span>
+                <span>Крипто-Камуфляж</span>
               </button>
               <button
-                data-popup="#popup-08"
+                data-popup="#popup-08-ru"
                 type="button"
                 class="main-section__button main-section__button--8">
-                <span>Scam Lab</span>
+                <span>Скам-Лаборатория</span>
               </button>
             </div>
           </div>
@@ -106,17 +108,22 @@
                 <h1 class="main-section__info-title title">
                   Dark <span>Web3</span>
                 </h1>
-                <div class="main-section__info-label"></div>
+                <div class="main-section__info-label">форум Крипто Елиты</div>
               </div>
               <div class="main-section__info-text">
-                <span>DarkWeb3 </span><span id="info-text"></span>
+                <span>DarkWeb3 </span
+                ><span
+                  >- это секретный форум, где решается судьба биткоина и других
+                  криптовалют, где огромные состояния перемещаются одним кликом
+                  мышки.</span
+                >
               </div>
             </div>
             <a
               href="#"
-              data-popup="#popup-attention"
+              data-popup="#popup-attention-ru"
               class="main-section__join button">
-              <span>Join us</span>
+              <span>присоединиться</span>
             </a>
           </div>
         </section>
@@ -127,167 +134,169 @@
               <div class="tariff-plans__wrapper swiper-wrapper">
                 <div class="tariff-plans__slide swiper-slide">
                   <div class="fariff-palns__item item-fariff-palns">
-                    <h2 class="item-fariff-palns__title">Crypto Spark</h2>
+                    <h2 class="item-fariff-palns__title">"Крипто-Искра"</h2>
                     <ul class="item-fariff-palns__list">
                       <li class="item-fariff-palns__item">
-                        - basic resource of the forum
+                        - Доступ к базовым ресурсам форума
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Scam Lab"
+                        - Форум "Скам-Лаборатория"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Crypto-Camouflage"
+                        - Форум "Крипто-Камуфляж"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Insider Library"
+                        - Форум "Инсайдерская Библиотека"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Analytical Center"
+                        - Форум "Аналитический Центр"
                       </li>
                     </ul>
                     <div class="item-fariff-palns__verification">
                       <h3 class="item-fariff-palns__verification-title">
-                        Verification
+                        Верификация:
                       </h3>
                       <ul class="item-fariff-palns__verification-list">
                         <li class="item-fariff-palns__verification-item">
-                          Wallet turnover of $1 000+ per year
+                          Оборот кошелька 1 000$+ за год
                         </li>
                         <li class="item-fariff-palns__verification-item">
-                          Promo code
+                          Промокод
                         </li>
                         <li class="item-fariff-palns__verification-item">
-                          Price 0.02 ETH
+                          Цена 0.02 ETH
                         </li>
                       </ul>
                     </div>
                     <button
                       type="button"
                       class="item-fariff-palns__button button">
-                      <span>Check verification</span>
+                      <span>Пройти верификацию</span>
                     </button>
                   </div>
                 </div>
                 <div class="tariff-plans__slide swiper-slide">
                   <div class="fariff-palns__item item-fariff-palns">
-                    <h2 class="item-fariff-palns__title">Blockchain Artisan</h2>
+                    <h2 class="item-fariff-palns__title">Блокчейн-мастер</h2>
                     <ul class="item-fariff-palns__list">
                       <li class="item-fariff-palns__item">
-                        - basic resource of the forum
+                        - Доступ к базовым ресурсам форума.
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Scam Lab"
+                        - Форум "Скам-Лаборатория"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Crypto-Camouflage"
+                        - Форум "Крипто-Камуфляж"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Insider Library"
+                        - Форум "Инсайдерская Библиотека"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Analytical Center"
+                        - Форум "Аналитический Центр"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Secret Market"
+                        - Форум "Тайный Рынок"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Presale Club"
+                        - Форум "Пресейл-Клуб"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Pump Arena"
+                        - Форум "Памп-Арена"
                       </li>
                     </ul>
                     <div class="item-fariff-palns__verification">
                       <h3 class="item-fariff-palns__verification-title">
-                        Verification
+                        Верификация:
                       </h3>
                       <ul class="item-fariff-palns__verification-list">
                         <li class="item-fariff-palns__verification-item">
-                          Wallet turnover of $5 000+ per year
+                          Оборот кошелька 5 000$+ за год
                         </li>
                         <li class="item-fariff-palns__verification-item">
-                          Promo code
+                          Промокод
                         </li>
                         <li class="item-fariff-palns__verification-item">
-                          Price 0.5 ETH
+                          Цена 0.5 ETH
                         </li>
                       </ul>
                     </div>
                     <button
                       type="button"
                       class="item-fariff-palns__button button">
-                      <span>Check verification</span>
+                      <span>Пройти верификацию</span>
                     </button>
                   </div>
                 </div>
                 <div class="tariff-plans__slide swiper-slide">
                   <div class="fariff-palns__item item-fariff-palns">
-                    <h2 class="item-fariff-palns__title">Shadow Magnate</h2>
+                    <h2 class="item-fariff-palns__title">Теневой Магнат</h2>
                     <ul class="item-fariff-palns__list">
                       <li class="item-fariff-palns__item">
-                        - basic resource of the forum
+                        - Доступ ко всем разделам форума
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Scam Lab"
+                        - Форум "Скам-Лаборатория"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Crypto-Camouflage"
+                        - Форум "Крипто-Камуфляж"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Insider Library"
+                        - Форум "Инсайдерская Библиотека"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Analytical Center"
+                        - Форум "Аналитический Центр"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Secret Market"
+                        - Форум "Тайный Рынок"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Presale Club"
+                        - Форум "Пресейл-Клуб"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Pump Arena"
+                        - Форум "Памп-Арена"
                       </li>
                       <li class="item-fariff-palns__item">
-                        - Forum "Satoshi's Crypto Code"
+                        - Форум "Крипто-Код Сатоши"
                       </li>
                     </ul>
                     <div class="item-fariff-palns__verification">
                       <h3 class="item-fariff-palns__verification-title">
-                        Verification
+                        Верификация:
                       </h3>
                       <ul class="item-fariff-palns__verification-list">
                         <li class="item-fariff-palns__verification-item">
-                          1 BTC+ wallet turnover per year
+                          Оборот кошелька 1 ВТС+ за год
                         </li>
                         <li class="item-fariff-palns__verification-item">
-                          Promo code
+                          Промокод
                         </li>
                         <li class="item-fariff-palns__verification-item">
-                          Price of 1 ETH
+                          Цена 1 ETH
                         </li>
                       </ul>
                     </div>
                     <button
                       type="button"
                       class="item-fariff-palns__button button">
-                      <span>Check verification</span>
+                      <span>Пройти верификацию</span>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="fariff-palns__items"></div>
           </div>
         </section>
         <section id="verification-section" class="page__form form">
           <form action="#" class="form__body">
-            <button data-popup="#popup-info" type="button" class="form__info">
+            <button
+              data-popup="#popup-info-ru"
+              type="button"
+              class="form__info">
               <img src="img/info.png" alt="Info Icon" />
             </button>
-            <h1 class="form__title">Check verification</h1>
+            <h1 class="form__title">Пройти верификацию</h1>
             <div class="form__line">
-              <label class="form__label" for="promocode">promo code</label>
+              <label class="form__label" for="promocode">Промокод</label>
               <input
                 class="form__input"
                 required
@@ -296,134 +305,133 @@
                 id="promocode" />
             </div>
             <button type="submit" class="form__button button claim-button">
-              <span>Conect Wallet</span>
+              <span>Подключить кошелек</span>
             </button>
             <div class="form__text">
-              Payment for the selected package through the forum admin after
-              receiving verification!
+              Оплата выбранного пакета через админа форума после получения
+              верификации!
             </div>
           </form>
         </section>
       </main>
     </div>
-    <div id="popup-01" aria-hidden="true" class="popup">
+    <div id="popup-01-ru" aria-hidden="true" class="popup">
       <div class="popup__wrapper">
         <div class="popup__content">
           <button data-close type="button" class="popup__close">X</button>
-          <h2 class="popup__title">Satoshi's Crypto Code</h2>
+          <h2 class="popup__title">Крипто-Код Сатоши</h2>
           <div class="popup__text">
-            A private forum where investors with balances of 10,000 BTC+ plan
-            their steps, determining the future of Bitcoin. For 7 years, this
-            team has been deciding and changing the BTC movement!
+            Частный форум, где инвесторы с балансами 10 000 BTC+ планируют свои
+            шаги, определяя будущее биткоина. Уже 7 лет эта команда решает, и
+            меняет движение ВТС!
           </div>
         </div>
       </div>
     </div>
-    <div id="popup-02" aria-hidden="true" class="popup">
+    <div id="popup-02-ru" aria-hidden="true" class="popup">
       <div class="popup__wrapper left">
         <div class="popup__content">
           <button data-close type="button" class="popup__close">X</button>
-          <h2 class="popup__title">Pump Arena</h2>
+          <h2 class="popup__title">Памп - Арена</h2>
           <div class="popup__text">
-            A section where participants coordinate actions to manipulate
-            altcoin prices. Alliances and strategies for massive coin pumps are
-            formed here to ensure rapid coin growth and increase profits
+            Раздел, где участники координируют действия для манипулирования
+            ценами альткоинов. Здесь формируются альянсы и стратегии для
+            массовых пампов монет для быстрого роста монет и увеличения прибыли
           </div>
         </div>
       </div>
     </div>
-    <div id="popup-03" aria-hidden="true" class="popup">
+    <div id="popup-03-ru" aria-hidden="true" class="popup">
       <div class="popup__wrapper">
         <div class="popup__content">
           <button data-close type="button" class="popup__close">X</button>
-          <h2 class="popup__title">Presale Club</h2>
+          <h2 class="popup__title">Пресейл-Клуб</h2>
           <div class="popup__text">
-            Exclusive access to new coins before they are released to the
-            market. Participants have the opportunity to invest in new projects
-            at the earliest possible stage. For more information on the further
-            development of the project
+            Эксклюзивный доступ к новым монетам еще до их выхода на рынок.
+            Участники имеют возможность инвестировать в новые проекты на самой
+            ранней стадии. С подробной информацию о дальнейшем развитии проекта
           </div>
         </div>
       </div>
     </div>
-    <div id="popup-04" aria-hidden="true" class="popup">
+    <div id="popup-04-ru" aria-hidden="true" class="popup">
       <div class="popup__wrapper left">
         <div class="popup__content">
           <button data-close type="button" class="popup__close">X</button>
-          <h2 class="popup__title">Analytical Center</h2>
+          <h2 class="popup__title">Аналитический Центр</h2>
           <div class="popup__text">
-            A section with detailed forecasts and analysis of the crypto world
-            for the year ahead. Valuable insights and forecasts!
+            Раздел с детальными прогнозами и анализом криптомира на год вперед.
+            Ценные инсайды и прогнозы!
           </div>
         </div>
       </div>
     </div>
-    <div id="popup-05" aria-hidden="true" class="popup">
+    <div id="popup-05-ru" aria-hidden="true" class="popup">
       <div class="popup__wrapper">
         <div class="popup__content">
           <button data-close type="button" class="popup__close">X</button>
-          <h2 class="popup__title">Secret Market</h2>
+          <h2 class="popup__title">"Тайный Рынок"</h2>
           <div class="popup__text">
-            A section with private deals and exclusive offers not available to
-            the general market.
+            Секция с частными сделками и эксклюзивными предложениями,
+            недоступными для общего рынка.
           </div>
         </div>
       </div>
     </div>
-    <div id="popup-06" aria-hidden="true" class="popup">
+    <div id="popup-06-ru" aria-hidden="true" class="popup">
       <div class="popup__wrapper">
         <div class="popup__content">
           <button data-close type="button" class="popup__close">X</button>
-          <h2 class="popup__title">Insider Library</h2>
+          <h2 class="popup__title">Инсайдерская Библиотека</h2>
           <div class="popup__text">
-            A knowledge base with information that is never publicly available.
-            Lectures, research, secret reports.
+            База знаний с информацией, которая никогда не попадает в публичный
+            доступ. Лекции, исследования, секретные отчеты.
           </div>
         </div>
       </div>
     </div>
-    <div id="popup-07" aria-hidden="true" class="popup">
+    <div id="popup-07-ru" aria-hidden="true" class="popup">
       <div class="popup__wrapper right">
         <div class="popup__content">
           <button data-close type="button" class="popup__close">X</button>
-          <h2 class="popup__title">Crypto Camouflage</h2>
+          <h2 class="popup__title">Крипто-Камуфляж</h2>
           <div class="popup__text">
-            A section of the website where users can "whitewash" cryptocurrency
-            through complex transfers and exchanges. It is used to avoid
-            transaction tracking and to clean up the cryptocurrency!
+            Раздел сайта, где пользователи могут "отбеливать" криптовалюту через
+            сложные переводы и обмены. Используется для избежания отслеживания
+            транзакций, и очистки криптовалюты!
           </div>
         </div>
       </div>
     </div>
-    <div id="popup-08" aria-hidden="true" class="popup">
+    <div id="popup-08-ru" aria-hidden="true" class="popup">
       <div class="popup__wrapper right">
         <div class="popup__content">
           <button data-close type="button" class="popup__close">X</button>
-          <h2 class="popup__title">Scam Lab</h2>
+          <h2 class="popup__title">Скам-Лаборатория</h2>
           <div class="popup__text">
-            A platform for planning and launching coin scams. Participants
-            discuss and develop strategies for creating and promoting coins that
-            will provide quick profits.
+            Платформа для планирования и запуска скам монет. Участники обсуждают
+            и разрабатывают стратегии для создания и продвижения монет, которые
+            дадут быструю прибыль.
           </div>
         </div>
       </div>
     </div>
-    <div id="popup-attention" aria-hidden="true" class="popup">
+    <div id="popup-attention-ru" aria-hidden="true" class="popup">
       <div class="popup__wrapper">
         <div class="popup__content">
+          <button data-close type="button" class="popup__close">X</button>
           <h2 class="popup__title">
-            <span>Attention</span>
+            <span>Внимание</span>
           </h2>
           <div class="popup__text">
             <p>
-              - Access to the site is restricted for beginners and inexperienced
-              investors.
+              - Доступ к сайту ограничен для новичков и неопытных инвесторов
             </p>
-            <p>- Connection to the forum has WEB3 verification of wallets</p>
-            <p>- Joining the club has different access packages</p>
-            <p>- Special promo code or member nickname who recommended</p>
+            <p>- Подключение к форуму имеет WEB3 верификацию кошельков</p>
+            <p>- Вступление в клуб имеет различные пакеты доступа</p>
+            <p>- Специальный промокод или ник участника кто порекомендовал</p>
             <p class="center">
-              In the absence of one of the items - access will not be granted!
+              При отсутствии одного из пунктов - доступ не будет предоставлен!
             </p>
           </div>
           <button
@@ -431,51 +439,49 @@
             data-close
             id="go-to-tariff"
             class="popup__button button">
-            <span>GO</span>
+            <span>Вперед</span>
           </button>
         </div>
       </div>
     </div>
-    <div id="popup-info" aria-hidden="true" class="popup">
+    <div id="popup-info-ru" aria-hidden="true" class="popup">
       <div class="popup__wrapper">
         <div class="popup__content">
           <div class="popup__text">
             <p>
-              DarkWeb3 is not just a forum, it is a realm with its own laws.
-              Entrance here is not open to everyone. Only those who have a deep
-              understanding and active participation in the world of
-              cryptocurrencies can step outside the threshold of this elite
-              arena.
+              DarkWeb3 - это не просто форум, это царство, где действуют свои
+              законы. Вход сюда открыт не для всех. Только те, кто имеют
+              глубокое понимание и активное участие в мире криптовалют, могут
+              ступить за порог этой элитной арены.
             </p>
             <p>
-              Verification Procedure: Your Key to the Crypto-Elite World To join
-              us, enter the nickname of an existing DarkWeb3 member who
-              recommended you, or a promo code you saw in our advertisement.
+              Процедура Верификации: Ваш Ключ к Миру Крипто-Элиты Чтобы
+              присоединиться к нам, укажите ник существующего участника
+              DarkWeb3, который вас рекомендовал, или промокод, который вы
+              увидели в нашей рекламе.
             </p>
             <p>
-              Connect your WEB3 wallet. We will evaluate your history to verify
-              your contribution and experience in the cryptocurrency world.
+              Подключите свой WEB3 кошелек. Мы оценим вашу историю, чтобы
+              убедиться в вашем вкладе и опыте в криптовалютном мире.
             </p>
             <p>
-              Ensuring Your Privacy: Our Top Priority We guarantee the highest
-              level of privacy. Your information will be protected and will
-              never be used or displayed without your permission.
+              Обеспечение Вашей Конфиденциальности: Наш Основной Приоритет Мы
+              гарантируем наивысший уровень конфиденциальности. Ваша информация
+              будет защищена и никогда не будет использована или отображена без
+              вашего разрешения.
             </p>
             <p>
-              After Verification: Open the Door to DarkWeb3 Immediately after
-              completing the verification process, you will receive a message
-              informing you of the packages available to you. Choose the one
-              that best suits your needs and continue your communication through
-              our administrator, who will provide you with all the information
-              you need to access the world of DarkWeb3.
+              После Верификации: Откройте Дверь в DarkWeb3 Сразу после
+              завершения процедуры верификации вы получите сообщение с
+              информацией о доступных вам пакетах. Выберите тот, который лучше
+              всего соответствует вашим потребностям, и продолжайте общение
+              через нашего администратора, который предоставит вам всю
+              необходимую информацию для доступа к миру DarkWeb3.
             </p>
-            <p>
-              Welcome to the epicenter of the wisdom and power of
-              cryptocurrencies.
-            </p>
+            <p>Добро пожаловать в эпицентр мудрости и власти криптовалют.</p>
           </div>
           <button type="button" data-close class="popup__button button">
-            <span>Close</span>
+            <span>Закрыть</span>
           </button>
         </div>
       </div>
