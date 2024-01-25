@@ -3413,23 +3413,31 @@
             breakpoints: {
                 320: {
                     slidesPerView: 1.2,
-                    spaceBetween: 10
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                    initialSlide: 0
                 },
-                640: {
-                    slidesPerView: 1,
-                    spaceBetween: 0
+                480: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                    initialSlide: 1
                 },
                 768: {
                     slidesPerView: 2,
-                    spaceBetween: 20
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                    initialSlide: 1
                 },
                 992: {
                     slidesPerView: 3,
-                    spaceBetween: 10
+                    spaceBetween: 10,
+                    centeredSlides: false
                 },
                 1200: {
                     slidesPerView: 3,
-                    spaceBetween: 40
+                    spaceBetween: 40,
+                    centeredSlides: false
                 }
             },
             on: {}
@@ -3448,10 +3456,11 @@
         }
     }), 0);
     const phrases = [ "INITIALIZING DARK WEB3...\n", "DELETING COOKIES\n", "LOADING: KIT ARENA\n", "LOADING: PAMP ARENA\n", "LOADING: PRESS RELEASE CLUB\n", "JOINING THE SERVER...\n", "JOINED ANALYTICAL CENTER\n", "SECRET MARKET>>>\n", "Insider Library>>>\n", "Crypto Soundromat>>>\n", "Scam Laboratory>>>\n", ">>>\n", ">>>\n", ">>>\n", "WELCOME" ];
+    let heroBack = document.querySelector(".main-section__background .pc");
+    if (window.innerWidth < 768) heroBack = document.querySelector(".main-section__background .mob");
     const typeText = document.getElementById("text");
     const startSection = document.querySelector(".page__start");
     const header = document.querySelector(".header");
-    const heroBack = document.querySelector(".main-section__background img");
     const heroTitle = document.querySelector(".main-section__info-title");
     const heroButtons = document.querySelectorAll(".main-section__button");
     const joinUs = document.querySelector(".main-section__join");
@@ -3522,6 +3531,22 @@
         enButton.classList.remove("active");
         ruButton.classList.add("active");
     }));
+    if (document.documentElement.classList.contains("en")) {
+        const playButtonEn = document.getElementById("play-en");
+        const audioEn = document.getElementById("audio-en");
+        playButtonEn.addEventListener("click", (() => {
+            playButtonEn.classList.toggle("play");
+            audioEn.play();
+        }));
+    }
+    if (document.documentElement.classList.contains("ru")) {
+        const playButtonRu = document.getElementById("play-ru");
+        const audioRu = document.getElementById("audio-ru");
+        playButtonRu.addEventListener("click", (() => {
+            playButtonRu.classList.toggle("play");
+            audioRu.play();
+        }));
+    }
     window["FLS"] = false;
     isWebp();
     addLoadedClass();

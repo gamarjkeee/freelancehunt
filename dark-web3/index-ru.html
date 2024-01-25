@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240124123423">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240125131200">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +16,15 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__box">
+				<div class="header__audio">
+					<button class="header__audio-button" id="play-ru" type="button">
+						<picture><source srcset="img/vol.webp" type="image/webp"><img src="img/vol.png" alt="Volume off" /></picture>
+						<picture><source srcset="img/vol-2.webp" type="image/webp"><img src="img/vol-2.png" alt="Volume on" /></picture>
+					</button>
+					<audio id="audio-ru">
+						<source type="audio/mpeg" src="media/02.mp3" />
+					</audio>
+				</div>
 				<div class="header__languages">
 					<a href="index.html" id="en" class="header__language">EN</a>
 					<a href="index-ru.html" id="ru" class="header__language active">RU</a>
@@ -30,7 +39,8 @@
 			</div>
 			<section class="page__main-section main-section">
 				<div class="main-section__background">
-					<picture><source srcset="img/back.webp" type="image/webp"><img src="img/back.jpg" alt="Background Image" /></picture>
+					<picture><source srcset="img/back.webp" type="image/webp"><img class="pc" src="img/back.jpg" alt="Background Image" /></picture>
+					<picture><source srcset="img/back-mob.webp" type="image/webp"><img class="mob" src="img/back-mob.jpg" alt="Background Image Mobile" /></picture>
 					<div class="main-section__buttons">
 						<button data-popup="#popup-01-ru" type="button" class="main-section__button main-section__button--1">
 							<span>Крипто-Код Сатоши</span>
@@ -184,7 +194,6 @@
 			</div>
 		</div>
 	</div>
-
 	<div id="popup-attention-ru" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
@@ -205,7 +214,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240124123423"></script>
+	<script src="js/app.min.js?_v=20240125131200"></script>
 </body>
 
 </html>
