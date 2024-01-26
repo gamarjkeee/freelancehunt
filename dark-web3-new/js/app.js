@@ -22,6 +22,9 @@
         }));
     }
     let bodyLockStatus = true;
+    let bodyLockToggle = (delay = 500) => {
+        if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
+    };
     let bodyUnlock = (delay = 500) => {
         let body = document.querySelector("body");
         if (bodyLockStatus) {
@@ -56,6 +59,14 @@
             }), delay);
         }
     };
+    function menuInit() {
+        if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
+            if (bodyLockStatus && e.target.closest(".icon-menu")) {
+                bodyLockToggle();
+                document.documentElement.classList.toggle("menu-open");
+            }
+        }));
+    }
     function functions_FLS(message) {
         setTimeout((() => {
             if (window.FLS) console.log(message);
@@ -3455,6 +3466,44 @@
             }));
         }
     }), 0);
+    let script_bodyLockStatus = true;
+    let script_bodyLockToggle = (delay = 500) => {
+        if (document.documentElement.classList.contains("lock")) script_bodyUnlock(delay); else script_bodyLock(delay);
+    };
+    let script_bodyUnlock = (delay = 500) => {
+        let body = document.querySelector("body");
+        if (script_bodyLockStatus) {
+            let lock_padding = document.querySelectorAll("[data-lp]");
+            setTimeout((() => {
+                for (let index = 0; index < lock_padding.length; index++) {
+                    const el = lock_padding[index];
+                    el.style.paddingRight = "0px";
+                }
+                body.style.paddingRight = "0px";
+                document.documentElement.classList.remove("lock");
+            }), delay);
+            script_bodyLockStatus = false;
+            setTimeout((function() {
+                script_bodyLockStatus = true;
+            }), delay);
+        }
+    };
+    let script_bodyLock = (delay = 500) => {
+        let body = document.querySelector("body");
+        if (script_bodyLockStatus) {
+            let lock_padding = document.querySelectorAll("[data-lp]");
+            for (let index = 0; index < lock_padding.length; index++) {
+                const el = lock_padding[index];
+                el.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+            }
+            body.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+            document.documentElement.classList.add("lock");
+            script_bodyLockStatus = false;
+            setTimeout((function() {
+                script_bodyLockStatus = true;
+            }), delay);
+        }
+    };
     const phrases = [ "INITIALIZING DARK WEB3...\n", "DELETING COOKIES\n", "LOADING: KIT ARENA\n", "LOADING: PAMP ARENA\n", "LOADING: PRESS RELEASE CLUB\n", "JOINING THE SERVER...\n", "JOINED ANALYTICAL CENTER\n", "SECRET MARKET>>>\n", "Insider Library>>>\n", "Crypto Soundromat>>>\n", "Scam Laboratory>>>\n", ">>>\n", ">>>\n", ">>>\n", "WELCOME" ];
     let heroBack = document.querySelector(".main-section__background .pc");
     if (window.innerWidth < 768) heroBack = document.querySelector(".main-section__background .mob");
@@ -3558,11 +3607,21 @@
     const goToTariff = document.getElementById("go-to-tariff");
     const goVerifications = document.querySelectorAll(".item-fariff-palns__button");
     const goMain = document.querySelector(".header__logo");
+    const menuLinkHome = document.querySelector(".menu__link--home");
+    const menuLinkTariff = document.querySelector(".menu__link--tariff");
+    const menuLinkVerification = document.querySelector(".menu__link--verification");
     goToTariff.addEventListener("click", (() => {
+        menuLinkHome.classList.remove("active");
+        menuLinkVerification.classList.remove("active");
+        menuLinkTariff.classList.add("active");
         pageDecor.style.animation = "page 1s ease 0.3s forwards";
         setTimeout((() => {
-            mainSection.style.display = "none";
+            mainSection.style.position = "absolute";
+            mainSection.style.zIndex = "-1";
+            mainSection.style.inset = "0";
             tariffSection.style.display = "block";
+            tariffSection.style.position = "relative";
+            tariffSection.style.zIndex = "3";
             verivicationSection.style.display = "none";
         }), 800);
         setTimeout((() => {
@@ -3571,11 +3630,18 @@
     }));
     goVerifications.forEach((goVerification => {
         goVerification.addEventListener("click", (() => {
+            menuLinkHome.classList.remove("active");
+            menuLinkTariff.classList.remove("active");
+            menuLinkVerification.classList.add("active");
             pageDecor.style.animation = "page 1s ease 0.3s forwards";
             setTimeout((() => {
-                mainSection.style.display = "none";
+                mainSection.style.position = "absolute";
+                mainSection.style.zIndex = "-1";
+                mainSection.style.inset = "0";
                 tariffSection.style.display = "none";
                 verivicationSection.style.display = "flex";
+                verivicationSection.style.position = "relative";
+                verivicationSection.style.zIndex = "3";
             }), 800);
             setTimeout((() => {
                 pageDecor.style.animation = "none";
@@ -3583,11 +3649,80 @@
         }));
     }));
     goMain.addEventListener("click", (() => {
+        menuLinkTariff.classList.remove("active");
+        menuLinkVerification.classList.remove("active");
+        menuLinkHome.classList.add("active");
         pageDecor.style.animation = "page 1s ease 0.3s forwards";
         setTimeout((() => {
             mainSection.style.display = "block";
+            mainSection.style.position = "relative";
+            mainSection.style.zIndex = "3";
             tariffSection.style.display = "none";
             verivicationSection.style.display = "none";
+        }), 800);
+        setTimeout((() => {
+            pageDecor.style.animation = "none";
+        }), 1300);
+    }));
+    menuLinkHome.addEventListener("click", (() => {
+        if (window.innerWidth < 768) {
+            script_bodyLockToggle();
+            document.documentElement.classList.toggle("menu-open");
+        }
+        menuLinkTariff.classList.remove("active");
+        menuLinkVerification.classList.remove("active");
+        menuLinkHome.classList.add("active");
+        pageDecor.style.animation = "page 1s ease 0.3s forwards";
+        setTimeout((() => {
+            mainSection.style.display = "block";
+            mainSection.style.position = "relative";
+            mainSection.style.zIndex = "3";
+            tariffSection.style.display = "none";
+            verivicationSection.style.display = "none";
+        }), 800);
+        setTimeout((() => {
+            pageDecor.style.animation = "none";
+        }), 1300);
+    }));
+    menuLinkTariff.addEventListener("click", (() => {
+        if (window.innerWidth < 768) {
+            script_bodyLockToggle();
+            document.documentElement.classList.toggle("menu-open");
+        }
+        menuLinkHome.classList.remove("active");
+        menuLinkVerification.classList.remove("active");
+        menuLinkTariff.classList.add("active");
+        pageDecor.style.animation = "page 1s ease 0.3s forwards";
+        setTimeout((() => {
+            mainSection.style.position = "absolute";
+            mainSection.style.inset = "0";
+            mainSection.style.zIndex = "-1";
+            tariffSection.style.display = "block";
+            tariffSection.style.position = "relative";
+            tariffSection.style.zIndex = "3";
+            verivicationSection.style.display = "none";
+        }), 800);
+        setTimeout((() => {
+            pageDecor.style.animation = "none";
+        }), 1300);
+    }));
+    menuLinkVerification.addEventListener("click", (() => {
+        if (window.innerWidth < 768) {
+            script_bodyLockToggle();
+            document.documentElement.classList.toggle("menu-open");
+        }
+        menuLinkHome.classList.remove("active");
+        menuLinkTariff.classList.remove("active");
+        menuLinkVerification.classList.add("active");
+        pageDecor.style.animation = "page 1s ease 0.3s forwards";
+        setTimeout((() => {
+            mainSection.style.position = "absolute";
+            mainSection.style.zIndex = "-1";
+            mainSection.style.inset = "0";
+            tariffSection.style.display = "none";
+            verivicationSection.style.display = "flex";
+            verivicationSection.style.position = "relative";
+            verivicationSection.style.zIndex = "3";
         }), 800);
         setTimeout((() => {
             pageDecor.style.animation = "none";
@@ -3596,4 +3731,5 @@
     window["FLS"] = false;
     isWebp();
     addLoadedClass();
+    menuInit();
 })();

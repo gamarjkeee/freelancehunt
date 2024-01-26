@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
     <!-- <style>body{opacity: 0;}</style> -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20240125225242" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20240126131535" />
     <link rel="shortcut icon" href="favicon.ico" />
     <!-- <meta name="robots" content="noindex, nofollow"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,6 +15,34 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__box">
+          <div class="header__menu menu">
+            <button type="button" class="menu__icon icon-menu">
+              <span></span>
+            </button>
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <button
+                    type="button"
+                    class="menu__link menu__link--home active">
+                    Главная
+                  </button>
+                </li>
+                <li class="menu__item">
+                  <button type="button" class="menu__link menu__link--tariff">
+                    Тарифные планы
+                  </button>
+                </li>
+                <li class="menu__item">
+                  <button
+                    type="button"
+                    class="menu__link menu__link--verification">
+                    Верификация
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
           <div class="header__audio">
             <button
               class="header__audio-button play-ru"
@@ -41,9 +69,6 @@
 
       <main class="page">
         <span class="page__decor"></span>
-        <div class="page__start start hidden">
-          <div id="text" class="start__text"></div>
-        </div>
         <section id="main-section" class="page__main-section main-section">
           <div class="main-section__background">
             <img class="pc" src="img/back.jpg" alt="Background Image" />
@@ -486,6 +511,6 @@
         </div>
       </div>
     </div>
-    <script src="js/app.min.js?_v=20240125225242"></script>
+    <script src="js/app.min.js?_v=20240126131535"></script>
   </body>
 </html>
