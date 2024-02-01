@@ -231,6 +231,7 @@ body {
   transition: -webkit-box-shadow 0.2s ease 0s;
   transition: box-shadow 0.2s ease 0s;
   transition: box-shadow 0.2s ease 0s, -webkit-box-shadow 0.2s ease 0s;
+  min-width: 7.625rem;
 }
 
 .button span {
@@ -243,6 +244,7 @@ body {
   transition: -webkit-transform 0.2s ease 0s;
   transition: transform 0.2s ease 0s;
   transition: transform 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
+  text-wrap: nowrap;
 }
 
 .button--white {
