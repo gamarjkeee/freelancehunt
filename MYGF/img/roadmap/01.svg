@@ -1,0 +1,17 @@
+<svg width="78" height="87" viewBox="0 0 78 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ri:chat-heart-fill" filter="url(#filter0_d_2006_91)">
+<path id="Vector" d="M25.6825 52.5L19 57.75V30C19 29.6022 19.158 29.2206 19.4393 28.9393C19.7206 28.658 20.1022 28.5 20.5 28.5H47.5C47.8978 28.5 48.2794 28.658 48.5607 28.9393C48.842 29.2206 49 29.6022 49 30V51C49 51.3978 48.842 51.7794 48.5607 52.0607C48.2794 52.342 47.8978 52.5 47.5 52.5H25.6825ZM34.027 46.05L39.064 41.0115C39.3864 40.7002 39.6436 40.3278 39.8205 39.9161C39.9975 39.5044 40.0906 39.0615 40.0946 38.6134C40.0986 38.1653 40.0132 37.7208 39.8436 37.306C39.674 36.8912 39.4234 36.5144 39.1066 36.1974C38.7898 35.8805 38.413 35.6298 37.9982 35.4601C37.5835 35.2903 37.1391 35.2048 36.6909 35.2087C36.2428 35.2125 35.7999 35.3055 35.3881 35.4823C34.9763 35.6591 34.6039 35.9162 34.2925 36.2385L34.027 36.504L33.7615 36.2385C33.4481 35.9251 33.076 35.6765 32.6666 35.5069C32.2571 35.3373 31.8182 35.25 31.375 35.25C30.9318 35.25 30.4929 35.3373 30.0834 35.5069C29.674 35.6765 29.3019 35.9251 28.9885 36.2385C28.3556 36.8714 28 37.7299 28 38.625C28 39.5201 28.3556 40.3786 28.9885 41.0115L34.027 46.05Z" fill="#F30FAC"/>
+</g>
+<defs>
+<filter id="filter0_d_2006_91" x="-12.3" y="-4.3" width="92.6" height="92.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="14.15"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.391667 0 0 0 0 0.810563 0 0 0 0.65 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2006_91"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2006_91" result="shape"/>
+</filter>
+</defs>
+</svg>
