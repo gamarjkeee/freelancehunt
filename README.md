@@ -23,3 +23,5 @@ https://gamarjkeee.github.io/freelancehunt/dark-web3-new/index.html
 https://gamarjkeee.github.io/freelancehunt/golden-goose/index.html
 
 https://gamarjkeee.github.io/freelancehunt/MYGF/index.html
+
+https://gamarjkeee.github.io/freelancehunt/kanatka/index.html
