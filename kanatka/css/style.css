@@ -3806,7 +3806,12 @@ button.button--white span {
   display: grid;
   -ms-grid-columns: 47.5% 52.5%;
   grid-template-columns: 47.5% 52.5%;
-  margin-bottom: 2.625rem;
+  margin-bottom: 3.625rem;
+}
+@media (max-width: 61.99875em) {
+  .main-item__content-columns {
+    margin-bottom: 2.75rem;
+  }
 }
 @media (max-width: 47.99875em) {
   .main-item__content-columns {
