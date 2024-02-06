@@ -502,7 +502,7 @@ body::after {
 }
 
 .button.button-svg svg path {
-  fill: transparent;
+  fill: transparent !important;
   stroke: #fff;
   -webkit-transition: stroke 0.2s ease 0s;
   transition: stroke 0.2s ease 0s;
@@ -1162,6 +1162,50 @@ button.button--white span {
     visibility: visible;
     -webkit-transform: translateX(0rem);
             transform: translateX(0rem);
+  }
+}
+
+@-webkit-keyframes attention {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes attention {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
@@ -1926,50 +1970,6 @@ button.button--white span {
   line-height: 1.3;
 }
 
-@-webkit-keyframes attention {
-  0% {
-    opacity: 1;
-  }
-
-  10% {
-    opacity: 1;
-  }
-
-  25% {
-    opacity: 0;
-  }
-
-  40% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes attention {
-  0% {
-    opacity: 1;
-  }
-
-  10% {
-    opacity: 1;
-  }
-
-  25% {
-    opacity: 0;
-  }
-
-  40% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 .installation {
   position: relative;
   z-index: 2;
@@ -2188,6 +2188,12 @@ button.button--white span {
 
 .stages__actions-button svg {
   height: 1.3125rem;
+}
+
+.stages__actions-button.svg svg path {
+  fill: transparent !important;
+  -webkit-transition: stroke 0.2s ease 0s;
+  transition: stroke 0.2s ease 0s;
 }
 
 .item-stages {
@@ -3070,7 +3076,7 @@ button.button--white span {
 }
 
 .social-contacts__item.svg svg path {
-  fill: transparent;
+  fill: transparent !important;
   -webkit-transition: stroke 0.2s ease 0s;
   transition: stroke 0.2s ease 0s;
 }
@@ -6827,6 +6833,10 @@ button.button--white span {
 
   .main-item__content-bottom-consultation:hover {
     text-decoration: none;
+  }
+
+  .stages__actions-button.svg:hover svg path {
+    stroke: #1b1b1b;
   }
 
   .card-services__button:hover span {
