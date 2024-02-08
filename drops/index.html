@@ -1,1 +1,430 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+	<title>DROPS - Unlock Value, Trade Illiquidity</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240208171448">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="" class="header__logo"><img src="img/logo.svg" alt="Logo Image" /></a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#" class="menu__link button button-header"><span>Home</span></a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link button button-header"><span>About</span></a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link button button-header"><span>Contact</span></a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link button button-header button-black"><span>Launch</span></a>
+							</li>
+						</ul>
+					</nav>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="page__hero hero">
+				<div class="hero__container">
+					<div class="hero__content">
+						<div class="hero__social">
+							<a href="#" class="hero__social-link"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+									<path d="M26.0701 3.99604C25.7491 4.0194 25.434 4.09471 25.1371 4.21904H25.1331C24.8481 4.33204 23.4931 4.90204 21.4331 5.76604L14.0511 8.87504C8.75412 11.105 3.54712 13.301 3.54712 13.301L3.60912 13.277C3.60912 13.277 3.25012 13.395 2.87512 13.652C2.64345 13.7995 2.44409 13.9924 2.28912 14.219C2.10512 14.489 1.95712 14.902 2.01212 15.329C2.10212 16.051 2.57012 16.484 2.90612 16.723C3.24612 16.965 3.57012 17.078 3.57012 17.078H3.57812L8.46112 18.723C8.68012 19.426 9.94912 23.598 10.2541 24.559C10.4341 25.133 10.6091 25.492 10.8281 25.766C10.9341 25.906 11.0581 26.023 11.2071 26.117C11.2846 26.1621 11.3672 26.1977 11.4531 26.223L11.4031 26.211C11.4181 26.215 11.4301 26.227 11.4411 26.231C11.4811 26.242 11.5081 26.246 11.5591 26.254C12.3321 26.488 12.9531 26.008 12.9531 26.008L12.9881 25.98L15.8711 23.355L20.7031 27.062L20.8131 27.109C21.8201 27.551 22.8401 27.305 23.3791 26.871C23.9221 26.434 24.1331 25.875 24.1331 25.875L24.1681 25.785L27.9021 6.65604C28.0081 6.18404 28.0351 5.74204 27.9181 5.31304C27.7974 4.87887 27.5189 4.50545 27.1371 4.26604C26.8165 4.07116 26.4448 3.97709 26.0701 3.99604ZM25.9691 6.04604C25.9651 6.10904 25.9771 6.10204 25.9491 6.22304V6.23404L22.2501 25.164C22.2341 25.191 22.2071 25.25 22.1331 25.309C22.0551 25.371 21.9931 25.41 21.6681 25.281L15.7581 20.75L12.1881 24.004L12.9381 19.214L22.5941 10.214C22.9921 9.84404 22.8591 9.76604 22.8591 9.76604C22.8871 9.31204 22.2581 9.63304 22.2581 9.63304L10.0821 17.176L10.0781 17.156L4.24212 15.191V15.187L4.22712 15.184C4.23735 15.1806 4.24737 15.1766 4.25712 15.172L4.28912 15.156L4.32012 15.145C4.32012 15.145 9.53112 12.949 14.8281 10.719C17.4801 9.60204 20.1521 8.47704 22.2071 7.60904C23.4259 7.09605 24.6459 6.58604 25.8671 6.07904C25.9491 6.04704 25.9101 6.04604 25.9691 6.04604Z" fill="#151515" />
+								</svg>
+							</a>
+							<a href="#" class="hero__social-link"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M28.7815 28.4998L18.7849 13.9293L18.802 13.9429L27.8154 3.49976H24.8033L17.4608 11.9998L11.6299 3.49976H3.73046L13.0632 17.1032L13.0621 17.102L3.21899 28.4998H6.23102L14.3942 19.0429L20.882 28.4998H28.7815ZM10.4365 5.77247L24.4623 26.227H22.0755L8.03828 5.77247H10.4365Z" fill="#151515" />
+								</svg>
+							</a>
+						</div>
+						<h1 class="hero__title">
+							Unlock Value, <br />
+							Trade <span>Illiquidity</span>
+						</h1>
+						<div class="hero__text">
+							A Decentralized Locked Liquidity Marketplace.
+						</div>
+						<div class="hero__actions">
+							<button type="button" class="hero__actions-button button button-black">
+								<span>Buy</span>
+							</button>
+							<div class="hero__actions-number">
+								0x000000000000000000000000000000
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hero__image">
+					<div class="hero__image-1">
+						<img src="img/hero/hero.png" alt="Hero Image" />
+					</div>
+					<div class="hero__image-2">
+						<img src="img/hero/hero-2.png" alt="Hero Image" />
+						<img src="img/hero/hero-2.png" alt="Hero Image" />
+						<img src="img/hero/hero-2.png" alt="Hero Image" />
+					</div>
+				</div>
+			</section>
+			<section class="page__new-way new-way">
+				<div class="new-way__body">
+					<div class="new-way__header header-section">
+						<h2 class="header-section__title">
+							A New Way to Exchange Value in <span>DeFi</span>
+						</h2>
+						<div class="header-section__text">
+							Use DROPS to buy, sell and trade liquidity through our peer to
+							peer decentralized marketplace. Or, use ETH for a fee.
+						</div>
+					</div>
+					<div class="new-way__items-body">
+						<div class="new-way__items-body-background">
+							<img src="img/new-way/background.png" alt="Background of waves" />
+						</div>
+						<div class="new-way__items-body-items">
+							<div class="new-way__items-body-item item-new-way">
+								<h3 class="item-new-way__title">
+									Skip The Wait, <br />
+									Get paid Today
+								</h3>
+								<div class="item-new-way__text">
+									Autonomously sell your locked assets. Create a listing,
+									choose your price and let us find the buyer.
+								</div>
+								<a href="#" class="item-new-way__button item-new-way__button--type1"><span>Buy Locked Liquidity</span></a>
+							</div>
+							<div class="new-way__items-body-item item-new-way">
+								<h3 class="item-new-way__title">
+									Invest Today, <br />
+									Secure Tomorrow
+								</h3>
+								<div class="item-new-way__text">
+									Realize guaranteed profits by buying locked liquidity at a
+									reduced rate. Flip locked assets to accelerate returns.
+								</div>
+								<a href="#" class="item-new-way__button item-new-way__button--type2"><span>Sell Locked Liquidity</span></a>
+							</div>
+						</div>
+						<div class="new-way__items-body-wave">
+							<img src="img/new-way/wave.png" alt="Wave Image" />
+							<img src="img/new-way/wave.png" alt="Wave Image" />
+							<img src="img/new-way/wave.png" alt="Wave Image" />
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__ethics ethics">
+				<div class="ethics__container">
+					<div class="ethics__header header-section">
+						<div class="header-section__label">
+							Drops’ ethics & security protocols
+						</div>
+						<h2 class="header-section__title">
+							Ensuring Trust Through <span>Decentralization</span>
+						</h2>
+					</div>
+					<div class="ethics__cards">
+						<div class="ethics__card card-ethics">
+							<div class="card-ethics__background"></div>
+							<h3 class="card-ethics__title">A Marketplace you Can Trust</h3>
+							<div class="card-ethics__text">
+								Your safety is our top priority. Drops’ security measures
+								mitigate risks by blocking listings with functions and supply
+								distributions which could be used maliciously.
+							</div>
+							<div class="card-ethics__actions">
+								<a href="#" class="card-ethics__learn-more"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+										<path d="M0 10H18M18 10L9 1M18 10L9 19" stroke="#151515" stroke-width="2" />
+									</svg>
+									<span>Learn more</span></a>
+								<div class="card-ethics__decor">
+									<svg xmlns="http://www.w3.org/2000/svg" width="53" height="54" viewBox="0 0 53 54" fill="none">
+										<path d="M26.583 0C11.9957 0 0.172852 12.085 0.172852 27.0034C0.172852 41.9219 11.9957 54 26.583 54C41.1702 54 53 41.915 53 27.0034C53 12.0919 41.1702 0 26.583 0ZM26.583 42.8732C19.6271 42.8732 13.9811 37.9717 13.9811 30.409C13.9811 22.8464 26.583 7.81769 26.583 7.81769C26.583 7.81769 39.1848 22.8533 39.1848 30.409C39.1848 37.9648 33.5457 42.8732 26.583 42.8732Z" fill="#E2E2E2" />
+									</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" width="53" height="54" viewBox="0 0 53 54" fill="none">
+										<path d="M26.583 0C11.9957 0 0.172852 12.085 0.172852 27.0034C0.172852 41.9219 11.9957 54 26.583 54C41.1702 54 53 41.915 53 27.0034C53 12.0919 41.1702 0 26.583 0ZM26.583 42.8732C19.6271 42.8732 13.9811 37.9717 13.9811 30.409C13.9811 22.8464 26.583 7.81769 26.583 7.81769C26.583 7.81769 39.1848 22.8533 39.1848 30.409C39.1848 37.9648 33.5457 42.8732 26.583 42.8732Z" fill="url(#paint0_linear_28_96)" />
+										<defs>
+											<linearGradient id="paint0_linear_28_96" x1="26.5864" y1="0" x2="26.5864" y2="54" gradientUnits="userSpaceOnUse">
+												<stop stop-color="#0ACDFF" />
+												<stop offset="1" stop-color="#0079F4" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="ethics__card card-ethics">
+							<div class="card-ethics__background"></div>
+							<h3 class="card-ethics__title">An Open Source Framework</h3>
+							<div class="card-ethics__text">
+								We value transparency. Our open source & audited smart
+								contracts are easily viewable by anyone, both on-chain and
+								through our online repositories.
+							</div>
+							<div class="card-ethics__actions">
+								<a href="#" class="card-ethics__learn-more"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+										<path d="M0 10H18M18 10L9 1M18 10L9 19" stroke="#151515" stroke-width="2" />
+									</svg>
+									<span>Learn more</span></a>
+								<div class="card-ethics__decor">
+									<svg xmlns="http://www.w3.org/2000/svg" width="53" height="54" viewBox="0 0 53 54" fill="none">
+										<path d="M26.583 0C11.9957 0 0.172852 12.085 0.172852 27.0034C0.172852 41.9219 11.9957 54 26.583 54C41.1702 54 53 41.915 53 27.0034C53 12.0919 41.1702 0 26.583 0ZM26.583 42.8732C19.6271 42.8732 13.9811 37.9717 13.9811 30.409C13.9811 22.8464 26.583 7.81769 26.583 7.81769C26.583 7.81769 39.1848 22.8533 39.1848 30.409C39.1848 37.9648 33.5457 42.8732 26.583 42.8732Z" fill="#E2E2E2" />
+									</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" width="53" height="54" viewBox="0 0 53 54" fill="none">
+										<path d="M26.583 0C11.9957 0 0.172852 12.085 0.172852 27.0034C0.172852 41.9219 11.9957 54 26.583 54C41.1702 54 53 41.915 53 27.0034C53 12.0919 41.1702 0 26.583 0ZM26.583 42.8732C19.6271 42.8732 13.9811 37.9717 13.9811 30.409C13.9811 22.8464 26.583 7.81769 26.583 7.81769C26.583 7.81769 39.1848 22.8533 39.1848 30.409C39.1848 37.9648 33.5457 42.8732 26.583 42.8732Z" fill="url(#paint0_linear_28_96)" />
+										<defs>
+											<linearGradient id="paint0_linear_28_96" x1="26.5864" y1="0" x2="26.5864" y2="54" gradientUnits="userSpaceOnUse">
+												<stop stop-color="#0ACDFF" />
+												<stop offset="1" stop-color="#0079F4" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__ethics ethics">
+				<div class="ethics__container">
+					<div class="ethics__header header-section">
+						<h2 class="header-section__title">
+							Earning With <span>DROPS</span>
+						</h2>
+						<div class="header-section__text">
+							Benefit from our marketplace in multiple ways. DROPS is bought
+							off the market and distributed as rewards using fees associated
+							with platform use.
+						</div>
+					</div>
+					<div class="ethics__cards">
+						<div class="ethics__card card-ethics">
+							<div class="card-ethics__background"></div>
+							<h3 class="card-ethics__title">
+								Become a Pillar of the Ecosystem
+							</h3>
+							<div class="card-ethics__text">
+								Get rewarded for the stability you bring to the marketplace by
+								adding and staking LP, or by staking DROPS. All rewards are
+								received in market-bought DROPS.
+							</div>
+							<div class="card-ethics__actions">
+								<a href="#" class="card-ethics__learn-more"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+										<path d="M0 10H18M18 10L9 1M18 10L9 19" stroke="#151515" stroke-width="2" />
+									</svg>
+									<span>Learn more</span></a>
+								<div class="card-ethics__decor">
+									<svg xmlns="http://www.w3.org/2000/svg" width="53" height="54" viewBox="0 0 53 54" fill="none">
+										<path d="M26.583 0C11.9957 0 0.172852 12.085 0.172852 27.0034C0.172852 41.9219 11.9957 54 26.583 54C41.1702 54 53 41.915 53 27.0034C53 12.0919 41.1702 0 26.583 0ZM26.583 42.8732C19.6271 42.8732 13.9811 37.9717 13.9811 30.409C13.9811 22.8464 26.583 7.81769 26.583 7.81769C26.583 7.81769 39.1848 22.8533 39.1848 30.409C39.1848 37.9648 33.5457 42.8732 26.583 42.8732Z" fill="#E2E2E2" />
+									</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" width="53" height="54" viewBox="0 0 53 54" fill="none">
+										<path d="M26.583 0C11.9957 0 0.172852 12.085 0.172852 27.0034C0.172852 41.9219 11.9957 54 26.583 54C41.1702 54 53 41.915 53 27.0034C53 12.0919 41.1702 0 26.583 0ZM26.583 42.8732C19.6271 42.8732 13.9811 37.9717 13.9811 30.409C13.9811 22.8464 26.583 7.81769 26.583 7.81769C26.583 7.81769 39.1848 22.8533 39.1848 30.409C39.1848 37.9648 33.5457 42.8732 26.583 42.8732Z" fill="url(#paint0_linear_28_96)" />
+										<defs>
+											<linearGradient id="paint0_linear_28_96" x1="26.5864" y1="0" x2="26.5864" y2="54" gradientUnits="userSpaceOnUse">
+												<stop stop-color="#0ACDFF" />
+												<stop offset="1" stop-color="#0079F4" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="ethics__card card-ethics">
+							<div class="card-ethics__background"></div>
+							<h3 class="card-ethics__title">Earn on Every Transaction</h3>
+							<div class="card-ethics__text">
+								Users buy & sell DROPS when trading through our marketplace,
+								allowing you to earn on token trading fees. ETH brokerage fees
+								are also shared.
+							</div>
+							<div class="card-ethics__actions">
+								<a href="#" class="card-ethics__learn-more"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+										<path d="M0 10H18M18 10L9 1M18 10L9 19" stroke="#151515" stroke-width="2" />
+									</svg>
+									<span>Learn more</span></a>
+								<div class="card-ethics__decor">
+									<svg xmlns="http://www.w3.org/2000/svg" width="53" height="54" viewBox="0 0 53 54" fill="none">
+										<path d="M26.583 0C11.9957 0 0.172852 12.085 0.172852 27.0034C0.172852 41.9219 11.9957 54 26.583 54C41.1702 54 53 41.915 53 27.0034C53 12.0919 41.1702 0 26.583 0ZM26.583 42.8732C19.6271 42.8732 13.9811 37.9717 13.9811 30.409C13.9811 22.8464 26.583 7.81769 26.583 7.81769C26.583 7.81769 39.1848 22.8533 39.1848 30.409C39.1848 37.9648 33.5457 42.8732 26.583 42.8732Z" fill="#E2E2E2" />
+									</svg>
+									<svg xmlns="http://www.w3.org/2000/svg" width="53" height="54" viewBox="0 0 53 54" fill="none">
+										<path d="M26.583 0C11.9957 0 0.172852 12.085 0.172852 27.0034C0.172852 41.9219 11.9957 54 26.583 54C41.1702 54 53 41.915 53 27.0034C53 12.0919 41.1702 0 26.583 0ZM26.583 42.8732C19.6271 42.8732 13.9811 37.9717 13.9811 30.409C13.9811 22.8464 26.583 7.81769 26.583 7.81769C26.583 7.81769 39.1848 22.8533 39.1848 30.409C39.1848 37.9648 33.5457 42.8732 26.583 42.8732Z" fill="url(#paint0_linear_28_96)" />
+										<defs>
+											<linearGradient id="paint0_linear_28_96" x1="26.5864" y1="0" x2="26.5864" y2="54" gradientUnits="userSpaceOnUse">
+												<stop stop-color="#0ACDFF" />
+												<stop offset="1" stop-color="#0079F4" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__tabs tabs">
+				<div class="tabs__container">
+					<div class="tabs__header header-section">
+						<h2 class="header-section__title">
+							Tiered <span>Earnings</span>
+						</h2>
+						<div class="header-section__text">
+							Join one of our three tiers to start earning DROPS today. 80% of
+							market-bought DROPS are shared with pool contributors, the other
+							20% are burned forever.
+						</div>
+					</div>
+					<div class="tabs__items">
+						<div class="tabs__item item-tabs">
+							<div class="item-tabs__decor"></div>
+							<div class="item-tabs__info">
+								<div class="item-tabs__info-top">
+									<div class="item-tabs__info-top-number">01</div>
+									<div class="item-tabs__info-top-text">Tier</div>
+								</div>
+								<div class="item-tabs__info-middle">
+									<div class="item-tabs__info-middle-label">
+										Access Requirement
+									</div>
+									<h4 class="item-tabs__info-middle-title">
+										DROPS UNI-V2 LP
+									</h4>
+								</div>
+								<div class="item-tabs__info-bottom">
+									<div class="item-tabs__info-bottom-text">
+										Total Tier Share of Earnings
+									</div>
+									<div class="item-tabs__info-bottom-value">40%</div>
+								</div>
+							</div>
+							<a href="#" class="item-tabs__button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path d="M0.5 10H18.5M18.5 10L9.5 1M18.5 10L9.5 19" stroke="white" stroke-width="2" />
+								</svg>
+							</a>
+						</div>
+						<div class="tabs__item item-tabs">
+							<div class="item-tabs__decor"></div>
+							<div class="item-tabs__info">
+								<div class="item-tabs__info-top">
+									<div class="item-tabs__info-top-number">02</div>
+									<div class="item-tabs__info-top-text">Tier</div>
+								</div>
+								<div class="item-tabs__info-middle">
+									<div class="item-tabs__info-middle-label">
+										Access Requirement
+									</div>
+									<h4 class="item-tabs__info-middle-title">50,000 DROPS</h4>
+								</div>
+								<div class="item-tabs__info-bottom">
+									<div class="item-tabs__info-bottom-text">
+										Total Tier Share of Earnings
+									</div>
+									<div class="item-tabs__info-bottom-value">30%</div>
+								</div>
+							</div>
+							<a href="#" class="item-tabs__button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path d="M0.5 10H18.5M18.5 10L9.5 1M18.5 10L9.5 19" stroke="white" stroke-width="2" />
+								</svg>
+							</a>
+						</div>
+						<div class="tabs__item item-tabs active">
+							<div class="item-tabs__decor"></div>
+							<div class="item-tabs__info">
+								<div class="item-tabs__info-top">
+									<div class="item-tabs__info-top-number">03</div>
+									<div class="item-tabs__info-top-text">Tier</div>
+								</div>
+								<div class="item-tabs__info-middle">
+									<div class="item-tabs__info-middle-label">
+										Access Requirement
+									</div>
+									<h4 class="item-tabs__info-middle-title">
+										DROPS Any Amount
+									</h4>
+								</div>
+								<div class="item-tabs__info-bottom">
+									<div class="item-tabs__info-bottom-text">
+										Total Tier Share of Earnings
+									</div>
+									<div class="item-tabs__info-bottom-value">10%</div>
+								</div>
+							</div>
+							<a href="#" class="item-tabs__button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path d="M0.5 10H18.5M18.5 10L9.5 1M18.5 10L9.5 19" stroke="white" stroke-width="2" />
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__contacts contacts">
+				<div class="contacts__background">
+					<div class="contacts__background-blue"></div>
+					<img src="img/contacts/waves.png" alt="Waves Image" />
+				</div>
+				<div class="contacts__container">
+					<div class="contacts__form-body">
+						<h2 class="contacts__form-body-title">
+							<span>Exchange Share Trust</span><img src="img/logo-white.svg" alt="Logo Image" />
+						</h2>
+						<form action="#" class="contacts__form-body-form form">
+							<div class="form__line">
+								<input required class="form__input" name="user-name" type="text" placeholder="First Name" />
+							</div>
+							<div class="form__line">
+								<input required class="form__input" name="user-email" type="email" placeholder="Email" />
+							</div>
+							<div class="form__line">
+								<button class="form__button" type="submit" class="">
+									<span>Subscribe to newsletter</span>
+								</button>
+							</div>
+						</form>
+					</div>
+					<div class="contacts__cintact-us">
+						<div class="contacts__cintact-us-header">
+							<h4 class="contacts__cintact-us-title">Contact Us</h4>
+							<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+								<path d="M13.0002 1.26758L1.53516 12.7326M1.53516 12.7326H13.0002M1.53516 12.7326V1.26758" stroke="white" stroke-width="2.14969" />
+							</svg>
+						</div>
+						<div class="contacts__cintact-us-body">
+							<a href="mailto:drops@gmail.com" class="contacts__cintact-us-email">drops@gmail.com</a>
+							<div class="contacts__cintact-us-social">
+								<a href="#" class="contacts__cintact-us-social-item"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+										<path d="M52.1402 7.99209C51.4982 8.0388 50.868 8.18942 50.2742 8.43809H50.2662C49.6962 8.66409 46.9862 9.80409 42.8662 11.5321L28.1022 17.7501C17.5082 22.2101 7.09424 26.6021 7.09424 26.6021L7.21824 26.5541C7.21824 26.5541 6.50024 26.7901 5.75024 27.3041C5.28689 27.5989 4.88818 27.9847 4.57824 28.4381C4.21024 28.9781 3.91424 29.8041 4.02424 30.6581C4.20424 32.1021 5.14024 32.9681 5.81224 33.4461C6.49224 33.9301 7.14024 34.1561 7.14024 34.1561H7.15624L16.9222 37.4461C17.3602 38.8521 19.8982 47.1961 20.5082 49.1181C20.8682 50.2661 21.2182 50.9841 21.6562 51.5321C21.8682 51.8121 22.1162 52.0461 22.4142 52.2341C22.5692 52.3242 22.7343 52.3954 22.9062 52.4461L22.8062 52.4221C22.8362 52.4301 22.8602 52.4541 22.8822 52.4621C22.9622 52.4841 23.0162 52.4921 23.1182 52.5081C24.6642 52.9761 25.9062 52.0161 25.9062 52.0161L25.9762 51.9601L31.7422 46.7101L41.4062 54.1241L41.6262 54.2181C43.6402 55.1021 45.6802 54.6101 46.7582 53.7421C47.8442 52.8681 48.2662 51.7501 48.2662 51.7501L48.3362 51.5701L55.8042 13.3121C56.0162 12.3681 56.0702 11.4841 55.8362 10.6261C55.5949 9.75774 55.0378 9.0109 54.2742 8.53209C53.6331 8.14232 52.8896 7.95418 52.1402 7.99209ZM51.9382 12.0921C51.9302 12.2181 51.9542 12.2041 51.8982 12.4461V12.4681L44.5002 50.3281C44.4682 50.3821 44.4142 50.5001 44.2662 50.6181C44.1102 50.7421 43.9862 50.8201 43.3362 50.5621L31.5162 41.5001L24.3762 48.0081L25.8762 38.4281L45.1882 20.4281C45.9842 19.6881 45.7182 19.5321 45.7182 19.5321C45.7742 18.6241 44.5162 19.2661 44.5162 19.2661L20.1642 34.3521L20.1562 34.3121L8.48424 30.3821V30.3741L8.45424 30.3681C8.4747 30.3613 8.49473 30.3533 8.51424 30.3441L8.57824 30.3121L8.64024 30.2901C8.64024 30.2901 19.0622 25.8981 29.6562 21.4381C34.9602 19.2041 40.3042 16.9541 44.4142 15.2181C46.8517 14.1921 49.2917 13.1721 51.7342 12.1581C51.8982 12.0941 51.8202 12.0921 51.9382 12.0921Z" fill="white" />
+									</svg>
+								</a>
+								<a href="#" class="contacts__cintact-us-social-item"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M57.5625 57L37.5694 27.8591L37.6035 27.8864L55.6302 7H49.6062L34.9211 24L23.2594 7H7.46044L26.1259 34.2069L26.1237 34.2046L6.4375 57H12.4616L28.7879 38.0864L41.7636 57H57.5625ZM20.8725 11.5454L48.9242 52.4546H44.1504L16.0761 11.5454H20.8725Z" fill="white" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20240208171448"></script>
+</body>
+
+</html>
