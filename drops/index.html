@@ -3,16 +3,135 @@
 
 <head>
 	<title>DROPS - Unlock Value, Trade Illiquidity</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240208171448">
-	<link rel="shortcut icon" href="favicon.ico">
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<style>
+		@keyframes mltShdSpin {
+			0% {
+				box-shadow:
+					0 -0.83em 0 -0.4em,
+					0 -0.83em 0 -0.42em,
+					0 -0.83em 0 -0.44em,
+					0 -0.83em 0 -0.46em,
+					0 -0.83em 0 -0.477em;
+			}
+
+			5%,
+			95% {
+				box-shadow:
+					0 -0.83em 0 -0.4em,
+					0 -0.83em 0 -0.42em,
+					0 -0.83em 0 -0.44em,
+					0 -0.83em 0 -0.46em,
+					0 -0.83em 0 -0.477em;
+			}
+
+			10%,
+			59% {
+				box-shadow:
+					0 -0.83em 0 -0.4em,
+					-0.087em -0.825em 0 -0.42em,
+					-0.173em -0.812em 0 -0.44em,
+					-0.256em -0.789em 0 -0.46em,
+					-0.297em -0.775em 0 -0.477em;
+			}
+
+			20% {
+				box-shadow:
+					0 -0.83em 0 -0.4em,
+					-0.338em -0.758em 0 -0.42em,
+					-0.555em -0.617em 0 -0.44em,
+					-0.671em -0.488em 0 -0.46em,
+					-0.749em -0.34em 0 -0.477em;
+			}
+
+			38% {
+				box-shadow:
+					0 -0.83em 0 -0.4em,
+					-0.377em -0.74em 0 -0.42em,
+					-0.645em -0.522em 0 -0.44em,
+					-0.775em -0.297em 0 -0.46em,
+					-0.82em -0.09em 0 -0.477em;
+			}
+
+			100% {
+				box-shadow:
+					0 -0.83em 0 -0.4em,
+					0 -0.83em 0 -0.42em,
+					0 -0.83em 0 -0.44em,
+					0 -0.83em 0 -0.46em,
+					0 -0.83em 0 -0.477em;
+			}
+		}
+
+		@keyframes round {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes loader-off {
+			0% {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			99% {
+				opacity: 0;
+				visibility: hidden;
+			}
+
+			100% {
+				opacity: 0;
+				visibility: hidden;
+				display: none;
+			}
+		}
+
+		.loader {
+			position: fixed;
+			pointer-events: none;
+			z-index: 100;
+			inset: 0;
+			background: linear-gradient(180deg, #0acdff 0%, #0079f4 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.loaded .loader {
+			animation: loader-off 1s ease 0.6s forwards;
+		}
+
+		.loader span {
+			color: #ffffff;
+			font-size: 45px;
+			text-indent: -9999em;
+			overflow: hidden;
+			width: 1em;
+			height: 1em;
+			border-radius: 50%;
+			position: relative;
+			transform: translateZ(0);
+			animation:
+				mltShdSpin 1.7s infinite ease,
+				round 1.7s infinite ease;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20240208183015" />
+	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
+	<div class="loader">
+		<span></span>
+	</div>
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
@@ -21,16 +140,16 @@
 					<nav class="menu__body">
 						<ul class="menu__list">
 							<li class="menu__item">
-								<a href="#" class="menu__link button button-header"><span>Home</span></a>
+								<a href="#" data-goto=".page__hero" data-goto-header class="menu__link button button-header"><span>Home</span></a>
 							</li>
 							<li class="menu__item">
-								<a href="#" class="menu__link button button-header"><span>About</span></a>
+								<a href="#" data-goto=".page__new-way" data-goto-header class="menu__link button button-header"><span>About</span></a>
 							</li>
 							<li class="menu__item">
-								<a href="#" class="menu__link button button-header"><span>Contact</span></a>
+								<a href="#" data-goto=".page__contacts" data-goto-header class="menu__link button button-header"><span>Contact</span></a>
 							</li>
 							<li class="menu__item">
-								<a href="#" class="menu__link button button-header button-black"><span>Launch</span></a>
+								<a href="#" data-goto=".page__tabs" data-goto-header class="menu__link button button-header button-black"><span>Launch</span></a>
 							</li>
 						</ul>
 					</nav>
@@ -83,7 +202,7 @@
 			</section>
 			<section class="page__new-way new-way">
 				<div class="new-way__body">
-					<div class="new-way__header header-section">
+					<div data-watch-threshold="0.5" data-watch-once data-watch class="new-way__header header-section">
 						<h2 class="header-section__title">
 							A New Way to Exchange Value in <span>DeFi</span>
 						</h2>
@@ -93,10 +212,10 @@
 						</div>
 					</div>
 					<div class="new-way__items-body">
-						<div class="new-way__items-body-background">
+						<div data-watch-threshold="0.2" data-watch-once data-watch class="new-way__items-body-background">
 							<img src="img/new-way/background.png" alt="Background of waves" />
 						</div>
-						<div class="new-way__items-body-items">
+						<div data-watch-threshold="0.4" data-watch-once data-watch class="new-way__items-body-items">
 							<div class="new-way__items-body-item item-new-way">
 								<h3 class="item-new-way__title">
 									Skip The Wait, <br />
@@ -130,7 +249,7 @@
 			</section>
 			<section class="page__ethics ethics">
 				<div class="ethics__container">
-					<div class="ethics__header header-section">
+					<div data-watch-threshold="0.5" data-watch-once data-watch class="ethics__header header-section">
 						<div class="header-section__label">
 							Drops’ ethics & security protocols
 						</div>
@@ -138,7 +257,7 @@
 							Ensuring Trust Through <span>Decentralization</span>
 						</h2>
 					</div>
-					<div class="ethics__cards">
+					<div data-watch-threshold="0.4" data-watch-once data-watch class="ethics__cards">
 						<div class="ethics__card card-ethics">
 							<div class="card-ethics__background"></div>
 							<h3 class="card-ethics__title">A Marketplace you Can Trust</h3>
@@ -202,7 +321,7 @@
 			</section>
 			<section class="page__ethics ethics">
 				<div class="ethics__container">
-					<div class="ethics__header header-section">
+					<div data-watch-threshold="0.5" data-watch-once data-watch class="ethics__header header-section">
 						<h2 class="header-section__title">
 							Earning With <span>DROPS</span>
 						</h2>
@@ -212,7 +331,7 @@
 							with platform use.
 						</div>
 					</div>
-					<div class="ethics__cards">
+					<div data-watch-threshold="0.4" data-watch-once data-watch class="ethics__cards">
 						<div class="ethics__card card-ethics">
 							<div class="card-ethics__background"></div>
 							<h3 class="card-ethics__title">
@@ -278,7 +397,7 @@
 			</section>
 			<section class="page__tabs tabs">
 				<div class="tabs__container">
-					<div class="tabs__header header-section">
+					<div data-watch-threshold="0.5" data-watch-once data-watch class="tabs__header header-section">
 						<h2 class="header-section__title">
 							Tiered <span>Earnings</span>
 						</h2>
@@ -288,7 +407,7 @@
 							20% are burned forever.
 						</div>
 					</div>
-					<div class="tabs__items">
+					<div data-watch-threshold="0.4" data-watch-once data-watch class="tabs__items">
 						<div class="tabs__item item-tabs">
 							<div class="item-tabs__decor"></div>
 							<div class="item-tabs__info">
@@ -376,7 +495,7 @@
 					<div class="contacts__background-blue"></div>
 					<img src="img/contacts/waves.png" alt="Waves Image" />
 				</div>
-				<div class="contacts__container">
+				<div data-watch-threshold="0.4" data-watch-once data-watch class="contacts__container">
 					<div class="contacts__form-body">
 						<h2 class="contacts__form-body-title">
 							<span>Exchange Share Trust</span><img src="img/logo-white.svg" alt="Logo Image" />
@@ -424,7 +543,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240208171448"></script>
+	<script src="js/app.min.js?_v=20240208183015"></script>
 </body>
 
 </html>
