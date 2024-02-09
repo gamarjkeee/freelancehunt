@@ -1709,51 +1709,11 @@ body {
   }
 
   .loaded .header {
-    -webkit-animation: opacity 0.4s ease 1.4s forwards;
-            animation: opacity 0.4s ease 1.4s forwards;
+    -webkit-animation: opacity 0.4s ease 1.6s forwards;
+            animation: opacity 0.4s ease 1.6s forwards;
   }
 
-  .hero__social-link {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .hero__social-link:nth-child(1) {
-    -webkit-transform: translateX(-1.875rem);
-        -ms-transform: translateX(-1.875rem);
-            transform: translateX(-1.875rem);
-  }
-
-  .loaded .hero__social-link:nth-child(1) {
-    -webkit-animation: to-right 0.4s ease 0.8s forwards;
-            animation: to-right 0.4s ease 0.8s forwards;
-  }
-
-  .hero__social-link:nth-child(2) {
-    -webkit-transform: translateX(1.875rem);
-        -ms-transform: translateX(1.875rem);
-            transform: translateX(1.875rem);
-  }
-
-  .loaded .hero__social-link:nth-child(2) {
-    -webkit-animation: to-left 0.4s ease 0.8s forwards;
-            animation: to-left 0.4s ease 0.8s forwards;
-  }
-
-  .hero__title {
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transform: translateX(-1.875rem);
-        -ms-transform: translateX(-1.875rem);
-            transform: translateX(-1.875rem);
-  }
-
-  .loaded .hero__title {
-    -webkit-animation: to-right 0.4s ease 0.8s forwards;
-            animation: to-right 0.4s ease 0.8s forwards;
-  }
-
-  .hero__text {
+  .hero__content {
     opacity: 0;
     visibility: hidden;
     -webkit-transform: translateX(1.875rem);
@@ -1761,35 +1721,9 @@ body {
             transform: translateX(1.875rem);
   }
 
-  .loaded .hero__text {
-    -webkit-animation: to-left 0.4s ease 0.8s forwards;
-            animation: to-left 0.4s ease 0.8s forwards;
-  }
-
-  .hero__actions-button {
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transform: translateX(-1.875rem);
-        -ms-transform: translateX(-1.875rem);
-            transform: translateX(-1.875rem);
-  }
-
-  .loaded .hero__actions-button {
-    -webkit-animation: to-right 0.4s ease 0.8s forwards;
-            animation: to-right 0.4s ease 0.8s forwards;
-  }
-
-  .hero__actions-number {
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transform: translateX(1.875rem);
-        -ms-transform: translateX(1.875rem);
-            transform: translateX(1.875rem);
-  }
-
-  .loaded .hero__actions-number {
-    -webkit-animation: to-left 0.4s ease 0.8s forwards;
-            animation: to-left 0.4s ease 0.8s forwards;
+  .loaded .hero__content {
+    -webkit-animation: to-left 0.4s ease 1s forwards;
+            animation: to-left 0.4s ease 1s forwards;
   }
 
   .hero__image {
@@ -1801,11 +1735,14 @@ body {
     border-radius: 1.25rem 0 0 1.25rem;
     opacity: 0;
     visibility: hidden;
+    -webkit-transform: translateX(-1.875rem);
+        -ms-transform: translateX(-1.875rem);
+            transform: translateX(-1.875rem);
   }
 
   .loaded .hero__image {
-    -webkit-animation: opacity 0.4s ease 0.8s forwards;
-            animation: opacity 0.4s ease 0.8s forwards;
+    -webkit-animation: to-right 0.4s ease 1s forwards;
+            animation: to-right 0.4s ease 1s forwards;
   }
 
   .new-way__items-body-items._watcher-view .new-way__items-body-item:nth-child(odd) {
