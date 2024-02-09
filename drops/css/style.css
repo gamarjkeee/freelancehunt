@@ -1087,7 +1087,6 @@ body {
   background: linear-gradient(180deg, #0acdff 0%, #0079f4 100%);
   filter: blur(165.9499969482px);
   -webkit-filter: blur(165.9499969482px);
-  -webkit-backdrop-filter: blur(165.9499969482px);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
