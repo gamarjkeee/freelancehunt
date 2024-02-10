@@ -1,0 +1,16 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ant-design:tool-filled" filter="url(#filter0_d_546_1112)">
+<path id="Vector" d="M54.0816 15.2937C54.0629 15.2749 50.2629 19.0312 42.7004 26.5812L37.3941 21.2749L48.7004 9.96866C42.7504 6.38741 35.1066 7.30616 30.1504 12.2624C28.2558 14.1559 26.8925 16.5142 26.197 19.1009C25.5015 21.6876 25.4984 24.4116 26.1879 26.9999L26.3004 27.4187L8.58164 45.1312C8.19414 45.5187 8.19414 46.1562 8.58164 46.5437L17.4191 55.3812C17.8066 55.7687 18.4441 55.7687 18.8316 55.3812L36.5379 37.6749L36.9566 37.7874C42.1879 39.1812 47.8066 37.7312 51.7066 33.8312C56.6691 28.8749 57.5879 21.2312 54.0816 15.2937Z" fill="#6E4378"/>
+</g>
+<defs>
+<filter id="filter0_d_546_1112" x="0" y="0" width="68" height="68" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4" dy="4"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.881044 0 0 0 0 0.817448 0 0 0 0 0.895833 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_546_1112"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_546_1112" result="shape"/>
+</filter>
+</defs>
+</svg>
