@@ -28,4 +28,4 @@ https://gamarjkeee.github.io/freelancehunt/kanatka/index.html
 
 https://gamarjkeee.github.io/freelancehunt/drops/index.html
 
-https://gamarjkeee.github.io/freelancehunt/gamer-gragon/index.html
+https://gamarjkeee.github.io/freelancehunt/gamer-dragon/index.html
