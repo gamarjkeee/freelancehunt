@@ -2,17 +2,180 @@
 <html lang="en">
 
 <head>
-	<title>Gamer Dragon</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240210213725">
-	<link rel="shortcut icon" href="favicon.ico">
+	<title>DRAGON GEM</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<style>
+		@keyframes rotate {
+			0% {
+				transform: translate(0, 47.5%) rotate(0);
+			}
+
+			100% {
+				transform: translate(0, 47.5%) rotate(360deg);
+			}
+		}
+
+		@keyframes rotate-2 {
+			0% {
+				transform: translate(0, 47.5%) rotate(-10deg);
+			}
+
+			100% {
+				transform: translate(0, 47.5%) rotate(10deg);
+			}
+		}
+
+		@keyframes scale {
+			0% {
+				transform: translate(0, 47.5%) rotate(0) scaleY(1);
+			}
+
+			30% {
+				transform: translate(0, 47.5%) rotate(0) scaleY(3);
+			}
+
+			100% {
+				transform: translate(0, 47.5%) rotate(0) scaleY(0.5);
+			}
+		}
+
+		@keyframes scale-2 {
+			0% {
+				transform: translate(-50%, -50%) scale(1);
+			}
+
+			75% {
+				transform: translate(-50%, -50%) scale(2);
+			}
+
+			100% {
+				transform: translate(-50%, -50%) scale(1);
+			}
+		}
+
+		@keyframes down {
+			0% {
+				top: 0;
+			}
+
+			99% {
+				top: 100%;
+			}
+
+			100% {
+				top: 100%;
+				display: none;
+			}
+		}
+
+		.loader-box {
+			position: fixed;
+			z-index: 100;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #faf4e1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.loader-box::before {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 20px;
+			height: 20px;
+			background-color: #9d3085;
+			border-radius: 50%;
+			transform-origin: center;
+			animation: scale-2 1s ease infinite;
+		}
+
+		.loaded .loader-box::before {
+			animation: none;
+		}
+
+		.loader {
+			position: relative;
+			z-index: 2;
+			transform: translate(0, 47.5%) rotate(0);
+			transform-origin: center 6px;
+		}
+
+		.loaded .loader {
+			animation:
+				rotate 1s ease-in 0.3s,
+				scale 1s ease 1.3s forwards;
+		}
+
+		.loaded .loader-box {
+			animation: down 0.6s ease 1.6s forwards;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20240211133219" />
+	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
+	<div class="loader-box">
+		<span class="loader"><svg width="116" height="231" viewBox="0 0 116 231" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g clip-path="url(#clip0_564_423)">
+					<path d="M59.0752 159.513H56.9238V219.234H59.0752V159.513Z" fill="#4E1F3F" />
+					<path d="M32.4589 182.532L30.8203 181.129C32.3588 179.337 34.2475 177.871 36.0737 176.467C39.2383 174.036 41.965 171.931 41.965 168.861H44.1164C44.1164 172.996 40.6892 175.628 37.3871 178.172C35.6484 179.512 33.8473 180.903 32.4589 182.532Z" fill="#F9CB66" />
+					<path d="M35.6359 184.963L33.8223 183.798C35.5359 181.129 37.4621 179.011 39.1757 177.144C41.8525 174.212 43.9788 171.894 43.9788 168.849H46.1302C46.1302 172.733 43.6411 175.452 40.7643 178.597C39.1132 180.402 37.2495 182.444 35.6359 184.963Z" fill="#F9CB66" />
+					<path d="M38.9497 187.056L37.0234 186.091C38.712 182.707 40.4507 180.139 41.9766 177.871C44.2906 174.437 45.9542 171.944 45.9542 168.861H48.1056C48.1056 172.608 46.1794 175.465 43.7528 179.074C42.2643 181.291 40.5632 183.81 38.9497 187.056Z" fill="#F9CB66" />
+					<path d="M42.4154 188.797L40.4141 188.008C41.94 184.098 43.4535 181.041 44.6793 178.597C46.6556 174.638 47.9564 172.019 47.9564 168.861H50.1078C50.1078 172.533 48.6444 175.49 46.6056 179.562C45.3422 182.106 43.9038 184.975 42.4154 188.797Z" fill="#F9CB66" />
+					<path d="M46.0052 190.176L43.9414 189.562C45.1922 185.289 46.393 181.968 47.3561 179.299C48.9196 174.976 49.9578 172.119 49.9578 168.861H52.1092C52.1092 172.508 51.021 175.502 49.3824 180.038C48.4318 182.682 47.2435 185.965 46.0052 190.176Z" fill="#F9CB66" />
+					<path d="M49.6705 191.178L47.5566 190.739C48.4822 186.228 49.3453 182.732 50.0332 179.926C51.1715 175.277 51.9345 172.207 51.9345 168.849H54.0859C54.0859 172.47 53.3104 175.64 52.1221 180.439C51.4341 183.234 50.5836 186.705 49.658 191.165L49.6705 191.178Z" fill="#F9CB66" />
+					<path d="M53.4104 191.83L51.2715 191.567C51.8343 186.93 52.3472 183.321 52.7725 180.427C53.4979 175.365 53.9357 172.307 53.9357 168.861H56.0871C56.0871 172.457 55.6118 175.753 54.8988 180.74C54.4861 183.622 53.9732 187.218 53.4104 191.83Z" fill="#F9CB66" />
+					<path d="M57.1865 192.105L55.0352 192.018C55.2228 187.331 55.3979 183.71 55.5355 180.753C55.7856 175.527 55.9357 172.382 55.9357 168.861H58.0871C58.0871 172.432 57.937 175.603 57.6869 180.853C57.5493 183.81 57.3742 187.419 57.1865 192.105Z" fill="#F9CB66" />
+					<path d="M58.8127 192.105C58.6251 187.406 58.45 183.798 58.3124 180.828C58.0622 175.578 57.9121 172.42 57.9121 168.849H60.0635C60.0635 172.357 60.2136 175.515 60.4513 180.728C60.5888 183.697 60.764 187.319 60.9516 192.018L58.8002 192.105H58.8127Z" fill="#F9CB66" />
+					<path d="M62.5908 191.83C62.0279 187.206 61.5151 183.622 61.1023 180.74C60.3894 175.753 59.9141 172.47 59.9141 168.861H62.0655C62.0655 172.307 62.5032 175.365 63.2287 180.427C63.6415 183.321 64.1543 186.918 64.7297 191.567L62.5908 191.83Z" fill="#F9CB66" />
+					<path d="M66.3302 191.178C65.4171 186.705 64.5541 183.234 63.8661 180.452C62.6904 175.653 61.9023 172.483 61.9023 168.861H64.0537C64.0537 172.219 64.8042 175.289 65.955 179.938C66.6429 182.745 67.506 186.241 68.4316 190.752L66.3177 191.191L66.3302 191.178Z" fill="#F9CB66" />
+					<path d="M70.0082 190.176C68.7699 185.965 67.5817 182.682 66.6311 180.038C64.9925 175.502 63.9043 172.495 63.9043 168.861H66.0557C66.0557 172.119 67.0939 174.976 68.6574 179.312C69.6205 181.981 70.8213 185.289 72.0721 189.574L70.0082 190.188V190.176Z" fill="#F9CB66" />
+					<path d="M73.5851 188.797C72.0966 184.988 70.6707 182.106 69.3948 179.562C67.356 175.477 65.8926 172.533 65.8926 168.861H68.044C68.044 172.031 69.3448 174.638 71.3211 178.597C72.5469 181.053 74.0604 184.098 75.5863 188.008L73.5851 188.797Z" fill="#F9CB66" />
+					<path d="M77.0505 187.056C75.4244 183.798 73.7358 181.291 72.2473 179.074C69.8208 175.465 67.8945 172.608 67.8945 168.861H70.0459C70.0459 171.944 71.722 174.437 74.0235 177.871C75.5495 180.139 77.2881 182.72 78.9767 186.091L77.0505 187.056Z" fill="#F9CB66" />
+					<path d="M80.3771 184.963C78.7636 182.444 76.8999 180.402 75.2488 178.597C72.3719 175.452 69.8828 172.733 69.8828 168.849H72.0342C72.0342 171.894 74.1481 174.212 76.8373 177.144C78.5384 179.011 80.4772 181.129 82.1908 183.798L80.3771 184.963Z" fill="#F9CB66" />
+					<path d="M83.5423 182.532C82.1539 180.903 80.3527 179.525 78.6141 178.171C75.2995 175.628 71.8848 172.996 71.8848 168.861H74.0362C74.0362 171.931 76.7629 174.036 79.9275 176.467C81.7536 177.871 83.6549 179.337 85.1809 181.129L83.5423 182.532Z" fill="#F9CB66" />
+					<path d="M75.9118 158.699H40.0762V171.117H75.9118V158.699Z" fill="#4E1F3F" />
+					<path d="M62.9916 219.234C62.9916 221.991 60.7652 231 58.0134 231C55.2616 231 53.0352 221.991 53.0352 219.234C53.0352 216.477 55.2616 214.247 58.0134 214.247C60.7652 214.247 62.9916 216.477 62.9916 219.234Z" fill="#9D3085" />
+					<path d="M61.5272 201.917C61.5272 203.871 59.9512 205.45 57.9999 205.45C56.0487 205.45 54.4727 203.871 54.4727 201.917C54.4727 199.962 56.0487 198.383 57.9999 198.383C59.9512 198.383 61.5272 199.962 61.5272 201.917Z" fill="#9D3085" />
+					<path d="M83.7285 43.9946H32.2702C30.0188 43.9946 28.2051 45.8241 28.2051 48.067C28.2051 50.3225 30.0313 52.1395 32.2702 52.1395H83.7285C85.9799 52.1395 87.7936 50.31 87.7936 48.067C87.7936 45.8116 85.9674 43.9946 83.7285 43.9946Z" fill="#F9CB66" />
+					<path d="M48.6935 31.5769H67.3055C72.0586 31.5769 75.9236 35.4488 75.9236 40.2104V43.9946H40.0879V40.2104C40.0879 35.4488 43.9529 31.5769 48.706 31.5769H48.6935Z" fill="#4E1F3F" />
+					<path d="M67.7814 35.2233H48.2188V19.2719C48.2188 13.8713 52.6091 9.47308 58.0001 9.47308C63.3911 9.47308 67.7814 13.8713 67.7814 19.2719V35.2233ZM50.3701 33.068H65.63V19.2719C65.63 15.0617 62.2028 11.6283 58.0001 11.6283C53.7974 11.6283 50.3701 15.0617 50.3701 19.2719V33.068Z" fill="#4E1F3F" />
+					<path d="M57.9991 11.6283C54.797 11.6283 52.1953 9.02197 52.1953 5.81416C52.1953 2.60635 54.797 0 57.9991 0C61.2011 0 63.8028 2.60635 63.8028 5.81416C63.8028 9.02197 61.2011 11.6283 57.9991 11.6283ZM57.9991 2.15525C55.9853 2.15525 54.3467 3.79674 54.3467 5.81416C54.3467 7.83157 55.9853 9.47307 57.9991 9.47307C60.0129 9.47307 61.6514 7.83157 61.6514 5.81416C61.6514 3.79674 60.0129 2.15525 57.9991 2.15525Z" fill="#4E1F3F" />
+					<path d="M81.165 52.152H34.835C14.3343 61.0988 0 81.5862 0 105.419C0 129.252 14.3343 149.74 34.835 158.699H81.165C101.666 149.74 116 129.265 116 105.419C116 81.5736 101.666 61.0988 81.165 52.1395V52.152Z" fill="#9D3085" />
+					<path d="M84.0537 111.772C56.1482 111.772 28.2426 111.772 0.349609 111.785C0.41215 112.324 0.47469 112.85 0.549739 113.376C12.52 113.376 24.5027 113.364 36.473 113.364C62.8025 113.364 89.1195 113.364 115.449 113.376C115.524 112.85 115.587 112.311 115.649 111.785C105.117 111.785 94.5855 111.772 84.0537 111.772Z" fill="#F9CB66" />
+					<path d="M15.7599 145.216C22.6644 145.216 29.5688 145.216 36.4733 145.216C57.7245 145.216 78.9883 145.216 100.24 145.229C100.727 144.702 101.215 144.176 101.69 143.637C96.0118 143.637 90.3331 143.637 84.6545 143.637C61.2143 143.637 37.7741 143.637 14.334 143.65C14.8093 144.189 15.2846 144.715 15.7724 145.241L15.7599 145.216Z" fill="#F9CB66" />
+					<path d="M84.0542 127.698C57.512 127.698 30.9699 127.698 4.42773 127.711C4.65288 128.25 4.87803 128.776 5.11568 129.302C15.5724 129.302 26.0167 129.29 36.4734 129.29C61.277 129.29 86.0805 129.29 110.884 129.302C111.122 128.776 111.347 128.237 111.572 127.711C102.404 127.711 93.2351 127.698 84.0542 127.698Z" fill="#F9CB66" />
+					<path d="M85.0413 64.0184C62.4642 64.0184 39.8996 64.0184 17.3225 64.0309C16.7971 64.5447 16.2843 65.0835 15.7715 65.6223C22.6759 65.6223 29.5804 65.6223 36.4724 65.6223C57.7236 65.6223 78.9749 65.6223 100.239 65.6348C99.7258 65.096 99.2129 64.5572 98.6751 64.0309C94.1347 64.0309 89.5817 64.0309 85.0413 64.0309V64.0184Z" fill="#F9CB66" />
+					<path d="M84.053 79.9321C57.9861 79.9321 31.9318 79.9321 5.86493 79.9447C5.61477 80.4709 5.36461 80.9972 5.12695 81.536C15.6463 81.536 26.1656 81.5235 36.6723 81.5235C61.4133 81.5235 86.1418 81.5235 110.883 81.536C110.645 80.9972 110.395 80.4709 110.132 79.9447C101.439 79.9447 92.7461 79.9321 84.053 79.9447V79.9321Z" fill="#F9CB66" />
+					<path d="M84.0528 95.8584C56.2974 95.8584 28.5419 95.8584 0.786482 95.8709C0.698925 96.3972 0.623877 96.9235 0.548828 97.4623C12.5941 97.4623 24.6269 97.4498 36.6722 97.4498C62.9267 97.4498 89.1936 97.4498 115.448 97.4623C115.373 96.9235 115.298 96.3972 115.21 95.8709C104.829 95.8709 94.4345 95.8584 84.0528 95.8584Z" fill="#F9CB66" />
+					<path d="M58 121.233L42.2148 105.419L58 89.6057L73.7853 105.419L58 121.233ZM45.2543 105.419L58 118.188L70.7458 105.419L58 92.6506L45.2543 105.419Z" fill="#4E1F3F" />
+					<path d="M57.9992 106.948L46.5418 95.47C44.1527 93.0766 44.1527 89.1922 46.5418 86.7988C48.9308 84.4055 52.8083 84.4055 55.1974 86.7988L57.9992 89.6057L60.801 86.7988C61.9517 85.646 63.4902 85.007 65.1288 85.007C66.7674 85.007 68.2933 85.646 69.4566 86.7988C70.6073 87.9516 71.2453 89.4929 71.2453 91.1344C71.2453 92.7759 70.6073 94.3172 69.4566 95.47L57.9992 106.948ZM50.8696 87.1622C49.8564 87.1622 48.8433 87.5507 48.0678 88.3276C46.5168 89.8813 46.5168 92.4 48.0678 93.9412L57.9992 103.89L67.9306 93.9412C68.6811 93.1894 69.0939 92.187 69.0939 91.1344C69.0939 90.0818 68.6811 89.0794 67.9306 88.3276C66.4296 86.8239 63.828 86.8239 62.327 88.3276L57.9992 92.6631L53.6714 88.3276C52.8959 87.5507 51.8827 87.1622 50.8696 87.1622Z" fill="#4E1F3F" />
+					<path d="M79.4017 111.547C77.7631 111.547 76.2371 110.908 75.0739 109.755L70.7461 105.419L75.0739 101.084C76.2246 99.9308 77.7631 99.2917 79.4017 99.2917C81.0402 99.2917 82.5787 99.9308 83.7295 101.084C84.8802 102.236 85.5181 103.778 85.5181 105.419C85.5181 107.061 84.8802 108.602 83.7295 109.755C82.5787 110.908 81.0402 111.547 79.4017 111.547ZM73.7981 105.419L76.5999 108.226C78.1008 109.73 80.715 109.73 82.2035 108.226C82.954 107.474 83.3668 106.472 83.3668 105.419C83.3668 104.367 82.954 103.364 82.2035 102.612C80.7025 101.109 78.0883 101.109 76.5999 102.612L73.7981 105.419Z" fill="#4E1F3F" />
+					<path d="M65.1288 125.844C63.4902 125.844 61.9517 125.205 60.801 124.052L57.9992 121.245L55.1974 124.052C52.8083 126.445 48.9308 126.445 46.5418 124.052C44.1527 121.659 44.1527 117.774 46.5418 115.381L57.9992 103.903L69.4566 115.381C70.6073 116.534 71.2453 118.075 71.2453 119.717C71.2453 121.358 70.6073 122.899 69.4566 124.052C68.3059 125.205 66.7674 125.844 65.1288 125.844ZM57.9992 118.188L62.327 122.523C63.828 124.027 66.4422 124.027 67.9306 122.523C68.6811 121.772 69.0939 120.769 69.0939 119.717C69.0939 118.664 68.6811 117.662 67.9306 116.91L57.9992 106.96L48.0678 116.91C46.5168 118.463 46.5168 120.982 48.0678 122.523C49.6188 124.077 52.1329 124.077 53.6714 122.523L57.9992 118.188Z" fill="#4E1F3F" />
+					<path d="M36.6106 111.547C34.972 111.547 33.446 110.908 32.2828 109.755C31.1195 108.602 30.4941 107.061 30.4941 105.419C30.4941 103.778 31.1321 102.236 32.2828 101.084C33.4335 99.9308 34.972 99.2917 36.6106 99.2917C38.2492 99.2917 39.7877 99.9308 40.9384 101.084L45.2662 105.419L40.9384 109.755C39.7877 110.908 38.2492 111.547 36.6106 111.547ZM36.6106 101.447C35.5474 101.447 34.5593 101.861 33.8088 102.612C33.0583 103.364 32.6455 104.367 32.6455 105.419C32.6455 106.472 33.0583 107.474 33.8088 108.226C35.3098 109.73 37.9239 109.73 39.4124 108.226L42.2142 105.419L39.4124 102.612C38.6619 101.861 37.6613 101.447 36.6106 101.447Z" fill="#4E1F3F" />
+					<g style="mix-blend-mode: multiply">
+						<path d="M101.791 67.3515C98.4888 110.269 66.9684 145.266 25.7793 153.737C28.6311 155.641 31.6581 157.308 34.8352 158.699H81.1651C101.666 149.74 116 129.265 116 105.419C116 90.8462 110.634 77.5388 101.791 67.3515Z" fill="#E6E7E8" />
+					</g>
+				</g>
+				<defs>
+					<clipPath id="clip0_564_423">
+						<rect width="116" height="231" fill="white" />
+					</clipPath>
+				</defs>
+			</svg>
+		</span>
+	</div>
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
@@ -45,13 +208,14 @@
 		<main class="page">
 			<section class="page__hero hero">
 				<div class="hero__background">
-					<img src="img/hero/bg.png" alt="Background Image" />
+					<span></span><span></span>
+					<img src="img/hero/bg2.png" alt="Background Image" />
 				</div>
 				<div class="hero__container">
 					<div class="hero__content">
 						<h1 class="hero__title">
-							Gamer <br />
-							Dragon
+							DRAGON <br />
+							GEM
 						</h1>
 						<div class="hero__actions">
 							<a href="#" class="hero__button hero__button--white"><span> Buy on Raydium</span><img src="img/icons/open.svg" alt="Open Icon" /></a>
@@ -62,21 +226,21 @@
 			</section>
 			<section class="page__about about">
 				<div class="about__container">
-					<div class="about__content">
+					<div data-watch-threshold="0.6" data-watch-once data-watch class="about__content">
 						<h2 class="about__title">
 							About <br />
-							$GAMER
+							DRAGON GEM
 						</h2>
 						<div class="about__text">
-							$XXX is blending gaming with cryptocurrency built on the Solana
-							blockchain's robust framework. We focus on creating engaging,
-							straightforward games that leverage Solana's high-speed and
-							low-cost transactions to enhance gameplay and offer real value
-							to our players.
+							$DRAGEM is blending gaming with cryptocurrency built on the
+							Solana blockchain's robust framework. We focus on creating
+							engaging, straightforward games that leverage Solana's
+							high-speed and low-cost transactions to enhance gameplay and
+							offer real value to our players.
 						</div>
 					</div>
 				</div>
-				<div class="about__image">
+				<div data-watch-threshold="0.6" data-watch-once data-watch class="about__image">
 					<img src="img/about/01.png" alt="Image" />
 				</div>
 			</section>
@@ -85,10 +249,10 @@
 					<img src="img/features/bg.png" alt="Background Image" />
 				</div>
 				<div class="features__container">
-					<div class="features__herader">
+					<div data-watch-threshold="0.6" data-watch-once data-watch class="features__herader">
 						<h2 class="features__title">Features</h2>
 						<div class="features__text">
-							$XXX is committed to enriching the gaming landscape with
+							$DRAGEM is committed to enriching the gaming landscape with
 							innovative and engaging titles. Leveraging blockchain's
 							potential, we aim to launch a variety of games, from the
 							competitive "Dragon Races" to the strategic "Dragon Fight" and
@@ -97,7 +261,7 @@
 							platform to enhance player experience.
 						</div>
 					</div>
-					<div class="features__items">
+					<div data-watch-threshold="0.6" data-watch-once data-watch class="features__items">
 						<div class="features__item item-features">
 							<h3 class="item-features__title">Q1 - DRAGON RACES</h3>
 							<div class="item-features__text">
@@ -124,9 +288,9 @@
 			</section>
 			<section class="page__tokenomics tokenomics">
 				<div class="tokenomics__container">
-					<div class="tokenomics__header">
+					<div data-watch-threshold="0.6" data-watch-once data-watch class="tokenomics__header">
 						<h2 class="tokenomics__title">
-							<span>$XXXXX</span> <br />
+							<span>$DRAGEM</span> <br />
 							Tokenomics
 						</h2>
 						<div class="tokenomics__number">
@@ -141,9 +305,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="tokenomics__items">
+					<div data-watch-threshold="0.6" data-watch-once data-watch class="tokenomics__items">
 						<div class="tokenomics__item item-tokenomics">
-							<div class="item-tokenomics__title">$XXXXX</div>
+							<div class="item-tokenomics__title">$DRAGEM</div>
 							<div class="item-tokenomics__text">Symbol</div>
 						</div>
 						<div class="tokenomics__item item-tokenomics">
@@ -159,10 +323,10 @@
 			</section>
 			<section class="page__follow follow">
 				<div class="follow__container">
-					<div class="follow__body">
+					<div data-watch-threshold="0.5" data-watch-once data-watch class="follow__body">
 						<div class="follow__body-info">
 							<h2 class="follow__body-title">
-								Follow $XXXXX on social media
+								Follow $DRAGEM on social media
 							</h2>
 							<div class="follow__body-actions">
 								<a href="#" class="follow__body-button button button-black"><img src="img/icons/telegram.svg" alt="Telegram Icon" /><span>Join Telegram</span></a>
@@ -194,7 +358,7 @@
 						</div>
 					</div>
 					<div class="footer__bottom">
-						<div class="footer__bottom-name">Gamer Dragon</div>
+						<div class="footer__bottom-name">Dragon Gem</div>
 						<div class="footer__bottom-menu">
 							<a class="footer__bottom-menu-link" href="#" data-goto-header data-goto=".hero">Home</a>
 							<a class="footer__bottom-menu-link" href="#" data-goto-header data-goto=".about">About</a>
@@ -204,15 +368,15 @@
 				</div>
 				<div class="footer__copy">
 					<div class="footer__copy-copy">
-						Gamer Dragon © 2024 • All Rights Reserved
+						Dragon Gem © 2024 • All Rights Reserved
 					</div>
-					<div class="footer__copy-designed">Designed by Osnovo Co.</div>
+					<a target="_blank" href="https://t.me/osnovoco" class="footer__copy-designed">Designed by Osnovo Co.</a>
 				</div>
 			</div>
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20240210213725"></script>
+	<script src="js/app.min.js?_v=20240211133219"></script>
 </body>
 
 </html>
