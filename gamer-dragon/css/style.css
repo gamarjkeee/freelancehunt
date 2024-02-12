@@ -519,7 +519,7 @@ body {
 }
 .hero__background span:nth-child(2) {
   top: 64%;
-  right: 20.7%;
+  right: 15%;
   width: 3.5625rem;
   aspect-ratio: 57/171;
   background-image: url(../img/hero/decor-2.png);
@@ -863,6 +863,9 @@ body {
   max-width: 100%
 }
 @media (min-width:61.99875em) {
+  .menu__link._navigator-active {
+    color: #6e4378
+  }
   .header {
     top: -100%
   }
