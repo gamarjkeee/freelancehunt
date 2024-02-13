@@ -2279,10 +2279,6 @@ body {
   }
 
   .hero__title {
-    font-size: 2.75rem;
-  }
-
-  .hero__title {
     margin-bottom: 7.5rem;
   }
 
@@ -3105,18 +3101,6 @@ body {
     }
 }
 
-@supports (font-size: clamp( 2.75rem , 2.0015592516rem  +  3.7422037422vw , 5rem )) {
-    .hero__title {
-      font-size: clamp( 2.75rem , 2.0015592516rem  +  3.7422037422vw , 5rem );
-    }
-}
-
-@supports not (font-size: clamp( 2.75rem , 2.0015592516rem  +  3.7422037422vw , 5rem )) {
-    .hero__title {
-      font-size: calc(2.75rem + 2.25 * (100vw - 20rem) / 60.125);
-    }
-}
-
 @supports (margin-bottom: clamp( 2rem , 9.3295218295rem  +  -9.1476091476vw , 7.5rem )) {
     .hero__title {
       margin-bottom: clamp( 2rem , 9.3295218295rem  +  -9.1476091476vw , 7.5rem );
@@ -3527,6 +3511,18 @@ body {
 }
 
 @media (min-width: 61.99875em) and (max-width: 80.125em) {
+@supports (font-size: clamp( 2.75rem , -4.9458658024rem  +  12.4129370388vw , 5rem )) {
+    .hero__title {
+      font-size: clamp( 2.75rem , -4.9458658024rem  +  12.4129370388vw , 5rem );
+    }
+}
+
+@supports not (font-size: clamp( 2.75rem , -4.9458658024rem  +  12.4129370388vw , 5rem )) {
+    .hero__title {
+      font-size: calc(2.75rem + 2.25 * (100vw - 61.99875rem) / 18.12625);
+    }
+}
+
 @supports ((-moz-column-gap: clamp( 1.5rem , -3.6305772016rem  +  8.2752913592vw , 3rem )) or (column-gap: clamp( 1.5rem , -3.6305772016rem  +  8.2752913592vw , 3rem ))) {
     .contacts__main-menu {
       -webkit-column-gap: clamp( 1.5rem , -3.6305772016rem  +  8.2752913592vw , 3rem );
