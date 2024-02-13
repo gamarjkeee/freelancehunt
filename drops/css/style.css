@@ -3511,15 +3511,15 @@ body {
 }
 
 @media (min-width: 61.99875em) and (max-width: 80.125em) {
-@supports (font-size: clamp( 2.75rem , -4.9458658024rem  +  12.4129370388vw , 5rem )) {
+@supports (font-size: clamp( 4.25rem , 1.6847113992rem  +  4.1376456796vw , 5rem )) {
     .hero__title {
-      font-size: clamp( 2.75rem , -4.9458658024rem  +  12.4129370388vw , 5rem );
+      font-size: clamp( 4.25rem , 1.6847113992rem  +  4.1376456796vw , 5rem );
     }
 }
 
-@supports not (font-size: clamp( 2.75rem , -4.9458658024rem  +  12.4129370388vw , 5rem )) {
+@supports not (font-size: clamp( 4.25rem , 1.6847113992rem  +  4.1376456796vw , 5rem )) {
     .hero__title {
-      font-size: calc(2.75rem + 2.25 * (100vw - 61.99875rem) / 18.12625);
+      font-size: calc(4.25rem + 0.75 * (100vw - 61.99875rem) / 18.12625);
     }
 }
 
