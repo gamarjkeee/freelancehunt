@@ -44,9 +44,6 @@
             }), 0);
         }));
     }
-    function getHash() {
-        if (location.hash) return location.hash.replace("#", "");
-    }
     let bodyLockStatus = true;
     let bodyLockToggle = (delay = 500) => {
         if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
@@ -93,10 +90,6 @@
             }
         }));
     }
-    function menuClose() {
-        bodyUnlock();
-        document.documentElement.classList.remove("menu-open");
-    }
     function functions_FLS(message) {
         setTimeout((() => {
             if (window.FLS) console.log(message);
@@ -107,44 +100,61 @@
             return self.indexOf(item) === index;
         }));
     }
-    let gotoblock_gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
-        const targetBlockElement = document.querySelector(targetBlock);
-        if (targetBlockElement) {
-            let headerItem = "";
-            let headerItemHeight = 0;
-            if (noHeader) {
-                headerItem = "header.header";
-                const headerElement = document.querySelector(headerItem);
-                if (!headerElement.classList.contains("_header-scroll")) {
-                    headerElement.style.cssText = `transition-duration: 0s;`;
-                    headerElement.classList.add("_header-scroll");
-                    headerItemHeight = headerElement.offsetHeight;
-                    headerElement.classList.remove("_header-scroll");
-                    setTimeout((() => {
-                        headerElement.style.cssText = ``;
-                    }), 0);
-                } else headerItemHeight = headerElement.offsetHeight;
-            }
-            let options = {
-                speedAsDuration: true,
-                speed,
-                header: headerItem,
-                offset: offsetTop,
-                easing: "easeOutQuad"
+    class MousePRLX {
+        constructor(props, data = null) {
+            let defaultConfig = {
+                init: true,
+                logging: true
             };
-            document.documentElement.classList.contains("menu-open") ? menuClose() : null;
-            if (typeof SmoothScroll !== "undefined") (new SmoothScroll).animateScroll(targetBlockElement, "", options); else {
-                let targetBlockElementPosition = targetBlockElement.getBoundingClientRect().top + scrollY;
-                targetBlockElementPosition = headerItemHeight ? targetBlockElementPosition - headerItemHeight : targetBlockElementPosition;
-                targetBlockElementPosition = offsetTop ? targetBlockElementPosition - offsetTop : targetBlockElementPosition;
-                window.scrollTo({
-                    top: targetBlockElementPosition,
-                    behavior: "smooth"
-                });
+            this.config = Object.assign(defaultConfig, props);
+            if (this.config.init) {
+                const paralaxMouse = document.querySelectorAll("[data-prlx-mouse]");
+                if (paralaxMouse.length) {
+                    this.paralaxMouseInit(paralaxMouse);
+                    this.setLogging(`Прокинувся, стежу за об'єктами: (${paralaxMouse.length})`);
+                } else this.setLogging("Немає жодного обєкта. Сплю...");
             }
-            functions_FLS(`[gotoBlock]: Юхуу...їдемо до ${targetBlock}`);
-        } else functions_FLS(`[gotoBlock]: Йой... Такого блоку немає на сторінці: ${targetBlock}`);
-    };
+        }
+        paralaxMouseInit(paralaxMouse) {
+            paralaxMouse.forEach((el => {
+                const paralaxMouseWrapper = el.closest("[data-prlx-mouse-wrapper]");
+                const paramСoefficientX = el.dataset.prlxCx ? +el.dataset.prlxCx : 100;
+                const paramСoefficientY = el.dataset.prlxCy ? +el.dataset.prlxCy : 100;
+                const directionX = el.hasAttribute("data-prlx-dxr") ? -1 : 1;
+                const directionY = el.hasAttribute("data-prlx-dyr") ? -1 : 1;
+                const paramAnimation = el.dataset.prlxA ? +el.dataset.prlxA : 50;
+                let positionX = 0, positionY = 0;
+                let coordXprocent = 0, coordYprocent = 0;
+                setMouseParallaxStyle();
+                if (paralaxMouseWrapper) mouseMoveParalax(paralaxMouseWrapper); else mouseMoveParalax();
+                function setMouseParallaxStyle() {
+                    const distX = coordXprocent - positionX;
+                    const distY = coordYprocent - positionY;
+                    positionX += distX * paramAnimation / 1e3;
+                    positionY += distY * paramAnimation / 1e3;
+                    el.style.cssText = `transform: translate3D(${directionX * positionX / (paramСoefficientX / 10)}%,${directionY * positionY / (paramСoefficientY / 10)}%,0) rotate(0.02deg);`;
+                    requestAnimationFrame(setMouseParallaxStyle);
+                }
+                function mouseMoveParalax(wrapper = window) {
+                    wrapper.addEventListener("mousemove", (function(e) {
+                        const offsetTop = el.getBoundingClientRect().top + window.scrollY;
+                        if (offsetTop >= window.scrollY || offsetTop + el.offsetHeight >= window.scrollY) {
+                            const parallaxWidth = window.innerWidth;
+                            const parallaxHeight = window.innerHeight;
+                            const coordX = e.clientX - parallaxWidth / 2;
+                            const coordY = e.clientY - parallaxHeight / 2;
+                            coordXprocent = coordX / parallaxWidth * 100;
+                            coordYprocent = coordY / parallaxHeight * 100;
+                        }
+                    }));
+                }
+            }));
+        }
+        setLogging(message) {
+            this.config.logging ? functions_FLS(`[PRLX Mouse]: ${message}`) : null;
+        }
+    }
+    modules_flsModules.mousePrlx = new MousePRLX({});
     class ScrollWatcher {
         constructor(props) {
             let defaultConfig = {
@@ -239,52 +249,77 @@
         }
     }
     modules_flsModules.watcher = new ScrollWatcher({});
-    let addWindowScrollEvent = false;
-    function pageNavigation() {
-        document.addEventListener("click", pageNavigationAction);
-        document.addEventListener("watcherCallback", pageNavigationAction);
-        function pageNavigationAction(e) {
-            if (e.type === "click") {
-                const targetElement = e.target;
-                if (targetElement.closest("[data-goto]")) {
-                    const gotoLink = targetElement.closest("[data-goto]");
-                    const gotoLinkSelector = gotoLink.dataset.goto ? gotoLink.dataset.goto : "";
-                    const noHeader = gotoLink.hasAttribute("data-goto-header") ? true : false;
-                    const gotoSpeed = gotoLink.dataset.gotoSpeed ? gotoLink.dataset.gotoSpeed : 500;
-                    const offsetTop = gotoLink.dataset.gotoTop ? parseInt(gotoLink.dataset.gotoTop) : 0;
-                    if (modules_flsModules.fullpage) {
-                        const fullpageSection = document.querySelector(`${gotoLinkSelector}`).closest("[data-fp-section]");
-                        const fullpageSectionId = fullpageSection ? +fullpageSection.dataset.fpId : null;
-                        if (fullpageSectionId !== null) {
-                            modules_flsModules.fullpage.switchingSection(fullpageSectionId);
-                            document.documentElement.classList.contains("menu-open") ? menuClose() : null;
-                        }
-                    } else gotoblock_gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop);
-                    e.preventDefault();
-                }
-            } else if (e.type === "watcherCallback" && e.detail) {
-                const entry = e.detail.entry;
-                const targetElement = entry.target;
-                if (targetElement.dataset.watch === "navigator") {
-                    document.querySelector(`[data-goto]._navigator-active`);
-                    let navigatorCurrentItem;
-                    if (targetElement.id && document.querySelector(`[data-goto="#${targetElement.id}"]`)) navigatorCurrentItem = document.querySelector(`[data-goto="#${targetElement.id}"]`); else if (targetElement.classList.length) for (let index = 0; index < targetElement.classList.length; index++) {
-                        const element = targetElement.classList[index];
-                        if (document.querySelector(`[data-goto=".${element}"]`)) {
-                            navigatorCurrentItem = document.querySelector(`[data-goto=".${element}"]`);
-                            break;
-                        }
-                    }
-                    if (entry.isIntersecting) navigatorCurrentItem ? navigatorCurrentItem.classList.add("_navigator-active") : null; else navigatorCurrentItem ? navigatorCurrentItem.classList.remove("_navigator-active") : null;
-                }
-            }
+    class Parallax {
+        constructor(elements) {
+            if (elements.length) this.elements = Array.from(elements).map((el => new Parallax.Each(el, this.options)));
         }
-        if (getHash()) {
-            let goToHash;
-            if (document.querySelector(`#${getHash()}`)) goToHash = `#${getHash()}`; else if (document.querySelector(`.${getHash()}`)) goToHash = `.${getHash()}`;
-            goToHash ? gotoblock_gotoBlock(goToHash, true, 500, 20) : null;
+        destroyEvents() {
+            this.elements.forEach((el => {
+                el.destroyEvents();
+            }));
+        }
+        setEvents() {
+            this.elements.forEach((el => {
+                el.setEvents();
+            }));
         }
     }
+    Parallax.Each = class {
+        constructor(parent) {
+            this.parent = parent;
+            this.elements = this.parent.querySelectorAll("[data-prlx]");
+            this.animation = this.animationFrame.bind(this);
+            this.offset = 0;
+            this.value = 0;
+            this.smooth = parent.dataset.prlxSmooth ? Number(parent.dataset.prlxSmooth) : 15;
+            this.setEvents();
+        }
+        setEvents() {
+            this.animationID = window.requestAnimationFrame(this.animation);
+        }
+        destroyEvents() {
+            window.cancelAnimationFrame(this.animationID);
+        }
+        animationFrame() {
+            const topToWindow = this.parent.getBoundingClientRect().top;
+            const heightParent = this.parent.offsetHeight;
+            const heightWindow = window.innerHeight;
+            const positionParent = {
+                top: topToWindow - heightWindow,
+                bottom: topToWindow + heightParent
+            };
+            const centerPoint = this.parent.dataset.prlxCenter ? this.parent.dataset.prlxCenter : "center";
+            if (positionParent.top < 30 && positionParent.bottom > -30) switch (centerPoint) {
+              case "top":
+                this.offset = -1 * topToWindow;
+                break;
+
+              case "center":
+                this.offset = heightWindow / 2 - (topToWindow + heightParent / 2);
+                break;
+
+              case "bottom":
+                this.offset = heightWindow - (topToWindow + heightParent);
+                break;
+            }
+            this.value += (this.offset - this.value) / this.smooth;
+            this.animationID = window.requestAnimationFrame(this.animation);
+            this.elements.forEach((el => {
+                const parameters = {
+                    axis: el.dataset.axis ? el.dataset.axis : "v",
+                    direction: el.dataset.direction ? el.dataset.direction + "1" : "-1",
+                    coefficient: el.dataset.coefficient ? Number(el.dataset.coefficient) : 5,
+                    additionalProperties: el.dataset.properties ? el.dataset.properties : ""
+                };
+                this.parameters(el, parameters);
+            }));
+        }
+        parameters(el, parameters) {
+            if (parameters.axis == "v") el.style.transform = `translate3D(0, ${(parameters.direction * (this.value / parameters.coefficient)).toFixed(2)}px,0) ${parameters.additionalProperties}`; else if (parameters.axis == "h") el.style.transform = `translate3D(${(parameters.direction * (this.value / parameters.coefficient)).toFixed(2)}px,0,0) ${parameters.additionalProperties}`;
+        }
+    };
+    if (document.querySelectorAll("[data-prlx-parent]")) modules_flsModules.parallax = new Parallax(document.querySelectorAll("[data-prlx-parent]"));
+    let addWindowScrollEvent = false;
     function headerScroll() {
         addWindowScrollEvent = true;
         const header = document.querySelector("header.header");
@@ -319,36 +354,103 @@
             }));
         }
     }), 0);
-    const tabItems = document.querySelectorAll(".tabs__item");
-    window.onload = function() {
-        if (window.innerWidth > 767.98) tabItems.forEach((tabItem => {
-            tabItem.addEventListener("click", (() => {
-                tabItems.forEach((item => {
-                    item.classList.remove("active");
-                }));
-                tabItem.classList.add("active");
+    class DynamicAdapt {
+        constructor(type) {
+            this.type = type;
+        }
+        init() {
+            this.оbjects = [];
+            this.daClassname = "_dynamic_adapt_";
+            this.nodes = [ ...document.querySelectorAll("[data-da]") ];
+            this.nodes.forEach((node => {
+                const data = node.dataset.da.trim();
+                const dataArray = data.split(",");
+                const оbject = {};
+                оbject.element = node;
+                оbject.parent = node.parentNode;
+                оbject.destination = document.querySelector(`${dataArray[0].trim()}`);
+                оbject.breakpoint = dataArray[1] ? dataArray[1].trim() : "767";
+                оbject.place = dataArray[2] ? dataArray[2].trim() : "last";
+                оbject.index = this.indexInParent(оbject.parent, оbject.element);
+                this.оbjects.push(оbject);
             }));
-        })); else tabItems.forEach((tabItem => {
+            this.arraySort(this.оbjects);
+            this.mediaQueries = this.оbjects.map((({breakpoint}) => `(${this.type}-width: ${breakpoint}px),${breakpoint}`)).filter(((item, index, self) => self.indexOf(item) === index));
+            this.mediaQueries.forEach((media => {
+                const mediaSplit = media.split(",");
+                const matchMedia = window.matchMedia(mediaSplit[0]);
+                const mediaBreakpoint = mediaSplit[1];
+                const оbjectsFilter = this.оbjects.filter((({breakpoint}) => breakpoint === mediaBreakpoint));
+                matchMedia.addEventListener("change", (() => {
+                    this.mediaHandler(matchMedia, оbjectsFilter);
+                }));
+                this.mediaHandler(matchMedia, оbjectsFilter);
+            }));
+        }
+        mediaHandler(matchMedia, оbjects) {
+            if (matchMedia.matches) оbjects.forEach((оbject => {
+                this.moveTo(оbject.place, оbject.element, оbject.destination);
+            })); else оbjects.forEach((({parent, element, index}) => {
+                if (element.classList.contains(this.daClassname)) this.moveBack(parent, element, index);
+            }));
+        }
+        moveTo(place, element, destination) {
+            element.classList.add(this.daClassname);
+            if (place === "last" || place >= destination.children.length) {
+                destination.append(element);
+                return;
+            }
+            if (place === "first") {
+                destination.prepend(element);
+                return;
+            }
+            destination.children[place].before(element);
+        }
+        moveBack(parent, element, index) {
+            element.classList.remove(this.daClassname);
+            if (parent.children[index] !== void 0) parent.children[index].before(element); else parent.append(element);
+        }
+        indexInParent(parent, element) {
+            return [ ...parent.children ].indexOf(element);
+        }
+        arraySort(arr) {
+            if (this.type === "min") arr.sort(((a, b) => {
+                if (a.breakpoint === b.breakpoint) {
+                    if (a.place === b.place) return 0;
+                    if (a.place === "first" || b.place === "last") return -1;
+                    if (a.place === "last" || b.place === "first") return 1;
+                    return 0;
+                }
+                return a.breakpoint - b.breakpoint;
+            })); else {
+                arr.sort(((a, b) => {
+                    if (a.breakpoint === b.breakpoint) {
+                        if (a.place === b.place) return 0;
+                        if (a.place === "first" || b.place === "last") return 1;
+                        if (a.place === "last" || b.place === "first") return -1;
+                        return 0;
+                    }
+                    return b.breakpoint - a.breakpoint;
+                }));
+                return;
+            }
+        }
+    }
+    const da = new DynamicAdapt("max");
+    da.init();
+    const tabItems = document.querySelectorAll(".tabs__item");
+    tabItems.forEach((tabItem => {
+        tabItem.addEventListener("click", (() => {
+            tabItems.forEach((item => {
+                item.classList.remove("active");
+            }));
             tabItem.classList.add("active");
         }));
-        window.addEventListener("resize", (() => {
-            if (window.innerWidth > 767.98) tabItems.forEach((tabItem => {
-                tabItem.addEventListener("click", (() => {
-                    tabItems.forEach((item => {
-                        item.classList.remove("active");
-                    }));
-                    tabItem.classList.add("active");
-                }));
-            })); else tabItems.forEach((tabItem => {
-                tabItem.classList.add("active");
-            }));
-        }));
-    };
+    }));
     window["FLS"] = false;
     isWebp();
     addTouchClass();
     addLoadedClass();
     menuInit();
-    pageNavigation();
     headerScroll();
 })();
