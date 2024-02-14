@@ -4571,10 +4571,6 @@
         const withinBoundaries = e.composedPath().includes(selectHeader.parentElement);
         if (!withinBoundaries) selectHeader.parentElement.classList.remove("active");
     }));
-    const heroButton = document.querySelector(".hero__form-button");
-    window.addEventListener("resize", (() => {
-        if (window.innerWidth < 768) heroButton.classList.add("button--white"); else heroButton.classList.remove("button--white");
-    }));
     const script_forms = document.forms;
     if (script_forms.length) for (const form of script_forms) {
         const file = form.querySelector('input[type="file"]');

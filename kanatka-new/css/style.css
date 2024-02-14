@@ -513,6 +513,10 @@ button.button--white {
   border-color: #fff;
 }
 
+button.button--white svg path {
+  fill: #1b1b1b;
+}
+
 button.button--white span {
   color: #1b1b1b;
   -webkit-transition: color 0.2s ease 0s;
@@ -1260,7 +1264,7 @@ button.button--white span {
 }
 
 .hero__form-body {
-  max-width: 30rem;
+  max-width: 22.0625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3128,15 +3132,6 @@ button.button--white span {
 }
 
 @media (min-width: 47.99875em) {
-  .hero__form-body {
-    border: 0.0625rem solid #fff;
-    background: rgba(255, 255, 255, 0.2);
-    -webkit-backdrop-filter: blur(0.46875rem);
-            backdrop-filter: blur(0.46875rem);
-    border-radius: 3.25rem;
-    padding: 0.3125rem;
-  }
-
   .installation__image-pc {
     opacity: 0;
     visibility: hidden;
@@ -4941,13 +4936,6 @@ button.button--white span {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-
-  .hero__form-body {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 
   .hero__form-input {
