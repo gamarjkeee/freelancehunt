@@ -1174,9 +1174,9 @@ body {
   position: absolute;
   pointer-events: none;
   z-index: 1;
-  top: -4.625rem;
-  right: -0.9375rem;
-  width: 7.625rem;
+  top: -5.625rem;
+  right: 0.3125rem;
+  width: 9rem;
   aspect-ratio: 1;
   background-image: url("../img/icons/plus.png");
   background-position: center;
@@ -1187,10 +1187,10 @@ body {
 .card-ethics__plus-2 {
   position: absolute;
   pointer-events: none;
-  z-index: 1;
-  top: 0.3125rem;
-  right: -3.4375rem;
-  width: 5.25rem;
+  z-index: 3;
+  top: -0.9375rem;
+  right: -4.375rem;
+  width: 6.6875rem;
   aspect-ratio: 1;
   background-image: url("../img/icons/plus-2.png");
   background-position: center;
@@ -1202,7 +1202,7 @@ body {
   position: absolute;
   pointer-events: none;
   z-index: 1;
-  top: -6.5rem;
+  top: -6.8125rem;
   right: 0.625rem;
   width: 10.375rem;
   aspect-ratio: 166/207;
@@ -1216,8 +1216,8 @@ body {
   position: absolute;
   pointer-events: none;
   z-index: 3;
-  top: 0.3125rem;
-  right: -3.4375rem;
+  top: -0.9375rem;
+  right: -2.8125rem;
   width: 5.3125rem;
   aspect-ratio: 85/105;
   background-image: url("../img/icons/drop-2.png");
@@ -1931,33 +1931,6 @@ body {
   }
 
   .new-way__items-body-item:nth-child(even) {
-    -webkit-transform: translateX(1.875rem);
-        -ms-transform: translateX(1.875rem);
-            transform: translateX(1.875rem);
-  }
-
-  .ethics__cards._watcher-view .ethics__card:nth-child(odd) {
-    -webkit-animation: to-right 0.4s ease 0.2s forwards;
-            animation: to-right 0.4s ease 0.2s forwards;
-  }
-
-  .ethics__cards._watcher-view .ethics__card:nth-child(even) {
-    -webkit-animation: to-left 0.4s ease 0.2s forwards;
-            animation: to-left 0.4s ease 0.2s forwards;
-  }
-
-  .ethics__card {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .ethics__card:nth-child(odd) {
-    -webkit-transform: translateX(-1.875rem);
-        -ms-transform: translateX(-1.875rem);
-            transform: translateX(-1.875rem);
-  }
-
-  .ethics__card:nth-child(even) {
     -webkit-transform: translateX(1.875rem);
         -ms-transform: translateX(1.875rem);
             transform: translateX(1.875rem);
@@ -2747,6 +2720,27 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .card-ethics__plus {
+    top: calc(100% - 6rem);
+    right: 2.5rem;
+  }
+
+  .card-ethics__plus-2 {
+    width: 6.375rem;
+    top: calc(100% - 1.3125rem);
+    right: -0.625rem;
+  }
+
+  .card-ethics__drop {
+    top: calc(100% - 7.1875rem);
+    right: 2.5rem;
+  }
+
+  .card-ethics__drop-2 {
+    top: calc(100% - 1.3125rem);
+    right: -1.25rem;
+  }
+
   .contacts__background img {
     -webkit-animation: wave-3 14s linear infinite;
             animation: wave-3 14s linear infinite;
@@ -2777,32 +2771,6 @@ body {
 @media (max-width: 61.99875em) and (max-width: 34.99875em) {
   .hero__image-3 {
     bottom: 7.5rem;
-  }
-}
-
-@media (max-width: 50.18625em) {
-  .card-ethics__plus {
-    top: -1.5625rem;
-    right: 0.9375rem;
-    width: 5.375rem;
-  }
-
-  .card-ethics__plus-2 {
-    top: 0.9375rem;
-    right: -1.25rem;
-    width: 4rem;
-  }
-
-  .card-ethics__drop {
-    top: -1.5625rem;
-    right: 0.9375rem;
-    width: 5.375rem;
-  }
-
-  .card-ethics__drop-2 {
-    top: 0.9375rem;
-    right: -1.25rem;
-    width: 4rem;
   }
 }
 
