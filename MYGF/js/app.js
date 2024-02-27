@@ -4189,7 +4189,7 @@
     da.init();
     async function copyContactAdressFunc() {
         try {
-            const tokenValue = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+            const tokenValue = "SEXi8NjY7qWFqqvu3SQZkmz48zpArnvpLRaXsLvDpLw";
             await navigator.clipboard.writeText(tokenValue);
             document.location.href = `${window.location.href + "#popup"}`;
         } catch (error) {

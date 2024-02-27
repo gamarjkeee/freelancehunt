@@ -424,6 +424,9 @@ body::after {
   transition: -webkit-filter 0.2s ease 0s;
   transition: filter 0.2s ease 0s;
   transition: filter 0.2s ease 0s, -webkit-filter 0.2s ease 0s;
+  -webkit-transform: translateX(-2.75rem);
+      -ms-transform: translateX(-2.75rem);
+          transform: translateX(-2.75rem);
 }
 
 .header__logo img {
@@ -436,6 +439,9 @@ body::after {
 }
 
 .header__actions {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 7.609375rem;
+          flex: 0 0 7.609375rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -545,6 +551,15 @@ body::after {
   transition: -webkit-filter 0.2s ease 0s;
   transition: filter 0.2s ease 0s;
   transition: filter 0.2s ease 0s, -webkit-filter 0.2s ease 0s;
+  width: 1.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.top-footer__social-item img {
+  max-width: 100%;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 .top-footer__bottom {
@@ -769,11 +784,15 @@ body::after {
   text-transform: uppercase;
 }
 
-.hero__title span {
+.hero__title span:first-child {
+  color: #000;
+}
+
+.hero__title span:last-child {
   position: relative;
 }
 
-.hero__title span::after {
+.hero__title span:last-child::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -1323,11 +1342,10 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1356,6 +1374,8 @@ body::after {
 }
 
 .tokenomics__title {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   font-family: "drunk_medium";
   font-style: normal;
   font-weight: 500;
@@ -1363,6 +1383,10 @@ body::after {
   text-transform: uppercase;
   position: relative;
   z-index: 2;
+}
+
+.tokenomics__title span:first-child {
+  color: #f414ae;
 }
 
 .tokenomics__title::after {
@@ -1382,6 +1406,8 @@ body::after {
 }
 
 .tokenomics__token {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   position: relative;
   z-index: 2;
 }
@@ -1423,6 +1449,7 @@ body::after {
 
 .token-tokenomics__value {
   color: #fff;
+  word-break: break-all;
 }
 
 .token-tokenomics__text {
@@ -2204,7 +2231,7 @@ body::after {
   }
 
   .token-tokenomics__value {
-    font-size: 2.875rem;
+    font-size: 2.375rem;
   }
 
   .token-tokenomics__text {
@@ -2302,7 +2329,7 @@ body::after {
   }
 
   .hero__title {
-    font-size: 7.875rem;
+    font-size: 6.75rem;
   }
 
   .hero__title {
@@ -2350,7 +2377,7 @@ body::after {
   }
 
   .token-tokenomics__value {
-    font-size: 1.5rem;
+    font-size: 0.6875rem;
   }
 
   .token-tokenomics__text {
@@ -2379,18 +2406,6 @@ body::after {
 }
 
 @media (max-width: 61.99875em) {
-  .news__cards {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .roadmap__items {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 47.99875em) {
   .menu__body {
     position: fixed;
     width: 100%;
@@ -2501,6 +2516,24 @@ body::after {
             transform: rotate(45deg);
   }
 
+  .news__cards {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .roadmap__items {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 61.99875em) and (any-hover: none) {
+  .icon-menu {
+    cursor: default;
+  }
+}
+
+@media (max-width: 47.99875em) {
   .button {
     padding: 0.5rem 0.75rem;
   }
@@ -2689,6 +2722,7 @@ body::after {
   }
 
   .token-tokenomics {
+    padding: 1rem 1rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2772,12 +2806,6 @@ body::after {
   }
 }
 
-@media (max-width: 47.99875em) and (any-hover: none) {
-  .icon-menu {
-    cursor: default;
-  }
-}
-
 @media (max-width: 38.875em) {
   .news__cards {
     -ms-grid-columns: (1fr)[1];
@@ -2785,25 +2813,51 @@ body::after {
   }
 }
 
-@media (max-width: 29.99875em) {
-  .token-tokenomics {
-    padding: 1rem 1rem;
+@media (max-width: 31.25em) {
+  .token-tokenomics__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 0.5rem;
   }
 }
 
+@media (max-width: 29.99875em) {
+  .token-tokenomics {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (min-width: 61.99875em) and (max-width: 81.25em) {
+@supports (font-size: clamp( 2.25rem , 0.2371842737rem  +  3.2465424323vw , 2.875rem )) {
+    .menu__link {
+      font-size: clamp( 2.25rem , 0.2371842737rem  +  3.2465424323vw , 2.875rem );
+    }
+}
+
+@supports not (font-size: clamp( 2.25rem , 0.2371842737rem  +  3.2465424323vw , 2.875rem )) {
+    .menu__link {
+      font-size: calc(2.25rem + 0.625 * (100vw - 61.99875rem) / 19.25125);
+    }
+}
+}
+
+@media (min-width: 20em) and (max-width: 61.99875em) {
+@supports (font-size: clamp( 2.625rem , 2.5059488378rem  +  0.5952558112vw , 2.875rem )) {
+    .menu__link {
+      font-size: clamp( 2.625rem , 2.5059488378rem  +  0.5952558112vw , 2.875rem );
+    }
+}
+
+@supports not (font-size: clamp( 2.625rem , 2.5059488378rem  +  0.5952558112vw , 2.875rem )) {
+    .menu__link {
+      font-size: calc(2.625rem + 0.25 * (100vw - 20rem) / 41.99875);
+    }
+}
+}
+
 @media (min-width: 20em) and (max-width: 81.25em) {
-@supports (font-size: clamp( 2.625rem , 2.5433673469rem  +  0.4081632653vw , 2.875rem )) {
-    .menu__link {
-      font-size: clamp( 2.625rem , 2.5433673469rem  +  0.4081632653vw , 2.875rem );
-    }
-}
-
-@supports not (font-size: clamp( 2.625rem , 2.5433673469rem  +  0.4081632653vw , 2.875rem )) {
-    .menu__link {
-      font-size: calc(2.625rem + 0.25 * (100vw - 20rem) / 61.25);
-    }
-}
-
 @supports (font-size: clamp( 2rem , 1.7142857143rem  +  1.4285714286vw , 2.875rem )) {
     .button span {
       font-size: clamp( 2rem , 1.7142857143rem  +  1.4285714286vw , 2.875rem );
@@ -2984,15 +3038,15 @@ body::after {
     }
 }
 
-@supports (font-size: clamp( 7.875rem , 6.8137755102rem  +  5.306122449vw , 11.125rem )) {
+@supports (font-size: clamp( 6.75rem , 5.3214285714rem  +  7.1428571429vw , 11.125rem )) {
     .hero__title {
-      font-size: clamp( 7.875rem , 6.8137755102rem  +  5.306122449vw , 11.125rem );
+      font-size: clamp( 6.75rem , 5.3214285714rem  +  7.1428571429vw , 11.125rem );
     }
 }
 
-@supports not (font-size: clamp( 7.875rem , 6.8137755102rem  +  5.306122449vw , 11.125rem )) {
+@supports not (font-size: clamp( 6.75rem , 5.3214285714rem  +  7.1428571429vw , 11.125rem )) {
     .hero__title {
-      font-size: calc(7.875rem + 3.25 * (100vw - 20rem) / 61.25);
+      font-size: calc(6.75rem + 4.375 * (100vw - 20rem) / 61.25);
     }
 }
 
@@ -3104,15 +3158,15 @@ body::after {
     }
 }
 
-@supports (font-size: clamp( 1.5rem , 1.0510204082rem  +  2.2448979592vw , 2.875rem )) {
+@supports (font-size: clamp( 0.6875rem , 0.1364795918rem  +  2.7551020408vw , 2.375rem )) {
     .token-tokenomics__value {
-      font-size: clamp( 1.5rem , 1.0510204082rem  +  2.2448979592vw , 2.875rem );
+      font-size: clamp( 0.6875rem , 0.1364795918rem  +  2.7551020408vw , 2.375rem );
     }
 }
 
-@supports not (font-size: clamp( 1.5rem , 1.0510204082rem  +  2.2448979592vw , 2.875rem )) {
+@supports not (font-size: clamp( 0.6875rem , 0.1364795918rem  +  2.7551020408vw , 2.375rem )) {
     .token-tokenomics__value {
-      font-size: calc(1.5rem + 1.375 * (100vw - 20rem) / 61.25);
+      font-size: calc(0.6875rem + 1.6875 * (100vw - 20rem) / 61.25);
     }
 }
 
