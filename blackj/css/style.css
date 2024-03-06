@@ -355,6 +355,7 @@ ul li::before {
   color: #1d1d1d
 }
 .header__logo {
+  flex: 0 0 6rem;
   position: relative;
   z-index: 2;
   width: 6rem;
@@ -809,7 +810,8 @@ ul li::before {
     height: 3.125rem
   }
   .header__logo {
-    width: 4.5625rem
+    width: 4.5625rem;
+    flex: 0 0 4.5625rem
   }
   .footer__container {
     height: 3.125rem
