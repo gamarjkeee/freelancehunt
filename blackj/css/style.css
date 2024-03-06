@@ -248,9 +248,6 @@ body::after {
   line-height: 148%;
   font-family: "Noto Sans"
 }
-.link:active {
-  color: #003fbf
-}
 .text {
   font-size: 1.0625rem;
   line-height: 148%
@@ -884,6 +881,9 @@ ul li::before {
   }
   .link:hover {
     color: #4ea3ff
+  }
+  .link:active {
+    color: #003fbf
   }
   .button:hover {
     background-color: #ff4932
