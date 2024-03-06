@@ -530,7 +530,7 @@ ul li::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.375rem
+  margin-bottom: 1.5rem
 }
 .table-body {
   display: grid;
@@ -613,6 +613,9 @@ ul li::before {
   .cards__items {
     grid-template-columns: repeat(3,1fr);
     gap: 1.375rem
+  }
+  .table__table-body-box {
+    margin-bottom: 1.375rem
   }
 }
 @media (max-width:68.125em) {
