@@ -210,9 +210,6 @@ body::after {
   font-size: 1.0625rem;
   line-height: 148%
 }
-.popup__item:active {
-  color: #003fbf
-}
 .popup__item.active {
   color: #ddd
 }
@@ -872,6 +869,9 @@ ul li::before {
 @media (any-hover:hover) {
   .popup__item:hover {
     color: #4ea3ff
+  }
+  .popup__item:active {
+    color: #003fbf
   }
   .link:hover {
     color: #4ea3ff
