@@ -381,12 +381,6 @@ ul li::before {
   -moz-column-gap: .5rem;
   column-gap: .5rem
 }
-.footer__button:active svg path {
-  fill: #b20000
-}
-.footer__button:active span {
-  color: #b20000
-}
 .footer__button svg {
   flex: 0 0 1.5rem;
   width: 1.5rem;
@@ -890,6 +884,12 @@ ul li::before {
   }
   .footer__button:hover span {
     color: #ff4932
+  }
+  .footer__button:active svg path {
+    fill: #b20000
+  }
+  .footer__button:active span {
+    color: #b20000
   }
   .hero__text > p > a:hover {
     color: #4ea3ff;
