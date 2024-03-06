@@ -416,14 +416,10 @@ ul li::before {
   font-size: 1.0625rem;
   transition: color .2s ease 0s
 }
-.page__cards {
-  padding-bottom: 2.0625rem
-}
 .page__vegas {
   padding-bottom: 6.1875rem
 }
 .page__table {
-  padding-top: 2.0625rem;
   padding-bottom: 6.1875rem
 }
 .hero__text {
@@ -690,14 +686,10 @@ ul li::before {
     -moz-column-gap: .875rem;
     column-gap: .875rem
   }
-  .page__cards {
-    padding-bottom: 1.875rem
-  }
   .page__vegas {
     padding-bottom: 5.625rem
   }
   .page__table {
-    padding-top: 1.875rem;
     padding-bottom: 5.625rem
   }
   .hero__text {
@@ -827,14 +819,10 @@ ul li::before {
   .footer__button > span {
     font-size: 1rem
   }
-  .page__cards {
-    padding-bottom: 1.5rem
-  }
   .page__vegas {
     padding-bottom: 4.5rem
   }
   .page__table {
-    padding-top: 1.5rem;
     padding-bottom: 4.5rem
   }
   .hero__text {
