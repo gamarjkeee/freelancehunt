@@ -108,7 +108,7 @@ body {
   min-width: 0
 }
 [class*=__container] {
-  max-width: 86.375rem;
+  max-width: 85.375rem;
   margin: 0 auto;
   padding: 0 1.75rem
 }
@@ -249,6 +249,12 @@ body::after {
   font-size: 1.0625rem;
   line-height: 148%
 }
+h1,
+h2,
+h3 {
+  margin-top: 2.0625rem;
+  margin-bottom: 1.375rem
+}
 h1 {
   color: #000;
   font-size: 1.75rem;
@@ -269,9 +275,6 @@ h3 {
   line-height: normal;
   font-weight: 500;
   text-align: center
-}
-.title {
-  margin-bottom: 1.375rem
 }
 .container-800 {
   max-width: 50rem;
@@ -352,11 +355,29 @@ ul li::before {
   color: #1d1d1d
 }
 .header__logo {
+  position: relative;
+  z-index: 2;
   width: 6rem;
   aspect-ratio: 96/34
 }
 .header__logo img {
-  width: 100%
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain
+}
+.header__logo img:nth-child(1) {
+  z-index: 3;
+  transition: opacity .2s ease 0s
+}
+.header__logo img:nth-child(2) {
+  z-index: 2
+}
+.header__logo img:nth-child(3) {
+  z-index: 1
 }
 .footer {
   background-color: #272727
@@ -393,9 +414,6 @@ ul li::before {
   color: #ddd;
   font-size: 1.0625rem;
   transition: color .2s ease 0s
-}
-.page__hero {
-  padding: 2.0625rem 0
 }
 .page__cards {
   padding-bottom: 2.0625rem
@@ -610,9 +628,6 @@ ul li::before {
   [class*=__container] {
     padding: 0 1rem
   }
-  .page__hero {
-    padding: 1.875rem 0
-  }
   .cards__items {
     grid-template-columns: repeat(2,1fr);
     gap: 1.25rem
@@ -654,6 +669,12 @@ ul li::before {
   .text {
     font-size: 1rem
   }
+  h1,
+  h2,
+  h3 {
+    margin-top: 1.875rem;
+    margin-bottom: 1.25rem
+  }
   h1 {
     font-size: 1.5rem
   }
@@ -663,16 +684,10 @@ ul li::before {
   h3 {
     font-size: 1.25rem
   }
-  .title {
-    margin-bottom: 1.25rem
-  }
   ul li {
     -webkit-column-gap: .875rem;
     -moz-column-gap: .875rem;
     column-gap: .875rem
-  }
-  .page__hero {
-    padding: 1.5rem 0
   }
   .page__cards {
     padding-bottom: 1.875rem
@@ -763,6 +778,12 @@ ul li::before {
     font-size: .9375rem;
     line-height: 140%
   }
+  h1,
+  h2,
+  h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem
+  }
   h1 {
     font-size: 1.375rem
   }
@@ -771,9 +792,6 @@ ul li::before {
   }
   h3 {
     font-size: 1.125rem
-  }
-  .title {
-    margin-bottom: 1rem
   }
   ul li {
     -webkit-column-gap: .8125rem;
@@ -878,6 +896,15 @@ ul li::before {
   }
   .button:active {
     background-color: #b20000
+  }
+  .header__logo.logo-link:hover img:nth-child(1) {
+    opacity: 0
+  }
+  .header__logo.logo-link:active img:nth-child(1) {
+    opacity: 0
+  }
+  .header__logo.logo-link:active img:nth-child(2) {
+    opacity: 0
   }
   .footer__button:hover svg path {
     fill: #ff4932
