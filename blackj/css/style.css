@@ -294,9 +294,6 @@ h3 {
   font-weight: 500;
   transition: background-color .2s ease 0s
 }
-.button:active {
-  background-color: #b20000
-}
 ol {
   display: flex;
   flex-direction: column;
@@ -430,9 +427,6 @@ ul li::before {
 .hero__text > p > a {
   color: #1c71f1;
   text-decoration: underline
-}
-.hero__text > p > a:active {
-  color: #003fbf
 }
 .cards__items {
   display: grid;
@@ -888,6 +882,9 @@ ul li::before {
   .button:hover {
     background-color: #ff4932
   }
+  .button:active {
+    background-color: #b20000
+  }
   .footer__button:hover svg path {
     fill: #ff4932
   }
@@ -897,5 +894,8 @@ ul li::before {
   .hero__text > p > a:hover {
     color: #4ea3ff;
     text-decoration: none
+  }
+  .hero__text > p > a:active {
+    color: #003fbf
   }
 }
