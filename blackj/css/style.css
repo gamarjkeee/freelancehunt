@@ -526,10 +526,6 @@ ul li::before {
   -o-object-fit: cover;
   object-fit: cover
 }
-.table__container {
-  display: flex;
-  flex-direction: column
-}
 .table__text {
   margin-bottom: 1.375rem
 }
@@ -731,8 +727,14 @@ ul li::before {
   .table-body {
     grid-template-columns: 5.6875rem auto
   }
+  .table-body {
+    grid-template-columns: 5.4375rem auto
+  }
   .table-body__column:nth-child(1) {
     width: 5.6875rem
+  }
+  .table-body__column:nth-child(1) {
+    width: 5.4375rem
   }
   .table-body__column:nth-child(2) {
     width: 56.875rem
@@ -849,14 +851,27 @@ ul li::before {
     margin: 0 -1rem 1rem -1rem
   }
   .table__text {
-    margin: 1rem
+    margin-bottom: 1rem
   }
   .table__table-body-box {
-    margin: 1rem
+    margin-bottom: 1rem
+  }
+  .table-body__column:nth-child(2) {
+    width: 54.375rem
+  }
+  .table-body__column--fixed .table-body__item:nth-child(1) {
+    height: 4.75rem
+  }
+  .table-body__item {
+    width: 5.4375rem;
+    height: 2.375rem
   }
   .table-body__item span {
     font-size: .9375rem;
     line-height: 140%
+  }
+  .table-body__row-header {
+    height: 2.375rem
   }
   .table-body__row-header span {
     font-size: .9375rem;
