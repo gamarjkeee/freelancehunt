@@ -309,20 +309,30 @@
             }));
         }
     }), 0);
+    const langBtnValue = document.querySelector("#langBtn span");
+    const languagesButtons = document.querySelectorAll(".popup__item");
+    const url = window.location.href;
+    const urlPath = window.location.pathname;
+    console.log(url);
+    console.log(urlPath);
+    window.onload = function() {
+        languagesButtons.forEach((languagesButton => {
+            if (languagesButton.getAttribute("id") === langBtnValue.innerText.toLowerCase()) languagesButton.classList.add("active"); else languagesButton.classList.remove("active");
+        }));
+    };
     function changeLanguage(e) {
-        const langBtnValue = document.querySelector("#langBtn span");
         const target = e.target;
         const langCode = target.getAttribute("id");
         if (langCode.toUpperCase() !== langBtnValue.innerText) {
+            location.href = window.location.protocol + window.location.host + "/" + langCode + urlPath;
+            console.log(newUrlPath);
             langBtnValue.innerText = langCode.toUpperCase();
             languagesButtons.forEach((languagesButton => {
                 languagesButton.classList.remove("active");
             }));
             target.classList.add("active");
         }
-        return langCode;
     }
-    const languagesButtons = document.querySelectorAll(".popup__item");
     languagesButtons.forEach((languagesButton => {
         languagesButton.onclick = changeLanguage;
     }));

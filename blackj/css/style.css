@@ -412,6 +412,7 @@ ul li::before {
   transition: fill .2s ease 0s
 }
 .footer__button > span {
+  text-transform: uppercase;
   color: #ddd;
   font-size: 1.0625rem;
   transition: color .2s ease 0s
@@ -605,6 +606,9 @@ ul li::before {
 }
 .blue {
   background-color: #bfdffd
+}
+.red {
+  background-color: #fdbfbf
 }
 .green {
   background-color: #dafdbf
