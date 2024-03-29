@@ -1,1 +1,2663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Доглянуто - Клінінгова компанія</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <style>
+      @keyframes loader-off {
+        0% {
+          opacity: 1;
+          visibility: visible;
+        }
 
+        99% {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        100% {
+          opacity: 0;
+          visibility: hidden;
+          display: none;
+        }
+      }
+
+      .preloader {
+        display: block;
+        pointer-events: none;
+        position: fixed;
+        z-index: 150;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+      }
+
+      .loaded .preloader {
+        animation: loader-off 0.6s ease 1s forwards;
+      }
+
+      #lottie {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        width: 100%;
+        height: 100%;
+        display: block;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+        text-align: center;
+        opacity: 1;
+      }
+    </style>
+    <script src="/js/loader.js" async></script>
+    <link rel="stylesheet" href="css/style.min.css?_v=20240330012554" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="preloader">
+      <div id="lottie"></div>
+    </div>
+    <div class="wrapper">
+      <header data-scroll-show data-scroll-show="5000" class="header">
+        <div class="header__container">
+          <div class="header__top">
+            <a href="../" class="header__logo"
+              ><img src="img/logo.svg" alt="Logo Icon"
+            /></a>
+            <div class="header__menu-right">
+              <a href="tel:+380931650040" class="header__phone">
+                <img src="img/icons/phone.svg" alt="Phone Icon" />
+                <span>+38 (063) 165 00 40</span>
+              </a>
+              <button
+                type="button"
+                class="header__menu-right-icon-menu icon-menu">
+                <span></span>
+              </button>
+              <div class="header__menu menu">
+                <nav class="menu__body">
+                  <div data-spollers class="menu__spollers spollers-menu">
+                    <details class="spollers-menu__item">
+                      <summary data-spoller class="spollers-menu__title">
+                        <span>ПРИБИРАННЯ</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="11"
+                          height="7"
+                          viewBox="0 0 11 7"
+                          fill="none">
+                          <path
+                            d="M1 1L5.5 5L10 1"
+                            stroke="#ff7a00"
+                            stroke-width="2" />
+                        </svg>
+                      </summary>
+                      <div class="spollers-menu__body">
+                        <a href="#" class="spollers-menu__item">Базове</a>
+                        <a href="#" class="spollers-menu__item">Генеральне</a>
+                        <a href="#" class="spollers-menu__item">Кухня</a>
+                        <a href="#" class="spollers-menu__item">Санвузол</a>
+                        <a href="#" class="spollers-menu__item">Вікна</a>
+                        <a href="#" class="spollers-menu__item"
+                          >Після ремонту</a
+                        >
+                      </div>
+                    </details>
+                    <details class="spollers-menu__item">
+                      <summary data-spoller class="spollers-menu__title">
+                        <span>ХІМЧИСТКА</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="11"
+                          height="7"
+                          viewBox="0 0 11 7"
+                          fill="none">
+                          <path
+                            d="M1 1L5.5 5L10 1"
+                            stroke="#ff7a00"
+                            stroke-width="2" />
+                        </svg>
+                      </summary>
+                      <div class="spollers-menu__body">
+                        <a href="#" class="spollers-menu__item">Дивани</a>
+                        <a href="#" class="spollers-menu__item">Матраци</a>
+                        <a href="#" class="spollers-menu__item">Килими</a>
+                        <a href="#" class="spollers-menu__item"
+                          >Шкіряні дивани</a
+                        >
+                      </div>
+                    </details>
+                  </div>
+                  <div class="menu__social">
+                    <h3 class="menu__social-title">Ми в соцмережах:</h3>
+                    <div class="menu__social-items">
+                      <a href="#" class="menu__social-item">
+                        <svg
+                          width="40"
+                          height="40"
+                          viewBox="0 0 40 40"
+                          fill="none">
+                          <rect width="40" height="40" rx="20" fill="black" />
+                          <path
+                            d="M20 11.8072C22.6506 11.8072 23.0121 11.8072 24.0964 11.8072C25.0602 11.8072 25.5422 12.0482 25.9036 12.1687C26.3855 12.4096 26.747 12.5301 27.1084 12.8916C27.4699 13.253 27.7108 13.6145 27.8313 14.0964C27.9518 14.4578 28.0723 14.9398 28.1928 15.9036C28.1928 16.988 28.1928 17.2289 28.1928 20C28.1928 22.7711 28.1928 23.0121 28.1928 24.0964C28.1928 25.0602 27.9518 25.5422 27.8313 25.9036C27.5904 26.3855 27.4699 26.747 27.1084 27.1084C26.747 27.4699 26.3855 27.7108 25.9036 27.8313C25.5422 27.9518 25.0602 28.0723 24.0964 28.1928C23.0121 28.1928 22.7711 28.1928 20 28.1928C17.2289 28.1928 16.988 28.1928 15.9036 28.1928C14.9398 28.1928 14.4578 27.9518 14.0964 27.8313C13.6145 27.5904 13.253 27.4699 12.8916 27.1084C12.5301 26.747 12.2892 26.3855 12.1687 25.9036C12.0482 25.5422 11.9277 25.0602 11.8072 24.0964C11.8072 23.0121 11.8072 22.7711 11.8072 20C11.8072 17.2289 11.8072 16.988 11.8072 15.9036C11.8072 14.9398 12.0482 14.4578 12.1687 14.0964C12.4096 13.6145 12.5301 13.253 12.8916 12.8916C13.253 12.5301 13.6145 12.2892 14.0964 12.1687C14.4578 12.0482 14.9398 11.9277 15.9036 11.8072C16.988 11.8072 17.3494 11.8072 20 11.8072ZM20 10C17.2289 10 16.988 10 15.9036 10C14.8193 10 14.0964 10.241 13.494 10.4819C12.8916 10.7229 12.2892 11.0843 11.6867 11.6867C11.0843 12.2892 10.8434 12.7711 10.4819 13.494C10.241 14.0964 10.1205 14.8193 10 15.9036C10 16.988 10 17.3494 10 20C10 22.7711 10 23.0121 10 24.0964C10 25.1807 10.241 25.9036 10.4819 26.506C10.7229 27.1084 11.0843 27.7108 11.6867 28.3133C12.2892 28.9157 12.7711 29.1566 13.494 29.5181C14.0964 29.759 14.8193 29.8795 15.9036 30C16.988 30 17.3494 30 20 30C22.6506 30 23.0121 30 24.0964 30C25.1807 30 25.9036 29.759 26.506 29.5181C27.1084 29.2771 27.7108 28.9157 28.3133 28.3133C28.9157 27.7108 29.1566 27.2289 29.5181 26.506C29.759 25.9036 29.8795 25.1807 30 24.0964C30 23.0121 30 22.6506 30 20C30 17.3494 30 16.988 30 15.9036C30 14.8193 29.759 14.0964 29.5181 13.494C29.2771 12.8916 28.9157 12.2892 28.3133 11.6867C27.7108 11.0843 27.2289 10.8434 26.506 10.4819C25.9036 10.241 25.1807 10.1205 24.0964 10C23.0121 10 22.7711 10 20 10Z"
+                            fill="white" />
+                          <path
+                            d="M20 14.8193C17.1084 14.8193 14.8193 17.1084 14.8193 20C14.8193 22.8916 17.1084 25.1807 20 25.1807C22.8916 25.1807 25.1807 22.8916 25.1807 20C25.1807 17.1084 22.8916 14.8193 20 14.8193ZM20 23.3735C18.1928 23.3735 16.6265 21.9277 16.6265 20C16.6265 18.1928 18.0723 16.6265 20 16.6265C21.8072 16.6265 23.3735 18.0723 23.3735 20C23.3735 21.8072 21.8072 23.3735 20 23.3735Z"
+                            fill="white" />
+                          <path
+                            d="M25.3012 15.9036C25.9666 15.9036 26.506 15.3642 26.506 14.6988C26.506 14.0334 25.9666 13.494 25.3012 13.494C24.6358 13.494 24.0964 14.0334 24.0964 14.6988C24.0964 15.3642 24.6358 15.9036 25.3012 15.9036Z"
+                            fill="white" />
+                        </svg>
+                      </a>
+                      <a href="#" class="menu__social-item">
+                        <svg
+                          width="40"
+                          height="40"
+                          viewBox="0 0 40 40"
+                          fill="none">
+                          <rect width="40" height="40" rx="20" fill="black" />
+                          <path
+                            d="M21.6571 20.3648H25.3793L25.9637 16.5605H21.6563V14.4813C21.6563 12.901 22.1696 11.4996 23.6389 11.4996H26V8.17974C25.5852 8.12338 24.7078 8 23.05 8C19.5882 8 17.5587 9.8393 17.5587 14.0297V16.5605H14V20.3648H17.5587V30.821C18.2634 30.9276 18.9773 31 19.7101 31C20.3724 31 21.0189 30.9391 21.6571 30.8522V20.3648Z"
+                            fill="white" />
+                        </svg>
+                      </a>
+                      <a href="#" class="menu__social-item">
+                        <svg
+                          width="40"
+                          height="40"
+                          viewBox="0 0 40 40"
+                          fill="none">
+                          <rect width="40" height="40" rx="20" fill="black" />
+                          <path
+                            d="M28 12.6022L24.9946 28.2923C24.9946 28.2923 24.5741 29.3801 23.4189 28.8584L16.4846 23.3526L16.4524 23.3364C17.3891 22.4654 24.6524 15.7027 24.9698 15.3961C25.4613 14.9214 25.1562 14.6387 24.5856 14.9974L13.8568 22.053L9.71764 20.6108C9.71764 20.6108 9.06626 20.3708 9.00359 19.8491C8.9401 19.3265 9.73908 19.0439 9.73908 19.0439L26.6131 12.1889C26.6131 12.1889 28 11.5579 28 12.6022Z"
+                            fill="white" />
+                        </svg>
+                      </a>
+                      <a href="#" class="menu__social-item">
+                        <svg
+                          width="40"
+                          height="40"
+                          viewBox="0 0 40 40"
+                          fill="none">
+                          <rect width="40" height="40" rx="20" fill="black" />
+                          <path
+                            d="M27.9268 12.0625C25.9512 10.0937 23.3171 9 20.5366 9C14.7561 9 10.0732 13.6667 10.0732 19.4271C10.0732 21.25 10.5854 23.0729 11.4634 24.6042L10 30L15.561 28.5417C17.0976 29.3438 18.7805 29.7812 20.5366 29.7812C26.3171 29.7812 31 25.1146 31 19.3542C30.9268 16.6563 29.9024 14.0312 27.9268 12.0625ZM25.5854 23.1458C25.3659 23.7292 24.3415 24.3125 23.8293 24.3854C23.3902 24.4583 22.8049 24.4583 22.2195 24.3125C21.8537 24.1667 21.3415 24.0208 20.7561 23.7292C18.122 22.6354 16.439 20.0104 16.2927 19.7917C16.1463 19.6458 15.1951 18.4062 15.1951 17.0937C15.1951 15.7812 15.8537 15.1979 16.0732 14.9062C16.2927 14.6146 16.5854 14.6146 16.8049 14.6146C16.9512 14.6146 17.1707 14.6146 17.3171 14.6146C17.4634 14.6146 17.6829 14.5417 17.9024 15.0521C18.122 15.5625 18.6341 16.875 18.7073 16.9479C18.7805 17.0938 18.7805 17.2396 18.7073 17.3854C18.6341 17.5312 18.561 17.6771 18.4146 17.8229C18.2683 17.9687 18.1219 18.1875 18.0488 18.2604C17.9024 18.4062 17.7561 18.5521 17.9024 18.7708C18.0488 19.0625 18.561 19.8646 19.3659 20.5937C20.3902 21.4687 21.1951 21.7604 21.4878 21.9063C21.7805 22.0521 21.9268 21.9792 22.0732 21.8333C22.2195 21.6875 22.7317 21.1042 22.878 20.8125C23.0244 20.5208 23.2439 20.5938 23.4634 20.6667C23.6829 20.7396 25 21.3958 25.2195 21.5417C25.5122 21.6875 25.6585 21.7604 25.7317 21.8333C25.8049 22.0521 25.8049 22.5625 25.5854 23.1458Z"
+                            fill="white" />
+                        </svg>
+                      </a>
+                      <a href="#" class="menu__social-item">
+                        <svg
+                          width="40"
+                          height="40"
+                          viewBox="0 0 40 40"
+                          fill="none">
+                          <rect width="40" height="40" rx="20" fill="black" />
+                          <path
+                            d="M26.2539 9.54591C22.4424 8.81803 18.4843 8.81803 14.6728 9.54591C12.9869 9.90986 10.8613 11.9479 10.4948 13.5493C9.83508 16.6792 9.83508 19.8819 10.4948 23.0118C10.9346 24.6131 13.0602 26.6512 14.6728 27.0152C14.7461 27.0152 14.8194 27.0879 14.8194 27.1607V31.7464C14.8194 31.9648 15.1126 32.1103 15.2592 31.892L17.4581 29.6355C17.4581 29.6355 19.2173 27.8158 19.5105 27.5247C19.5105 27.5247 19.5838 27.4519 19.6571 27.4519C21.856 27.5247 24.1283 27.3063 26.3272 26.9424C28.0131 26.5784 30.1387 24.5403 30.5052 22.939C31.1649 19.8091 31.1649 16.6064 30.5052 13.4765C30.0654 11.9479 27.9398 9.90986 26.2539 9.54591ZM26.3272 23.2302C25.9607 23.958 25.5209 24.5403 24.788 24.9043C24.5681 24.9771 24.3482 25.0499 24.1283 25.1227C23.8351 25.0499 23.6152 24.9771 23.3953 24.9043C21.0497 23.958 18.8508 22.6478 17.0916 20.7553C16.1387 19.6635 15.3325 18.4261 14.6728 17.1159C14.3796 16.4608 14.0864 15.8785 13.8665 15.2234C13.6466 14.6411 14.0131 14.0588 14.3796 13.6221C14.7461 13.1853 15.1859 12.8942 15.699 12.6758C16.0654 12.4575 16.4319 12.603 16.7251 12.8942C17.3115 13.6221 17.8979 14.35 18.3377 15.1506C18.6309 15.6601 18.5576 16.2425 18.0445 16.6064C17.8979 16.6792 17.8246 16.752 17.678 16.8976C17.6047 16.9703 17.4581 17.0431 17.3848 17.1887C17.2382 17.4071 17.2382 17.6254 17.3115 17.8438C17.8979 19.5179 18.9974 20.8281 20.6832 21.556C20.9764 21.7016 21.1963 21.7744 21.5628 21.7744C22.0759 21.7016 22.2958 21.1193 22.6623 20.8281C23.0288 20.537 23.4686 20.537 23.9084 20.7553C24.2749 20.9737 24.6414 21.2649 25.0811 21.556C25.4476 21.8472 25.8141 22.0655 26.1806 22.3567C26.4005 22.5023 26.4738 22.8662 26.3272 23.2302ZM23.2487 17.771C23.1021 17.771 23.1754 17.771 23.2487 17.771C22.9555 17.771 22.8822 17.6254 22.8089 17.4071C22.8089 17.2615 22.8089 17.0431 22.7356 16.8976C22.6623 16.6064 22.5157 16.3152 22.2225 16.0969C22.0759 16.0241 21.9293 15.9513 21.7827 15.8785C21.5628 15.8057 21.4162 15.8057 21.1963 15.8057C20.9764 15.7329 20.9031 15.5874 20.9031 15.369C20.9031 15.2234 21.123 15.0778 21.2696 15.0778C22.4424 15.1506 23.322 15.8057 23.4686 17.1887C23.4686 17.2615 23.4686 17.4071 23.4686 17.4799C23.4686 17.6254 23.3953 17.771 23.2487 17.771ZM22.5157 14.5683C22.1492 14.4227 21.7827 14.2772 21.3429 14.2044C21.1963 14.2044 20.9764 14.1316 20.8298 14.1316C20.6099 14.1316 20.4634 13.986 20.5366 13.7676C20.5366 13.5493 20.6832 13.4037 20.9031 13.4765C21.6361 13.5493 22.2958 13.6949 22.9555 13.986C24.2749 14.6411 25.0079 15.7329 25.2277 17.1887C25.2277 17.2615 25.2277 17.3343 25.2277 17.4071C25.2277 17.5526 25.2277 17.6982 25.2277 17.9166C25.2277 17.9894 25.2277 18.0622 25.2277 18.135C25.1545 18.4261 24.6414 18.4989 24.5681 18.135C24.5681 18.0622 24.4948 17.9166 24.4948 17.8438C24.4948 17.1887 24.3482 16.5336 24.055 15.9513C23.6152 15.2962 23.1021 14.8595 22.5157 14.5683ZM26.4738 18.9356C26.2539 18.9356 26.1073 18.7173 26.1073 18.4989C26.1073 18.0622 26.034 17.6254 25.9607 17.1887C25.6675 14.8595 23.7618 12.967 21.4895 12.603C21.123 12.5302 20.7565 12.5302 20.4634 12.4575C20.2435 12.4575 19.9503 12.4575 19.877 12.1663C19.8037 11.9479 20.0236 11.7296 20.2435 11.7296C20.3168 11.7296 20.3901 11.7296 20.3901 11.7296C20.5367 11.7296 23.3953 11.8024 20.3901 11.7296C23.4686 11.8024 26.034 13.8404 26.5471 16.8976C26.6204 17.4071 26.6937 17.9166 26.6937 18.4989C26.8403 18.7173 26.6937 18.9356 26.4738 18.9356Z"
+                            fill="white" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="menu__languages">
+                    <h4 class="menu__languages-title">Мова:</h4>
+                    <div class="menu__languages-items">
+                      <a href="#" class="menu__languages-item active">
+                        <span>UA</span>
+                      </a>
+                      <a href="#" class="menu__languages-item">
+                        <span>RU</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="menu__location">
+                    <h4 class="menu__location-title">Місто:</h4>
+                    <div class="menu__location-items">
+                      <a href="#" class="menu__location-item active">
+                        <span>Київ</span>
+                      </a>
+                      <a href="#" class="menu__location-item">
+                        <span>Львів</span>
+                      </a>
+                      <a href="#" class="menu__location-item">
+                        <span>Черкаси</span>
+                      </a>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <div class="header__cleaning-types">
+              <a href="#" class="header__cleaning-type active">ПРИБИРАННЯ</a>
+              <a href="#" class="header__cleaning-type">ХІМЧИСТКА</a>
+            </div>
+            <div class="header__actions">
+              <div id="language" class="header__action action-header">
+                <button class="action-header__header">
+                  <span>UA</span>
+                  <img src="img/icons/arrow.svg" alt="Arrow Icon" />
+                </button>
+                <div class="action-header__list">
+                  <a href="#" class="action-header__item">RU</a>
+                  <a href="#" class="action-header__item">EN</a>
+                </div>
+              </div>
+              <div id="city" class="header__action action-header">
+                <button class="action-header__header">
+                  <span>КИЇВ</span>
+                  <img src="img/icons/arrow.svg" alt="Arrow Icon" />
+                </button>
+                <div class="action-header__list">
+                  <a href="#" class="action-header__item">ЛЬВІВ</a>
+                  <a href="#" class="action-header__item">ЧЕРКАСИ</a>
+                  <a href="#" class="action-header__item">вінниця</a>
+                </div>
+              </div>
+              <div id="place" class="header__action action-header">
+                <button class="action-header__header">
+                  <span>ДІМ</span>
+                  <img src="img/icons/arrow.svg" alt="Arrow Icon" />
+                </button>
+                <div class="action-header__list">
+                  <a href="#" class="action-header__item">Офіс</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__menu-pc menu-pc">
+            <nav class="menu-pc__body">
+              <ul class="menu-pc__list">
+                <li class="menu-pc__item">
+                  <a href="#" class="menu-pc__link active">Базове</a>
+                </li>
+                <li class="menu-pc__item">
+                  <a href="#" class="menu-pc__link">Генеральне</a>
+                </li>
+                <li class="menu-pc__item">
+                  <a href="#" class="menu-pc__link">Індивідуальне</a>
+                </li>
+                <li class="menu-pc__item">
+                  <a href="#" class="menu-pc__link">Вікна</a>
+                </li>
+                <li class="menu-pc__item">
+                  <a href="#" class="menu-pc__link">Після ремонту</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main class="page">
+        <section class="page__hero hero">
+          <div class="hero__bg">
+            <img src="img/hero/main.jpg" alt="Team of Cleaning Company" />
+            <img src="img/hero/main-mob.jpg" alt="Team of Cleaning Company" />
+          </div>
+          <div class="hero__container">
+            <div class="hero__body">
+              <div class="hero__content">
+                <h1 class="hero__title">
+                  Клінінгова компанія Чистота у Львові
+                </h1>
+                <div class="hero__text">
+                  Приділіть час собі та своїм близьким. А про чистоту та комфорт
+                  у вашому домі потурбуємось ми!
+                </div>
+              </div>
+              <form action="#" class="hero__form form-hero">
+                <h3 class="form-hero__title">
+                  Експерти з чистоти до ваших послуг. <br />
+                  Відповімо на будь-які ваші запитання!
+                </h3>
+                <div class="form-hero__body">
+                  <input
+                    placeholder="+38 (000) 000-00-00"
+                    type="tel"
+                    class="form-hero__input" />
+                  <button type="submit" class="form-hero__button button">
+                    <span> Розрахувати вартість</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="page__calculator calculator">
+          <div
+            data-watch-threshold="0.2"
+            data-watch-once
+            data-watch
+            class="calculator__container">
+            <div class="calculator__body">
+              <h2 class="calculator__title title">
+                <span>Калькулятор вартості</span>
+              </h2>
+              <form action="#" class="calculator__form form">
+                <div class="form__decor">
+                  <img src="img/icons/decor.svg" alt="Decor Item" />
+                </div>
+                <div class="form__line">
+                  <fieldset class="form__radio-select">
+                    <legend>Яке прибирання вас цікавить?</legend>
+                    <label for="base">
+                      <input
+                        type="radio"
+                        id="base"
+                        name="type-of-cleaning1"
+                        value="base" />
+                      Базове
+                    </label>
+                    <label for="general">
+                      <input
+                        type="radio"
+                        id="general"
+                        name="type-of-cleaning1"
+                        value="general"
+                        checked />
+                      Генеральне
+                    </label>
+                    <label for="windosw">
+                      <input
+                        type="radio"
+                        id="windosw"
+                        name="type-of-cleaning1"
+                        value="windosw" />
+                      Миття вікон
+                    </label>
+                  </fieldset>
+                </div>
+                <div class="form__line">
+                  <fieldset class="form__radio-select">
+                    <legend>Яке прибирання вас цікавить?</legend>
+                    <label for="base1">
+                      <input
+                        type="radio"
+                        id="base1"
+                        name="type-of-cleaning"
+                        value="base1" />
+                      Базове
+                    </label>
+                    <label for="general1">
+                      <input
+                        type="radio"
+                        id="general1"
+                        name="type-of-cleaning"
+                        value="general1"
+                        checked />
+                      Генеральне
+                    </label>
+                    <label for="windosw1">
+                      <input
+                        type="radio"
+                        id="windosw1"
+                        name="type-of-cleaning"
+                        value="windosw1" />
+                      Миття вікон
+                    </label>
+                  </fieldset>
+                </div>
+                <div class="form__line">
+                  <fieldset class="form__checkboxes">
+                    <legend>Яке прибирання вас цікавить?</legend>
+                    <div class="form__checkboxes-box">
+                      <label for="freezer">
+                        <input
+                          type="checkbox"
+                          id="freezer"
+                          name="freezer"
+                          value="freezer" />
+                        <span>вже у вартості</span>
+                        <span>Витерти холодильник</span>
+                      </label>
+                      <label for="freezer2" class="active">
+                        <input
+                          type="checkbox"
+                          id="freezer2"
+                          name="freezer2"
+                          value="freezer2"
+                          checked />
+                        <span>вже у вартості</span>
+                        <span>Витерти холодильник</span>
+                      </label>
+                      <label for="freezer3">
+                        <input
+                          type="checkbox"
+                          id="freezer3"
+                          name="freezer3"
+                          value="freezer3" />
+                        <span>вже у вартості</span>
+                        <span>Витерти холодильник</span>
+                      </label>
+                      <label for="freezer4">
+                        <input
+                          type="checkbox"
+                          id="freezer4"
+                          name="freezer4"
+                          value="freezer4" />
+                        <span>вже у вартості</span>
+                        <span>Витерти холодильник</span>
+                      </label>
+                      <label for="freezer5">
+                        <input
+                          type="checkbox"
+                          id="freezer5"
+                          name="freezer5"
+                          value="freezer5" />
+                        <span>вже у вартості</span>
+                        <span>Витерти холодильник</span>
+                      </label>
+                      <label for="freezer6">
+                        <input
+                          type="checkbox"
+                          id="freezer6"
+                          name="freezer6"
+                          value="freezer6" />
+                        <span>вже у вартості</span>
+                        <span>Витерти холодильник</span>
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="form__line">
+                  <div class="form__bottom">
+                    <div class="form__bottom-text">
+                      <h3 class="form__bottom-text-title">
+                        Приблизна вартість
+                      </h3>
+                      <div class="form__bottom-text-text">
+                        Експерти з чистоти до ваших послуг. Відповімо на
+                        будь-які ваші запитання!
+                      </div>
+                      <div class="form__bottom-text-price">від 2.000 грн</div>
+                    </div>
+                    <div class="form__bottom-elements">
+                      <input type="tel" placeholder="+38 (000) 000-00-00" />
+                      <button type="submit" class="form__button button">
+                        <span>Розрахувати вартість</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="page__how how">
+          <div
+            data-watch-threshold="0.25"
+            data-watch-once
+            data-watch
+            class="how__container">
+            <h2 class="how__title title">
+              <span>Як ми прибираємо</span>
+            </h2>
+            <div class="how__body">
+              <div class="how__body-bg">
+                <img src="img/how/main.jpg" alt="Image" />
+                <img src="img/how/main-mob.jpg" alt="Image" />
+              </div>
+              <div class="how__body-buttons">
+                <button class="how__body-button">
+                  <img src="img/icons/plus-btn.svg" alt="Button Icon" />
+                  <img
+                    src="img/icons/plus-btn-active.svg"
+                    alt="Button Icon Active" />
+                  <span
+                    >Саме тому зробили базове прибирання максимально економним
+                    для вас.</span
+                  >
+                </button>
+                <button class="how__body-button">
+                  <img src="img/icons/plus-btn.svg" alt="Button Icon" />
+                  <img
+                    src="img/icons/plus-btn-active.svg"
+                    alt="Button Icon Active" />
+                  <span>Саме тому зробили базове прибирання максимально.</span>
+                </button>
+                <button class="how__body-button">
+                  <img src="img/icons/plus-btn.svg" alt="Button Icon" />
+                  <img
+                    src="img/icons/plus-btn-active.svg"
+                    alt="Button Icon Active" />
+                  <span>Саме тому зробили базове прибирання.</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__services services">
+          <div
+            data-watch-threshold="0.3"
+            data-watch-once
+            data-watch
+            class="services__container">
+            <div class="services__header">
+              <h2
+                data-watch-threshold="1"
+                data-watch-once
+                data-watch
+                class="services__title title">
+                <span>Наші послуги</span>
+              </h2>
+              <div class="services__text text">
+                Весь комплекс клінінгових послуг і навіть трохи більше.
+              </div>
+            </div>
+            <div class="services__items">
+              <div class="services__item item-services">
+                <div class="item-services__icon">
+                  <img src="img/services/01.svg" alt="Icon" />
+                </div>
+                <div class="item-services__text">Базове прибирання квартир</div>
+                <div class="item-services__price">від 2.000 грн</div>
+              </div>
+              <div class="services__item item-services top">
+                <div class="item-services__icon">
+                  <img src="img/services/02.svg" alt="Icon" />
+                </div>
+                <div class="item-services__text">
+                  Генеральне прибирання квартир
+                </div>
+                <div class="item-services__price">від 2.000 грн</div>
+              </div>
+              <div class="services__item item-services">
+                <div class="item-services__icon">
+                  <img src="img/services/03.svg" alt="Icon" />
+                </div>
+                <div class="item-services__text">Прибирання ванної кімнати</div>
+                <div class="item-services__price">від 2.000 грн</div>
+              </div>
+              <div class="services__item item-services">
+                <div class="item-services__icon">
+                  <img src="img/services/04.svg" alt="Icon" />
+                </div>
+                <div class="item-services__text">Прибирання кухні</div>
+                <div class="item-services__price">від 2.000 грн</div>
+              </div>
+              <div class="services__item item-services">
+                <div class="item-services__icon">
+                  <img src="img/services/05.svg" alt="Icon" />
+                </div>
+                <div class="item-services__text">Миття вікон</div>
+                <div class="item-services__price">від 2.000 грн</div>
+              </div>
+              <div class="services__item item-services">
+                <div class="item-services__icon">
+                  <img src="img/services/06.svg" alt="Icon" />
+                </div>
+                <div class="item-services__text">
+                  Прибирання квартир після ремонту
+                </div>
+                <div class="item-services__price">від 2.000 грн</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__base base">
+          <div
+            data-watch-threshold="0.25"
+            data-watch-once
+            data-watch
+            class="base__container">
+            <div class="base__body">
+              <div class="base__header">
+                <h2
+                  data-watch-threshold="1"
+                  data-watch-once
+                  data-watch
+                  class="base__title title">
+                  <span>Базове прибирання</span>
+                </h2>
+                <div class="base__text text">
+                  Клінер приїжджає у домовлений час зі всім необхідним і
+                  приступає до прибирання. Вам залишається лише лише оцінити
+                  результат!
+                </div>
+              </div>
+              <div data-tabs class="base__tabs tabs">
+                <nav data-tabs-titles class="tabs__navigation">
+                  <button type="button" class="tabs__title _tab-active">
+                    Кухня
+                  </button>
+                  <button type="button" class="tabs__title">Кімнати</button>
+                  <button type="button" class="tabs__title">Ванна</button>
+                  <button type="button" class="tabs__title">Передпокій</button>
+                </nav>
+                <div data-tabs-body class="tabs__content">
+                  <div class="tabs__body">
+                    <div class="tabs__items">
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/01.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Ліжко</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/01.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Ліжко</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/02.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Дзеркала</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/02.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Дзеркала</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/03.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Лампи</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/03.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Лампи</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/04.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Фасади</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/04.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Фасади</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/05.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Одяг</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/05.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Одяг</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/06.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Підлога</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/06.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Підлога</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__body">
+                    <div class="tabs__items">
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/03.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Лампи</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/03.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Лампи</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/04.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Фасади</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/04.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Фасади</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/05.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Одяг</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/05.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Одяг</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/06.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Підлога</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/06.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Підлога</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__body">
+                    <div class="tabs__items">
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/04.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Фасади</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/04.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Фасади</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/05.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Одяг</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/05.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Одяг</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/06.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Підлога</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/06.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Підлога</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__body">
+                    <div class="tabs__items">
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/05.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Одяг</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/05.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Одяг</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__item item-tabs">
+                        <div class="item-tabs__content">
+                          <div class="item-tabs__icon">
+                            <img src="img/base/06.svg" alt="Bed Icon" />
+                          </div>
+                          <div class="item-tabs__text">Підлога</div>
+                        </div>
+                        <button class="item-tabs__info-btn">
+                          <img src="img/icons/info.svg" alt="Info Icon" />
+                        </button>
+                        <div class="item-tabs__info info-item-tabs">
+                          <div class="info-item-tabs__header">
+                            <div class="info-item-tabs__icon">
+                              <img src="img/base/06.svg" alt="Bed Icon" />
+                            </div>
+                            <h4 class="info-item-tabs__title">Підлога</h4>
+                          </div>
+                          <div class="info-item-tabs__text">
+                            Клінер приїжджає у домовлений час зі всім необхідним
+                            і приступає до прибирання. Вам залишається лише лише
+                            оцінити результат!
+                          </div>
+                          <div class="info-item-tabs__image">
+                            <img src="img/base/01.jpg" alt="Image" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__price price">
+          <div
+            data-watch-threshold="0.6"
+            data-watch-once
+            data-watch
+            class="price__container">
+            <h2 class="price__title title">
+              <span>Вартість прибирання</span>
+            </h2>
+            <div class="price__items">
+              <div class="price__item item-price">
+                <div class="item-price__top">
+                  <div class="item-price__num-of-room">1</div>
+                  <div class="item-price__room">кімнатна</div>
+                </div>
+                <div class="item-price__middle">
+                  <div class="item-price__params">
+                    <div class="item-price__params-icon">
+                      <img src="img/icons/square.svg" alt="Icon" />
+                    </div>
+                    <div class="item-price__params-info">
+                      <div class="item-price__params-value">45</div>
+                      <div class="item-price__params-name">м2</div>
+                    </div>
+                  </div>
+                  <div class="item-price__params">
+                    <div class="item-price__params-icon">
+                      <img src="img/icons/time.svg" alt="Icon" />
+                    </div>
+                    <div class="item-price__params-info">
+                      <div class="item-price__params-value">5</div>
+                      <div class="item-price__params-name">год</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-price__bottom">
+                  <div class="item-price__price">4200 грн</div>
+                </div>
+              </div>
+              <div class="price__item item-price">
+                <div class="item-price__top">
+                  <div class="item-price__num-of-room">2</div>
+                  <div class="item-price__room">кімнатна</div>
+                </div>
+                <div class="item-price__middle">
+                  <div class="item-price__params">
+                    <div class="item-price__params-icon">
+                      <img src="img/icons/square.svg" alt="Icon" />
+                    </div>
+                    <div class="item-price__params-info">
+                      <div class="item-price__params-value">45</div>
+                      <div class="item-price__params-name">м2</div>
+                    </div>
+                  </div>
+                  <div class="item-price__params">
+                    <div class="item-price__params-icon">
+                      <img src="img/icons/time.svg" alt="Icon" />
+                    </div>
+                    <div class="item-price__params-info">
+                      <div class="item-price__params-value">5</div>
+                      <div class="item-price__params-name">год</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-price__bottom">
+                  <div class="item-price__price">4200 грн</div>
+                </div>
+              </div>
+              <div class="price__item item-price">
+                <div class="item-price__top">
+                  <div class="item-price__num-of-room">3</div>
+                  <div class="item-price__room">кімнатна</div>
+                </div>
+                <div class="item-price__middle">
+                  <div class="item-price__params">
+                    <div class="item-price__params-icon">
+                      <img src="img/icons/square.svg" alt="Icon" />
+                    </div>
+                    <div class="item-price__params-info">
+                      <div class="item-price__params-value">45</div>
+                      <div class="item-price__params-name">м2</div>
+                    </div>
+                  </div>
+                  <div class="item-price__params">
+                    <div class="item-price__params-icon">
+                      <img src="img/icons/time.svg" alt="Icon" />
+                    </div>
+                    <div class="item-price__params-info">
+                      <div class="item-price__params-value">5</div>
+                      <div class="item-price__params-name">год</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-price__bottom">
+                  <div class="item-price__price">4200 грн</div>
+                </div>
+              </div>
+              <div class="price__item item-price">
+                <div class="item-price__top">
+                  <div class="item-price__num-of-room">4</div>
+                  <div class="item-price__room">кімнатна</div>
+                </div>
+                <div class="item-price__middle">
+                  <div class="item-price__params">
+                    <div class="item-price__params-icon">
+                      <img src="img/icons/square.svg" alt="Icon" />
+                    </div>
+                    <div class="item-price__params-info">
+                      <div class="item-price__params-value">45</div>
+                      <div class="item-price__params-name">м2</div>
+                    </div>
+                  </div>
+                  <div class="item-price__params">
+                    <div class="item-price__params-icon">
+                      <img src="img/icons/time.svg" alt="Icon" />
+                    </div>
+                    <div class="item-price__params-info">
+                      <div class="item-price__params-value">5</div>
+                      <div class="item-price__params-name">год</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-price__bottom">
+                  <div class="item-price__price">4200 грн</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__about about">
+          <div
+            data-watch-threshold="0.8"
+            data-watch-once
+            data-watch
+            class="about__container">
+            <div class="about__body">
+              <div class="about__left">
+                <h2 data-da=".about__right, 767.98" class="about__title title">
+                  <span>Kоротко про нас</span>
+                </h2>
+                <div class="about__images">
+                  <div class="about__image">
+                    <img src="img/about/01.jpg" alt="Photo" />
+                  </div>
+                  <div class="about__image">
+                    <img src="img/about/02.jpg" alt="Photo" />
+                  </div>
+                  <div class="about__image">
+                    <img src="img/about/03.jpg" alt="Photo" />
+                  </div>
+                </div>
+              </div>
+              <div class="about__right">
+                <div class="about__items">
+                  <div class="about__item item-about">
+                    <div class="item-about__icon">
+                      <img src="img/about/items/01.svg" alt="Icon" />
+                    </div>
+                    <h4 class="item-about__title">Безпека та надійність</h4>
+                    <div class="item-about__text">
+                      Компенсація у випадку, якщо вас щось не влаштує
+                    </div>
+                  </div>
+                  <div class="about__item item-about">
+                    <div class="item-about__icon">
+                      <img src="img/about/items/02.svg" alt="Icon" />
+                    </div>
+                    <h4 class="item-about__title">Професійні клінери</h4>
+                    <div class="item-about__text">
+                      Ретельний відбір фахівців у три етапи
+                    </div>
+                  </div>
+                  <div class="about__item item-about">
+                    <div class="item-about__icon">
+                      <img src="img/about/items/03.png" alt="Icon" />
+                    </div>
+                    <h4 class="item-about__title">5 років на ринку</h4>
+                    <div class="item-about__text">
+                      Понад 12 000 задоволених клієнтів
+                    </div>
+                  </div>
+                  <div class="about__item item-about">
+                    <div class="item-about__icon">
+                      <img src="img/about/items/04.svg" alt="Icon" />
+                    </div>
+                    <h4 class="item-about__title">Ідеальний результат</h4>
+                    <div class="item-about__text">
+                      Повторне чищення за вашим запитом
+                    </div>
+                  </div>
+                  <div class="about__item item-about">
+                    <div class="item-about__icon">
+                      <img src="img/about/items/05.svg" alt="Icon" />
+                    </div>
+                    <h4 class="item-about__title">Прозоре ціноутворення</h4>
+                    <div class="item-about__text">
+                      Фіксовані ціни, які не змінюються «з огляду на обставини»
+                    </div>
+                  </div>
+                  <div class="about__item item-about">
+                    <div class="item-about__icon">
+                      <img src="img/about/items/06.svg" alt="Icon" />
+                    </div>
+                    <h4 class="item-about__title">Зручні форми оплати</h4>
+                    <div class="item-about__text">
+                      Готівкою, карткою, безготівковим розрахунком — як завгодно
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__chemistry chemistry">
+          <div class="chemistry__container">
+            <div class="chemistry__header">
+              <h2
+                data-watch-threshold="1"
+                data-watch-once
+                data-watch
+                class="chemistry__title title">
+                <span>Професійна хімія</span>
+              </h2>
+              <div class="chemistry__text text">
+                Використовуємо тільки професійну хімію від провідних світових
+                брендів. Хімія сертифікована та немає шкідливих випарів.
+              </div>
+            </div>
+            <div class="chemistry__slider-box">
+              <div class="chemistry__slider swiper">
+                <div class="chemistry__wrapper swiper-wrapper">
+                  <div class="chemistry__slide swiper-slide">
+                    <div class="chemistry__image">
+                      <img src="img/chemistry/01.jpg" alt="Image" />
+                    </div>
+                  </div>
+                  <div class="chemistry__slide swiper-slide">
+                    <div class="chemistry__image">
+                      <img src="img/chemistry/02.jpg" alt="Image" />
+                    </div>
+                  </div>
+                  <div class="chemistry__slide swiper-slide">
+                    <div class="chemistry__image">
+                      <img src="img/chemistry/01.jpg" alt="Image" />
+                    </div>
+                  </div>
+                  <div class="chemistry__slide swiper-slide">
+                    <div class="chemistry__image">
+                      <img src="img/chemistry/02.jpg" alt="Image" />
+                    </div>
+                  </div>
+                  <div class="chemistry__slide swiper-slide">
+                    <div class="chemistry__image">
+                      <img src="img/chemistry/01.jpg" alt="Image" />
+                    </div>
+                  </div>
+                  <div class="chemistry__slide swiper-slide">
+                    <div class="chemistry__image">
+                      <img src="img/chemistry/02.jpg" alt="Image" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="chemistry__swiper-pagination swiper-pagination"></div>
+              <button
+                type="button"
+                class="chemistry__swiper-button-prev swiper-button-prev">
+                <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
+                  <path
+                    d="M12.9231 5.89744L0.871814 5.89745M0.871814 5.89745L5.14808 10.718M0.871814 5.89745L5.14807 1.07693"
+                    stroke="white" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="chemistry__swiper-button-next swiper-button-next">
+                <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
+                  <path
+                    d="M0.743652 6.10256H12.7949M12.7949 6.10256L8.51867 1.28205M12.7949 6.10256L8.51867 10.9231"
+                    stroke="white" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="page__team team">
+          <div class="team__container">
+            <div class="team__body">
+              <div class="team__header">
+                <h2
+                  data-watch-threshold="1"
+                  data-watch-once
+                  data-watch
+                  class="team__title title">
+                  <span>Сучасна команда</span>
+                </h2>
+                <div class="team__text text">
+                  Знайомтеся! Найкращі з найкращих - наші досвідчені клінерки,
+                  які подбають про ваш комфорт та чистоту у вашому домі. Вони
+                  вас по- справжньому здивують!
+                </div>
+              </div>
+              <div class="team__slider-box">
+                <div class="team__slider swiper">
+                  <div class="team__wrapper swiper-wrapper">
+                    <div class="team__slide slide-team swiper-slide">
+                      <div class="slide-team__image">
+                        <img src="img/team/01.jpg" alt="Avatar" />
+                      </div>
+                      <div class="slide-team__name">Марія</div>
+                      <div class="slide-team__position">
+                        Головний читач книг в команді
+                      </div>
+                      <div class="slide-team__turnover">
+                        3 нами з першого дня
+                      </div>
+                    </div>
+                    <div class="team__slide slide-team swiper-slide">
+                      <div class="slide-team__image">
+                        <img src="img/team/01.jpg" alt="Avatar" />
+                      </div>
+                      <div class="slide-team__name">Марія</div>
+                      <div class="slide-team__position">
+                        Головний читач книг в команді
+                      </div>
+                      <div class="slide-team__turnover">
+                        3 нами з першого дня
+                      </div>
+                    </div>
+                    <div class="team__slide slide-team swiper-slide">
+                      <div class="slide-team__image">
+                        <img src="img/team/01.jpg" alt="Avatar" />
+                      </div>
+                      <div class="slide-team__name">Марія</div>
+                      <div class="slide-team__position">
+                        Головний читач книг в команді
+                      </div>
+                      <div class="slide-team__turnover">
+                        3 нами з першого дня
+                      </div>
+                    </div>
+                    <div class="team__slide slide-team swiper-slide">
+                      <div class="slide-team__image">
+                        <img src="img/team/01.jpg" alt="Avatar" />
+                      </div>
+                      <div class="slide-team__name">Марія</div>
+                      <div class="slide-team__position">
+                        Головний читач книг в команді
+                      </div>
+                      <div class="slide-team__turnover">
+                        3 нами з першого дня
+                      </div>
+                    </div>
+                    <div class="team__slide slide-team swiper-slide">
+                      <div class="slide-team__image">
+                        <img src="img/team/01.jpg" alt="Avatar" />
+                      </div>
+                      <div class="slide-team__name">Марія</div>
+                      <div class="slide-team__position">
+                        Головний читач книг в команді
+                      </div>
+                      <div class="slide-team__turnover">
+                        3 нами з першого дня
+                      </div>
+                    </div>
+                    <div class="team__slide slide-team swiper-slide">
+                      <div class="slide-team__image">
+                        <img src="img/team/01.jpg" alt="Avatar" />
+                      </div>
+                      <div class="slide-team__name">Марія</div>
+                      <div class="slide-team__position">
+                        Головний читач книг в команді
+                      </div>
+                      <div class="slide-team__turnover">
+                        3 нами з першого дня
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="team__swiper-pagination swiper-pagination"></div>
+                <button
+                  type="button"
+                  class="team__swiper-button-prev swiper-button-prev">
+                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
+                    <path
+                      d="M12.9231 5.89744L0.871814 5.89745M0.871814 5.89745L5.14808 10.718M0.871814 5.89745L5.14807 1.07693"
+                      stroke="white" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="team__swiper-button-next swiper-button-next">
+                  <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
+                    <path
+                      d="M0.743652 6.10256H12.7949M12.7949 6.10256L8.51867 1.28205M12.7949 6.10256L8.51867 10.9231"
+                      stroke="white" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__our-works our-works">
+          <div class="our-works__container">
+            <div class="our-works__header">
+              <h2
+                data-watch-threshold="1"
+                data-watch-once
+                data-watch
+                class="our-works__title title">
+                <span>Наші роботи</span>
+              </h2>
+              <div class="our-works__text text">
+                Коли до справи беруться наші вартові чистоти, у бруду не
+                залишається шансу. Ми стоїмо на варті вашого комфорту та
+                повертаємо речам первозданний вигляд. Коли ми закінчимо
+                прибирання, ваші меблі, техніка, вікна та підлога виглядатимуть,
+                як щойно з магазину!
+              </div>
+              <div class="our-works__label">
+                Саме так виглядає наша магія чистоти!
+              </div>
+            </div>
+            <div class="our-works__slider-box">
+              <div class="our-works__slider swiper">
+                <div class="our-works__wrapper swiper-wrapper">
+                  <div class="our-works__slide slide-our-works swiper-slide">
+                    <div class="slide-our-works__image">
+                      <img src="img/our-works/01.jpg" alt="Image" />
+                    </div>
+                    <div class="slide-our-works__image">
+                      <img src="img/our-works/02.jpg" alt="Image" />
+                    </div>
+                    <div class="slide-our-works__text">
+                      <span>До</span><span>Після</span>
+                    </div>
+                  </div>
+                  <div class="our-works__slide slide-our-works swiper-slide">
+                    <div class="slide-our-works__image">
+                      <img src="img/our-works/01.jpg" alt="Image" />
+                    </div>
+                    <div class="slide-our-works__image">
+                      <img src="img/our-works/02.jpg" alt="Image" />
+                    </div>
+                    <div class="slide-our-works__text">
+                      <span>До</span><span>Після</span>
+                    </div>
+                  </div>
+                  <div class="our-works__slide slide-our-works swiper-slide">
+                    <div class="slide-our-works__image">
+                      <img src="img/our-works/01.jpg" alt="Image" />
+                    </div>
+                    <div class="slide-our-works__image">
+                      <img src="img/our-works/02.jpg" alt="Image" />
+                    </div>
+                    <div class="slide-our-works__text">
+                      <span>До</span><span>Після</span>
+                    </div>
+                  </div>
+                  <div class="our-works__slide slide-our-works swiper-slide">
+                    <div class="slide-our-works__image">
+                      <img src="img/our-works/01.jpg" alt="Image" />
+                    </div>
+                    <div class="slide-our-works__image">
+                      <img src="img/our-works/02.jpg" alt="Image" />
+                    </div>
+                    <div class="slide-our-works__text">
+                      <span>До</span><span>Після</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="our-works__swiper-pagination swiper-pagination"></div>
+              <button
+                type="button"
+                class="our-works__swiper-button-prev swiper-button-prev">
+                <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
+                  <path
+                    d="M12.9231 5.89744L0.871814 5.89745M0.871814 5.89745L5.14808 10.718M0.871814 5.89745L5.14807 1.07693"
+                    stroke="white" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="our-works__swiper-button-next swiper-button-next">
+                <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
+                  <path
+                    d="M0.743652 6.10256H12.7949M12.7949 6.10256L8.51867 1.28205M12.7949 6.10256L8.51867 10.9231"
+                    stroke="white" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="page__reviews reviews">
+          <div class="reviews__container">
+            <div class="reviews__top">
+              <h2
+                data-watch-threshold="1"
+                data-watch-once
+                data-watch
+                class="reviews__title title">
+                <span>Відгуки</span>
+              </h2>
+              <div class="reviews__items">
+                <div class="reviews__rating rating-reviews">
+                  <div class="rating-reviews__logo">
+                    <img src="img/reviews/google.svg" alt="Google Logo" />
+                  </div>
+                  <div class="rating-reviews__main">
+                    <div class="rating-reviews__line">
+                      <span></span>
+                    </div>
+                    <div class="rating-reviews__statistic">
+                      <span>На основі 847 відгуків </span>
+                      <span>4.9 з 5</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__rating rating-reviews">
+                  <div class="rating-reviews__logo">
+                    <img src="img/reviews/facebook.svg" alt="Facebook Logo" />
+                  </div>
+                  <div class="rating-reviews__main">
+                    <div class="rating-reviews__line">
+                      <span></span>
+                    </div>
+                    <div class="rating-reviews__statistic">
+                      <span>На основі 847 відгуків </span>
+                      <span>4.9 з 5</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__rating rating-reviews">
+                  <div class="rating-reviews__logo">
+                    <img src="img/reviews/twitter.svg" alt="Twitter Logo" />
+                  </div>
+                  <div class="rating-reviews__main">
+                    <div class="rating-reviews__line">
+                      <span></span>
+                    </div>
+                    <div class="rating-reviews__statistic">
+                      <span>На основі 847 відгуків </span>
+                      <span>4.9 з 5</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reviews__body">
+              <div class="reviews__body-header">
+                <h3 class="reviews__body-title">Загальний рейтинг</h3>
+                <div class="reviews__body-rating">
+                  <span class="reviews__body-rating-value">4.9</span>
+                  <div class="reviews__body-rating-stars">
+                    <div class="reviews__body-rating-star">
+                      <img src="img/icons/star.svg" alt="Star Icon" />
+                    </div>
+                    <div class="reviews__body-rating-star">
+                      <img src="img/icons/star.svg" alt="Star Icon" />
+                    </div>
+                    <div class="reviews__body-rating-star">
+                      <img src="img/icons/star.svg" alt="Star Icon" />
+                    </div>
+                    <div class="reviews__body-rating-star">
+                      <img src="img/icons/star.svg" alt="Star Icon" />
+                    </div>
+                    <div class="reviews__body-rating-star">
+                      <img src="img/icons/star.svg" alt="Star Icon" />
+                    </div>
+                  </div>
+                  <span class="reviews__body-rating-num">1282 відгуки</span>
+                </div>
+                <div class="reviews__body-filters">
+                  <button class="reviews__body-filter all active">
+                    <span>Загальна оцінка 4.9</span>
+                  </button>
+                  <button class="reviews__body-filter google">
+                    <img src="img/reviews/google.svg" alt="Google Icon" />
+                    <span>Гугл 4.9</span>
+                  </button>
+                  <button class="reviews__body-filter facebook">
+                    <img src="img/reviews/facebook.svg" alt="Facebook Icon" />
+                    <span>Фейсбук 4.9</span>
+                  </button>
+                </div>
+              </div>
+              <div class="reviews__slider-box">
+                <div class="reviews__slider swiper">
+                  <div class="reviews__wrapper swiper-wrapper">
+                    <div class="reviews__slide slide-reviews swiper-slide">
+                      <div class="slide-reviews__header">
+                        <div class="slide-reviews__avatar">
+                          <img src="img/reviews/avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="slide-reviews__author">
+                          <div class="slide-reviews__name">Иван Иванов</div>
+                          <div class="slide-reviews__stars">
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-reviews__text">
+                        Дуже якісно! Однозначно найкращий клінінг!
+                      </div>
+                      <a href="#" class="slide-reviews__more">Більше</a>
+                      <div class="slide-reviews__logo">
+                        <img src="img/reviews/google.svg" alt="Google Icon" />
+                      </div>
+                    </div>
+                    <div class="reviews__slide slide-reviews swiper-slide">
+                      <div class="slide-reviews__header">
+                        <div class="slide-reviews__avatar">
+                          <img src="img/reviews/avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="slide-reviews__author">
+                          <div class="slide-reviews__name">Иван Иванов</div>
+                          <div class="slide-reviews__stars">
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-reviews__text">
+                        Дуже якісно! Однозначно найкращий клінінг!
+                      </div>
+                      <a href="#" class="slide-reviews__more">Більше</a>
+                      <div class="slide-reviews__logo">
+                        <img src="img/reviews/google.svg" alt="Google Icon" />
+                      </div>
+                    </div>
+                    <div class="reviews__slide slide-reviews swiper-slide">
+                      <div class="slide-reviews__header">
+                        <div class="slide-reviews__avatar">
+                          <img src="img/reviews/avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="slide-reviews__author">
+                          <div class="slide-reviews__name">Иван Иванов</div>
+                          <div class="slide-reviews__stars">
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-reviews__text">
+                        Дуже якісно! Однозначно найкращий клінінг!
+                      </div>
+                      <a href="#" class="slide-reviews__more">Більше</a>
+                      <div class="slide-reviews__logo">
+                        <img src="img/reviews/google.svg" alt="Google Icon" />
+                      </div>
+                    </div>
+                    <div class="reviews__slide slide-reviews swiper-slide">
+                      <div class="slide-reviews__header">
+                        <div class="slide-reviews__avatar">
+                          <img src="img/reviews/avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="slide-reviews__author">
+                          <div class="slide-reviews__name">Иван Иванов</div>
+                          <div class="slide-reviews__stars">
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-reviews__text">
+                        Дуже якісно! Однозначно найкращий клінінг!
+                      </div>
+                      <a href="#" class="slide-reviews__more">Більше</a>
+                      <div class="slide-reviews__logo">
+                        <img src="img/reviews/google.svg" alt="Google Icon" />
+                      </div>
+                    </div>
+                    <div class="reviews__slide slide-reviews swiper-slide">
+                      <div class="slide-reviews__header">
+                        <div class="slide-reviews__avatar">
+                          <img src="img/reviews/avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="slide-reviews__author">
+                          <div class="slide-reviews__name">Иван Иванов</div>
+                          <div class="slide-reviews__stars">
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-reviews__text">
+                        Дуже якісно! Однозначно найкращий клінінг!
+                      </div>
+                      <a href="#" class="slide-reviews__more">Більше</a>
+                      <div class="slide-reviews__logo">
+                        <img src="img/reviews/google.svg" alt="Google Icon" />
+                      </div>
+                    </div>
+                    <div class="reviews__slide slide-reviews swiper-slide">
+                      <div class="slide-reviews__header">
+                        <div class="slide-reviews__avatar">
+                          <img src="img/reviews/avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="slide-reviews__author">
+                          <div class="slide-reviews__name">Иван Иванов</div>
+                          <div class="slide-reviews__stars">
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-reviews__text">
+                        Дуже якісно! Однозначно найкращий клінінг!
+                      </div>
+                      <a href="#" class="slide-reviews__more">Більше</a>
+                      <div class="slide-reviews__logo">
+                        <img src="img/reviews/google.svg" alt="Google Icon" />
+                      </div>
+                    </div>
+                    <div class="reviews__slide slide-reviews swiper-slide">
+                      <div class="slide-reviews__header">
+                        <div class="slide-reviews__avatar">
+                          <img src="img/reviews/avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="slide-reviews__author">
+                          <div class="slide-reviews__name">Иван Иванов</div>
+                          <div class="slide-reviews__stars">
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-reviews__text">
+                        Дуже якісно! Однозначно найкращий клінінг!
+                      </div>
+                      <a href="#" class="slide-reviews__more">Більше</a>
+                      <div class="slide-reviews__logo">
+                        <img src="img/reviews/google.svg" alt="Google Icon" />
+                      </div>
+                    </div>
+                    <div class="reviews__slide slide-reviews swiper-slide">
+                      <div class="slide-reviews__header">
+                        <div class="slide-reviews__avatar">
+                          <img src="img/reviews/avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="slide-reviews__author">
+                          <div class="slide-reviews__name">Иван Иванов</div>
+                          <div class="slide-reviews__stars">
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-reviews__text">
+                        Дуже якісно! Однозначно найкращий клінінг!
+                      </div>
+                      <a href="#" class="slide-reviews__more">Більше</a>
+                      <div class="slide-reviews__logo">
+                        <img src="img/reviews/google.svg" alt="Google Icon" />
+                      </div>
+                    </div>
+                    <div class="reviews__slide slide-reviews swiper-slide">
+                      <div class="slide-reviews__header">
+                        <div class="slide-reviews__avatar">
+                          <img src="img/reviews/avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="slide-reviews__author">
+                          <div class="slide-reviews__name">Иван Иванов</div>
+                          <div class="slide-reviews__stars">
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                            <div class="slide-reviews__star">
+                              <img src="img/icons/star.svg" alt="Star Icon" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slide-reviews__text">
+                        Дуже якісно! Однозначно найкращий клінінг!
+                      </div>
+                      <a href="#" class="slide-reviews__more">Більше</a>
+                      <div class="slide-reviews__logo">
+                        <img src="img/reviews/google.svg" alt="Google Icon" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__swiper-pagination swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__support support">
+          <div class="support__container">
+            <div class="support__body">
+              <div class="support__left">
+                <h2
+                  data-watch-threshold="1"
+                  data-watch-once
+                  data-watch
+                  class="support__title title">
+                  <span>Ввідділ миттєвої підтримки</span>
+                </h2>
+                <div class="support__text">
+                  Потурбуємося про вас більше, ніж необхідно та допоможемо у
+                  будь - якому питанні
+                </div>
+                <div class="support__messengers">
+                  <h4 class="support__messengers-title">
+                    Оберіть зручний для спілкування месенджер:
+                  </h4>
+                  <div class="support__messengers-items">
+                    <a href="#" class="support__messengers-item">
+                      <div class="support__messengers-item-image">
+                        <img src="img/support/01.svg" alt="Icon" />
+                      </div>
+                      <div class="support__messengers-item-name">Фейсбук</div>
+                    </a>
+                    <a href="#" class="support__messengers-item">
+                      <div class="support__messengers-item-image">
+                        <img src="img/support/02.svg" alt="Icon" />
+                      </div>
+                      <div class="support__messengers-item-name">Телеграм</div>
+                    </a>
+                    <a href="#" class="support__messengers-item">
+                      <div class="support__messengers-item-image">
+                        <img src="img/support/03.svg" alt="Icon" />
+                      </div>
+                      <div class="support__messengers-item-name">Вайбер</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="support__right">
+                <h3 class="support__right-title">
+                  Базове прибирання квартир: і ви завжди на висоті!
+                </h3>
+                <div class="support__right-text">
+                  <p>
+                    Ви можете замовити послугу генерального прибирання як для
+                    всього будинку, так і для окремих проблемних зон.
+                    Генеральний клінінг – це ефективне рішення, коли потрібно
+                    провести передпродажну підготовку запущеної нерухомості або
+                    підготуватися до появи новонародженої дитини.
+                  </p>
+                  <p>
+                    Зайнятих бізнес-леді точно потішить професійне капітальне
+                    прибирання напередодні свят: виклик клінерів, пляшка
+                    шампанського в холодильник – і ви готові до прийому гостей!
+                  </p>
+                  <p>
+                    Ви можете замовити послугу генерального прибирання як для
+                    всього будинку, так і для окремих проблемних зон.
+                    Генеральний клінінг – це ефективне рішення, коли потрібно
+                    провести передпродажну підготовку запущеної нерухомості або
+                    підготуватися до появи новонародженої дитини.
+                  </p>
+                  <p>
+                    Ви можете замовити послугу генерального прибирання як для
+                    всього будинку, так і для окремих проблемних зон.
+                    Генеральний клінінг – це ефективне рішення, коли потрібно
+                    провести передпродажну підготовку запущеної нерухомості або
+                    підготуватися до появи новонародженої дитини.
+                  </p>
+                  <p>
+                    Зайнятих бізнес-леді точно потішить професійне капітальне
+                    прибирання напередодні свят: виклик клінерів, пляшка
+                    шампанського в холодильник – і ви готові до прийому гостей!
+                  </p>
+                  <p>
+                    Ви можете замовити послугу генерального прибирання як для
+                    всього будинку, так і для окремих проблемних зон.
+                    Генеральний клінінг – це ефективне рішення, коли потрібно
+                    провести передпродажну підготовку запущеної нерухомості або
+                    підготуватися до появи новонародженої дитини.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__responsibility responsibility">
+          <div class="responsibility__container">
+            <div class="responsibility__body">
+              <div class="responsibility__images">
+                <div class="responsibility__image">
+                  <img src="img/responsibility/01.jpg" alt="Image" />
+                </div>
+                <div class="responsibility__image">
+                  <img src="img/responsibility/02.jpg" alt="Image" />
+                </div>
+              </div>
+              <div class="responsibility__content">
+                <h2
+                  data-watch-threshold="1"
+                  data-watch-once
+                  data-watch
+                  class="responsibility__title title">
+                  <span>Соціальна відповідальність</span>
+                </h2>
+                <div class="responsibility__result">
+                  <div class="responsibility__result-content">
+                    <span>29 кг</span>
+                    <span>утилізація батарейок</span>
+                  </div>
+                  <div class="responsibility__result-image">
+                    <img src="img/responsibility/01.svg" alt="Icon " />
+                  </div>
+                </div>
+                <div class="responsibility__text">
+                  <p>
+                    Ми збираємо використані батарейки та передаємо їх на
+                    утилізацію, щоб зберегти навколишнє середовище.
+                  </p>
+                  <p>
+                    Долучайтеся до нашого проекту, щоб разом зберігати природні
+                    ресурси.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__blog blog">
+          <div class="blog__container">
+            <div class="blog__header">
+              <h2
+                data-watch-threshold="1"
+                data-watch-once
+                data-watch
+                class="blog__title title">
+                <span>Блог чистоти</span>
+              </h2>
+              <a href="#" class="blog__all-posts">Всі статті</a>
+            </div>
+            <div class="blog__body">
+              <article class="blog__item item-blog item-blog--main">
+                <a href="#" class="item-blog__image">
+                  <img src="img/blog/main.jpg" alt="Image" />
+                </a>
+                <div class="item-blog__content">
+                  <div class="item-blog__time">
+                    <div class="item-blog__time-date">29 Вересня 2022</div>
+                    <div class="item-blog__time-time">
+                      <img src="img/icons/clock.svg" alt="Icon" />
+                      <span>12 хв</span>
+                    </div>
+                  </div>
+                  <h3 class="item-blog__title">
+                    <a href="#"
+                      >Генеральне прибирання будинків у Львові. Покрокова
+                      інструкція</a
+                    >
+                  </h3>
+                  <a href="#" class="item-blog__button"> Прибирання </a>
+                </div>
+              </article>
+              <article class="blog__item item-blog">
+                <div class="item-blog__content">
+                  <div class="item-blog__time">
+                    <div class="item-blog__time-date">29 Вересня 2022</div>
+                    <div class="item-blog__time-time">
+                      <img src="img/icons/clock.svg" alt="Icon" />
+                      <span>12 хв</span>
+                    </div>
+                  </div>
+                  <h3 class="item-blog__title">
+                    <a href="#"
+                      >Генеральне прибирання будинків у Львові. Покрокова
+                      інструкція</a
+                    >
+                  </h3>
+                  <a href="#" class="item-blog__button"> Прибирання </a>
+                </div>
+              </article>
+              <article class="blog__item item-blog">
+                <div class="item-blog__content">
+                  <div class="item-blog__time">
+                    <div class="item-blog__time-date">29 Вересня 2022</div>
+                    <div class="item-blog__time-time">
+                      <img src="img/icons/clock.svg" alt="Icon" />
+                      <span>12 хв</span>
+                    </div>
+                  </div>
+                  <h3 class="item-blog__title">
+                    <a href="#"
+                      >Генеральне прибирання будинків у Львові. Покрокова
+                      інструкція</a
+                    >
+                  </h3>
+                  <a href="#" class="item-blog__button"> Прибирання </a>
+                </div>
+              </article>
+              <article class="blog__item item-blog">
+                <div class="item-blog__content">
+                  <div class="item-blog__time">
+                    <div class="item-blog__time-date">29 Вересня 2022</div>
+                    <div class="item-blog__time-time">
+                      <img src="img/icons/clock.svg" alt="Icon" />
+                      <span>12 хв</span>
+                    </div>
+                  </div>
+                  <h3 class="item-blog__title">
+                    <a href="#"
+                      >Генеральне прибирання будинків у Львові. Покрокова
+                      інструкція</a
+                    >
+                  </h3>
+                  <a href="#" class="item-blog__button"> Прибирання </a>
+                </div>
+              </article>
+              <article class="blog__item item-blog">
+                <div class="item-blog__content">
+                  <div class="item-blog__time">
+                    <div class="item-blog__time-date">29 Вересня 2022</div>
+                    <div class="item-blog__time-time">
+                      <img src="img/icons/clock.svg" alt="Icon" />
+                      <span>12 хв</span>
+                    </div>
+                  </div>
+                  <h3 class="item-blog__title">
+                    <a href="#"
+                      >Генеральне прибирання будинків у Львові. Покрокова
+                      інструкція</a
+                    >
+                  </h3>
+                  <a href="#" class="item-blog__button"> Прибирання </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="page__clients clients">
+          <div class="clients__container">
+            <div class="clients__body">
+              <h2
+                data-watch-threshold="1"
+                data-watch-once
+                data-watch
+                class="clients__title title">
+                <span>Нам довіряють прибирання</span>
+              </h2>
+              <div class="clients__text text">
+                Ці та багато інших компаній цінують якість прибирання
+              </div>
+              <div class="clients__items">
+                <div class="clients__item">
+                  <img src="img/clients/01.svg" alt="Logo" />
+                </div>
+                <div class="clients__item">
+                  <img src="img/clients/02.svg" alt="Logo" />
+                </div>
+                <div class="clients__item">
+                  <img src="img/clients/03.svg" alt="Logo" />
+                </div>
+                <div class="clients__item">
+                  <img src="img/clients/04.svg" alt="Logo" />
+                </div>
+                <div class="clients__item">
+                  <img src="img/clients/01.svg" alt="Logo" />
+                </div>
+                <div class="clients__item">
+                  <img src="img/clients/02.svg" alt="Logo" />
+                </div>
+                <div class="clients__item">
+                  <img src="img/clients/03.svg" alt="Logo" />
+                </div>
+                <div class="clients__item">
+                  <img src="img/clients/04.svg" alt="Logo" />
+                </div>
+                <div class="clients__item">
+                  <img src="img/clients/01.svg" alt="Logo" />
+                </div>
+                <div class="clients__item">
+                  <img src="img/clients/02.svg" alt="Logo" />
+                </div>
+                <div class="clients__item">
+                  <img src="img/clients/03.svg" alt="Logo" />
+                </div>
+                <div class="clients__item">
+                  <img src="img/clients/04.svg" alt="Logo" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__answer answer">
+          <div
+            data-watch-threshold="0.3"
+            data-watch-once
+            data-watch
+            class="answer__container">
+            <h2 class="answer__title title">
+              <span>Відповіді на запитання</span>
+            </h2>
+            <div
+              data-one-spoller
+              data-spollers
+              class="answer__spollers spollers">
+              <details class="spollers__item">
+                <summary class="spollers__title">
+                  <span> Чи потрібно бути вдома під час прибирання?</span>
+                  <div></div>
+                </summary>
+                <div class="spollers__body">
+                  <p>
+                    Ви можете замовити послугу генерального прибирання як для
+                    всього будинку, так і для окремих проблемних зон.
+                    Генеральний клінінг – це ефективне рішення, коли потрібно
+                    провести передпродажну підготовку запущеної нерухомості або
+                    підготуватися до появи новонародженої дитини.
+                  </p>
+                  <p>
+                    Зайнятих бізнес-леді точно потішить професійне капітальне
+                    прибирання напередодні свят: виклик клінерів, пляшка
+                    шампанського в холодильник – і ви готові до прийому гостей!
+                  </p>
+                </div>
+              </details>
+              <details class="spollers__item">
+                <summary class="spollers__title">
+                  <span> Чи потрібно бути вдома під час прибирання?</span>
+                  <div></div>
+                </summary>
+                <div class="spollers__body">
+                  <p>
+                    Ви можете замовити послугу генерального прибирання як для
+                    всього будинку, так і для окремих проблемних зон.
+                    Генеральний клінінг – це ефективне рішення, коли потрібно
+                    провести передпродажну підготовку запущеної нерухомості або
+                    підготуватися до появи новонародженої дитини.
+                  </p>
+                  <p>
+                    Зайнятих бізнес-леді точно потішить професійне капітальне
+                    прибирання напередодні свят: виклик клінерів, пляшка
+                    шампанського в холодильник – і ви готові до прийому гостей!
+                  </p>
+                </div>
+              </details>
+              <details class="spollers__item">
+                <summary class="spollers__title">
+                  <span> Чи потрібно бути вдома під час прибирання?</span>
+                  <div></div>
+                </summary>
+                <div class="spollers__body">
+                  <p>
+                    Ви можете замовити послугу генерального прибирання як для
+                    всього будинку, так і для окремих проблемних зон.
+                    Генеральний клінінг – це ефективне рішення, коли потрібно
+                    провести передпродажну підготовку запущеної нерухомості або
+                    підготуватися до появи новонародженої дитини.
+                  </p>
+                  <p>
+                    Зайнятих бізнес-леді точно потішить професійне капітальне
+                    прибирання напередодні свят: виклик клінерів, пляшка
+                    шампанського в холодильник – і ви готові до прийому гостей!
+                  </p>
+                </div>
+              </details>
+              <details class="spollers__item">
+                <summary class="spollers__title">
+                  <span> Чи потрібно бути вдома під час прибирання?</span>
+                  <div></div>
+                </summary>
+                <div class="spollers__body">
+                  <p>
+                    Ви можете замовити послугу генерального прибирання як для
+                    всього будинку, так і для окремих проблемних зон.
+                    Генеральний клінінг – це ефективне рішення, коли потрібно
+                    провести передпродажну підготовку запущеної нерухомості або
+                    підготуватися до появи новонародженої дитини.
+                  </p>
+                  <p>
+                    Зайнятих бізнес-леді точно потішить професійне капітальне
+                    прибирання напередодні свят: виклик клінерів, пляшка
+                    шампанського в холодильник – і ви готові до прийому гостей!
+                  </p>
+                </div>
+              </details>
+              <details class="spollers__item">
+                <summary class="spollers__title">
+                  <span> Чи потрібно бути вдома під час прибирання?</span>
+                  <div></div>
+                </summary>
+                <div class="spollers__body">
+                  <p>
+                    Ви можете замовити послугу генерального прибирання як для
+                    всього будинку, так і для окремих проблемних зон.
+                    Генеральний клінінг – це ефективне рішення, коли потрібно
+                    провести передпродажну підготовку запущеної нерухомості або
+                    підготуватися до появи новонародженої дитини.
+                  </p>
+                  <p>
+                    Зайнятих бізнес-леді точно потішить професійне капітальне
+                    прибирання напередодні свят: виклик клінерів, пляшка
+                    шампанського в холодильник – і ви готові до прийому гостей!
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+        <section class="page__details details">
+          <div class="details__container">
+            <h2
+              data-watch-threshold="1"
+              data-watch-once
+              data-watch
+              class="details__title title">
+              <span>Прибирання квартир: як ми перевтілюємо квартири</span>
+            </h2>
+            <div class="details__text">
+              <p>
+                Ви можете замовити послугу генерального прибирання як для всього
+                будинку, так і для окремих проблемних зон. Генеральний клінінг –
+                це ефективне рішення, коли потрібно провести передпродажну
+                підготовку запущеної нерухомості або підготуватися до появи
+                новонародженої дитини.
+              </p>
+              <p>
+                Зайнятих бізнес-леді точно потішить професійне капітальне
+                прибирання напередодні свят: виклик клінерів, пляшка
+                шампанського в холодильник – і ви готові до прийому гостей!
+              </p>
+              <p class="mark">Базове (підтримуюче) прибирання.</p>
+              <p>
+                Бракує часу, щоб регулярно робити прибирання, але ви дуже
+                вимогливіі в питаннях чистоти? Розуміємо! Наша клінінгова
+                компанія допоможе вирішити проблему прибирання: замовте
+                регулярний клінінг – і у вас завжди буде чисто!
+              </p>
+              <p>
+                Ви можете оформити передплату на послуги клінінгу: регулярність
+                клінінгу та комплекс послуг з прибирання – на ваш розсуд. Візит
+                прибиральників можна перенести, графік підлаштувати під ваші
+                плани.
+              </p>
+              <p class="mark">Професійне миття вікон та балконів.</p>
+              <p>
+                Впевнені: крізь чисті вікна дивитись на світ приємніше :). Але є
+                і більш вагомі причини не рідше трьох разів на рік замовляти в
+                клінінговому агентстві цю послугу, адже регулярне миття вікон
+                дозволяє:
+              </p>
+              <p>
+                Впевнені: крізь чисті вікна дивитись на світ приємніше :). Але є
+                і більш вагомі причини не рідше трьох разів на рік замовляти в
+                клінінговому агентстві цю послугу, адже регулярне миття вікон
+                дозволяє:
+              </p>
+              <p>
+                Впевнені: крізь чисті вікна дивитись на світ приємніше :). Але є
+                і більш вагомі причини не рідше трьох разів на рік замовляти в
+                клінінговому агентстві цю послугу, адже регулярне миття вікон
+                дозволяє:
+              </p>
+              <p>
+                Впевнені: крізь чисті вікна дивитись на світ приємніше :). Але є
+                і більш вагомі причини не рідше трьох разів на рік замовляти в
+                клінінговому агентстві цю послугу, адже регулярне миття вікон
+                дозволяє:
+              </p>
+              <p>
+                Впевнені: крізь чисті вікна дивитись на світ приємніше :). Але є
+                і більш вагомі причини не рідше трьох разів на рік замовляти в
+                клінінговому агентстві цю послугу, адже регулярне миття вікон
+                дозволяє:
+              </p>
+              <p>
+                Впевнені: крізь чисті вікна дивитись на світ приємніше :). Але є
+                і більш вагомі причини не рідше трьох разів на рік замовляти в
+                клінінговому агентстві цю послугу, адже регулярне миття вікон
+                дозволяє:
+              </p>
+              <p>
+                Впевнені: крізь чисті вікна дивитись на світ приємніше :). Але є
+                і більш вагомі причини не рідше трьох разів на рік замовляти в
+                клінінговому агентстві цю послугу, адже регулярне миття вікон
+                дозволяє:
+              </p>
+              <p>
+                Впевнені: крізь чисті вікна дивитись на світ приємніше :). Але є
+                і більш вагомі причини не рідше трьох разів на рік замовляти в
+                клінінговому агентстві цю послугу, адже регулярне миття вікон
+                дозволяє:
+              </p>
+            </div>
+            <button type="button" class="details__show-more">
+              <span>Показати ще</span>
+              <span>Згорнути</span>
+              <svg width="7" height="5" viewBox="0 0 7 5" fill="none">
+                <path d="M1 1L3.5 3.5L6 1" stroke="#F66801" />
+              </svg>
+            </button>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__main">
+            <div class="footer__column column-footer-1">
+              <div class="column-footer-1__header">
+                <a href="#" data-goto=".hero" class="column-footer-1__logo">
+                  <img src="img/logo-f.svg" alt="Logo Icon" />
+                </a>
+                <a href="#" class="column-footer-1__button">
+                  <span>Стати клінером</span>
+                </a>
+              </div>
+              <div class="column-footer-1__middle">
+                <h4 class="column-footer-1__title">Ми працюємо у</h4>
+                <div class="column-footer-1__locations">
+                  <a href="#" class="column-footer-1__location active">КИЇВ</a>
+                  <a href="#" class="column-footer-1__location">ЛЬВІВ</a>
+                </div>
+              </div>
+              <div class="column-footer-1__bottom">
+                <h4 class="column-footer-1__bottom-title">Про нас пишуть</h4>
+                <div class="column-footer-1__clients">
+                  <a href="#" class="column-footer-1__client">
+                    <img src="img/footer/clients/01.svg" alt="Logo" />
+                  </a>
+                  <a href="#" class="column-footer-1__client">
+                    <img src="img/footer/clients/02.svg" alt="Logo" />
+                  </a>
+                  <a href="#" class="column-footer-1__client">
+                    <img src="img/footer/clients/03.svg" alt="Logo" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__column column-footer-2">
+              <div
+                class="column-footer-2__menu"
+                data-da=".column-footer-1, 991.98, 2">
+                <div class="column-footer-2__menu-box">
+                  <button class="column-footer-2__menu-item" data-num="1">
+                    <span>Про сервіс</span>
+                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none">
+                      <path d="M1 13L7 7L1 1" stroke="#fff" stroke-width="2" />
+                    </svg>
+                  </button>
+                  <button
+                    class="column-footer-2__menu-item active"
+                    data-num="2">
+                    <span>Прибирання</span>
+                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none">
+                      <path d="M1 13L7 7L1 1" stroke="#fff" stroke-width="2" />
+                    </svg>
+                  </button>
+                  <button class="column-footer-2__menu-item" data-num="3">
+                    <span>Хімчистка</span>
+                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none">
+                      <path d="M1 13L7 7L1 1" stroke="#fff" stroke-width="2" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="column-footer-2__menu-submenu">
+                  <ul
+                    id="one"
+                    class="column-footer-2__menu-submenu-item"
+                    data-num="1">
+                    <li><a href="#">Контакти</a></li>
+                    <li><a href="#">Питання</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Ціни</a></li>
+                    <li><a href="#">Відгуки</a></li>
+                  </ul>
+                  <ul
+                    id="two"
+                    class="column-footer-2__menu-submenu-item active"
+                    data-num="2">
+                    <li><a href="#">Базове</a></li>
+                    <li><a href="#">Генеральне</a></li>
+                    <li><a href="#">Індивідуальне</a></li>
+                    <li><a href="#">Вікна</a></li>
+                    <li><a href="#">Після ремонту</a></li>
+                  </ul>
+                  <ul
+                    id="three"
+                    class="column-footer-2__menu-submenu-item"
+                    data-num="3">
+                    <li>
+                      <a href="#">Дивани</a>
+                    </li>
+                    <li><a href="#">Матраци</a></li>
+                    <li><a href="#">Килими</a></li>
+                    <li><a href="#">Шкіряні дивани</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="column-footer-2__items"
+                data-da=".column-footer-3, 991.98">
+                <div class="column-footer-2__item">
+                  <img src="img/footer/pay/01.svg" alt="Logo" />
+                </div>
+                <div class="column-footer-2__item">
+                  <img src="img/footer/pay/02.svg" alt="Logo" />
+                </div>
+                <div class="column-footer-2__item">
+                  <img src="img/footer/pay/03.svg" alt="Logo" />
+                </div>
+                <div class="column-footer-2__item">
+                  <img src="img/footer/pay/04.svg" alt="Logo" />
+                </div>
+                <div class="column-footer-2__item">
+                  <img src="img/footer/pay/05.svg" alt="Logo" />
+                </div>
+              </div>
+            </div>
+            <div class="footer__column column-footer-3">
+              <div class="column-footer-3__info">
+                <p>
+                  Прийом замовлень: <br />
+                  з 9:00 до 19:00 <br />
+                  без вихідних
+                </p>
+                <p>
+                  Виконання замовлень: <br />
+                  з 9:00 до 21:00
+                </p>
+              </div>
+              <div class="column-footer-3__tel">
+                <div class="column-footer-3__tel-text">
+                  Безкоштовно по Україні
+                </div>
+                <a href="tel:+380631650040" class="column-footer-3__tel-link"
+                  >+38 (063) 165 00 40</a
+                >
+              </div>
+              <div class="column-footer-3__social">
+                <a href="#" class="column-footer-3__social-item">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="20" fill="black" />
+                    <path
+                      d="M20 11.8072C22.6506 11.8072 23.0121 11.8072 24.0964 11.8072C25.0602 11.8072 25.5422 12.0482 25.9036 12.1687C26.3855 12.4096 26.747 12.5301 27.1084 12.8916C27.4699 13.253 27.7108 13.6145 27.8313 14.0964C27.9518 14.4578 28.0723 14.9398 28.1928 15.9036C28.1928 16.988 28.1928 17.2289 28.1928 20C28.1928 22.7711 28.1928 23.0121 28.1928 24.0964C28.1928 25.0602 27.9518 25.5422 27.8313 25.9036C27.5904 26.3855 27.4699 26.747 27.1084 27.1084C26.747 27.4699 26.3855 27.7108 25.9036 27.8313C25.5422 27.9518 25.0602 28.0723 24.0964 28.1928C23.0121 28.1928 22.7711 28.1928 20 28.1928C17.2289 28.1928 16.988 28.1928 15.9036 28.1928C14.9398 28.1928 14.4578 27.9518 14.0964 27.8313C13.6145 27.5904 13.253 27.4699 12.8916 27.1084C12.5301 26.747 12.2892 26.3855 12.1687 25.9036C12.0482 25.5422 11.9277 25.0602 11.8072 24.0964C11.8072 23.0121 11.8072 22.7711 11.8072 20C11.8072 17.2289 11.8072 16.988 11.8072 15.9036C11.8072 14.9398 12.0482 14.4578 12.1687 14.0964C12.4096 13.6145 12.5301 13.253 12.8916 12.8916C13.253 12.5301 13.6145 12.2892 14.0964 12.1687C14.4578 12.0482 14.9398 11.9277 15.9036 11.8072C16.988 11.8072 17.3494 11.8072 20 11.8072ZM20 10C17.2289 10 16.988 10 15.9036 10C14.8193 10 14.0964 10.241 13.494 10.4819C12.8916 10.7229 12.2892 11.0843 11.6867 11.6867C11.0843 12.2892 10.8434 12.7711 10.4819 13.494C10.241 14.0964 10.1205 14.8193 10 15.9036C10 16.988 10 17.3494 10 20C10 22.7711 10 23.0121 10 24.0964C10 25.1807 10.241 25.9036 10.4819 26.506C10.7229 27.1084 11.0843 27.7108 11.6867 28.3133C12.2892 28.9157 12.7711 29.1566 13.494 29.5181C14.0964 29.759 14.8193 29.8795 15.9036 30C16.988 30 17.3494 30 20 30C22.6506 30 23.0121 30 24.0964 30C25.1807 30 25.9036 29.759 26.506 29.5181C27.1084 29.2771 27.7108 28.9157 28.3133 28.3133C28.9157 27.7108 29.1566 27.2289 29.5181 26.506C29.759 25.9036 29.8795 25.1807 30 24.0964C30 23.0121 30 22.6506 30 20C30 17.3494 30 16.988 30 15.9036C30 14.8193 29.759 14.0964 29.5181 13.494C29.2771 12.8916 28.9157 12.2892 28.3133 11.6867C27.7108 11.0843 27.2289 10.8434 26.506 10.4819C25.9036 10.241 25.1807 10.1205 24.0964 10C23.0121 10 22.7711 10 20 10Z"
+                      fill="white" />
+                    <path
+                      d="M20 14.8193C17.1084 14.8193 14.8193 17.1084 14.8193 20C14.8193 22.8916 17.1084 25.1807 20 25.1807C22.8916 25.1807 25.1807 22.8916 25.1807 20C25.1807 17.1084 22.8916 14.8193 20 14.8193ZM20 23.3735C18.1928 23.3735 16.6265 21.9277 16.6265 20C16.6265 18.1928 18.0723 16.6265 20 16.6265C21.8072 16.6265 23.3735 18.0723 23.3735 20C23.3735 21.8072 21.8072 23.3735 20 23.3735Z"
+                      fill="white" />
+                    <path
+                      d="M25.3012 15.9036C25.9666 15.9036 26.506 15.3642 26.506 14.6988C26.506 14.0334 25.9666 13.494 25.3012 13.494C24.6358 13.494 24.0964 14.0334 24.0964 14.6988C24.0964 15.3642 24.6358 15.9036 25.3012 15.9036Z"
+                      fill="white" />
+                  </svg>
+                </a>
+                <a href="#" class="column-footer-3__social-item">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="20" fill="black" />
+                    <path
+                      d="M21.6571 20.3648H25.3793L25.9637 16.5605H21.6563V14.4813C21.6563 12.901 22.1696 11.4996 23.6389 11.4996H26V8.17974C25.5852 8.12338 24.7078 8 23.05 8C19.5882 8 17.5587 9.8393 17.5587 14.0297V16.5605H14V20.3648H17.5587V30.821C18.2634 30.9276 18.9773 31 19.7101 31C20.3724 31 21.0189 30.9391 21.6571 30.8522V20.3648Z"
+                      fill="white" />
+                  </svg>
+                </a>
+                <a href="#" class="column-footer-3__social-item">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="20" fill="black" />
+                    <path
+                      d="M28 12.6022L24.9946 28.2923C24.9946 28.2923 24.5741 29.3801 23.4189 28.8584L16.4846 23.3526L16.4524 23.3364C17.3891 22.4654 24.6524 15.7027 24.9698 15.3961C25.4613 14.9214 25.1562 14.6387 24.5856 14.9974L13.8568 22.053L9.71764 20.6108C9.71764 20.6108 9.06626 20.3708 9.00359 19.8491C8.9401 19.3265 9.73908 19.0439 9.73908 19.0439L26.6131 12.1889C26.6131 12.1889 28 11.5579 28 12.6022Z"
+                      fill="white" />
+                  </svg>
+                </a>
+                <a href="#" class="column-footer-3__social-item">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="20" fill="black" />
+                    <path
+                      d="M27.9268 12.0625C25.9512 10.0937 23.3171 9 20.5366 9C14.7561 9 10.0732 13.6667 10.0732 19.4271C10.0732 21.25 10.5854 23.0729 11.4634 24.6042L10 30L15.561 28.5417C17.0976 29.3438 18.7805 29.7812 20.5366 29.7812C26.3171 29.7812 31 25.1146 31 19.3542C30.9268 16.6563 29.9024 14.0312 27.9268 12.0625ZM25.5854 23.1458C25.3659 23.7292 24.3415 24.3125 23.8293 24.3854C23.3902 24.4583 22.8049 24.4583 22.2195 24.3125C21.8537 24.1667 21.3415 24.0208 20.7561 23.7292C18.122 22.6354 16.439 20.0104 16.2927 19.7917C16.1463 19.6458 15.1951 18.4062 15.1951 17.0937C15.1951 15.7812 15.8537 15.1979 16.0732 14.9062C16.2927 14.6146 16.5854 14.6146 16.8049 14.6146C16.9512 14.6146 17.1707 14.6146 17.3171 14.6146C17.4634 14.6146 17.6829 14.5417 17.9024 15.0521C18.122 15.5625 18.6341 16.875 18.7073 16.9479C18.7805 17.0938 18.7805 17.2396 18.7073 17.3854C18.6341 17.5312 18.561 17.6771 18.4146 17.8229C18.2683 17.9687 18.1219 18.1875 18.0488 18.2604C17.9024 18.4062 17.7561 18.5521 17.9024 18.7708C18.0488 19.0625 18.561 19.8646 19.3659 20.5937C20.3902 21.4687 21.1951 21.7604 21.4878 21.9063C21.7805 22.0521 21.9268 21.9792 22.0732 21.8333C22.2195 21.6875 22.7317 21.1042 22.878 20.8125C23.0244 20.5208 23.2439 20.5938 23.4634 20.6667C23.6829 20.7396 25 21.3958 25.2195 21.5417C25.5122 21.6875 25.6585 21.7604 25.7317 21.8333C25.8049 22.0521 25.8049 22.5625 25.5854 23.1458Z"
+                      fill="white" />
+                  </svg>
+                </a>
+                <a href="#" class="column-footer-3__social-item">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="20" fill="black" />
+                    <path
+                      d="M26.2539 9.54591C22.4424 8.81803 18.4843 8.81803 14.6728 9.54591C12.9869 9.90986 10.8613 11.9479 10.4948 13.5493C9.83508 16.6792 9.83508 19.8819 10.4948 23.0118C10.9346 24.6131 13.0602 26.6512 14.6728 27.0152C14.7461 27.0152 14.8194 27.0879 14.8194 27.1607V31.7464C14.8194 31.9648 15.1126 32.1103 15.2592 31.892L17.4581 29.6355C17.4581 29.6355 19.2173 27.8158 19.5105 27.5247C19.5105 27.5247 19.5838 27.4519 19.6571 27.4519C21.856 27.5247 24.1283 27.3063 26.3272 26.9424C28.0131 26.5784 30.1387 24.5403 30.5052 22.939C31.1649 19.8091 31.1649 16.6064 30.5052 13.4765C30.0654 11.9479 27.9398 9.90986 26.2539 9.54591ZM26.3272 23.2302C25.9607 23.958 25.5209 24.5403 24.788 24.9043C24.5681 24.9771 24.3482 25.0499 24.1283 25.1227C23.8351 25.0499 23.6152 24.9771 23.3953 24.9043C21.0497 23.958 18.8508 22.6478 17.0916 20.7553C16.1387 19.6635 15.3325 18.4261 14.6728 17.1159C14.3796 16.4608 14.0864 15.8785 13.8665 15.2234C13.6466 14.6411 14.0131 14.0588 14.3796 13.6221C14.7461 13.1853 15.1859 12.8942 15.699 12.6758C16.0654 12.4575 16.4319 12.603 16.7251 12.8942C17.3115 13.6221 17.8979 14.35 18.3377 15.1506C18.6309 15.6601 18.5576 16.2425 18.0445 16.6064C17.8979 16.6792 17.8246 16.752 17.678 16.8976C17.6047 16.9703 17.4581 17.0431 17.3848 17.1887C17.2382 17.4071 17.2382 17.6254 17.3115 17.8438C17.8979 19.5179 18.9974 20.8281 20.6832 21.556C20.9764 21.7016 21.1963 21.7744 21.5628 21.7744C22.0759 21.7016 22.2958 21.1193 22.6623 20.8281C23.0288 20.537 23.4686 20.537 23.9084 20.7553C24.2749 20.9737 24.6414 21.2649 25.0811 21.556C25.4476 21.8472 25.8141 22.0655 26.1806 22.3567C26.4005 22.5023 26.4738 22.8662 26.3272 23.2302ZM23.2487 17.771C23.1021 17.771 23.1754 17.771 23.2487 17.771C22.9555 17.771 22.8822 17.6254 22.8089 17.4071C22.8089 17.2615 22.8089 17.0431 22.7356 16.8976C22.6623 16.6064 22.5157 16.3152 22.2225 16.0969C22.0759 16.0241 21.9293 15.9513 21.7827 15.8785C21.5628 15.8057 21.4162 15.8057 21.1963 15.8057C20.9764 15.7329 20.9031 15.5874 20.9031 15.369C20.9031 15.2234 21.123 15.0778 21.2696 15.0778C22.4424 15.1506 23.322 15.8057 23.4686 17.1887C23.4686 17.2615 23.4686 17.4071 23.4686 17.4799C23.4686 17.6254 23.3953 17.771 23.2487 17.771ZM22.5157 14.5683C22.1492 14.4227 21.7827 14.2772 21.3429 14.2044C21.1963 14.2044 20.9764 14.1316 20.8298 14.1316C20.6099 14.1316 20.4634 13.986 20.5366 13.7676C20.5366 13.5493 20.6832 13.4037 20.9031 13.4765C21.6361 13.5493 22.2958 13.6949 22.9555 13.986C24.2749 14.6411 25.0079 15.7329 25.2277 17.1887C25.2277 17.2615 25.2277 17.3343 25.2277 17.4071C25.2277 17.5526 25.2277 17.6982 25.2277 17.9166C25.2277 17.9894 25.2277 18.0622 25.2277 18.135C25.1545 18.4261 24.6414 18.4989 24.5681 18.135C24.5681 18.0622 24.4948 17.9166 24.4948 17.8438C24.4948 17.1887 24.3482 16.5336 24.055 15.9513C23.6152 15.2962 23.1021 14.8595 22.5157 14.5683ZM26.4738 18.9356C26.2539 18.9356 26.1073 18.7173 26.1073 18.4989C26.1073 18.0622 26.034 17.6254 25.9607 17.1887C25.6675 14.8595 23.7618 12.967 21.4895 12.603C21.123 12.5302 20.7565 12.5302 20.4634 12.4575C20.2435 12.4575 19.9503 12.4575 19.877 12.1663C19.8037 11.9479 20.0236 11.7296 20.2435 11.7296C20.3168 11.7296 20.3901 11.7296 20.3901 11.7296C20.5367 11.7296 23.3953 11.8024 20.3901 11.7296C23.4686 11.8024 26.034 13.8404 26.5471 16.8976C26.6204 17.4071 26.6937 17.9166 26.6937 18.4989C26.8403 18.7173 26.6937 18.9356 26.4738 18.9356Z"
+                      fill="white" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <span>© 2024, <a href="#">Політика конфіденційності</a></span>
+            <a href="# ">Умови використання сайту</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/app.min.js?_v=20240330012554"></script>
+  </body>
+</html>
