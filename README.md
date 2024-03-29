@@ -35,3 +35,5 @@ https://gamarjkeee.github.io/freelancehunt/gamer-dragon/index.html
 https://gamarjkeee.github.io/freelancehunt/brrr/index.html
 
 https://gamarjkeee.github.io/freelancehunt/blackj/index.html
+
+https://gamarjkeee.github.io/freelancehunt/dogl/index.html
